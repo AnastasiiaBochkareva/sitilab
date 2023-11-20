@@ -151,11 +151,11 @@
     position: relative;
     width: 100%;
     border-radius: $border-radius;
-    //border: 1px solid $ui-gray-1;
-    border: none;
+    border: 1px solid var(--gray1, #B2BAC6);
     background-color: $ui-white;
-    padding: 11px 12px;
-    font-size: 1rem;
+    padding: 8px 12px 7px;
+    // font-size: 1rem;
+    font-size: 14px;
     line-height: 1.467rem;
 
     &:active,
@@ -188,9 +188,10 @@
     top: 50%;
     transform: translateY(-50%);
     left: 11px;
-    color: $text-3;
+    color: var(--gray1, #B2BAC6);
     cursor: text;
-    font-size: 1rem;
+    // font-size: 1rem;
+    font-size: 14px;
     line-height: 22px;
     transition: top $transition,
                 font-size $transition;
@@ -535,7 +536,7 @@
       color: $text-1;
 
       &::before {
-        border-color: $ui-primary;
+        border-color: var(--gray1, #B2BAC6);
       }
     }
   }
@@ -548,8 +549,7 @@
     &:checked {
       + .checkbox__label {
         &::before {
-          border-color: $ui-primary;
-          background-color: $ui-primary;
+          border-color: var(--gray1, #B2BAC6);
         }
         &::after {
           display: block;
@@ -610,22 +610,25 @@
 
     &::before {
       content: '';
-      background-color: #ffffff;
-      border-radius: 2px;
+      // background-color: #ffffff;
+      // border-radius: 2px;
       left: 0;
       height: 20px;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 20px;
-      border: 1px solid $ui-gray-1;
+      // border: 1px solid $ui-gray-1;
       transition: border-color $transition;
       cursor: pointer;
+      border-radius: 3px;
+      border: 1px solid var(--gray1, #B2BAC6);
+      background: #FFF;
     }
 
     &:after {
       content: '';
-      border: solid $ui-white;
+      border: solid $black;
       border-width: 0 1.5px 1.5px 0;
       display: none;
       height: 10px;

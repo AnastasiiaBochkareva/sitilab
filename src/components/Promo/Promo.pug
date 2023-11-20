@@ -1,0 +1,47 @@
+.promo
+  .promo__img
+    img(src="/assets/img/categories/vnd/promo1.png", alt="")
+  .promo__content
+      form.form   
+        .promo__title Закажите по телефону:
+        .promo__phone 8 (495) 147-01-71
+        .promo__title-sm или заполните форму заявки:
+        +Input({
+          text: true,
+          placeholder: 'ФИО *',
+        })
+        div
+          +Input({
+            text: true,
+            placeholder: '+7 (___) ___-__-__ *',
+          })
+          +Input({
+            text: true,
+            placeholder: 'Адрес выезда *',
+          })
+          +Input({
+            text: true,
+            placeholder: 'E-mail *',
+          })
+          +Input({
+            textarea: true,
+            placeholder: 'Комментарий',
+          })
+        .promo__description * Поля, обязательные для заполнения
+        .promo__agree
+          +Checkbox({
+            text: 'Я согласен на обработку',
+          })
+          a(href="#") персональных данных 
+        .promo__captcha
+          button.promo__confirm_btn Отправить
+          .promo__confirm
+            p Введите символы с картинки:
+            div
+              img(src="/assets/img/categories/vnd/captcha.png", alt="")
+              +Input({
+                text: true,
+              })
+        p Лицензия №Л041-01137-77/00349073 от 03.06.2019г.
+
+          

@@ -1,0 +1,7 @@
+.services.container
+    h2 Услуги автосервиса
+    .services__container 
+        -
+            const arrTitle = ['Ремонт автомобиля','Плановое ТО','Диагностика и ремонт','Чип тюнинг']
+        each i, index in Array(4)
+            +Services-card({subtitle: `0${index+1}`, title: arrTitle[index], number: index})

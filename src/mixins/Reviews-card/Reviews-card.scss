@@ -1,0 +1,45 @@
+.reviews-card {
+  display: flex;
+  flex-direction: column;
+  margin-left: 460px;
+  margin-top: 40px;
+  &__users {
+    display: flex;
+    &_img {
+      border-radius: 100%;
+      border: 1px solid white;
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    &_name {
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 120%;
+      color: #ffffff;
+    }
+    &_date {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #989898;
+    }
+    &_rating {
+      fill: #fec110;
+    }
+    &_btn {
+    }
+  }
+  &__comment {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 120%;
+    color: #ffffff;
+  }
+}

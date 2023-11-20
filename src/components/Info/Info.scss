@@ -1,0 +1,44 @@
+.info {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #b6b6b6;
+    &_title {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 200%;
+      color: #2c2c2c;
+    }
+    &_number {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 200%;
+      color: #989898;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    &_content {
+      width: 50%;
+    }
+
+    &_title {
+      font-weight: 400;
+      font-size: 90px;
+      line-height: 90%;
+      color: #fec110;
+    }
+    &_subtitle {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 120%;
+      color: #2c2c2c;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+mixin Services-card(param = {})
+    .services-card
+        .container.services-card__container
+            div.services-card__img
+                img(src=`/assets/img/services${param.number+1}.png`, alt="repair")
+            div.services-card__description
+                .services-card__description_words
+                    span.services-card__description_title=param.title
+                    span.services-card__description_subtitle=param.subtitle
+                .services-card__description_arrow
+                    +icon("arrow-right")

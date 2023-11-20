@@ -1,0 +1,31 @@
+.reviews
+    .reviews__black
+        .container
+            .reviews__row
+                .reviews__row_title Отзывы пользователей об Автоцентре
+                .reviews__row_number 4.6
+                .reviews__row_grade Средняя оценка
+            .reviews__row
+                +Reviews-card    
+            .reviews__img 
+                .reviews__img_garage
+                    img(src="/assets/img/garage.png" alt="garage")
+                .reviews__img_map
+                    img(src="/assets/img/map.png" alt="map")
+    .reviews__white
+        .container
+            .reviews__contacts
+                .reviews__contacts_adress 
+                    span Екатеринбург, Московский тракт 7 км, 2
+                    span Телефон: +7 (999) 123-45-67
+                .reviews__contacts_email
+                    span 
+                        |Cервис:
+                        a  service@example.ru
+                    span
+                        | Отдел запасных частей: 
+                        a  parts@example.ru
+                .reviews__contacts_controles
+                    button.btn.btn_primary.reviews__contacts_controles_btn
+                        span Построить маршрут
+                        +icon('slim-arrow-left')

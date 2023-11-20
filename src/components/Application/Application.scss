@@ -1,0 +1,14 @@
+.application {
+  &__consultation {
+    width: 100%;
+    &_info {
+      position: relative;
+      &_title {
+        position: absolute;
+        top: 190px;
+      }
+      &_subtitle {
+      }
+    }
+  }
+}

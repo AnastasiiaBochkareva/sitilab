@@ -1,0 +1,89 @@
+.reviews {
+  &__black {
+    background-color: #313232;
+    padding-top: 180px;
+  }
+  &__row {
+    display: flex;
+    &:first-child {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #b6b6b6;
+    }
+    &_title {
+      font-weight: 400;
+      font-size: 67px;
+      line-height: 95%;
+      color: #ffffff;
+      margin-right: 40px;
+      max-width: 730px;
+    }
+    &_number {
+      font-weight: 400;
+      font-size: 90px;
+      line-height: 90%;
+      color: #fec110;
+      width: 35%;
+      text-align: center;
+    }
+    &_grade {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 200%;
+      color: #989898;
+    }
+  }
+  &__img {
+    display: flex;
+    padding-top: 180px;
+    &_garage {
+      img {
+        height: 312px;
+        width: 420px;
+      }
+    }
+    &_map {
+      width: 920px;
+      position: relative;
+      img {
+        position: absolute;
+      }
+    }
+  }
+  &__white {
+    background-color: #ffffff;
+    padding-bottom: 180px;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    height: 288px;
+    background: #313232;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+    padding-left: 40px;
+    &_adress {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    &_email {
+      display: flex;
+      flex-direction: column;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #ffffff;
+      margin-bottom: 40px;
+      a {
+        color: #fec110 !important;
+      }
+    }
+    &_controles {
+      width: 256px;
+    }
+  }
+}

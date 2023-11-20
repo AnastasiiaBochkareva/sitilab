@@ -1,0 +1,64 @@
+$border-radius: 4px;
+$border-radius-plus: 8px;
+$box-shadow: 0 0 2px rgba(0, 0, 0, 0.16);
+$box-shadow-bottom: inset 0 -1px 0 #dfe1e6;
+$box-shadow-2: 0 1px 16px rgba(0, 0, 0, 0.16);
+$filter-shadow: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.04))
+  drop-shadow(0px 4px 32px rgba(0, 0, 0, 0.16));
+$animation-type: ease-in-out;
+$animation-duration: 0.2s;
+$transition: $animation-duration $animation-type;
+$b1: solid 1px;
+
+$black: #000000;
+$gray: #7e7e7e;
+$darkGray: #323640;
+
+// colors
+$text-1: #091e42;
+$text-2: #42526e;
+$text-3: #6b778c;
+$text-4: #ffffff;
+$text-5: #0a3fb4;
+$text-6: #dc1818;
+$text-warning: #ff991f;
+$text-error: #de350b;
+$text-success: #00875a;
+
+$ui-white: #ffffff;
+$ui-dark-1: #253858;
+$ui-dark-2: #051945;
+//$ui-gray-1: #dfe1e6;
+$ui-gray-1: #f5f5f5;
+$ui-gray-2: #c1c7d0;
+$ui-primary: #fec110;
+$ui-primary-2: #dc1818;
+
+$ui-secondary: #f4f5f7;
+$ui-blue: #0065ff;
+$ui-red: #ff5630;
+$ui-green: #36b37e;
+$ui-yellow: #ffab00;
+$ui-purple: #6554c0;
+
+$ui-secondary12: rgba(0, 0, 0, 0.48);
+$ui-blue12: rgba(0, 101, 255, 0.12);
+$ui-red12: rgba(255, 86, 48, 0.12);
+$ui-green12: rgba(54, 179, 126, 0.12);
+$ui-yellow12: rgba(255, 171, 0, 0.12);
+$ui-purple12: rgba(101, 84, 192, 0.12);
+
+// mixins
+@mixin hideScroll {
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+@mixin card {
+  background: $ui-white;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius-plus;
+}

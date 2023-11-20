@@ -1,0 +1,17 @@
+.services {
+  h2 {
+    font-weight: 400;
+    font-size: 67px;
+    line-height: 95%;
+    color: #2c2c2c;
+    padding-bottom: 60px;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    @include xl {
+      grid-template-columns: 1fr;
+    }
+  }
+}

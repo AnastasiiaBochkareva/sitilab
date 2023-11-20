@@ -1,0 +1,40 @@
+.services-card {
+  &__container {
+    width: 650px;
+    background-color: #ffffff;
+  }
+  &__img {
+  }
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    &_words {
+      display: flex;
+      flex-direction: column;
+    }
+    &_title {
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 120%;
+      color: #2c2c2c;
+    }
+    &_subtitle {
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 120%;
+      color: #989898;
+    }
+    &_arrow {
+      background: #fec110;
+      border-radius: 100%;
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

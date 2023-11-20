@@ -1,0 +1,15 @@
+mixin Reviews-card(param={})
+    .reviews-card.container 
+        .reviews-card__users  
+            .reviews-card__users_img
+                .reviews-card__users_icon
+                    +icon('user')
+            .reviews-card__users_info
+                .reviews-card__users_name butyl1n_i
+                .reviews-card__users_date 23 декабря 2020
+                .reviews-card__users_rating 
+                    img(src="/assets/img/ratings.png" alt="ratings")
+            .reviews-card__users_btn 
+                +icon('slim-arrow-left')
+                +icon('slim-arrow-right')
+        .reviews-card__comment Решил убить сразу несколько зайцев, и пока гуляли с женой по меге оставил свою Volvo на диагностику в данном центре. Знаю что меняли ранее в другом центре, и что уже нужно было поменять. В этом центре лишнего не насчитали, проблемы нашли. В следующий раз приеду уже за полным ТО.

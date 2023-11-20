@@ -1,0 +1,50 @@
+.mark-auto {
+  h2 {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 200%;
+    color: #989898;
+    margin-bottom: 60px;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    &_center {
+      height: 300px;
+      width: 0px;
+      position: relative;
+    }
+    &_item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      border: 1px solid white;
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      &:nth-child(1) {
+        left: -800px;
+      }
+      &:nth-child(2) {
+        left: -540px;
+      }
+      &:nth-child(3) {
+        left: -280px;
+      }
+      &:nth-child(4) {
+        right: -280px;
+      }
+      &:nth-child(5) {
+        right: -540px;
+      }
+      &:nth-child(6) {
+        right: -800px;
+      }
+    }
+  }
+}

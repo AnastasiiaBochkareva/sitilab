@@ -1,0 +1,23 @@
+// -
+//include catalog
+
+mixin Header(param = {})
+    header.header
+        .container.header__container
+            div.header__img
+                img(src="/assets/img/Logo.png" alt="Logo")
+            nav.header__nav 
+                ul.header__nav_ul
+                    li Услуги
+                        +icon("arrow-down")
+                    li О компании
+                    li Гарантии
+                    li Новости
+                    li Акции
+                    li Контакты
+            .header__controles
+                button.header__controles_btn
+                    +icon("menu-line")
+                button.btn.btn_primary.header__controles_btn
+                    span Запись на сервис
+

@@ -1,0 +1,61 @@
+.stock {
+  h2 {
+    font-weight: 400;
+    font-size: 67px;
+    line-height: 95%;
+    color: #2c2c2c;
+  }
+  &__container {
+    margin-top: 60px;
+    display: flex;
+  }
+  &__img {
+    width: 100%;
+    margin-right: 40px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    &_top {
+      &_title {
+        font-weight: 400;
+        font-size: 51px;
+        line-height: 105%;
+        color: #2c2c2c;
+        margin-bottom: 20px;
+      }
+      &_subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #989898;
+        margin-bottom: 40px;
+      }
+      &_btn {
+        display: flex;
+        align-items: center;
+        &_arrow-right {
+          border-radius: 100%;
+          background-color: #fec110;
+          width: 40px;
+          height: 40px;
+          min-width: 40px;
+          min-height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+        }
+        &_span {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 18px;
+          color: #2c2c2c;
+        }
+      }
+    }
+    &_bottom {
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.header {
+  box-shadow: $box-shadow-2;
+  &__img {
+    width: 164px;
+    height: 60px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav {
+    margin-left: auto;
+    margin-right: 40px;
+    &_ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      height: 100%;
+    }
+  }
+  &__controles {
+    display: flex;
+    align-items: center;
+    &_btn {
+      margin-left: 20px;
+    }
+  }
+}

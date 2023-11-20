@@ -1,0 +1,47 @@
+.banner {
+  background: #313232;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-height: 650px;
+  }
+  &__content {
+    padding: 80px 40px 60px 0px;
+    &_title {
+      margin-bottom: 40px;
+      font-weight: 400;
+      font-size: 67px;
+      color: #ffffff;
+      line-height: 95%;
+    }
+    &_phone {
+      margin-bottom: 60px;
+      font-weight: 400;
+      font-size: 67px;
+      color: #fec110;
+      line-height: 95%;
+    }
+    &_contacts {
+      margin-bottom: 10px;
+      &_title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #989898;
+      }
+      &_subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #ffffff;
+      }
+    }
+    &_controles {
+      margin-top: 50px;
+    }
+  }
+
+  &__img {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}

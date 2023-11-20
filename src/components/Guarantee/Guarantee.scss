@@ -1,0 +1,46 @@
+.guarantee {
+  display: flex;
+  &__description {
+    width: 650px;
+    margin-right: 40px;
+    &_title {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 120%;
+      color: #2c2c2c;
+      margin-bottom: 40px;
+    }
+    &_subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #2c2c2c;
+      width: 420px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    div {
+      display: flex;
+      flex-direction: column;
+      svg {
+        margin-bottom: 20px;
+        fill: #fec110;
+        width: 60px;
+        height: 60px;
+      }
+      span {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 120%;
+        color: #2c2c2c;
+      }
+    }
+  }
+}

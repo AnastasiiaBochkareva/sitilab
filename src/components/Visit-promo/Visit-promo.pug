@@ -1,0 +1,50 @@
+.visit-promo
+  .visit-promo__head СИТИЛАБ - больше, чем просто анализы.<br>Выезд врачей и медицинских сестёр на дом.
+  .visit-promo__banner
+    .visit-promo__img
+      img(src="/assets/img/categories/vnd/promo1.png", alt="")
+    .visit-promo__content
+        form.form   
+          .visit-promo__title Закажите по телефону:
+          .visit-promo__phone 8 (495) 147-01-71
+          .visit-promo__title-sm или заполните форму заявки:
+          +Input({
+            text: true,
+            placeholder: 'ФИО *',
+          })
+          div
+            +Input({
+              text: true,
+              placeholder: '+7 (___) ___-__-__ *',
+            })
+            +Input({
+              text: true,
+              placeholder: 'Адрес выезда *',
+            })
+            +Input({
+              text: true,
+              placeholder: 'E-mail *',
+            })
+            +Input({
+              textarea: true,
+              placeholder: 'Комментарий',
+            })
+          .visit-promo__description * Поля, обязательные для заполнения
+          .visit-promo__agree
+            +Checkbox({
+              text: 'Я согласен на обработку',
+            })
+            a(href="#") персональных данных 
+          .visit-promo__captcha
+            button.visit-promo__captcha_btn Отправить
+            .visit-promo__confirm
+              p Введите символы с картинки:
+              div
+                div 
+                  img(src="/assets/img/categories/vnd/captcha.png", alt="")
+                +Input({
+                  text: true,
+                })
+          .visit-promo__license Лицензия №Л041-01137-77/00349073 от 03.06.2019г.
+
+            

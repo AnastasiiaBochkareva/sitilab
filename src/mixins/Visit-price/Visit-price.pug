@@ -1,0 +1,44 @@
+mixin Visit-price(param={})
+  .visit-price
+    .visit-price__content
+
+      .visit-price__head
+        .visit-price__head_title=param.title
+        .visit-price__head_subtitle=param.subtitle
+
+      .visit-price__body
+        .visit-price__body_row
+          div
+            .visit-price__body_title Москва
+            .visit-price__body_subtitle в пределах МКАД
+          .visit-price__body_cost 
+            div 735 ₽
+            div 1₽
+        .visit-price__body_row.visit-price__sale
+            div
+              .visit-price__body_title Москва
+              .visit-price__body_subtitle в пределах МКАД
+            .visit-price__body_cost 
+              div
+                img(src="/assets/img/categories/vnd/fire.png", alt="")
+                span 1750 ₽
+              div День в день ** 
+        .visit-price__body_row
+          div
+            .visit-price__body_title Москва
+            .visit-price__body_subtitle в пределах МКАД
+          .visit-price__body_cost 
+            div 1000 ₽
+            div 1000₽
+        each el, i in Array(5)
+          .visit-price__body_row
+            div
+              .visit-price__body_title Москва
+              .visit-price__body_subtitle в пределах МКАД
+            .visit-price__body_cost 735 ₽
+
+    .visit-price__map 
+      img(src="/assets/img/categories/vnd/map.png", alt="")
+  .visit-price__footnote
+    div * В стоимость выезда медсестры не включена стоимость лабораторных исследований и взятия биоматериала.
+    div ** Выезды день в день возможны только по согласованию с оператором службы выезда на дом.

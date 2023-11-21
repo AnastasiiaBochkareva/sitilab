@@ -1,0 +1,10 @@
+mixin Visit-service(param={})
+  .visit-service
+    .visit-service__title=param.title
+    .visit-service__subtitle=param.subtitle
+    +Visit-schedule({
+      scheduleTwo: true,
+      title: 'График приема заявок на выезд медицинской сестры:',
+      subtitle: 'Заявки принимаются круглосуточно, обрабатываются',
+      time: 'с 07:30 до 20:00',
+    })

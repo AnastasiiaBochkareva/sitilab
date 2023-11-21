@@ -1,0 +1,80 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    section.home-visit
+
+      section.vnd-container
+        include ../components/Visit-promo/Visit-promo
+
+      section.vnd-container
+        
+        +TabsNav({
+          items: [
+            { label: 'Анализы на дому', targetId: 'tab1' },
+            { label: 'Выезд терапевта', targetId: 'tab2' },
+            { label: 'Выезд Педиатра', targetId: 'tab3' },
+            { label: 'ЭКГ на дому', targetId: 'tab4' },
+            { label: 'Спермограмма на дому', targetId: 'tab5' },
+            { label: 'Вакцинация на дому', targetId: 'tab6' },
+            { label: 'Уколы, инъекции, Капельницы на дому', targetId: 'tab7' },
+          ],
+        })
+          
+        .tabb#tab1(style="width: 100%; height: max-content; background: none;")
+
+          .inner-content
+            include ../components/Actual/Actual
+          
+          .inner-content
+            +Visit-service({
+              title: 'Анализы на дому',
+              subtitle: 'по Москве и Московской области в пределах 60 км от МКАД'
+            })
+
+          .inner-content
+            +Visit-price({
+              title: 'Стоимость выезда медсестры *',
+              subtitle: 'Точная стоимость выезда по вашему адресу рассчитывается оператором службы выезда на дом'
+            })
+
+          .inner-content
+            include ../components/Visit-test/Visit-test
+
+          .inner-content
+            +Visit-attention({
+              title: 'Анализы, недоступные через выездную службу',
+              subtitle: 'Более подробную информацию о доступных исследованиях уточняйте у оператора при оформлении заявки.'
+            })
+
+          .inner-content
+            +Visit-result({
+              noTitle: true,
+            })
+          
+          .inner-content
+            +Visit-text({
+              title: 'Как правильно подготовиться к сдаче анализов',
+            })
+
+          .inner-content
+            +Visit-result({
+              title: 'Как получить результаты анализов'
+            })
+
+          .inner-content
+            include ../components/Visit-ask/Visit-ask
+        .tabb#tab2(style="width: 100%; height: 300px; background: pink; display: none;") content 2
+        .tabb#tab3(style="width: 100%; height: 300px; background: pink; display: none;") content 3
+        .tabb#tab4(style="width: 100%; height: 300px; background: pink; display: none;") content 4
+        .tabb#tab5(style="width: 100%; height: 300px; background: pink; display: none;") content 5
+        .tabb#tab6(style="width: 100%; height: 300px; background: pink; display: none;") content 6
+        .tabb#tab7(style="width: 100%; height: 300px; background: pink; display: none;") content 7
+        .tabb#tab8(style="width: 100%; height: 300px; background: pink; display: none;") content 8
+        .tabb#tab9(style="width: 100%; height: 300px; background: pink; display: none;") content 9
+
+    include _modals

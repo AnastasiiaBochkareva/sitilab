@@ -1,4 +1,7 @@
 .actual {
+  // padding-left: 59px;
+  // padding-right: 98px;
+  // padding: 80px 98px 40px 59px;
   &__title {
     color: var(--blue-gray, #3b4b64);
     text-align: center;
@@ -11,7 +14,7 @@
   }
   &__service-number {
     color: #c6ecf6;
-    font-family: 'Montserrat';
+    font-family: '' Montserrat ', sans-serif';
     font-size: 80px;
     font-style: normal;
     font-weight: 800;
@@ -32,11 +35,13 @@
     position: relative;
     padding-bottom: 8px;
     border-bottom: 4px solid #00abdf;
+    max-height: 73px;
+    height: 100%;
   }
   &__bottom {
     padding-top: 10px;
     color: var(--blue-gray, #3b4b64);
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -47,7 +52,8 @@
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    // column-gap: 60px;
+    column-gap: 60px;
+    row-gap: 20px;
     li {
       width: 100%;
       max-width: 240px;
@@ -88,6 +94,20 @@
       }
       &:nth-child(4) {
         left: 30px;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    padding-left: 0px;
+    padding-right: 0px;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__list {
+      li {
+        background: #fff;
+        box-shadow: 0px 20px 50px 0px rgba(196, 196, 196, 0.2);
+        padding: 24px 30px 40px;
       }
     }
   }

@@ -1,0 +1,24 @@
+.visit-service {
+  &__title {
+    color: #00abdf;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 100% */
+    letter-spacing: -0.64px;
+    margin-bottom: 7px;
+  }
+  &__subtitle {
+    color: var(--blue-gray, #3b4b64);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.36px;
+    margin-bottom: 40px;
+  }
+}

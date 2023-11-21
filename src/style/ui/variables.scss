@@ -15,7 +15,7 @@ $gray: #7e7e7e;
 $darkGray: #323640;
 
 // colors
-$text-1: #091e42;
+$text-1: var(--blue-gray, #3b4b64);
 $text-2: #42526e;
 $text-3: #6b778c;
 $text-4: #ffffff;

@@ -1,0 +1,26 @@
+.visit-text {
+  &__title {
+    color: var(--blue-gray, #3b4b64);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.56px;
+  }
+  &__block-one {
+    color: var(--blue-gray, #3b4b64);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: -0.36px;
+    margin-top: 26px;
+    > div {
+      display: flex;
+      column-gap: 4px;
+      margin-top: 4px;
+    }
+  }
+}

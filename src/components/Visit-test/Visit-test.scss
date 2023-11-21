@@ -1,0 +1,41 @@
+.visit-test {
+  display: flex;
+  // justify-content: space-between;
+  column-gap: 92px;
+  padding-left: 74px;
+  &__title {
+    color: var(--blue-gray, #3b4b64);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 136.364% */
+    letter-spacing: -0.44px;
+    max-width: 237px;
+    width: 100%;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    li {
+      display: flex;
+      align-items: center;
+      column-gap: 14px;
+      svg {
+        fill: #00abdf;
+        width: 14px;
+        height: 12px;
+      }
+      div {
+        color: var(--blue-gray, #3b4b64);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 133.333% */
+        letter-spacing: -0.36px;
+      }
+    }
+  }
+}

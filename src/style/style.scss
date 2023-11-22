@@ -79,5 +79,8 @@ ul {
   }
   .inner-content {
     padding: 40px 58px !important;
+    @media (max-width: 700px) {
+      padding: 0 !important;
+    }
   }
 }

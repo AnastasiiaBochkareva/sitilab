@@ -112,6 +112,9 @@
     }
   }
   @media (max-width: 700px) {
+    padding-left: 37px;
+    padding-right: 38px;
+    padding-top: 40px;
     &__list {
       flex-direction: column;
       li {

@@ -1,19 +1,10 @@
 .visit-promo {
-  &__banner {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    margin-left: 0;
-  }
-  &__head {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 38px;
-    letter-spacing: -0.02em;
-    text-align: center;
-  }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-left: 0;
+
   &__img {
     height: 624px;
     width: 50%;

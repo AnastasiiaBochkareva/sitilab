@@ -1,0 +1,18 @@
+.visit-head {
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+  @media (max-width: 700px) {
+    padding: 20px 38px;
+    &__title {
+      font-size: 22px;
+      line-height: 35px; /* 159.091% */
+      letter-spacing: -0.44px;
+    }
+  }
+}

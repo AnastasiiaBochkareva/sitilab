@@ -2,6 +2,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__col {
     // width: 20%;
@@ -42,7 +43,7 @@
       }
     }
   }
-  &__decsription {
+  &__description {
     max-width: 180px;
     width: 100%;
     color: var(--blue-gray, #3b4b64);
@@ -75,5 +76,19 @@
     line-height: 28px; /* 100% */
     letter-spacing: -0.56px;
     margin-bottom: 40px;
+  }
+  @media (max-width: 700px) {
+    padding: 50px 37px 50px 38px;
+    border-top: 1px solid var(--gray1, #b2bac6);
+    &__content {
+      flex-direction: column;
+    }
+    &__col {
+      display: flex;
+      width: 100%;
+    }
+    &__description {
+      max-width: 100%;
+    }
   }
 }

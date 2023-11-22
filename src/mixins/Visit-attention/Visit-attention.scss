@@ -1,5 +1,6 @@
 .visit-attention {
   display: flex;
+  flex-wrap: wrap;
   // justify-content: space-between;
   column-gap: 130px;
   background-color: rgba(249, 172, 1, 0.05);
@@ -54,5 +55,10 @@
         border-radius: 100%;
       }
     }
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+    padding: 14px 37px 40px 38px;
+    border-top: 1px solid var(--gray1, #b2bac6);
   }
 }

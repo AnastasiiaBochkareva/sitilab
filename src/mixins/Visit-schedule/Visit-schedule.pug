@@ -7,7 +7,7 @@ mixin Visit-schedule(param={})
         .visit-schedule__title=param.title
         .visit-schedule__content
           .visit-schedule__subtitle=param.subtitle
-          .visit-schedule__time=param.time
+            .visit-schedule__time=param.time
         
     if(param.scheduleTwo)
       div
@@ -15,10 +15,10 @@ mixin Visit-schedule(param={})
         .visit-schedule__title=param.title
         .visit-schedule__content
           .visit-schedule__subtitle=param.subtitle
-          .visit-schedule__time=param.time
+            .visit-schedule__time=param.time
       div
         +icon('icon-done')
         .visit-schedule__title=param.title
         .visit-schedule__content
           .visit-schedule__subtitle=param.subtitle
-          .visit-schedule__time=param.time
+            .visit-schedule__time=param.time

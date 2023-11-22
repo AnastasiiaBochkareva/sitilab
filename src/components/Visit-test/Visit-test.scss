@@ -26,6 +26,7 @@
         fill: #00abdf;
         width: 14px;
         height: 12px;
+        min-width: 14px;
       }
       div {
         color: var(--blue-gray, #3b4b64);
@@ -47,6 +48,14 @@
     border-top: 1px solid var(--gray1, #b2bac6);
     &__title {
       margin-bottom: 15px;
+    }
+    &__list {
+      li {
+        svg {
+          width: 13px;
+          min-width: 13px;
+        }
+      }
     }
   }
 }

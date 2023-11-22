@@ -49,5 +49,21 @@
   }
   @media (max-width: 700px) {
     padding: 30px 37px 41px 38px;
+    &__title {
+      font-size: 22px;
+      line-height: 28px; /* 127.273% */
+      letter-spacing: -0.44px;
+    }
+    &__subtitle {
+      margin: 22px 0 30px;
+      text-align: start;
+    }
+    &__btn {
+      padding: 6px 46px;
+      text-align: start;
+    }
+    svg {
+      bottom: 17px;
+    }
   }
 }

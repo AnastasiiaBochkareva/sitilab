@@ -17,16 +17,17 @@ block content
         
         +TabsNav({
           items: [
-            { label: 'Анализы на дому', targetId: 'tab1' },
-            { label: 'Выезд терапевта', targetId: 'tab2' },
-            { label: 'Выезд Педиатра', targetId: 'tab3' },
-            { label: 'ЭКГ на дому', targetId: 'tab4' },
-            { label: 'Спермограмма на дому', targetId: 'tab5' },
-            { label: 'Вакцинация на дому', targetId: 'tab6' },
-            { label: 'Уколы, инъекции, Капельницы на дому', targetId: 'tab7' },
+            { label: 'Анализы<br>на дому', targetId: 'tab1', svg: 'test' },
+            { label: 'Выезд<br>Терапевта', targetId: 'tab2', svg: 'doctor' },
+            { label: 'Выезд<br>Педиатра', targetId: 'tab3', svg: 'doctor' },
+            { label: 'ЭКГ<br>на дому', targetId: 'tab4', svg: 'heart' },
+            { label: 'Спермограмма<br>на дому', targetId: 'tab5', svg: 'sperm' },
+            { label: 'Вакцинация<br>на дому', targetId: 'tab6', svg: 'vaccine' },
+            { label: 'Уколы, инъекции,<br>капельницы<br>на дому', targetId: 'tab7', svg: 'injection' },
           ],
         })
           
+      section.vnd-container
         .tabb#tab1(style="width: 100%; height: max-content; background: none;")
 
           .inner-content
@@ -38,7 +39,7 @@ block content
               subtitle: 'по Москве и Московской области в пределах 60 км от МКАД'
             })
 
-          .inner-content
+          .inner-content.show-list
             +Visit-price({
               title: 'Стоимость выезда медсестры *',
               subtitle: 'Точная стоимость выезда по вашему адресу рассчитывается оператором службы выезда на дом'

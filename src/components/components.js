@@ -14,6 +14,7 @@ import '@/components/ui/scrollTo/scrollTo';
 import '@/components/ui/Tabs/TabsNav';
 
 import '@/mixins/Header/Header';
+import '@/mixins/Visit-price/Visit-price';
 
 import MyModal from '@/components/ui/MyModal/MyModal';
 import Filters from '@/components/ui/Filters/Filters';

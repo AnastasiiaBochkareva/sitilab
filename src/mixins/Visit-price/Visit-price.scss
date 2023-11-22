@@ -1,3 +1,33 @@
+.show-list {
+  .visit-price {
+    &__content {
+      display: flex;
+    }
+    &__btn-list {
+      svg {
+        stroke: #00abdf;
+      }
+      span {
+        color: #00abdf;
+      }
+    }
+  }
+}
+.show-map {
+  .visit-price {
+    &__map {
+      display: block;
+    }
+    &__btn-map {
+      svg {
+        fill: #00abdf;
+      }
+      span {
+        color: #00abdf;
+      }
+    }
+  }
+}
 .visit-price {
   // margin-top: 60px;
   margin-bottom: 25px;
@@ -180,5 +210,121 @@
     font-weight: 400;
     line-height: 24px; /* 171.429% */
     letter-spacing: -0.28px;
+  }
+  &__btn {
+    display: none;
+  }
+  &__btn-list {
+    align-items: center;
+    display: flex;
+    width: 50%;
+    column-gap: 12px;
+    span {
+      color: var(--gray2, #8e9aab);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+      letter-spacing: 0.5px;
+    }
+    svg {
+      fill: #8e9aab;
+      stroke: #8e9aab;
+      height: 18px;
+      width: 18px;
+    }
+  }
+  &__btn-map {
+    align-items: center;
+    display: flex;
+    width: 50%;
+    column-gap: 3px;
+    span {
+      color: var(--gray2, #8e9aab);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+      letter-spacing: 0.5px;
+    }
+    svg {
+      fill: #8e9aab;
+      // stroke: #8e9aab;
+      height: 26px;
+      width: 26px;
+    }
+  }
+  @media (max-width: 1000px) {
+    margin-bottom: 0;
+    &__body {
+      &_cost {
+        flex-direction: column;
+        row-gap: 10px;
+        > div {
+          &:nth-child(1) {
+            // padding: 3px 12px 3px 8px !important;
+            column-gap: 4px !important;
+          }
+        }
+      }
+      &_row {
+        padding: 22px;
+        > div {
+          &:nth-child(1) {
+            padding-left: 50px;
+          }
+        }
+      }
+    }
+    &__footnote {
+      padding: 15px 22px 50px;
+    }
+    &__content {
+      max-width: 100%;
+      display: none;
+    }
+    &__map {
+      display: none;
+    }
+    &__btn {
+      display: flex;
+      padding: 0 36px 16px;
+    }
+    &__btn-list:hover {
+      cursor: pointer;
+      svg {
+        stroke: #00abdf;
+      }
+      span {
+        color: #00abdf;
+      }
+    }
+    &__btn-map:hover {
+      cursor: pointer;
+      svg {
+        fill: #00abdf;
+      }
+      span {
+        color: #00abdf;
+      }
+    }
+    &__sale {
+      .visit-price {
+        &__body {
+          &_cost {
+            flex-direction: column;
+            row-gap: 0px;
+            > div {
+              &:nth-child(1) {
+                padding: 3px 12px 3px 8px !important;
+                column-gap: 4px !important;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

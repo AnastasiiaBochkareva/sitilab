@@ -1,6 +1,7 @@
 mixin Visit-text(param={})
   .visit-text
-    .visit-text__title=param.title
+    if(param.title)
+      .visit-text__title=param.title
     .visit-text__block-one
       //- .visit-text__subtitle=param.subtitle
       p Правила подготовки отличаются для разных лабораторных исследований и типа биоматериала. Заранее уточните у лечащего врача или специалиста лаборатории условия, которые необходимо соблюдать для получения достоверных результатов.

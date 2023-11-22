@@ -1,5 +1,13 @@
 mixin Visit-price(param={})
-  .visit-price
+  .visit-price__btn
+    .visit-price__btn-list(data-show-type='list')
+      +icon('icon-list')
+      span Списком
+    .visit-price__btn-map(data-show-type='map')
+      +icon('icon-map')
+      span На карте
+  
+  .visit-price 
     .visit-price__content
 
       .visit-price__head
@@ -39,6 +47,7 @@ mixin Visit-price(param={})
 
     .visit-price__map 
       img(src="/assets/img/categories/vnd/map.png", alt="")
+
   .visit-price__footnote
     div * В стоимость выезда медсестры не включена стоимость лабораторных исследований и взятия биоматериала.
     div ** Выезды день в день возможны только по согласованию с оператором службы выезда на дом.

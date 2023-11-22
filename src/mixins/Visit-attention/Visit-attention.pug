@@ -3,14 +3,13 @@ mixin Visit-attention(param={})
     div
       +icon('icon-attention')
       .visit-attention__title=param.title
-      .visit-attention__sutitle=param.subtitle
-    div
-      ul.visit-attention__list 
-        li Взятие урогенитальных мазков и соскобов
-        li  Взятие гинекологических мазков
-        li  Взятие соскобов на демодекс
-        li  Взятие секрета предстательной железы
-        li  Взятие мазков из раны
-        li  Пункции, биопсии и другие хирургические действия
-        li  Соскоб кожи
-        li  Глюкозотолерантный тест
+    .visit-attention__subtitle=param.subtitle
+    ul.visit-attention__list 
+      li Взятие урогенитальных мазков и соскобов
+      li  Взятие гинекологических мазков
+      li  Взятие соскобов на демодекс
+      li  Взятие секрета предстательной железы
+      li  Взятие мазков из раны
+      li  Пункции, биопсии и другие хирургические действия
+      li  Соскоб кожи
+      li  Глюкозотолерантный тест

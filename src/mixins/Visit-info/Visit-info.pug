@@ -1,0 +1,55 @@
+mixin Visit-info(param={})
+  .visit-info
+    .visit-info__text
+      .visit-info__text-one=param.textOne
+      .visit-info__text-two=param.textTwo
+
+    if(param.title)
+      .visit-info__title=param.title
+    if(param.infoTherapist)
+      ul.visit-info__list
+        li 
+          +icon('icon-check')
+          span соберет жалобы;
+        li 
+          +icon('icon-check')
+          span проведет опрос и осмотр;
+        li 
+          +icon('icon-check')
+          span поставит предварительный диагноз;
+        li 
+          +icon('icon-check')
+          span назначит лечение;
+        li 
+          +icon('icon-check')
+          span при необходимости направит на дополнительное обследование;
+        li 
+          +icon('icon-check')
+          span поможет справиться как с легким недомоганием, так и с обострением хронического заболевания;
+        li 
+          +icon('icon-check')
+          span оформит больничный лист при наличии показаний.
+
+    if(param.infoPediatrician)
+      ul.visit-info__list
+        li 
+          +icon('icon-check')
+          span соберет жалобы, анамнез;
+        li 
+          +icon('icon-check')
+          span осуществит осмотр;
+        li 
+          +icon('icon-check')
+          span установит предварительный диагноз;
+        li 
+          +icon('icon-check')
+          span назначит лечение;
+        li 
+          +icon('icon-check')
+          span отправит медицинскую сестру, если нужно взять анализы;
+        li 
+          +icon('icon-check')
+          span оформит больничный лист по уходу за ребенком или выдаст справку.
+          
+
+

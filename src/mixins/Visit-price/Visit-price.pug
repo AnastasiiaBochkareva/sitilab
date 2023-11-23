@@ -12,7 +12,8 @@ mixin Visit-price(param={})
 
       .visit-price__head
         .visit-price__head_title=param.title
-        .visit-price__head_subtitle=param.subtitle
+        if(param.subtitle)
+          .visit-price__head_subtitle=param.subtitle
 
       .visit-price__body
         .visit-price__body_row
@@ -48,6 +49,21 @@ mixin Visit-price(param={})
     .visit-price__map 
       img(src="/assets/img/categories/vnd/map.png", alt="")
 
-  .visit-price__footnote
-    div * В стоимость выезда медсестры не включена стоимость лабораторных исследований и взятия биоматериала.
-    div ** Выезды день в день возможны только по согласованию с оператором службы выезда на дом.
+  if(param.footnoteOne)
+    .visit-price__footnote
+      div * В стоимость выезда терапевта не включена стоимость лабораторных исследований и взятия биоматериала.
+  if(param.footnoteTwo)
+    .visit-price__footnote
+      div * В стоимость выезда медсестры не включена стоимость лабораторных исследований и взятия биоматериала.
+      div ** Выезды день в день возможны только по согласованию с оператором службы выезда на дом.
+  if(param.footnoteThree)
+    .visit-price__footnote.visit-price__footnote-three
+      .visit-price__contraindications Имеются противопоказания. Необходима консультация специалиста.
+      div * В стоимость выезда терапевта не включена стоимость лабораторных исследований и взятия биоматериала.
+      div Вакцинация - самый эффективный способ профилактики гриппа. Сезон ежегодной иммунизации начинается в сентябре. Успейте защитить себя от тяжелых форм болезни, пройдя процедуру вакцинации на дому. 
+      div Наши специалисты могут выехать к Вам в офис, если количество вакцинируемых будет не менее 10 человек.
+  if(param.footnoteFour)
+    .visit-price__footnote.visit-price__footnote-three
+      .visit-price__contraindications Имеются противопоказания. Необходима консультация специалиста.
+      div * В стоимость услуги не входит цена лекарственного препарата и его введение.
+      div Чтобы не записываться в клинику и не ждать в очереди, Вы можете вызвать медицинскую сестру для проведения курса инъекционной терапии.

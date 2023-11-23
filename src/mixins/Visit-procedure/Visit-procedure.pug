@@ -1,0 +1,83 @@
+mixin Visit-procedure(param={})
+  .visit-procedure
+    .visit-procedure__title=param.title
+    .visit-procedure__list
+
+      if(param.heart)
+        .visit-procedure__row
+          .visit-procedure__name
+            .visit-procedure__name-title Проведение электрокардиографического исследования
+            .visit-procedure__name-subtitle без учета стоимости выезда медсестры
+          .visit-procedure__price 735 ₽
+
+      if(param.sperm)
+        .visit-procedure__row
+          .visit-procedure__name
+            .visit-procedure__name-title Тест на фрагментацию ДНК сперматозоидов методом TUNEL
+            .visit-procedure__name-subtitle без учета стоимости выезда курьера
+          .visit-procedure__price 10355 ₽
+        .visit-procedure__row
+          .visit-procedure__name
+            .visit-procedure__promotion
+              .visit-procedure__name-title Исследование осадка эякулята
+              .visit-procedure__exclusive Эксклюзив
+            .visit-procedure__name-subtitle без учета стоимости выезда курьера
+          .visit-procedure__price 9565 ₽
+        .visit-procedure__row
+          .visit-procedure__name
+            .visit-procedure__name-title Спермограмма с морфологией по Крюгеру
+            .visit-procedure__name-subtitle без учета стоимости выезда курьера
+          .visit-procedure__price 2205 ₽
+        .visit-procedure__row
+          .visit-procedure__name
+            .visit-procedure__name-title Биохимия спермы
+            .visit-procedure__name-subtitle без учета стоимости выезда курьера
+          .visit-procedure__price 1890 ₽
+        .visit-procedure__row
+          .visit-procedure__name
+            .visit-procedure__name-title Диагностические профили и  многие другие исследования
+            .visit-procedure__name-subtitle без учета стоимости выезда курьера
+
+      if(param.vaccine)
+          .visit-procedure__row
+            .visit-procedure__name
+              .visit-procedure__name-title Вакцинация против гриппа вакциной Ультрикс Квадри 
+              .visit-procedure__name-subtitle без учета стоимости выезда курьера
+            .visit-procedure__price 10355 ₽
+          .visit-procedure__row
+            .visit-procedure__name
+              .visit-procedure__name-title Вакцинация против гриппа вакциной Гриппол Квадривалент
+              .visit-procedure__name-subtitle без учета стоимости выезда курьера
+            .visit-procedure__price 9565 ₽
+          .visit-procedure__row
+            .visit-procedure__name
+              .visit-procedure__name-title Вакцинация против гриппа вакциной Флю-М Тетра
+              .visit-procedure__name-subtitle без учета стоимости выезда курьера
+            .visit-procedure__price 2205 ₽
+          .visit-procedure__row
+            .visit-procedure__name
+              .visit-procedure__name-title Вакцинация против гриппа вакциной Флю-М
+              .visit-procedure__name-subtitle без учета стоимости выезда курьера
+            .visit-procedure__price 1890 ₽
+
+      if(param.injection)
+        .visit-procedure__row
+          .visit-procedure__name
+            .visit-procedure__name-title Внутривенное капельное введение лекарственных препаратов
+            .visit-procedure__name-subtitle без учета стоимости лекарственного препарата и выезда медсестры
+          .visit-procedure__price 1100 ₽ / час **
+        .visit-procedure__footnote.footnote-mobile ** Стоимость указана за минимальное время введения препарата - 1 час. 
+        .visit-procedure__row
+          .visit-procedure__name
+            .visit-procedure__name-title Внутривенное струйное введение лекарственных препаратов
+            .visit-procedure__name-subtitle без учета стоимости лекарственного препарата и выезда медсестры
+          .visit-procedure__price 350 ₽
+        .visit-procedure__row
+          .visit-procedure__name
+            .visit-procedure__name-title Внутримышечное введение лекарственных препаратов
+            .visit-procedure__name-subtitle без учета стоимости лекарственного препарата и выезда медсестры
+          .visit-procedure__price 300 ₽
+  if(param.footnote)
+    .visit-procedure__footnote.footnote-desktop ** Стоимость указана за минимальное время введения препарата - 1 час. 
+
+            

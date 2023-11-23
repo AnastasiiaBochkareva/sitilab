@@ -7,6 +7,9 @@ mixin TabsNav(param = {})
 
     - param.items = param.items || [{ label: 'test 1', targetId: 'test2' }, { label: 'test 2', targetId: 'test2' }]
 
+    .tabs-car 
+      img(src="/assets/img/categories/vnd/car.png", alt="")
+
     .tabs-nav
 
         - for (let i = 0; i < param.items.length; i++)

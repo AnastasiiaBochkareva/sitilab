@@ -36,13 +36,15 @@ block content
           .inner-content
             +Visit-service({
               title: 'Анализы на дому',
-              subtitle: 'по Москве и Московской области в пределах 60 км от МКАД'
+              subtitle: 'по Москве и Московской области в пределах 60 км от МКАД',
+              serviceAnalysis: true
             })
 
           .inner-content.show-list
             +Visit-price({
               title: 'Стоимость выезда медсестры *',
-              subtitle: 'Точная стоимость выезда по вашему адресу рассчитывается оператором службы выезда на дом'
+              subtitle: 'Точная стоимость выезда по вашему адресу рассчитывается оператором службы выезда на дом',
+              footnoteTwo: true
             })
 
           .inner-content
@@ -50,6 +52,7 @@ block content
 
           .inner-content
             +Visit-attention({
+              attentionAnalysis: true,
               title: 'Анализы, недоступные через выездную службу',
               subtitle: 'Более подробную информацию о доступных исследованиях уточняйте у оператора при оформлении заявки.'
             })
@@ -71,13 +74,184 @@ block content
 
           .inner-content
             include ../components/Visit-ask/Visit-ask
-        .tabb#tab2(style="width: 100%; height: 300px; background: pink; display: none;") content 2
-        .tabb#tab3(style="width: 100%; height: 300px; background: pink; display: none;") content 3
-        .tabb#tab4(style="width: 100%; height: 300px; background: pink; display: none;") content 4
-        .tabb#tab5(style="width: 100%; height: 300px; background: pink; display: none;") content 5
-        .tabb#tab6(style="width: 100%; height: 300px; background: pink; display: none;") content 6
-        .tabb#tab7(style="width: 100%; height: 300px; background: pink; display: none;") content 7
+
+        .tabb#tab2(style="width: 100%; height: 300px; display: none;")
+
+          .inner-content
+            +Visit-service({
+            title: 'Выезд терапевта',
+            subtitle: 'по Москве и Московской области в пределах 30 км от МКАД',
+            serviceTherapist: true
+          })
+
+          .inner-content.show-list
+            +Visit-price({
+              title: 'Стоимость выезда терапевта *',
+              subtitle: 'Точная стоимость выезда по вашему адресу рассчитывается оператором службы выезда на дом',
+              footnoteOne: true
+            })
+
+          .inner-content
+            +Visit-info({
+              textOne: 'Квалифицированная медицинская помощь у вас дома. Медицинский персонал имеет при себе полный комплект необходимых медицинских инструментов, строго соблюдает санитарно-гигиенические нормы и протоколы диагностики и лечения.',
+              textTwo: 'Выезд на дом – это удобно.',
+              title: 'Врач-терапевт:',
+              infoTherapist: true
+            })
+
+          .inner-content 
+            +Visit-documents({
+              documentsTherapist: true
+            })  
+
+        .tabb#tab3(style="width: 100%; height: 300px; display: none;") 
+
+          .inner-content 
+            +Visit-service({
+            title: 'Выезд педиатра',
+            subtitle: 'по Москве в пределах МКАД',
+            servicePediatrician: true
+          })
+
+          .inner-content.show-list
+            +Visit-price({
+              title: 'Стоимость выезда педиатра *',
+              footnoteOne: true
+            })
+
+          .inner-content
+            +Visit-info({
+              textOne: 'Мы заботимся о здоровье самых маленьких пациентов. Когда ребенок чувствует себя плохо, лучшим решением будет вызвать специалиста на дом, чтобы получить консультацию врача в кратчайшие сроки.',
+              textTwo: 'Врач-педиатр поможет малышу и проконсультирует родителей по медицинским вопросам.',
+              title: 'Врач-педиатр:',
+              infoPediatrician: true
+            })
+
+          .inner-content 
+            +Visit-documents({
+              documentsPediatrician: true
+            })
+
+        .tabb#tab4(style="width: 100%; height: 300px; display: none;") 
+
+          .inner-content 
+            +Visit-service({
+            title: 'ЭКГ на дому',
+            subtitle: 'по Москве и Московской области в пределах 60 км от МКАД',
+            serviceHeart: true
+          })
+
+          .inner-content.show-list
+            +Visit-price({
+              title: 'Стоимость выезда медсестры *',
+              subtitle: 'Точная стоимость выезда по вашему адресу рассчитывается оператором службы выезда на дом',
+              footnoteTwo: true
+            })
+
+          .inner-content
+            +Visit-info({
+              textOne: 'Врачи рекомендуют снимать ЭКГ в состоянии спокойствия, но для многих поход в медицинское учреждение сам по себе является стрессом.',
+              textTwo: 'Наш специалист приедет к вам и запишет показатели работы сердца в привычной домашней обстановке с использованием портативного устройства. Врач оформит заключение, которое будет отправлено на электронную почту в этот же день.',
+              title: false
+            })
+
+          .inner-content 
+            +Visit-procedure({
+              title: 'Лаборатория СИТИЛАБ оказывает услугу по ЭКГ:',
+              heart: true,
+            })
+
+        .tabb#tab5(style="width: 100%; height: 300px; display: none;") 
+
+          .inner-content 
+            +Visit-service({
+            title: 'Спермограмма на дому',
+            subtitle: 'по Москве в пределах МКАД',
+            serviceSperm: true
+          })
+
+          .inner-content.show-list
+            +Visit-price({
+              title: 'Стоимость выезда курьера',
+              footnoteTwo: false
+            })
+
+          .inner-content
+            +Visit-info({
+              textOne: 'Сдайте исследование в комфортной обстановке.',
+              textTwo: 'Вам больше не нужно тратить время на дорогу и ожидание, достаточно оформить заказ и передать биоматериал курьеру СИТИЛАБ, остальное – наша работа!',
+              title: false
+            })
+
+          .inner-content 
+            +Visit-attention({
+              title: 'Пожалуйста, внимательно изучите:',
+              attentionSperm: true,
+            })
+
+          .inner-content 
+            +Visit-procedure({
+              title: 'Лаборатория СИТИЛАБ проводит полный комплекс исследований эякулята:',
+              sperm: true,
+            })
+
+
+        .tabb#tab6(style="width: 100%; height: 300px; display: none;") 
+
+          .inner-content 
+            +Visit-service({
+            title: 'Вакцинация на дому',
+            subtitle: 'по Москве в пределах МКАД',
+            serviceVaccination: true
+          })
+
+          .inner-content.show-list
+            +Visit-price({
+              title: 'Стоимость осмотра врача перед вакцинацией на дому *',
+              footnoteThree: true
+            })
+
+          .inner-content 
+            +Visit-attention({
+              title: 'Услуга предоставляется для лиц старше 18 лет. Перед процедурой выполняется осмотр врачом-терапевтом.',
+              attentionVaccine: true,
+            })
+
+          .inner-content 
+            +Visit-procedure({
+              title: 'Лаборатория СИТИЛАБ оказывает услуги по вакцинации:',
+              vaccine: true,
+            })
+
+        .tabb#tab7(style="width: 100%; height: 300px; display: none;") 
+
+          .inner-content 
+            +Visit-service({
+            title: 'Уколы, инъекции, капельницы на дому',
+            subtitle: 'по Москве в пределах МКАД',
+            serviceInjection: true
+          })
+
+          .inner-content.show-list
+            +Visit-price({
+              title: 'Стоимость выезда медсестры *',
+              footnoteFour: true
+            })
+
+          .inner-content 
+            +Visit-attention({
+              title: 'Услуга предоставляется для лиц старше 18 лет по направлению врача.',
+              attentionVaccine: true,
+            })
+
+          .inner-content 
+            +Visit-procedure({
+              title: 'Лаборатория СИТИЛАБ оказывает услуги по внутривенным и внутримышечным введениям препаратов:',
+              injection: true,
+              footnote: true,
+            })
+
         .tabb#tab8(style="width: 100%; height: 300px; background: pink; display: none;") content 8
         .tabb#tab9(style="width: 100%; height: 300px; background: pink; display: none;") content 9
 
-    include _modals
+    //- include _modals

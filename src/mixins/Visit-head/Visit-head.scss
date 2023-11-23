@@ -7,6 +7,14 @@
     letter-spacing: -0.02em;
     text-align: center;
   }
+  @media (max-width: 720px) {
+    &__title {
+      p {
+        display: inline;
+      }
+    }
+  }
+
   @media (max-width: 700px) {
     padding: 20px 38px;
     &__title {

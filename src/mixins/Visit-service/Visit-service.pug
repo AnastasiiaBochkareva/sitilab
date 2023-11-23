@@ -2,9 +2,99 @@ mixin Visit-service(param={})
   .visit-service
     .visit-service__title=param.title
     .visit-service__subtitle=param.subtitle
-    +Visit-schedule({
-      scheduleTwo: true,
-      title: 'График приема заявок на выезд медицинской сестры:',
-      subtitle: 'Заявки принимаются круглосуточно, обрабатываются',
-      time: 'с 07:30 до 20:00',
-    })
+    
+    if(param.serviceAnalysis)
+      div
+        .visit-schedule
+          +icon('icon-calendar')
+          .visit-schedule__title График приема заявок на выезд медицинской сестры:
+          .visit-schedule__content
+            .visit-schedule__subtitle Заявки принимаются круглосуточно, обрабатываются
+              .visit-schedule__time с 07:30 до 20:00
+          
+        .visit-schedule
+          +icon('icon-done')
+          .visit-schedule__title График выезда медицинской сестры:
+          .visit-schedule__content
+            .visit-schedule__subtitle ежедневно
+              .visit-schedule__time с 07:00 до 19:00
+
+    if(param.serviceTherapist)
+      div
+        .visit-schedule.visit-schedule-warning
+          .visit-schedule__col
+            +icon('icon-done')
+            .visit-schedule__title График приёма заявок на выезд терапевта:
+          .visit-schedule__content
+            .visit-schedule__subtitle ежедневно 
+              .visit-schedule__time с 07:30 до 20:00
+          .visit-schedule__warning 
+            img(src="/assets/img/categories/vnd/info-circle.png", alt="")
+            span Врач приедет в день приёма заявки, если Вы обратились до 17:00
+
+    if(param.servicePediatrician)
+      div
+        .visit-schedule.visit-schedule-warning
+          .visit-schedule__col
+            +icon('icon-done')
+            .visit-schedule__title График приёма заявок на выезд педиатра:
+          .visit-schedule__content
+            .visit-schedule__subtitle ежедневно 
+              .visit-schedule__time с 07:30 до 20:00
+          .visit-schedule__warning 
+            img(src="/assets/img/categories/vnd/info-circle.png", alt="")
+            span Врач приедет в день приёма заявки, если Вы обратились до 17:00
+      
+    if(param.serviceHeart)
+      div
+        .visit-schedule
+          +icon('icon-calendar')
+          .visit-schedule__title График приема заявок на выезд медицинской сестры:
+          .visit-schedule__content
+            .visit-schedule__subtitle Заявки принимаются круглосуточно, обрабатываются
+              .visit-schedule__time с 07:30 до 20:00
+          
+        .visit-schedule
+          +icon('icon-done')
+          .visit-schedule__title График выезда медицинской сестры:
+          .visit-schedule__content
+            .visit-schedule__subtitle ежедневно
+              .visit-schedule__time с 07:00 до 19:00
+
+    if(param.serviceSperm)
+      div
+        .visit-schedule
+          +icon('icon-calendar')
+          .visit-schedule__title График приема заявок на выезд курьера Ситилаб:
+          .visit-schedule__content
+            .visit-schedule__subtitle Заявки принимаются круглосуточно, обрабатываются
+              .visit-schedule__time с 07:30 до 20:00
+          
+        .visit-schedule
+          +icon('icon-done')
+          .visit-schedule__title График выезда курьера Ситилаб:
+          .visit-schedule__content
+            .visit-schedule__subtitle ежедневно
+              .visit-schedule__time с 12:00 до 19:00
+
+    if(param.serviceVaccination)
+      div
+        .visit-schedule.visit-schedule-warning
+          .visit-schedule__col
+            +icon('icon-done')
+            .visit-schedule__title График приёма заявок на выезд врача:
+          .visit-schedule__content
+            .visit-schedule__subtitle ежедневно 
+              .visit-schedule__time с 07:30 до 20:00
+          .visit-schedule__warning 
+            img(src="/assets/img/categories/vnd/info-circle.png", alt="")
+            span Врач приедет в день приёма заявки, если Вы обратились до 17:00
+    
+    if(param.serviceInjection)
+      div
+        .visit-schedule
+          +icon('icon-done')
+          .visit-schedule__title График приёма заявок на выезд медицинской сестры:
+          .visit-schedule__content
+            .visit-schedule__subtitle ежедневно
+              .visit-schedule__time с 07:00 до 20:00

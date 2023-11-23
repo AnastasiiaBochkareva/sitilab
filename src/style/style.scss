@@ -108,4 +108,59 @@ ul {
       padding: 0 !important;
     }
   }
+  &__tabs-img {
+    @media (max-width: 1500px) {
+      display: none;
+    }
+  }
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    .tabs-nav {
+      width: initial;
+      justify-content: center;
+      align-items: center;
+      padding-left: 35px;
+      padding-right: 35px;
+      &__btn {
+        width: 100%;
+        max-width: 168px;
+      }
+    }
+    .tabs-car {
+      @media (max-width: 1500px) {
+        width: 246.015px;
+        height: 115px;
+      }
+      img {
+        width: 140px;
+        height: 66px;
+        @media (max-width: 1500px) {
+          width: 246.015px;
+          height: 115px;
+        }
+      }
+    }
+
+    @media (max-width: 1000px) and (min-width: 700px) {
+      .tabs-mark {
+        // display: none;
+        img {
+        }
+      }
+      .tabs-car {
+        width: 246.015px;
+        height: 115px;
+        img {
+          width: 246.015px;
+          height: 115px;
+        }
+      }
+    }
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
 }

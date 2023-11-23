@@ -20,6 +20,28 @@
     background-size: 20px 1px;
     border: none;
   }
+  @media (max-width: 1500px) {
+    width: 246.015px;
+    height: 115px;
+  }
+}
+.tabs-mark {
+  img {
+    width: 56px;
+    height: 59px;
+  }
+  display: none;
+  @media (max-width: 1500px) {
+    display: block;
+  }
+}
+.tabs-img {
+  display: flex;
+  align-items: center;
+  column-gap: 38px;
+  @media (max-width: 1500px) {
+    justify-content: flex-end;
+  }
 }
 .tabs-nav {
   width: 100%;

@@ -15,6 +15,18 @@ block content
 
       section.vnd-container
         
+        .home-visit__tabs
+          +TabsNav({
+            items: [
+              { label: 'Анализы<br>на дому', targetId: 'tab8', svg: 'test' },
+              { label: 'Выезд<br>Педиатра', targetId: 'ta9', svg: 'doctor' },
+              { label: 'ЭКГ<br>на дому', targetId: 'tab10', svg: 'heart' },
+            ],
+          })
+          .home-visit__tabs-img 
+            img(src="/assets/img/categories/vnd/mark.png", alt="")
+
+
         +TabsNav({
           items: [
             { label: 'Анализы<br>на дому', targetId: 'tab1', svg: 'test' },
@@ -250,8 +262,5 @@ block content
               injection: true,
               footnote: true,
             })
-
-        .tabb#tab8(style="width: 100%; height: 300px; background: pink; display: none;") content 8
-        .tabb#tab9(style="width: 100%; height: 300px; background: pink; display: none;") content 9
 
     //- include _modals

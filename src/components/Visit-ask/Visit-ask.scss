@@ -61,9 +61,14 @@
     &__btn {
       padding: 6px 46px;
       text-align: start;
+      z-index: 2;
+      align-self: start;
     }
     svg {
       bottom: 17px;
+      width: 178px;
+      height: 155px;
+      z-index: 1;
     }
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { animate } from '@/js/utils';
 
 (function TabsNav() {
@@ -10,27 +11,37 @@ import { animate } from '@/js/utils';
     // hide
     const beforeActiveBtn = tabsNav.querySelector('.tabs-nav__btn.active');
     beforeActiveBtn.classList.remove('active');
-    const activeTab = document.getElementById(beforeActiveBtn.dataset.tabTarget);
-    await animate({
-      draw(progress) {
-        activeTab.style.opacity = 1 - progress;
-      },
+    const activeTabs = document.querySelectorAll(
+      `[data-tab-id="${beforeActiveBtn.dataset.tabTarget}"]`
+    );
+    activeTabs.forEach(async (activeTab) => {
+      await animate({
+        draw(progress) {
+          activeTab.style.opacity = 1 - progress;
+        },
+      });
+      activeTab.style.display = 'none';
+      activeTab.style.opacity = null;
     });
-    activeTab.style.display = 'none';
-    activeTab.style.opacity = null;
 
-    // show
-    tabBtn.classList.add('active');
-    const targetTab = document.getElementById(tabBtn.dataset.tabTarget);
-    targetTab.style.opacity = 0;
-    targetTab.style.display = null;
-    await animate({
-      draw(progress) {
-        targetTab.style.opacity = progress;
-      },
-    });
-    targetTab.style.opacity = null;
+    setTimeout(() => {
+      // show
+      tabBtn.classList.add('active');
+      const targetTabs = document.querySelectorAll(
+        `[data-tab-id="${tabBtn.dataset.tabTarget}"]`
+      );
+      targetTabs.forEach(async (targetTab) => {
+        targetTab.style.opacity = 0;
+        targetTab.style.display = null;
+        await animate({
+          draw(progress) {
+            targetTab.style.opacity = progress;
+          },
+        });
+        targetTab.style.opacity = null;
+      });
+    }, 300);
   };
 
   document.addEventListener('click', clickHandler);
-}());
+})();

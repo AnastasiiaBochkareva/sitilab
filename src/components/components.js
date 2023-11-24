@@ -15,6 +15,7 @@ import '@/components/ui/Tabs/TabsNav';
 
 // import '@/mixins/Header/Header';
 import '@/mixins/Visit-price/Visit-price';
+import '@/components/Visit-promo/Visit-promo';
 
 // import MyModal from '@/components/ui/MyModal/MyModal';
 // import Filters from '@/components/ui/Filters/Filters';

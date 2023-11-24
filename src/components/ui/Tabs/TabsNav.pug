@@ -8,7 +8,7 @@ mixin TabsNav(param = {})
     - param.items = param.items || [{ label: 'test 1', targetId: 'test2' }, { label: 'test 2', targetId: 'test2' }]
 
     .tabs-img
-      .tabs-car 
+      .tabs-car(id=param.isCar ? "car" : false)
         img(src="/assets/img/categories/vnd/car.png", alt="")
       .tabs-mark 
         img(src="/assets/img/categories/vnd/mark.png", alt="")

@@ -18,26 +18,27 @@ block content
         .home-visit__tabs
           +TabsNav({
             items: [
-              { label: 'Анализы<br>на дому', targetId: 'tab8', svg: 'test' },
-              { label: 'Выезд<br>Педиатра', targetId: 'ta9', svg: 'doctor' },
-              { label: 'ЭКГ<br>на дому', targetId: 'tab10', svg: 'heart' },
+              { label: 'Анализы<br>на дому', targetId: 'tab1', svg: 'test' },
+              { label: 'Выезд<br>Педиатра', targetId: 'tab3', svg: 'doctor' },
+              { label: 'ЭКГ<br>на дому', targetId: 'tab4', svg: 'heart' },
             ],
           })
           .home-visit__tabs-img 
             img(src="/assets/img/categories/vnd/mark.png", alt="")
 
-
-        +TabsNav({
-          items: [
-            { label: 'Анализы<br>на дому', targetId: 'tab1', svg: 'test' },
-            { label: 'Выезд<br>Терапевта', targetId: 'tab2', svg: 'doctor' },
-            { label: 'Выезд<br>Педиатра', targetId: 'tab3', svg: 'doctor' },
-            { label: 'ЭКГ<br>на дому', targetId: 'tab4', svg: 'heart' },
-            { label: 'Спермограмма<br>на дому', targetId: 'tab5', svg: 'sperm' },
-            { label: 'Вакцинация<br>на дому', targetId: 'tab6', svg: 'vaccine' },
-            { label: 'Уколы, инъекции,<br>капельницы<br>на дому', targetId: 'tab7', svg: 'injection' },
-          ],
-        })
+        .visit-home__tabs-full
+          +TabsNav({
+            items: [
+              { label: 'Анализы<br>на дому', targetId: 'tab1', svg: 'test' },
+              { label: 'Выезд<br>Терапевта', targetId: 'tab2', svg: 'doctor' },
+              { label: 'Выезд<br>Педиатра', targetId: 'tab3', svg: 'doctor' },
+              { label: 'ЭКГ<br>на дому', targetId: 'tab4', svg: 'heart' },
+              { label: 'Спермограмма<br>на дому', targetId: 'tab5', svg: 'sperm' },
+              { label: 'Вакцинация<br>на дому', targetId: 'tab6', svg: 'vaccine' },
+              { label: 'Уколы, инъекции,<br>капельницы<br>на дому', targetId: 'tab7', svg: 'injection' },
+            ],
+            isCar:true,
+          })
           
       section.vnd-container
         .tabb(style="width: 100%; height: max-content; background: none;" data-tab-id='tab1')

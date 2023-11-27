@@ -1,9 +1,13 @@
-.tabb(style="width: 100%; height: max-content; background: none;" data-tab-id='tab1')
-  .visit-promo
-    .visit-promo__img
-      img(src="/assets/img/categories/vnd/promo1.png", alt="")
-    .visit-promo__content
-        form.form   
+mixin Visit-promo(param = {})
+  .tabb(
+      style=`width: 100%; height: max-content; background: none; ${param.id !== 1 && 'display: none;'}`
+      data-tab-id=`tab${param.id}`
+    )
+    .visit-promo
+      .visit-promo__img
+        img(src=`/assets/img/categories/vnd/promo${param.id}.png`, alt="")
+      .visit-promo__content
+        form.form
           .visit-promo__title Закажите по телефону:
           .visit-promo__phone 8 (495) 147-01-71
           .visit-promo__title-sm или заполните форму заявки:
@@ -33,265 +37,28 @@
             +Checkbox({
               text: 'Я согласен на обработку',
             })
-            a(href="#") персональных данных 
+            a(href="#") персональных данных
           .visit-promo__captcha
             button.visit-promo__captcha_btn Отправить
             .visit-promo__confirm
               p Введите символы с картинки:
               div
-                div 
+                div
                   img(src="/assets/img/categories/vnd/captcha.png", alt="")
                 +Input({
                   text: true,
                 })
           .visit-promo__license Лицензия №Л041-01137-77/00349073 от 03.06.2019г.
 
-.tabb(style="width: 100%; height: max-content; display: none; background: none;" data-tab-id='tab2')
-  .visit-promo
-    .visit-promo__img
-      img(src="/assets/img/categories/vnd/promo2.png", alt="")
-    .visit-promo__content
-        form.form   
-          .visit-promo__title Закажите по телефону:
-          .visit-promo__phone 8 (495) 147-01-71
-          .visit-promo__title-sm или заполните форму заявки:
-          +Input({
-            text: true,
-            placeholder: 'ФИО *',
-          })
-          div
-            +Input({
-              text: true,
-              placeholder: '+7 (___) ___-__-__ *',
-            })
-            +Input({
-              text: true,
-              placeholder: 'Адрес выезда *',
-            })
-            +Input({
-              text: true,
-              placeholder: 'E-mail *',
-            })
-            +Input({
-              textarea: true,
-              placeholder: 'Комментарий',
-            })
-          .visit-promo__description * Поля, обязательные для заполнения
-          .visit-promo__agree
-            +Checkbox({
-              text: 'Я согласен на обработку',
-            })
-            a(href="#") персональных данных 
-          .visit-promo__captcha
-            button.visit-promo__captcha_btn Отправить
-            .visit-promo__confirm
-              p Введите символы с картинки:
-              div
-                div 
-                  img(src="/assets/img/categories/vnd/captcha.png", alt="")
-                +Input({
-                  text: true,
-                })
-          .visit-promo__license Лицензия №Л041-01137-77/00349073 от 03.06.2019г.
-
-.tabb(style="width: 100%; height: max-content; display: none; background: none;" data-tab-id='tab3')
-  .visit-promo
-    .visit-promo__img
-      img(src="/assets/img/categories/vnd/promo3.png", alt="")
-    .visit-promo__content
-        form.form   
-          .visit-promo__title Закажите по телефону:
-          .visit-promo__phone 8 (495) 147-01-71
-          .visit-promo__title-sm или заполните форму заявки:
-          +Input({
-            text: true,
-            placeholder: 'ФИО *',
-          })
-          div
-            +Input({
-              text: true,
-              placeholder: '+7 (___) ___-__-__ *',
-            })
-            +Input({
-              text: true,
-              placeholder: 'Адрес выезда *',
-            })
-            +Input({
-              text: true,
-              placeholder: 'E-mail *',
-            })
-            +Input({
-              textarea: true,
-              placeholder: 'Комментарий',
-            })
-          .visit-promo__description * Поля, обязательные для заполнения
-          .visit-promo__agree
-            +Checkbox({
-              text: 'Я согласен на обработку',
-            })
-            a(href="#") персональных данных 
-          .visit-promo__captcha
-            button.visit-promo__captcha_btn Отправить
-            .visit-promo__confirm
-              p Введите символы с картинки:
-              div
-                div 
-                  img(src="/assets/img/categories/vnd/captcha.png", alt="")
-                +Input({
-                  text: true,
-                })
-          .visit-promo__license Лицензия №Л041-01137-77/00349073 от 03.06.2019г.
-
-.tabb(style="width: 100%; height: max-content; display: none; background: none;" data-tab-id='tab4')
-  .visit-promo
-    .visit-promo__img
-      img(src="/assets/img/categories/vnd/promo4.png", alt="")
-    .visit-promo__content
-        form.form   
-          .visit-promo__title Закажите по телефону:
-          .visit-promo__phone 8 (495) 147-01-71
-          .visit-promo__title-sm или заполните форму заявки:
-          +Input({
-            text: true,
-            placeholder: 'ФИО *',
-          })
-          div
-            +Input({
-              text: true,
-              placeholder: '+7 (___) ___-__-__ *',
-            })
-            +Input({
-              text: true,
-              placeholder: 'Адрес выезда *',
-            })
-            +Input({
-              text: true,
-              placeholder: 'E-mail *',
-            })
-            +Input({
-              textarea: true,
-              placeholder: 'Комментарий',
-            })
-          .visit-promo__description * Поля, обязательные для заполнения
-          .visit-promo__agree
-            +Checkbox({
-              text: 'Я согласен на обработку',
-            })
-            a(href="#") персональных данных 
-          .visit-promo__captcha
-            button.visit-promo__captcha_btn Отправить
-            .visit-promo__confirm
-              p Введите символы с картинки:
-              div
-                div 
-                  img(src="/assets/img/categories/vnd/captcha.png", alt="")
-                +Input({
-                  text: true,
-                })
-          .visit-promo__license Лицензия №Л041-01137-77/00349073 от 03.06.2019г.
-
-.tabb(style="width: 100%; height: max-content; display: none; background: none;" data-tab-id='tab5')
-  .visit-promo
-    .visit-promo__img
-      img(src="/assets/img/categories/vnd/promo5.png", alt="")
-    .visit-promo__content
-        form.form   
-          .visit-promo__title Закажите по телефону:
-          .visit-promo__phone 8 (495) 147-01-71
-          .visit-promo__title-sm или заполните форму заявки:
-          +Input({
-            text: true,
-            placeholder: 'ФИО *',
-          })
-          div
-            +Input({
-              text: true,
-              placeholder: '+7 (___) ___-__-__ *',
-            })
-            +Input({
-              text: true,
-              placeholder: 'Адрес выезда *',
-            })
-            +Input({
-              text: true,
-              placeholder: 'E-mail *',
-            })
-            +Input({
-              textarea: true,
-              placeholder: 'Комментарий',
-            })
-          .visit-promo__description * Поля, обязательные для заполнения
-          .visit-promo__agree
-            +Checkbox({
-              text: 'Я согласен на обработку',
-            })
-            a(href="#") персональных данных 
-          .visit-promo__captcha
-            button.visit-promo__captcha_btn Отправить
-            .visit-promo__confirm
-              p Введите символы с картинки:
-              div
-                div 
-                  img(src="/assets/img/categories/vnd/captcha.png", alt="")
-                +Input({
-                  text: true,
-                })
-          .visit-promo__license Лицензия №Л041-01137-77/00349073 от 03.06.2019г.
-
-.tabb(style="width: 100%; height: max-content; display: none; background: none;" data-tab-id='tab6')
-  .visit-promo
-    .visit-promo__img
-      img(src="/assets/img/categories/vnd/promo6.png", alt="")
-    .visit-promo__content
-        form.form   
-          .visit-promo__title Закажите по телефону:
-          .visit-promo__phone 8 (495) 147-01-71
-          .visit-promo__title-sm или заполните форму заявки:
-          +Input({
-            text: true,
-            placeholder: 'ФИО *',
-          })
-          div
-            +Input({
-              text: true,
-              placeholder: '+7 (___) ___-__-__ *',
-            })
-            +Input({
-              text: true,
-              placeholder: 'Адрес выезда *',
-            })
-            +Input({
-              text: true,
-              placeholder: 'E-mail *',
-            })
-            +Input({
-              textarea: true,
-              placeholder: 'Комментарий',
-            })
-          .visit-promo__description * Поля, обязательные для заполнения
-          .visit-promo__agree
-            +Checkbox({
-              text: 'Я согласен на обработку',
-            })
-            a(href="#") персональных данных 
-          .visit-promo__captcha
-            button.visit-promo__captcha_btn Отправить
-            .visit-promo__confirm
-              p Введите символы с картинки:
-              div
-                div 
-                  img(src="/assets/img/categories/vnd/captcha.png", alt="")
-                +Input({
-                  text: true,
-                })
-          .visit-promo__license Лицензия №Л041-01137-77/00349073 от 03.06.2019г.
+each i in [1,2,3,4,5,6]
+  +Visit-promo({id: i})
 
 .tabb(style="width: 100%; height: max-content; display: none; background: none;" data-tab-id='tab7')
   .visit-promo
     .visit-promo__img
       img(src="/assets/img/categories/vnd/promo7.png", alt="")
     .visit-promo__content
-        form.form   
+        form.form
           .visit-promo__title Закажите по телефону:
           .visit-promo__phone 8 (495) 147-01-71
           .visit-promo__title-sm или заполните форму заявки:
@@ -324,24 +91,23 @@
                 +Checkbox({
                   text: 'Я согласен на обработку',
                 })
-                a(href="#") персональных данных 
+                a(href="#") персональных данных
             .visit-promo__col
               +icon('file-plus')
               div
                 a(href="#") Прикрепить направление
-                span  или 
-                a(href="#") Получить направление у нашего терапевта 
+                span  или
+                a(href="#") Получить направление у нашего терапевта
 
           .visit-promo__captcha
             button.visit-promo__captcha_btn Отправить
             .visit-promo__confirm
               p Введите символы с картинки:
               div
-                div 
+                div
                   img(src="/assets/img/categories/vnd/captcha.png", alt="")
                 +Input({
                   text: true,
                 })
           .visit-promo__license Лицензия №Л041-01137-77/00349073 от 03.06.2019г.
-
-            
+//

@@ -2,8 +2,7 @@
 import { animate } from '@/js/utils';
 
 function moveCar(tabBtn, tabsNav) {
-  console.log(tabBtn);
-  console.log(tabsNav);
+  if (document.documentElement.clientWidth <= 1500) return;
   const btnLeft = tabBtn.offsetLeft;
   const tabsNavLeft = tabsNav.offsetLeft;
   const math = btnLeft - tabsNavLeft;
@@ -11,87 +10,73 @@ function moveCar(tabBtn, tabsNav) {
   const tabCar = document.querySelector('#car');
   tabCar.style.left = `${math}px`;
   const widthCar = tabCar.offsetWidth;
-  console.log(widthCar);
   const widthTabBtn = tabBtn.offsetWidth;
-  console.log(widthTabBtn);
   const space = widthTabBtn - widthCar;
-  console.log(space);
   const separate = space / 2;
-  console.log(separate);
   tabCar.style.marginLeft = `${separate}px`;
-  // console.log(tabsNavWidth);
 }
 
 (function TabsNav() {
   const clickHandler = async (e) => {
+
     const tabBtn = e.target.closest('.tabs-nav__btn');
     if (!tabBtn) return;
 
     const tabsNav = tabBtn.parentElement;
+    const beforeActiveBtn = tabsNav.querySelector('.tabs-nav__btn.active');
+    beforeActiveBtn?.classList.remove('active');
+    tabBtn.classList.add('active');
+    tabsNav.classList.add('blocked');
 
     moveCar(tabBtn, tabsNav);
 
     // hide
-    const beforeActiveBtn = tabsNav.querySelector('.tabs-nav__btn.active');
-    beforeActiveBtn?.classList.remove('active');
-    const activeTabs = document.querySelectorAll(
-      `[data-tab-id="${beforeActiveBtn?.dataset.tabTarget}"]`
-    );
-
-    // activeTabs.forEach(async (activeTab) => {
-    //   await animate({
-    //     draw(progress) {
-    //       activeTab.style.opacity = 1 - progress;
-    //     },
-    //   });
-    //   activeTab.style.display = 'none';
-    //   activeTab.style.opacity = null;
-    // });
-
-    // show
-
-    async function animateTabs() {
-      for (const activeTab of activeTabs) {
-        await animate({
-          draw(progress) {
-            activeTab.style.opacity = 1 - progress;
-          },
-        });
-        activeTab.style.display = 'none';
-        activeTab.style.opacity = null;
-        // console.log('forEach');
-      }
-      tabBtn.classList.add('active');
-      const targetTabs = document.querySelectorAll(
-        `[data-tab-id="${tabBtn.dataset.tabTarget}"]`
-      );
-      for (const targetTab of targetTabs) {
-        targetTab.style.opacity = 0;
-        targetTab.style.display = null;
-        await animate({
-          draw(progress) {
-            targetTab.style.opacity = progress;
-          },
-        });
-        targetTab.style.opacity = null;
-      }
+    const activeTab = document.getElementById(beforeActiveBtn?.dataset.tabTarget);
+    const activeTab1 = document.querySelector(`[data-tab-id="${beforeActiveBtn?.dataset.tabTarget}"]`);
+    if (activeTab) {
+      await animate({
+        draw(progress) {
+          activeTab.style.opacity = 1 - progress;
+          activeTab1.style.opacity = 1 - progress;
+        },
+      })
+      activeTab.style.display = 'none';
+      activeTab1.style.display = 'none';
+      activeTab.style.opacity = null;
+      activeTab1.style.opacity = null;
     }
 
-    animateTabs();
+    // show
+    const targetTab = document.getElementById(tabBtn.dataset.tabTarget);
+    const targetTab1 = document.querySelector(`[data-tab-id="${tabBtn?.dataset.tabTarget}"]`);
+    if (targetTab) {
+      targetTab.style.opacity = 0;
+      targetTab1.style.opacity = 0;
+      targetTab.style.display = null;
+      targetTab1.style.display = null;
+      await animate({
+        draw(progress) {
+          targetTab.style.opacity = progress;
+          targetTab1.style.opacity = progress;
+        },
+      });
+      targetTab.style.opacity = null;
+      targetTab1.style.opacity = null;
+    }
 
-    // targetTabs.forEach(async (targetTab) => {
-    //   targetTab.style.opacity = 0;
-    //   targetTab.style.display = null;
-    //   await animate({
-    //     draw(progress) {
-    //       targetTab.style.opacity = progress;
-    //     },
-    //   });
-    //   targetTab.style.opacity = null;
-    // });
+    setTimeout(() => {
+      tabsNav.classList.remove('blocked');
+    }, 100)
   };
 
-  document.addEventListener('click', clickHandler);
+  document.addEventListener('click', (e) => {
+    const tabBtn = e.target.closest('.tabs-nav__btn');
+    if (!tabBtn) return;
+
+    const tabsNav = tabBtn.parentElement;
+    if (tabsNav.classList.contains('blocked')) return;
+    clickHandler(e);
+  });
   document.addEventListener('DOMContentLoaded', () => {
     const var1 = document.querySelector(
       '.visit-home__tabs-full .tabs-nav__btn'

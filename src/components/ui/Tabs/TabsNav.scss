@@ -60,6 +60,32 @@
   overflow: auto;
   @include hideScroll();
 
+  &:not(.blocked) {
+    .tabs-nav__btn {
+      &:hover {
+        color: $text-1;
+        background-color: #00abdf;
+
+        span {
+          color: #fff;
+        }
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &.blocked {
+    .tabs-nav__btn {
+      &:hover {
+        cursor: initial;
+      }
+      &:not(.active) {
+        opacity: 0.6;
+      }
+    }
+  }
+
   &__btn {
     border-radius: 10px;
     border: 1.5px solid #00abdf;
@@ -67,7 +93,7 @@
     padding: 12px 0;
     color: $text-3;
     // white-space: nowrap;
-    transition: color $transition, box-shadow $transition;
+    transition: color $transition, box-shadow $transition, opacity 0.1s;
     height: 144px;
     // flex: 1 1 168px;
     width: calc(15% - 26px);
@@ -81,18 +107,6 @@
     row-gap: 12px;
     @media (max-width: 1500px) {
       width: calc(16.5% - 15px);
-    }
-
-    &:hover {
-      color: $text-1;
-      background-color: #00abdf;
-
-      span {
-        color: #fff;
-      }
-      svg {
-        fill: #fff;
-      }
     }
 
     &.active {

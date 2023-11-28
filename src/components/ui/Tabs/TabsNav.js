@@ -2,7 +2,7 @@
 import { animate } from '@/js/utils';
 
 function moveCar(tabBtn, tabsNav) {
-  if (document.documentElement.clientWidth <= 1500) return;
+  if (document.documentElement.clientWidth <= 1250) return;
   const btnLeft = tabBtn.offsetLeft;
   const tabsNavLeft = tabsNav.offsetLeft;
   const math = btnLeft - tabsNavLeft;
@@ -18,7 +18,6 @@ function moveCar(tabBtn, tabsNav) {
 
 (function TabsNav() {
   const clickHandler = async (e) => {
-
     const tabBtn = e.target.closest('.tabs-nav__btn');
     if (!tabBtn) return;
 
@@ -31,15 +30,19 @@ function moveCar(tabBtn, tabsNav) {
     moveCar(tabBtn, tabsNav);
 
     // hide
-    const activeTab = document.getElementById(beforeActiveBtn?.dataset.tabTarget);
-    const activeTab1 = document.querySelector(`[data-tab-id="${beforeActiveBtn?.dataset.tabTarget}"]`);
+    const activeTab = document.getElementById(
+      beforeActiveBtn?.dataset.tabTarget
+    );
+    const activeTab1 = document.querySelector(
+      `[data-tab-id="${beforeActiveBtn?.dataset.tabTarget}"]`
+    );
     if (activeTab) {
       await animate({
         draw(progress) {
           activeTab.style.opacity = 1 - progress;
           activeTab1.style.opacity = 1 - progress;
         },
-      })
+      });
       activeTab.style.display = 'none';
       activeTab1.style.display = 'none';
       activeTab.style.opacity = null;
@@ -48,7 +51,9 @@ function moveCar(tabBtn, tabsNav) {
 
     // show
     const targetTab = document.getElementById(tabBtn.dataset.tabTarget);
-    const targetTab1 = document.querySelector(`[data-tab-id="${tabBtn?.dataset.tabTarget}"]`);
+    const targetTab1 = document.querySelector(
+      `[data-tab-id="${tabBtn?.dataset.tabTarget}"]`
+    );
     if (targetTab) {
       targetTab.style.opacity = 0;
       targetTab1.style.opacity = 0;
@@ -66,7 +71,7 @@ function moveCar(tabBtn, tabsNav) {
 
     setTimeout(() => {
       tabsNav.classList.remove('blocked');
-    }, 100)
+    }, 100);
   };
 
   document.addEventListener('click', (e) => {

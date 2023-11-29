@@ -2,7 +2,7 @@
 function removeShowClass(element) {
   const arrayClasses = Array.from(element.classList);
   arrayClasses.forEach((item) => {
-    if (item.includes('show-')) {
+    if (item.includes('v-show-')) {
       element.classList.remove(item);
     }
   });
@@ -16,8 +16,8 @@ document.addEventListener('click', (event) => {
   if (!button && !parent && !nextParent) return;
   const showType = button.dataset.showType;
   if (showType) {
-    if (nextParent.classList.contains(`show-${showType}`)) return;
+    if (nextParent.classList.contains(`v-show-${showType}`)) return;
     removeShowClass(nextParent);
-    nextParent.classList.add(`show-${showType}`);
+    nextParent.classList.add(`v-show-${showType}`);
   }
 });

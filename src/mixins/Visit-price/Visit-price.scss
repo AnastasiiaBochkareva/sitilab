@@ -1,4 +1,4 @@
-.show-list {
+.v-show-list {
   .visit-price {
     &__content {
       display: flex;
@@ -13,10 +13,13 @@
     }
   }
 }
-.show-map {
+.v-show-map {
   .visit-price {
     &__map {
       display: block;
+      img {
+        height: 100%;
+      }
     }
     &__btn-map {
       svg {

@@ -6,6 +6,7 @@
     line-height: 38px;
     letter-spacing: -0.02em;
     text-align: center;
+    color: var(--blue-gray, #3b4b64);
   }
   @media (max-width: 720px) {
     &__title {

@@ -1,9 +1,9 @@
 // Библиотеки (опционально)
-@import '~normalize.css';
-@import '~nouislider';
-@import '~tippy.js/dist/tippy.css';
-@import '~hystmodal/dist/hystmodal.min.css';
-@import '~bootstrap/dist/css/bootstrap.min.css';
+// @import '~normalize.css';
+// @import '~nouislider';
+// @import '~tippy.js/dist/tippy.css';
+// @import '~hystmodal/dist/hystmodal.min.css';
+// @import '~bootstrap/dist/css/bootstrap.min.css';
 
 // Утилиты
 @import 'ui/variables.scss';
@@ -16,57 +16,56 @@
 @import '~@/mixins/mixins';
 @import 'ui/temp'; // < ВРЕМЕННЫЕ СТИЛИ
 
-html {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
-  line-height: 26px;
+// html {
+//   font-family: 'Ubuntu', sans-serif;
+//   font-size: 15px;
+//   line-height: 26px;
+// }
+
+.home-visit {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  .svg-icon {
+    // width: 24px;
+    // height: 24px;
+  }
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-body {
-  font-size: 1rem;
-  overflow-x: hidden;
-  background: #fff;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+// body {
+//   font-size: 1rem;
+//   overflow-x: hidden;
+//   background: #fff;
+// }
 
 // скролл
-*:not(body) {
-  &::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;
-    border: solid 3px transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.72);
-    border: solid 3px transparent;
-    border-radius: 8px;
-  }
-}
-
-.svg-icon {
-  width: 24px;
-  height: 24px;
-}
+// *:not(body) {
+//   &::-webkit-scrollbar {
+//     width: 8px;
+//     height: 8px;
+//   }
+//   &::-webkit-scrollbar-track {
+//     background: transparent;
+//     border: solid 3px transparent;
+//   }
+//   &::-webkit-scrollbar-thumb {
+//     box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.72);
+//     border: solid 3px transparent;
+//     border-radius: 8px;
+//   }
+// }
 
 .home-visit {
   display: flex;
@@ -129,6 +128,7 @@ ul {
       &__btn {
         width: 100%;
         max-width: 168px;
+        min-width: 168px;
       }
     }
     .tabs-car {

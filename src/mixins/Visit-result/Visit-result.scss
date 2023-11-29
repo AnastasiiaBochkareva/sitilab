@@ -11,7 +11,8 @@
     &:nth-child(2) {
       .visit-result {
         &__img {
-          width: 97px;
+          // width: 97px;
+          width: 96px;
           @media (max-width: 700px) {
             width: 96px;
           }
@@ -21,7 +22,8 @@
     &:nth-child(3) {
       .visit-result {
         &__img {
-          width: 96px;
+          width: 91px;
+          // width: 96px;
           @media (max-width: 700px) {
             width: 91px;
           }
@@ -31,7 +33,7 @@
     &:nth-child(4) {
       .visit-result {
         &__img {
-          width: 91px;
+          width: 128px;
           @media (max-width: 700px) {
             width: 110px;
           }
@@ -41,8 +43,12 @@
     &:nth-child(5) {
       .visit-result {
         &__img {
-          width: 128px;
+          // width: 83px;
+          width: 97px;
           @media (max-width: 700px) {
+          }
+          img {
+            height: 100%;
           }
         }
       }

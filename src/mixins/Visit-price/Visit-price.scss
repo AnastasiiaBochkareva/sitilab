@@ -85,6 +85,8 @@
           padding-left: 40px;
           display: flex;
           flex-direction: column;
+          max-width: 64%;
+          width: 100%;
 
           &::before {
             content: ' ';
@@ -129,6 +131,11 @@
       letter-spacing: -0.44px;
       display: flex;
       column-gap: 11px;
+      max-width: 33%;
+      width: 100%;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      height: max-content;
       > div {
         &:nth-child(1) {
           text-decoration: line-through;
@@ -189,6 +196,7 @@
           line-height: 28px;
           letter-spacing: -0.28px;
           text-transform: lowercase;
+          text-align: center;
         }
       }
     }
@@ -285,6 +293,7 @@
       &_cost {
         flex-direction: column;
         row-gap: 10px;
+        max-width: 114px;
         > div {
           &:nth-child(1) {
             // padding: 3px 12px 3px 8px !important;
@@ -297,6 +306,7 @@
         > div {
           &:nth-child(1) {
             padding-left: 50px;
+            max-width: 80%;
           }
         }
       }
@@ -374,13 +384,53 @@
           &_cost {
             flex-direction: column;
             row-gap: 0px;
+            align-items: flex-end;
             > div {
               &:nth-child(1) {
-                padding: 3px 12px 3px 8px !important;
+                padding: 3px 11px 3px 8px !important;
                 column-gap: 4px !important;
+                @media (max-width: 768px) {
+                  max-width: 114px;
+                  width: 100%;
+                }
               }
             }
           }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .visit-price__body_row {
+      > div:nth-child(1) {
+        max-width: 65%;
+      }
+    }
+
+    .visit-price__body_cost {
+      max-width: 35%;
+    }
+  }
+  @media (max-width: 400px) {
+    .visit-price__sale .visit-price__body_cost > div:nth-child(1) {
+      padding: 3px 3px 3px 3px !important;
+      column-gap: 2px !important;
+    }
+    .visit-price__body_row {
+      padding: 15px 10px;
+      > div:nth-child(1) {
+        max-width: 65%;
+        padding-left: 40px;
+        &::before {
+          left: 10px;
+        }
+      }
+    }
+    .visit-price__body_cost {
+      max-width: 35%;
+      > div {
+        span {
+          font-size: 18px;
         }
       }
     }

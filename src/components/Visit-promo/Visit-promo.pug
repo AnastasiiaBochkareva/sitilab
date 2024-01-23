@@ -15,7 +15,7 @@ mixin Visit-promo(param = {})
             text: true,
             placeholder: 'ФИО *',
           })
-          div
+          div.visit-promo__group
             +Input({
               text: true,
               placeholder: '+7 (___) ___-__-__ *',
@@ -39,7 +39,7 @@ mixin Visit-promo(param = {})
             })
             a(href="#") персональных данных
           .visit-promo__captcha
-            button.visit-promo__captcha_btn Отправить
+            input(type="text" value="Отправить").visit-promo__captcha_btn
             .visit-promo__confirm
               p Введите символы с картинки:
               div
@@ -47,6 +47,7 @@ mixin Visit-promo(param = {})
                   img(src="/assets/img/categories/vnd/captcha.png", alt="")
                 +Input({
                   text: true,
+                  inputClass: 'visit-promo__confirm_input'
                 })
           .visit-promo__license Лицензия №Л041-01137-77/00349073 от 03.06.2019г.
 
@@ -66,7 +67,7 @@ each i in [1,2,3,4,5,6]
             text: true,
             placeholder: 'ФИО *',
           })
-          div
+          div.visit-promo__group
             +Input({
               text: true,
               placeholder: '+7 (___) ___-__-__ *',
@@ -100,7 +101,7 @@ each i in [1,2,3,4,5,6]
                 a(href="#") Получить направление у нашего терапевта
 
           .visit-promo__captcha
-            button.visit-promo__captcha_btn Отправить
+            input(type="text" value="Отправить").visit-promo__captcha_btn
             .visit-promo__confirm
               p Введите символы с картинки:
               div

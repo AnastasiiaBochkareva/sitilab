@@ -23,6 +23,9 @@
       flex-wrap: wrap;
       column-gap: 4px;
       margin-top: 4px;
+      p {
+        margin: 0 !important;
+      }
       a {
         color: #00abdf;
         font-family: 'Montserrat', sans-serif;

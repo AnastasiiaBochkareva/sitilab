@@ -89,4 +89,16 @@ function moveCar(tabBtn, tabsNav) {
     const var2 = document.querySelector('.visit-home__tabs-full .tabs-nav');
     moveCar(var1, var2);
   });
+
+  function generateLineDotted(block) {
+    // написать цикл по массвиву и 50 эл-в и кажд итерац доб в эл-т блок див
+    for (let i = 0; i < 151; i++) {
+      const div = '<div></div>';
+      block.innerHTML += div;
+    }
+  }
+  const allElements = document.querySelectorAll('#dotted');
+  allElements?.forEach((element) => {
+    generateLineDotted(element);
+  });
 })();

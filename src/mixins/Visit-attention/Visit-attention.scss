@@ -61,11 +61,11 @@
       column-gap: 17px;
       &::before {
         content: ' ';
-        background-color: #f9ac01;
-        width: 8px;
-        min-width: 8px;
-        height: 8px;
-        border-radius: 100%;
+        background-color: #f9ac01 !important;
+        width: 8px !important;
+        min-width: 8px !important;
+        height: 8px !important;
+        border-radius: 100% !important;
       }
     }
   }

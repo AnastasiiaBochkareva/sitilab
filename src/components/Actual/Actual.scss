@@ -59,9 +59,9 @@
     margin: 0 !important;
     li {
       width: 100%;
-      max-width: 240px;
+      max-width: 245px;
       &::before {
-        content: none;
+        content: none !important;
       }
       .actual__top {
         column-gap: 56px;

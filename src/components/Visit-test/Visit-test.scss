@@ -23,7 +23,7 @@
       align-items: center;
       column-gap: 14px;
       &::before {
-        content: none;
+        content: none !important;
       }
       svg {
         fill: #00abdf;

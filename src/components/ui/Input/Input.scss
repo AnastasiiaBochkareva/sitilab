@@ -153,10 +153,14 @@
     position: relative;
     width: 100%;
     border-radius: $border-radius;
-    border: 1px solid var(--gray1, #b2bac6);
+    // border: 1px solid var(--gray1, #b2bac6);
+    border: 1px solid black;
+
     background-color: $ui-white;
     padding: 8px 12px 7px;
-    color: var(--gray1, #b2bac6);
+    // color: var(--gray1, #b2bac6);
+
+    color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-style: normal;
@@ -169,7 +173,7 @@
     &:active,
     &:focus {
       outline: none;
-      border-width: 2px;
+      // border-width: 2px;
     }
 
     &:required {

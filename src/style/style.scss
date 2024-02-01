@@ -48,6 +48,31 @@
     // width: 24px;
     // height: 24px;
   }
+  &__not-avaible {
+    .vnd-container {
+      display: flex;
+      column-gap: 15px;
+    }
+    div {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: -0.02em;
+      text-align: left;
+    }
+    svg {
+      fill: none;
+      stroke: #f9ac01;
+      width: 24px;
+      min-width: 24px;
+      height: 24px;
+    }
+    @media (max-width: 600px) {
+      padding: 40px 47px;
+      background-color: #fefbf2;
+    }
+  }
 }
 
 // body {

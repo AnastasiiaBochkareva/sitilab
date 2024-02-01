@@ -17,6 +17,9 @@
     flex-direction: column;
     row-gap: 20px;
     li {
+      &::before {
+        content: none !important;
+      }
       div {
         color: #00abdf;
         font-family: 'Montserrat', sans-serif;

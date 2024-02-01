@@ -14,7 +14,8 @@
           // width: 97px;
           width: 96px;
           @media (max-width: 700px) {
-            width: 96px;
+            width: 100px;
+            height: 72px;
           }
         }
       }
@@ -22,10 +23,10 @@
     &:nth-child(3) {
       .visit-result {
         &__img {
-          width: 91px;
+          width: 105px;
           // width: 96px;
           @media (max-width: 700px) {
-            width: 91px;
+            width: 95px;
           }
         }
       }
@@ -38,7 +39,7 @@
             max-width: 150px;
           }
           @media (max-width: 700px) {
-            width: 110px;
+            width: 133px;
           }
         }
       }
@@ -50,6 +51,8 @@
           width: 90px;
           height: 70px;
           @media (max-width: 700px) {
+            width: 83px;
+            height: 62px;
           }
           img {
             height: 100%;
@@ -85,7 +88,8 @@
     left: -28px;
     width: 110px;
     @media (max-width: 700px) {
-      width: 88px;
+      height: 65px;
+      width: 100px;
     }
     img {
       max-height: 74px;
@@ -202,8 +206,24 @@
         }
         &__description {
           padding-left: 0;
+          &_title {
+            margin-top: 10px;
+          }
         }
       }
+    }
+  }
+  @media (max-width: 400px) {
+    &__description {
+      padding-left: 0;
+    }
+    &__col {
+      flex-direction: column;
+      height: auto;
+      row-gap: 10px;
+    }
+    &__img {
+      position: initial;
     }
   }
 }

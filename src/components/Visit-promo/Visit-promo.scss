@@ -240,7 +240,7 @@
           border-radius: 0px !important;
           // height: 36px;
 
-          height: 37px;
+          height: 45px;
         }
       }
     }
@@ -250,7 +250,7 @@
       border-radius: 0 !important;
       border: 1px solid var(--gray1, #b2bac6);
       background-color: #ffffff;
-      padding: 8px 12px 7px;
+      // padding: 8px 12px 7px;
       color: var(--gray1, #b2bac6);
       font-family: 'Montserrat', sans-serif;
       font-size: 14px;
@@ -293,7 +293,7 @@
       display: flex;
       column-gap: 8px;
       > div {
-        height: 36px;
+        height: 45px;
 
         // width: 100%;
         width: 139px;
@@ -303,7 +303,7 @@
         img {
           // height: 100%;
           // object-fit: cover;
-          height: 42px;
+          height: 48px;
           margin: -2px;
           width: 143px;
           // position: relative;

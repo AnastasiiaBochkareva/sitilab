@@ -101,6 +101,45 @@
     width: 50%;
     background: rgba(222, 222, 222, 0.2);
     padding: 64px 39px 24px 38px;
+    .visit-promo__form {
+      &:not(.form__error) {
+        .visit-promo__error_text {
+          display: none;
+        }
+      }
+    }
+    .form__error {
+      .visit-promo__error_text {
+        display: block;
+        margin-top: auto;
+        color: #ea516d;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px; /* 150% */
+        letter-spacing: -0.24px;
+      }
+      .v-input {
+        &:not(.not-required) {
+          &:after {
+            border-color: #ea516d;
+          }
+        }
+      }
+      .v-checkbox__label {
+        &::before {
+          border-color: #ea516d;
+        }
+      }
+      .v-input__placeholder {
+        &:not(.not-required) {
+          &:after {
+            color: #ea516d;
+          }
+        }
+      }
+    }
   }
   &__document {
     display: flex;
@@ -168,10 +207,11 @@
       letter-spacing: -0.24px;
     }
   }
-  .form {
+  .visit-promo__form {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: column;
     height: 100%;
     .v-input {
       &__placeholder {
@@ -224,6 +264,9 @@
       font-family: 'Montserrat', sans-serif;
       border: none;
       cursor: pointer;
+      &:hover {
+        background-color: #11c3f3;
+      }
     }
   }
   &__confirm {
@@ -234,7 +277,7 @@
         &::after {
           border-radius: 0px !important;
           // border: none !important;
-          border: 4px solid white !important;
+          // border: 4px solid white !important;
         }
         input {
           border-radius: 0px !important;
@@ -294,12 +337,11 @@
       column-gap: 8px;
       > div {
         height: 45px;
-
-        // width: 100%;
         width: 139px;
-        border: 1px solid black;
-
         overflow: hidden;
+        &:not(.v-input) {
+          border: 1px solid #b2bac6;
+        }
         img {
           // height: 100%;
           // object-fit: cover;

@@ -38,6 +38,10 @@
     letter-spacing: -0.28px;
     text-transform: capitalize;
     padding: 6px 40px;
+    &:hover {
+      background-color: #11c3f3;
+      text-decoration: none;
+    }
   }
   svg {
     fill: #dcf3be;

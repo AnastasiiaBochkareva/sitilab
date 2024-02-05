@@ -37,6 +37,7 @@
   display: flex;
   max-height: 495px;
   height: 100%;
+  overflow: hidden;
   &__content {
     display: flex;
     flex-direction: column;
@@ -226,7 +227,7 @@
     color: var(--gray1, #b2bac6);
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 85.714% */

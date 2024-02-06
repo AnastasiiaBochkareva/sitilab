@@ -125,18 +125,14 @@
           &:after {
             border-color: #ea516d;
           }
+          .v-input__placeholder {
+            color: #ea516d;
+          }
         }
       }
       .v-checkbox__label {
         &::before {
           border-color: #ea516d;
-        }
-      }
-      .v-input__placeholder {
-        &:not(.not-required) {
-          &:after {
-            color: #ea516d;
-          }
         }
       }
     }
@@ -369,7 +365,7 @@
       flex-direction: column-reverse;
       align-items: flex-start;
       &_btn {
-        margin-top: 27px;
+        margin-top: 10px;
       }
     }
     &__confirm {
@@ -431,6 +427,7 @@
     }
     &__captcha {
       &_btn {
+        margin-top: 27px;
         width: calc(50% - 7px);
       }
     }

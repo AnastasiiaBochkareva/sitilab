@@ -21,6 +21,7 @@
     align-items: center;
     padding: 10px 30px 7px;
     text-decoration: none;
+    column-gap: 20px;
     &:not(:first-child) {
       border-top: 1px solid var(--gray1, #b2bac6);
     }
@@ -63,6 +64,8 @@
     line-height: 28px; /* 127.273% */
     letter-spacing: -0.44px;
     text-decoration: none;
+    width: 104px;
+    text-align: end;
   }
   &__promotion {
     display: flex;
@@ -78,9 +81,9 @@
     letter-spacing: -0.4px;
     border-radius: 20px;
     background-color: #ffe7e9;
-
     padding: 1px 15px;
     max-width: max-content;
+    height: max-content;
   }
   &__footnote {
     color: var(--blue-gray, #3b4b64);
@@ -125,6 +128,7 @@
 
     &__price {
       margin-top: 15px;
+      text-align: start;
     }
     &__footnote {
       font-size: 14px;

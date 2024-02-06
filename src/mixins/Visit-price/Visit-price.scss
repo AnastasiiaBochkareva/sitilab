@@ -77,29 +77,15 @@
       justify-content: space-between;
       flex-wrap: wrap;
       position: relative;
-
+      border-bottom: 1px solid #b2bac6;
       &:not(:first-child) {
-        border-top: 1px solid #b2bac6;
       }
       > div {
         &:nth-child(1) {
-          // padding-left: 40px;
           display: flex;
           flex-direction: column;
           max-width: 64%;
           width: 100%;
-
-          // &::before {
-          //   content: ' ';
-          //   background-color: #b9f5ad;
-          //   border-radius: 8px;
-          //   border: 1px solid #60cf49;
-          //   width: 30px;
-          //   height: 30px;
-          //   display: block;
-          //   position: absolute;
-          //   left: 29px;
-          // }
         }
       }
     }

@@ -44,10 +44,6 @@
   *::after {
     box-sizing: border-box;
   }
-  .svg-icon {
-    // width: 24px;
-    // height: 24px;
-  }
   &__not-avaible {
     .vnd-container {
       display: flex;
@@ -73,31 +69,17 @@
       background-color: #fefbf2;
     }
   }
+  @media (max-width: 700px) {
+    .actual__list li {
+      padding: 30px !important;
+    }
+  }
+  @media (max-width: 355px) {
+    .actual__list li {
+      padding: 15px !important;
+    }
+  }
 }
-
-// body {
-//   font-size: 1rem;
-//   overflow-x: hidden;
-//   background: #fff;
-// }
-
-// скролл
-// *:not(body) {
-//   &::-webkit-scrollbar {
-//     width: 8px;
-//     height: 8px;
-//   }
-//   &::-webkit-scrollbar-track {
-//     background: transparent;
-//     border: solid 3px transparent;
-//   }
-//   &::-webkit-scrollbar-thumb {
-//     box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.72);
-//     border: solid 3px transparent;
-//     border-radius: 8px;
-//   }
-// }
-
 .home-visit {
   display: flex;
   flex-direction: column;
@@ -124,7 +106,8 @@
       }
       &:nth-child(2) {
         order: 3;
-        min-height: 1173px;
+        // min-height: 1173px;
+        min-height: max-content;
       }
       &:nth-child(3) {
         order: 2;
@@ -178,11 +161,6 @@
     }
 
     @media (max-width: 1000px) and (min-width: 700px) {
-      .tabs-mark {
-        // display: none;
-        img {
-        }
-      }
       .tabs-car {
         width: 246.015px;
         height: 115px;

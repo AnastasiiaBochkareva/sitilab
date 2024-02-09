@@ -29,7 +29,7 @@
     }
   }
   @media (max-width: 700px) {
-    padding: 60px 22px 34px;
+    padding: 30px 22px 34px;
     &__title {
       font-size: 22px;
       line-height: 32px; /* 145.455% */
@@ -70,10 +70,8 @@
         display: none;
       }
       .visit-schedule {
-        > div {
-        }
         &__content {
-          margin-left: 0;
+          margin-left: 0 !important;
         }
         &__title {
           margin-left: 0;
@@ -222,6 +220,13 @@
         padding: 2px 16px;
         display: inline;
         position: initial;
+      }
+    }
+    @media (max-width: 355px) {
+      padding: 25px 8px !important;
+      &__time {
+        display: inline-block;
+        padding: 2px 8px;
       }
     }
   }

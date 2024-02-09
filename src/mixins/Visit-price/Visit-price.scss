@@ -32,7 +32,6 @@
   }
 }
 .visit-price {
-  // margin-top: 60px;
   border: 1px solid #b2bac6;
   display: flex;
   max-height: 495px;
@@ -283,7 +282,6 @@
         max-width: 114px;
         > div {
           &:nth-child(1) {
-            // padding: 3px 12px 3px 8px !important;
             column-gap: 4px !important;
           }
         }
@@ -292,7 +290,6 @@
         padding: 22px;
         > div {
           &:nth-child(1) {
-            // padding-left: 50px;
             max-width: 80%;
           }
         }
@@ -361,8 +358,6 @@
         &__contraindications {
           display: none;
         }
-        &__footnote {
-        }
       }
     }
     &__sale {
@@ -387,6 +382,7 @@
       }
     }
   }
+
   @media (max-width: 768px) {
     .visit-price__body_row {
       > div:nth-child(1) {
@@ -398,6 +394,11 @@
       max-width: 35%;
     }
   }
+  @media (max-width: 700px) {
+    &__footnote {
+      border-bottom: 1px solid var(--gray1, #b2bac6);
+    }
+  }
   @media (max-width: 400px) {
     .visit-price__sale .visit-price__body_cost > div:nth-child(1) {
       padding: 3px 3px 3px 3px !important;
@@ -407,7 +408,6 @@
       padding: 15px 10px;
       > div:nth-child(1) {
         max-width: 65%;
-        // padding-left: 40px;
         &::before {
           left: 10px;
         }

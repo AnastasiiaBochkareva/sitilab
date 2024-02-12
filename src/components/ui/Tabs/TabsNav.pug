@@ -22,6 +22,7 @@ mixin TabsNav(param = {})
             button.tabs-nav__btn(
                 class=i==0 ? 'active' : ''
                 data-tab-target=param.items[i].targetId
+                disabled
             ) 
               +icon('icon-' + param.items[i].svg)
               span !{param.items[i].label}

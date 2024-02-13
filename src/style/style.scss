@@ -83,6 +83,11 @@
 .home-visit {
   display: flex;
   flex-direction: column;
+  .border-top-mobile {
+    @media (max-width: 700px) {
+      border-top: 1px solid var(--gray1, #b2bac6);
+    }
+  }
   .vnd-container {
     &:nth-child(1) {
       padding-bottom: 0 !important;

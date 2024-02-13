@@ -77,8 +77,6 @@
       flex-wrap: wrap;
       position: relative;
       border-bottom: 1px solid #b2bac6;
-      &:not(:first-child) {
-      }
       > div {
         &:nth-child(1) {
           display: flex;
@@ -268,7 +266,6 @@
     }
     svg {
       fill: #8e9aab;
-      // stroke: #8e9aab;
       height: 26px;
       width: 26px;
     }
@@ -287,7 +284,7 @@
         }
       }
       &_row {
-        padding: 22px;
+        padding: 22px 22px 22px 29px;
         > div {
           &:nth-child(1) {
             max-width: 80%;
@@ -296,7 +293,7 @@
       }
     }
     &__footnote {
-      padding: 15px 22px 50px;
+      // padding: 15px 22px 50px;
     }
     &__content {
       max-width: 100%;
@@ -397,9 +394,13 @@
   @media (max-width: 700px) {
     &__footnote {
       border-bottom: 1px solid var(--gray1, #b2bac6);
+      padding: 15px 22px 50px;
     }
   }
   @media (max-width: 400px) {
+    &__head {
+      padding: 15px 14px 15px 10px;
+    }
     .visit-price__sale .visit-price__body_cost > div:nth-child(1) {
       padding: 3px 3px 3px 3px !important;
       column-gap: 2px !important;

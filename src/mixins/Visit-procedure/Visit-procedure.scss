@@ -129,6 +129,7 @@
     &__price {
       margin-top: 15px;
       text-align: start;
+      width: 100%;
     }
     &__footnote {
       font-size: 14px;
@@ -148,7 +149,6 @@
     justify-content: center;
     &__title {
       width: 100%;
-      // max-width: 297px;
     }
     &__name-title {
       font-size: 18px;

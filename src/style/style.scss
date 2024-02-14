@@ -111,7 +111,6 @@
       }
       &:nth-child(2) {
         order: 3;
-        // min-height: 1173px;
         min-height: max-content;
       }
       &:nth-child(3) {
@@ -126,6 +125,14 @@
     padding: 40px 58px !important;
     @media (max-width: 700px) {
       padding: 0 !important;
+    }
+  }
+  @media (max-width: 700px) {
+    .padding-mobile.inner-content {
+      padding: 0 22px !important;
+      .visit-price__footnote {
+        padding: 15px 0 50px;
+      }
     }
   }
   &__tabs-img {

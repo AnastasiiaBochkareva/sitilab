@@ -226,6 +226,19 @@
       }
     }
   }
+  &__footnote-four {
+    > div {
+      &:not(.visit-price__contraindications) {
+        font-size: 18px;
+      }
+      &:nth-child(3) {
+        margin-top: 10px;
+      }
+    }
+  }
+  &__btn {
+    display: none;
+  }
   &__btn {
     display: none;
   }
@@ -292,9 +305,6 @@
         }
       }
     }
-    &__footnote {
-      // padding: 15px 22px 50px;
-    }
     &__content {
       max-width: 100%;
       display: none;
@@ -357,6 +367,26 @@
         }
       }
     }
+    &__footnote-four {
+      margin-top: 0 !important;
+      > div {
+        &:nth-child(2) {
+          font-size: 14px;
+          padding: 20px 0 50px;
+          border-bottom: 1px solid rgb(178, 186, 198);
+        }
+        &:last-child {
+          margin-top: 0;
+          padding: 50px 0 0;
+        }
+      }
+
+      .visit-price {
+        &__contraindications {
+          display: none;
+        }
+      }
+    }
     &__sale {
       .visit-price {
         &__body {
@@ -395,6 +425,9 @@
     &__footnote {
       border-bottom: 1px solid var(--gray1, #b2bac6);
       padding: 15px 22px 50px;
+    }
+    &__footnote-four {
+      border-bottom: none !important;
     }
   }
   @media (max-width: 400px) {

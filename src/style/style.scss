@@ -189,16 +189,4 @@
       flex-direction: column;
     }
   }
-  #tab7 {
-    @media (max-width: 700px) {
-      .inner-content {
-        .visit-contraindications {
-          border-bottom: none;
-        }
-        .visit-procedure {
-          border-top: 1px solid var(--gray1, #b2bac6);
-        }
-      }
-    }
-  }
 }

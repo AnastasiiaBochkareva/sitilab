@@ -134,6 +134,9 @@
         padding: 15px 0 50px;
       }
     }
+    .visit-service__subtitle.padding-mobile {
+      padding: 0 22px !important;
+    }
   }
   &__tabs-img {
     @media (max-width: 1500px) {

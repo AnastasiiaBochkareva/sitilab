@@ -439,14 +439,14 @@
   }
   @media (max-width: 400px) {
     &__head {
-      padding: 15px 14px 15px 10px;
+      padding: 15px 22px 15px 22px;
     }
     .visit-price__sale .visit-price__body_cost > div:nth-child(1) {
       padding: 3px 3px 3px 3px !important;
       column-gap: 2px !important;
     }
     .visit-price__body_row {
-      padding: 15px 10px;
+      padding: 15px 22px;
       > div:nth-child(1) {
         max-width: 65%;
         &::before {

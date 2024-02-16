@@ -18,6 +18,9 @@
             width: 120px;
             height: 72px;
           }
+          @media (max-width: 400px) {
+            width: 100px;
+          }
         }
       }
     }
@@ -29,6 +32,9 @@
           @media (max-width: 700px) {
             // width: 95px;
             width: 115px;
+          }
+          @media (max-width: 400px) {
+            width: 95px;
           }
         }
       }
@@ -44,6 +50,9 @@
             // width: 133px;
             width: 154px;
           }
+          @media (max-width: 400px) {
+            width: 136px;
+          }
         }
       }
     }
@@ -57,6 +66,9 @@
             // width: 83px;
             width: 105px;
             height: 62px;
+          }
+          @media (max-width: 400px) {
+            width: 91px;
           }
           img {
             height: 100%;

@@ -186,4 +186,14 @@
       flex-direction: column;
     }
   }
+  #tab7 {
+    .inner-content {
+      .visit-contraindications {
+        border-bottom: none;
+      }
+      .visit-procedure {
+        border-top: 1px solid var(--gray1, #b2bac6);
+      }
+    }
+  }
 }

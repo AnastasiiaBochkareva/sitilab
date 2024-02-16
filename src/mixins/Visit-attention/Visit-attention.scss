@@ -119,6 +119,7 @@
     div {
       max-width: max-content !important;
       display: flex;
+      align-items: flex-start;
       column-gap: 13px;
     }
     .visit-attention {
@@ -130,7 +131,8 @@
   @media (max-width: 1000px) {
     display: flex;
     flex-direction: column;
-    padding: 40px 37px 40px 38px;
+    // padding: 40px 37px 40px 38px; !!!!!!!!!!!!!!!!!!!!11
+    padding: 40px 22px;
     row-gap: 16px;
     &__subtitle {
       font-size: 14px;
@@ -143,7 +145,8 @@
       order: 1;
     }
     &__vaccine {
-      padding: 35px 39px 35px 38px;
+      // padding: 35px 39px 35px 38px; !!!!!!!!!!!!!!!!11
+      padding: 35px 22px;
     }
   }
 }
@@ -151,7 +154,7 @@
   display: none;
   @media (max-width: 1000px) {
     display: block;
-    padding: 50px 20px;
+    padding: 50px 22px;
     border-bottom: 1px solid var(--gray1, #b2bac6);
     &__title {
       color: var(--gray1, #b2bac6);

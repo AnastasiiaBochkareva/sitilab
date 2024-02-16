@@ -1,9 +1,6 @@
 .visit-test {
   display: grid;
-  // justify-content: space-between;
   grid-template-columns: repeat(12, 1fr);
-  // column-gap: 92px;
-  // padding-left: 74px;
   padding: 0 71px;
   &__title {
     color: var(--blue-gray, #3b4b64);
@@ -62,7 +59,8 @@
     flex-direction: column;
     padding-left: 0;
 
-    padding: 40px 37px 50px 38px;
+    // padding: 40px 37px 50px 38px; !!!!!!!!!!!!!!!!!!!!!!!!!!!!111
+    padding: 40px 22px 50px;
     &__title {
       margin-bottom: 15px;
     }

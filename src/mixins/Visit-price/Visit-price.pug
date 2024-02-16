@@ -51,6 +51,8 @@ mixin Visit-price(param={})
 
   if(param.footnoteOne)
     .visit-price__footnote
+      if(param.footnoteContraindications)
+        .visit-price__contraindications Имеются противопоказания. Необходима консультация специалиста.
       div * В стоимость выезда терапевта не включена стоимость лабораторных исследований и взятия биоматериала.
   if(param.footnoteTwo)
     .visit-price__footnote

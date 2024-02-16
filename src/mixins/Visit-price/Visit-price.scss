@@ -297,13 +297,16 @@
         }
       }
       &_row {
-        padding: 22px 22px 22px 29px;
+        padding: 22px;
         > div {
           &:nth-child(1) {
             max-width: 80%;
           }
         }
       }
+    }
+    &__head {
+      padding: 15px 22px;
     }
     &__content {
       max-width: 100%;
@@ -407,6 +410,10 @@
           }
         }
       }
+    }
+
+    &__contraindications {
+      display: none;
     }
   }
 

@@ -1,0 +1,53 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    section.celebrate
+      .celebrate__bg
+        .celebrate__bg_img.celebrate__desktop
+          img(src="/assets/img/celebrate/bg-desktop.png" alt="праздник")
+        .celebrate__bg_img.celebrate__mobile
+          .celebrate__blue-top
+            img(src="/assets/img/celebrate/blue-top.png" alt="праздник")
+          .celebrate__flower
+            img(src="/assets/img/celebrate/flower.png" alt="праздник")
+          .celebrate__butter
+            img(src="/assets/img/celebrate/butter.png" alt="праздник")
+          .celebrate__blue-right 
+            img(src="/assets/img/celebrate/blue-right.png" alt="праздник")
+          .celebrate__yellow-left
+            img(src="/assets/img/celebrate/yellow-left.png" alt="праздник")
+          .celebrate__flower-bottom
+            img(src="/assets/img/celebrate/flower-bottom.png" alt="праздник")
+
+      .celebrate__content
+        .celebrate__name.celebrate__name_desktop
+          img(src="/assets/img/celebrate/march.png" alt="праздник")
+        .celebrate__name.celebrate__name_mobile
+          img(src="/assets/img/celebrate/march-mobile.png" alt="праздник")
+        .celebrate__info
+          .celebrate__title Прекрасные дамы! 
+          .celebrate__text.celebrate__subtitle
+            p Спасибо за ваш труд, вовлеченность и профессионализм! Это большая честь для всей нашей компании, что вы выбрали расти и развиваться вместе с нами. Мы надеемся, что впереди нас ждет еще много лет совместной плодотворной работы и радости от общих побед!
+            p В этот день красоты, весны и женственности от всей души хочется пожелать исполнения желаний! Чтобы ваши мечты становились достижениями, а задуманное всегда сбывалось. Пусть близкие и родные всегда будут рядом, пусть дом будет – полная чаша, пусть солнечное настроение не покидает вас ни на секунду, а весна будет не только за окном, но и на душе.
+            p Будьте здоровы и счастливы!
+        .celebrate__bottom
+          .celebrate__col
+            .celebrate__img
+              img(src="/assets/img/celebrate/ub.png" alt="праздник")
+            .celebrate__caption
+              p.celebrate__subtitle.celebrate__subtitle-mobile С самыми теплыми пожеланиями,
+              p.celebrate__title Магадеев Юлай Басырович,
+              p.celebrate__subtitle Президент группы медицинских компаний «МЕДМА»
+          .celebrate__col
+            .celebrate__img
+              img(src="/assets/img/celebrate/oi.png" alt="праздник")
+            .celebrate__caption
+              p.celebrate__subtitle.celebrate__subtitle-mobile От всего сердца,
+              p.celebrate__title Ицков Олег Ильич,
+              p.celebrate__subtitle Генеральный директор группы медицинских компаний «СИТИЛАБ»
+            

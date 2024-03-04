@@ -56,7 +56,7 @@
   object-fit: cover;
 }
 .celebrate__content {
-  z-index: 500;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   row-gap: 70px;
@@ -95,9 +95,10 @@
 }
 .celebrate__img {
   width: 295px;
-  height: 100%;
+  height: 295px;
   overflow: hidden;
   margin-bottom: 25px;
+  border-radius: 50%;
 }
 .celebrate__img img {
   width: 100%;
@@ -105,6 +106,10 @@
 }
 .celebrate__subtitle-mobile {
   display: none;
+}
+.celebrate__caption {
+  max-width: 330px;
+  width: 100%;
 }
 @media (max-width: 1700px) {
   .celebrate__content {
@@ -226,6 +231,7 @@
   }
   .celebrate__img {
     width: 149px;
+    height: 149px;
   }
 }
 @media (max-width: 500px) {

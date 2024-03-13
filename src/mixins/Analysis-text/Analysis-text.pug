@@ -1,0 +1,5 @@
+mixin Analysis-text(param={})
+  if (param.listTextTitle)
+    .a-title-sm=param.title
+  each el in param.text 
+    p=el

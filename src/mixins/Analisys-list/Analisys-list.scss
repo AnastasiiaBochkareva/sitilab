@@ -1,0 +1,23 @@
+.a-list {
+  // width: 60%;
+  width: calc(100% - 351px);
+  padding: 30px 15px 0 30px;
+  margin-top: 77px;
+  a {
+    color: rgb(0, 171, 223) !important;
+    margin-bottom: 25px !important;
+    display: block;
+  }
+  .a-title {
+    font-size: 18px !important;
+    line-height: 28px !important;
+  }
+  .a-title-sm {
+    margin-bottom: 30px !important;
+    text-align: left !important;
+    font-size: 14px !important;
+  }
+  p {
+    margin: 0 !important;
+  }
+}

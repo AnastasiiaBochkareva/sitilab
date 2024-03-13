@@ -494,46 +494,167 @@
   }
 }
 .analysis {
-  position: relative;
-  padding-left: 260px;
-  padding-right: 260px;
-
-  // &__title {
-  //   font-family: 'Montserrat', sans-serif;
-  //   font-weight: 600;
-  //   font-size: 32px;
-  //   letter-spacing: -2%;
-  //   text-align: center;
-  //   color: rgb(59, 75, 100);
-  // }
-  // .analysis-container {
-  //   padding-left: 260px;
-  //   padding-right: 260px;
-  // }
-  .sidebar-list {
-    position: absolute;
-    max-width: 351px;
-    width: 100%;
-    margin-left: initial !important;
-    margin-right: initial !important;
-
-    // на сайте
-    display: block;
-    visibility: visible;
-    opacity: 1;
-    font-family: 'bold';
+  .a-title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -2%;
+    color: rgb(59, 75, 100);
   }
+  .a-title-sm {
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 22px;
+    letter-spacing: -2%;
+    color: rgb(59, 75, 100);
+    @media (max-width: 400px) {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  .a-inner-container {
+    padding-left: 113px;
+    padding-right: 113px;
+  }
+  .a-container {
+    max-height: 1000px;
+    overflow: scroll;
+    display: flex;
+    width: calc(100% - 340px);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .vnd-container {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    padding-right: 260px !important;
+    padding-left: 260px !important;
+    @media (max-width: 1700px) {
+      padding-right: 100px !important;
+      padding-left: 100px !important;
+    }
+    @media (max-width: 1500px) {
+      padding-right: 30px !important;
+      padding-left: 30px !important;
+    }
+    @media (max-width: 1000px) {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
+    @media (max-width: 700px) {
+      padding: 0 !important;
+    }
+  }
+  .a-services {
+    position: relative;
+    display: flex;
+    column-gap: 15px;
+  }
+  .a-col {
+    margin-top: 77px;
+  }
+  .tabs-nav {
+    gap: 35px;
+    box-shadow: none;
+    align-items: flex-end;
+    border-bottom: 1px solid #e5e5e5;
+    position: absolute;
+    top: 0;
+    left: 351px;
+    height: 77px;
+    right: 0;
+    width: auto;
+    background-color: #fff;
+    padding-left: 30px;
+
+    &__btn {
+      padding: 0 0 15px;
+      border: none;
+      width: initial;
+      max-width: initial;
+      height: initial;
+      border-radius: 0;
+      background-color: initial;
+      span {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -2%;
+        color: rgb(59, 75, 100);
+      }
+    }
+    .tabs-nav__btn.active {
+      span {
+        color: rgb(0, 171, 223);
+        border-bottom: 3px solid rgb(0, 170, 223);
+      }
+    }
+  }
+  .sidebar {
+    &-list {
+      max-width: 351px;
+      width: 100%;
+      margin-left: initial !important;
+      margin-right: initial !important;
+      position: relative;
+
+      // на сайте
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      font-family: 'bold';
+    }
+    &-btn {
+      width: 351px;
+      height: 77px;
+      background-color: rgb(0, 170, 223);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 24px;
+        height: 24px;
+        background-color: #3b4b64;
+      }
+      a {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 38px;
+        letter-spacing: -2%;
+      }
+    }
+  }
+
   ul {
     padding: 0;
     margin: 0;
     list-style: none;
   }
   .analisys-list {
-    padding-left: 350px;
+    // padding-left: 350px;
+    // padding-right: 340px;
   }
   @media (max-width: 400px) {
     .sidebar-list {
       max-width: 100%;
     }
   }
+}
+.t-body {
+  margin: 0;
 }

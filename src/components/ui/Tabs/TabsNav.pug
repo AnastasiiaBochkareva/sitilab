@@ -7,12 +7,13 @@ mixin TabsNav(param = {})
 
     - param.items = param.items || [{ label: 'test 1', targetId: 'test2' }, { label: 'test 2', targetId: 'test2' }]
 
-    .tabs-img
-      .tabs-car(id=param.isCar ? "car" : false)
-        img(src="/assets/img/categories/vnd/car.png", alt="")
-        div(id='dotted')
-      .tabs-mark 
-        img(src="/assets/img/categories/vnd/mark.png", alt="")
+      if(!param.noCar)
+        .tabs-img
+          .tabs-car(id=param.isCar ? "car" : false)
+            img(src="/assets/img/categories/vnd/car.png", alt="")
+            div(id='dotted')
+          .tabs-mark 
+            img(src="/assets/img/categories/vnd/mark.png", alt="")
 
 
     .tabs-nav
@@ -23,5 +24,6 @@ mixin TabsNav(param = {})
                 class=i==0 ? 'active' : ''
                 data-tab-target=param.items[i].targetId
             ) 
-              +icon('icon-' + param.items[i].svg)
+              if(!param.noSvg)
+                +icon('icon-' + param.items[i].svg)
               span !{param.items[i].label}

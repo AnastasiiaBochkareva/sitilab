@@ -7,7 +7,49 @@ block variables
 block content
 
     main.analysis
-      section.analysis-container
-        +Sidebar({})
-      section
-        +Analisys-list({})
+
+      section.vnd-container
+        .a-title Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)
+      
+        .a-services
+          +TabsNav({
+            items: [
+              { label: 'Описание', targetId: 'tab1', },
+              { label: 'Подготовка', targetId: 'tab2', },
+              { label: 'Показания к назначению', targetId: 'tab3', },
+              { label: 'Интерпретация результатов', targetId: 'tab4', },
+            ],
+            noCar: true,
+            noSvg: true,
+          })
+          
+          .a-container
+            +Sidebar({})
+          
+            +Analisys-list({
+              listTitleLink: true,
+            })
+          
+          .a-col
+            +Analysis-cost({})
+
+      section.vnd-container 
+        +Analysis-info({
+          title: 'Важная информация',
+        })
+      section.vnd-container 
+        +Analysis-info({
+          title: 'Важная информация',
+        })
+      section.vnd-container 
+        +Analysis-info({
+          title: 'Важная информация',
+        })
+      section.vnd-container 
+        +Analysis-info({
+          title: 'Важная информация',
+        })
+      section.vnd-container 
+        +Analysis-info({
+          title: 'Важная информация',
+        })

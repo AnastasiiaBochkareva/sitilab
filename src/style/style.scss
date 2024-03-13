@@ -493,3 +493,47 @@
     }
   }
 }
+.analysis {
+  position: relative;
+  padding-left: 260px;
+  padding-right: 260px;
+
+  // &__title {
+  //   font-family: 'Montserrat', sans-serif;
+  //   font-weight: 600;
+  //   font-size: 32px;
+  //   letter-spacing: -2%;
+  //   text-align: center;
+  //   color: rgb(59, 75, 100);
+  // }
+  // .analysis-container {
+  //   padding-left: 260px;
+  //   padding-right: 260px;
+  // }
+  .sidebar-list {
+    position: absolute;
+    max-width: 351px;
+    width: 100%;
+    margin-left: initial !important;
+    margin-right: initial !important;
+
+    // на сайте
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    font-family: 'bold';
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .analisys-list {
+    padding-left: 350px;
+  }
+  @media (max-width: 400px) {
+    .sidebar-list {
+      max-width: 100%;
+    }
+  }
+}

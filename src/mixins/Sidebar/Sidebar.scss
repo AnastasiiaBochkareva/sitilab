@@ -1,0 +1,125 @@
+.sidebar-list {
+  > ul {
+    > li {
+      background-color: #00aadf;
+      display: flex;
+      column-gap: 17px;
+      align-items: center;
+      padding: 20px 30px;
+      cursor: pointer;
+      color: #fff;
+      svg {
+        width: 21px;
+        height: 29px;
+        background-color: #3b4b64;
+      }
+      a {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 38px;
+        letter-spacing: -2%;
+        text-decoration: none;
+      }
+    }
+    .accordion__item.active {
+      .accordion__body {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+    }
+    .accordion__body {
+      overflow: hidden;
+      max-height: 0;
+      border: none !important;
+      background-color: rgb(241, 252, 255);
+      li {
+        padding: 6px 30px;
+        a {
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          &::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            display: flex;
+            margin-right: 9px;
+            border-radius: 50%;
+            background-color: rgb(59, 75, 100);
+          }
+        }
+        a:hover {
+          color: rgb(0, 171, 223);
+          &::before {
+            background-color: rgb(0, 171, 223);
+          }
+        }
+      }
+    }
+    .accordion {
+      padding-top: 13px;
+    }
+    ul {
+      border-left: 1px solid #b2bac6;
+      border-bottom: 1px solid #b2bac6;
+      border-right: 1px solid #b2bac6;
+
+      li {
+        > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          column-gap: 5px;
+          padding: 12px 29px;
+          cursor: pointer;
+        }
+        > div:hover {
+          background-color: #00abdf;
+          a {
+            color: #fff;
+          }
+        }
+        svg {
+          width: 24px;
+          height: 24px;
+          background-color: #3b4b64;
+        }
+        a {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: -2%;
+          text-decoration: none;
+          color: #3b4b64;
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    > ul {
+      > li {
+        padding: 20px 28px 20px 42px;
+        a {
+          font-size: 22px;
+        }
+      }
+      .accordion__body {
+        li {
+          padding: 6px 28px 6px 42px;
+        }
+      }
+      > ul {
+        > li {
+          > div {
+            padding: 13px 28px 13px 42px;
+          }
+        }
+      }
+    }
+  }
+}
+.t-body {
+  margin: 0;
+}

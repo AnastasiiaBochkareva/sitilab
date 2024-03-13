@@ -8,13 +8,14 @@ import '@/components/ui/Input/textarea';
 
 // import '@/components/ui/Tooltip/tooltip';
 // import '@/components/ui/Menu/Menu';
-// import '@/components/ui/Accordion/Accordion';
+import '@/components/ui/Accordion/Accordion';
 // import '@/components/ui/СhoosingСity/ChoosingCity';
 // import '@/components/ui/scrollTo/scrollTo';
 import '@/components/ui/Tabs/TabsNav';
 
 // import '@/mixins/Header/Header';
 import '@/mixins/Visit-price/Visit-price';
+
 import '@/components/Visit-promo/Visit-promo';
 
 // import MyModal from '@/components/ui/MyModal/MyModal';

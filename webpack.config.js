@@ -89,27 +89,27 @@ const optimization = () => {
 
       new TerserPlugin(),
 
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            plugins: [
-              ['gifsicle', { interlaced: true }],
-              ['mozjpeg', { progressive: true }],
-              ['optipng', { optimizationLevel: 5 }],
-            ],
-          },
-        },
-        generator: [
-          {
-            preset: 'webp',
-            implementation: ImageMinimizerPlugin.imageminGenerate,
-            options: {
-              plugins: ['imagemin-webp'],
-            },
-          },
-        ],
-      }),
+      // new ImageMinimizerPlugin({
+      //   minimizer: {
+      //     implementation: ImageMinimizerPlugin.imageminMinify,
+      //     options: {
+      //       plugins: [
+      //         ['gifsicle', { interlaced: true }],
+      //         ['mozjpeg', { progressive: true }],
+      //         ['optipng', { optimizationLevel: 5 }],
+      //       ],
+      //     },
+      //   },
+      //   generator: [
+      //     {
+      //       preset: 'webp',
+      //       implementation: ImageMinimizerPlugin.imageminGenerate,
+      //       options: {
+      //         plugins: ['imagemin-webp'],
+      //       },
+      //     },
+      //   ],
+      // }),
 
     ];
   }

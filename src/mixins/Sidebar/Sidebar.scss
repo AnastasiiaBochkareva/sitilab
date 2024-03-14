@@ -1,25 +1,4 @@
 .sidebar-list {
-  // > ul {
-  //   > li {
-  //     background-color: #00aadf;
-  //     display: flex;
-  //     column-gap: 17px;
-  //     align-items: center;
-  //     padding: 20px 30px;
-  //     color: #fff;
-  //     svg {
-  //       width: 21px;
-  //       height: 29px;
-  //       background-color: #3b4b64;
-  //     }
-  //     a {
-  //       font-family: 'Montserrat', sans-serif;
-  //       font-weight: 600;
-  //       font-size: 20px;
-  //       line-height: 38px;
-  //       letter-spacing: -2%;
-  //     }
-  //   }
   .accordion__item.active {
     .accordion__body {
       padding-top: 8px;
@@ -92,7 +71,11 @@
       }
     }
   }
+  @media (max-width: 1440px) {
+    display: none !important;
+  }
 }
+
 @media (max-width: 400px) {
   .accordion__body {
     li {

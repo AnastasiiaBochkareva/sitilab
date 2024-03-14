@@ -2,6 +2,8 @@
 import { animate } from '@/js/utils';
 
 function moveCar(tabBtn, tabsNav) {
+  if (!tabBtn && !tabsNav) return;
+
   if (document.documentElement.clientWidth <= 1250) return;
   const btnLeft = tabBtn.offsetLeft;
   const tabsNavLeft = tabsNav.offsetLeft;

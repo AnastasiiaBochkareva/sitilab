@@ -1,0 +1,11 @@
+.a-sale {
+  &__cards {
+    position: relative;
+  }
+  &__slider {
+    overflow: hidden;
+    z-index: 1;
+    max-height: 280px;
+    height: 100%;
+  }
+}

@@ -1,0 +1,15 @@
+mixin Analysis-card(param={})
+  .a-card
+    .a-card__top
+      a(href="#").a-subtitle.a-card-code=param.codeSubtitle
+      a(href="#").a-title-sm=param.titleSm
+    .a-card__bottom
+      .a-subtitle=param.typeSubtitle 
+      .a-subtitle
+        +icon('a-home')
+        span.text-blue=param.vndSubtitle
+      div.a-card__btn 
+        div.a-title-sm=param.price 
+        div.a-btn-basket
+          +icon('a-basket')
+          span.a-subtitle в корзину

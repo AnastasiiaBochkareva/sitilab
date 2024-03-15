@@ -5,7 +5,9 @@
   &__slider {
     overflow: hidden;
     z-index: 1;
-    max-height: 280px;
     height: 100%;
+    .swiper-slide {
+      height: auto;
+    }
   }
 }

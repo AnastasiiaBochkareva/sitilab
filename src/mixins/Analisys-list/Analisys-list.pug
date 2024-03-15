@@ -1,20 +1,79 @@
 mixin Analisys-list (param={})
   .a-list.tabb(style="width: 100%; height: max-content; background: none;" id='tab1')
     if (param.listTitleLink)
-      a(href="#").a-title Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови
-    +Analysis-text({
-      listTextTitle: true,
-      title: 'Биоматериал: венозная кровь',
-      text: [
-        'Общий анализ крови представляет собой важное диагностическое исследование, тщательно отражающее как распространенные, так и более редкие нарушения здоровья человека. Эти нарушения проявляются отклонениями от нормы различных параметров общего анализа крови. Во многих случаях результаты общего анализа крови играют ключевую роль в установлении диагноза, особенно при заболеваниях системы кроветворения, где этому исследованию отводится ведущая роль.',
-       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat impedit neque architecto perspiciatis reiciendis consectetur cum nam quo, quae id suscipit maiores modi consequuntur molestias, illum quasi rerum. Debitis harum, officia enim distinctio accusantium repellat, possimus fugiat rerum nostrum, magni alias. Libero voluptatibus nihil, odit accusantium necessitatibus placeat ipsam nobis obcaecati laborum facere amet, velit, quisquam saepe eaque ea labore deserunt eveniet aut quod eos. Aliquam ea blanditiis rem sunt accusantium quod corrupti earum debitis quo, cupiditate minima, nesciunt autem natus nostrum voluptate ad accusamus temporibus suscipit labore ullam laudantium quasi! Voluptates modi magnam et animi non? Autem, cum fuga!', 
-       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat impedit neque architecto perspiciatis reiciendis consectetur cum nam quo, quae id suscipit maiores modi consequuntur molestias, illum quasi rerum. Debitis harum, officia enim distinctio accusantium repellat, possimus fugiat rerum nostrum, magni alias. Libero voluptatibus nihil, odit accusantium necessitatibus placeat ipsam nobis obcaecati laborum facere amet, velit, quisquam saepe eaque ea labore deserunt eveniet aut quod eos. Aliquam ea blanditiis rem sunt accusantium quod corrupti earum debitis quo, cupiditate minima, nesciunt autem natus nostrum voluptate ad accusamus temporibus suscipit labore ullam laudantium quasi! Voluptates modi magnam et animi non? Autem, cum fuga!', 
-       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat impedit neque architecto perspiciatis reiciendis consectetur cum nam quo, quae id suscipit maiores modi consequuntur molestias, illum quasi rerum. Debitis harum, officia enim distinctio accusantium repellat, possimus fugiat rerum nostrum, magni alias. Libero voluptatibus nihil, odit accusantium necessitatibus placeat ipsam nobis obcaecati laborum facere amet, velit, quisquam saepe eaque ea labore deserunt eveniet aut quod eos. Aliquam ea blanditiis rem sunt accusantium quod corrupti earum debitis quo, cupiditate minima, nesciunt autem natus nostrum voluptate ad accusamus temporibus suscipit labore ullam laudantium quasi! Voluptates modi magnam et animi non? Autem, cum fuga!', 
-       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat impedit neque architecto perspiciatis reiciendis consectetur cum nam quo, quae id suscipit maiores modi consequuntur molestias, illum quasi rerum. Debitis harum, officia enim distinctio accusantium repellat, possimus fugiat rerum nostrum, magni alias. Libero voluptatibus nihil, odit accusantium necessitatibus placeat ipsam nobis obcaecati laborum facere amet, velit, quisquam saepe eaque ea labore deserunt eveniet aut quod eos. Aliquam ea blanditiis rem sunt accusantium quod corrupti earum debitis quo, cupiditate minima, nesciunt autem natus nostrum voluptate ad accusamus temporibus suscipit labore ullam laudantium quasi! Voluptates modi magnam et animi non? Autem, cum fuga!', 
-       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat impedit neque architecto perspiciatis reiciendis consectetur cum nam quo, quae id suscipit maiores modi consequuntur molestias, illum quasi rerum. Debitis harum, officia enim distinctio accusantium repellat, possimus fugiat rerum nostrum, magni alias. Libero voluptatibus nihil, odit accusantium necessitatibus placeat ipsam nobis obcaecati laborum facere amet, velit, quisquam saepe eaque ea labore deserunt eveniet aut quod eos. Aliquam ea blanditiis rem sunt accusantium quod corrupti earum debitis quo, cupiditate minima, nesciunt autem natus nostrum voluptate ad accusamus temporibus suscipit labore ullam laudantium quasi! Voluptates modi magnam et animi non? Autem, cum fuga!', 
-       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat impedit neque architecto perspiciatis reiciendis consectetur cum nam quo, quae id suscipit maiores modi consequuntur molestias, illum quasi rerum. Debitis harum, officia enim distinctio accusantium repellat, possimus fugiat rerum nostrum, magni alias. Libero voluptatibus nihil, odit accusantium necessitatibus placeat ipsam nobis obcaecati laborum facere amet, velit, quisquam saepe eaque ea labore deserunt eveniet aut quod eos. Aliquam ea blanditiis rem sunt accusantium quod corrupti earum debitis quo, cupiditate minima, nesciunt autem natus nostrum voluptate ad accusamus temporibus suscipit labore ullam laudantium quasi! Voluptates modi magnam et animi non? Autem, cum fuga!', 
-       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat impedit neque architecto perspiciatis reiciendis consectetur cum nam quo, quae id suscipit maiores modi consequuntur molestias, illum quasi rerum. Debitis harum, officia enim distinctio accusantium repellat, possimus fugiat rerum nostrum, magni alias. Libero voluptatibus nihil, odit accusantium necessitatibus placeat ipsam nobis obcaecati laborum facere amet, velit, quisquam saepe eaque ea labore deserunt eveniet aut quod eos. Aliquam ea blanditiis rem sunt accusantium quod corrupti earum debitis quo, cupiditate minima, nesciunt autem natus nostrum voluptate ad accusamus temporibus suscipit labore ullam laudantium quasi! Voluptates modi magnam et animi non? Autem, cum fuga!', 
-       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat impedit neque architecto perspiciatis reiciendis consectetur cum nam quo, quae id suscipit maiores modi consequuntur molestias, illum quasi rerum. Debitis harum, officia enim distinctio accusantium repellat, possimus fugiat rerum nostrum, magni alias. Libero voluptatibus nihil, odit accusantium necessitatibus placeat ipsam nobis obcaecati laborum facere amet, velit, quisquam saepe eaque ea labore deserunt eveniet aut quod eos. Aliquam ea blanditiis rem sunt accusantium quod corrupti earum debitis quo, cupiditate minima, nesciunt autem natus nostrum voluptate ad accusamus temporibus suscipit labore ullam laudantium quasi! Voluptates modi magnam et animi non? Autem, cum fuga!', 
-       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat impedit neque architecto perspiciatis reiciendis consectetur cum nam quo, quae id suscipit maiores modi consequuntur molestias, illum quasi rerum. Debitis harum, officia enim distinctio accusantium repellat, possimus fugiat rerum nostrum, magni alias. Libero voluptatibus nihil, odit accusantium necessitatibus placeat ipsam nobis obcaecati laborum facere amet, velit, quisquam saepe eaque ea labore deserunt eveniet aut quod eos. Aliquam ea blanditiis rem sunt accusantium quod corrupti earum debitis quo, cupiditate minima, nesciunt autem natus nostrum voluptate ad accusamus temporibus suscipit labore ullam laudantium quasi! Voluptates modi magnam et animi non? Autem, cum fuga!', 
-      ]
-    })
+      div
+        p.a-title.text-blue Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови
+    div
+      +Analysis-text({
+        listTextTitle: true,
+        title: 'Биоматериал: венозная кровь',
+        listText: true,
+        text: [
+          'Общий анализ крови представляет собой важное диагностическое исследование, тщательно отражающее как распространенные, так и более редкие нарушения здоровья человека. Эти нарушения проявляются отклонениями от нормы различных параметров общего анализа крови. Во многих случаях результаты общего анализа крови играют ключевую роль в установлении диагноза, особенно при заболеваниях системы кроветворения, где этому исследованию отводится ведущая роль.',
+        ]
+      })
+    div
+      +Analysis-text({
+        listTextTitle: true,
+        title: 'Общий анализ крови включает в себя следующие показатели:',
+        listTextUl: true,
+        list: [
+          'Лейкоциты (WBC): Отражает количество белых кровяных клеток в определенном объеме крови. Отклонения в количестве лейкоцитов могут свидетельствовать об инфекциях, воспалительных состояниях или нарушениях иммунной системы.',
+          'Эритроциты (RBC): Отражает количество красных кровяных клеток в определенном объеме крови. Отклонения от нормы могут указывать на анемию или другие нарушения, связанные с кровью.',
+          'Гемоглобин (HGB, Hb): Оценивает количество гемоглобина, белка, отвечающего за перенос кислорода, в крови. Аномалии уровня гемоглобина могут указывать на анемию или другие проблемы со здоровьем.',
+          'Гематокрит (HCT): Представляет собой процент объема крови, занимаемого эритроцитами. Этот показатель также отражает способность крови переносить кислород.',
+          'Средний объем эритроцита (MCV): Указывает на средний размер красных кровяных клеток.',
+          'Среднее содержание Hb в эритроците (MCH): Измеряет среднее количество гемоглобина в красных кровяных клетках.',
+          'Средняя концентрация Hb в эритроцитах (MCHC): Отражает концентрацию гемоглобина в красных кровяных клетках.',
+          'Индекс распределения эритроцитов (RDW-SD): Отражает изменчивость размеров красных кровяных клеток.',
+          'Индекс распределения эритроцитов (RDW-CV): Оценивает степень изменчивости размеров красных кровяных клеток.',
+          'Тромбоциты (PLV): Оценивает количество тромбоцитов, необходимых для свертывания крови. Отклонения от нормы могут свидетельствовать о нарушениях свертывания крови или проблемах с костным мозгом.',
+          'Средний объем тромбоцита (MPV): Измеряет средний размер тромбоцитов в крови. Повышенные или пониженные значения могут быть связаны с различными заболеваниями, такими как тромбоцитопения или тромбоцитоз.',
+          'Тромбокрит (PCT): Этот параметр отражает процентное содержание тромбоцитов в общем объеме крови и используется для дополнительной оценки функции тромбоцитов.',
+          'Индекс распределения тромбоцитов (PDW): Измеряет изменчивость размеров тромбоцитов. Повышенные значения могут быть индикатором различных состояний, включая тромбоцитопению.',
+        
+          ],
+      })
+    div
+      +Analysis-text({
+        listTextTitle: true,
+        title: 'Лейкоцитарная формула состоит из пяти основных типов лейкоцитов в мазке крови:',
+        listText: true,
+        text: [
+          '1. Нейтрофилы (NE): Эти белые кровяные клетки играют ключевую роль в защите организма от бактерий и других инфекций. Повышенные уровни нейтрофилов могут указывать на бактериальное воспаление.',
+          '2. Лимфоциты (LYMF): Лимфоциты отвечают за иммунитет и могут быть повышены при вирусных инфекциях или в условиях, связанных с иммунной реакцией.',
+          '3. Моноциты (MON): Моноциты играют роль в фагоцитозе и воспалительных процессах. Их уровень может повыситься при хронических инфекциях или воспалительных состояниях.',
+          '4. Эозинофилы (Eo): Эозинофилы часто увеличиваются при аллергических реакциях и паразитарных инфекциях.',
+          '5. Базофилы (Ba): Базофилы играют роль в аллергических реакциях и воспалительных процессах. Их повышенные уровни могут быть связаны с различными аллергическими состояниями.',
+        ],
+      })
+    div 
+      +Analysis-text({
+        listText: true,
+        text: [
+          'Общий анализ крови – это результат совместной работы современных технологий и экспертов в области лабораторной гематологии. Несмотря на свою рутинность проведения, этот вид исследования остается первоочередным и ключевым этапом в поиске дифференциального диагноза и оценке эффективности лечения.',
+        ],
+      })
+    div   
+      +Analysis-text({
+        listTextTitle: true,
+        title: 'Источники:',
+        listTextLinks: true,
+        links: [
+          '1. Э.М. Шакирова, Э.И. Землякова Оценка анализов крови в общей врачебной практике. — ПРАКТИЧЕСКАЯ МЕДИЦИНА, 2011. — 25-28 с.',
+          '2. Marcel E. Conrad, MD, (Retired) Distinguished Professor of Medicine, University of South Alabama Iron Deficiency Anemia Updated: Oct 4, 2006.',
+          '3. Татков О. В., Ступин Ф. П. Общий анализ крови. Информационный сборник // М.: Издательские решения. — 2016. — 72 с. ISBN 978-5-4474-7600-7.',
+        ],
+      })
+    div 
+      +Analysis-tags({
+        tag: 
+        [
+          'Клинический анализ крови',
+          'ОАК',
+          'ОАК с лейкоформулой',
+          'Анализ крови'
+        ]
+      })
+      
+

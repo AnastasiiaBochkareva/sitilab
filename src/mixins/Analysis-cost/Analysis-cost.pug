@@ -1,2 +1,33 @@
 mixin Analysis-cost(param={})
-  .a-cost Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas neque dolorum eum, esse, accusantium distinctio repellat ea enim maxime adipisci unde doloremque voluptatibus id illum. Consequuntur, odit animi iste sint at recusandae, delectus nemo exercitationem rerum accusamus aliquid pariatur qui alias? Voluptate odit neque reprehenderit! Earum amet consequatur alias repudiandae?
+  .a-cost
+    div.a-cost__row
+      .a-title-sm код: 11-10-001
+      .a-subtitle
+        +icon('a-home')
+        span.text-blue доступно с выездом на дом
+    div.a-cost__row
+      .a-title-sm Срок исполнения:
+        .ico-info 
+          +icon('a-info')
+          .ico-popup
+            span На сайте указан максимально возможный срок выполнения исследования. Он отражает время выполнения исследования в лаборатории и не включает время на доставку биоматериала до лаборатории.
+      .a-subtitle
+        +icon('a-home')
+        span 1 календарный день
+      .a-subtitle
+        +icon('a-home')
+        span.text-blue результат за 3-5 часов (CITO): 1050 ₽
+    div.a-cost__row
+      .a-title-sm Цена:
+      .a-title.text-blue 525 ₽
+      .a-subtitle Взятие крови из вены: 
+        span.a-subtitle__price.text-blue + 230 ₽
+      .btn-container
+        .a-cost__btn
+          +icon('a-home')
+          span.a-subtitle в корзину
+      .a-subtitle
+        +icon('a-вщс')
+        span.a-subtitle.text-blue Скачать образец результата
+      
+          

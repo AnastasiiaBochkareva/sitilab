@@ -1,0 +1,22 @@
+.a-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 20px;
+  a {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -2%;
+    color: rgb(142, 154, 171);
+
+    background-color: rgb(245, 245, 245);
+    padding: 3px 10px;
+    border-radius: 5px;
+    &:hover {
+      background-color: rgb(230, 248, 253);
+    }
+  }
+}

@@ -525,19 +525,21 @@
     font-size: 14px;
     line-height: 22px;
     letter-spacing: -2%;
+    color: rgb(59, 75, 100);
   }
-  .a-inner-container {
-    padding-left: 110px;
-    padding-right: 110px;
-    @media (max-width: 1000px) {
-      padding-left: 0px;
-      padding-right: 0px;
+  .a-container {
+    padding: 40px 260px 100px;
+    @media (max-width: 1440px) {
+      padding: 40px 38px 50px;
+    }
+    @media (max-width: 500px) {
+      padding: 20px 0 50px;
     }
   }
   .text-blue {
     color: rgb(0, 171, 223) !important;
   }
-  .a-container {
+  .a-inner-container {
     max-height: 1000px;
     overflow: scroll;
     display: flex;
@@ -550,11 +552,41 @@
     text-decoration: none;
     cursor: pointer;
   }
+  .ico-popup {
+    position: absolute;
+    width: 235px;
+    background: #00abdf;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -1.5%;
+    padding: 26px 17px 18px;
+    border-radius: 10px;
+    top: 175px;
+    right: -68px;
+    z-index: 2;
+    display: none;
+    &:before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      transform: rotate(45deg);
+      display: block;
+      background-color: #00abdf;
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      right: 50%;
+    }
+  }
   .vnd-container {
     padding-top: 40px !important;
     padding-bottom: 40px !important;
-    padding-right: 260px !important;
-    padding-left: 260px !important;
+    padding-right: 370px !important;
+    padding-left: 370px !important;
     @media (max-width: 1700px) {
       padding-right: 100px !important;
       padding-left: 100px !important;
@@ -563,35 +595,28 @@
       padding-right: 38px !important;
       padding-left: 38px !important;
     }
-    // @media (max-width: 1000px) {
-    //   padding-top: 20px !important;
-    //   padding-bottom: 20px !important;
-    // }
-    // @media (max-width: 700px) {
-    //   padding: 0 !important;
-    // }
   }
   .a-services {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     column-gap: 15px;
   }
   .a-col {
     margin-top: 77px;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    height: 100%;
   }
   .tabs-nav {
     gap: 35px;
     box-shadow: none;
-    align-items: flex-end;
     border-bottom: 1px solid #e5e5e5;
-    position: absolute;
-    top: 0;
-    left: 351px;
-    height: 77px;
-    right: 0;
-    width: auto;
+    width: 100%;
     background-color: #fff;
-    padding-left: 30px;
+    align-items: flex-end;
+    flex-wrap: nowrap !important;
 
     &__btn {
       padding: 0 0 15px;
@@ -603,11 +628,12 @@
       background-color: initial;
       span {
         font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 14px;
         line-height: 22px;
         letter-spacing: -2%;
         color: rgb(59, 75, 100);
+        white-space: nowrap;
       }
     }
     .tabs-nav__btn.active {
@@ -659,13 +685,53 @@
     margin: 0;
     list-style: none;
   }
-  .analisys-list {
-    // padding-left: 350px;
-    // padding-right: 340px;
+  @media (max-width: 1440px) {
+    .sidebar {
+      &-btn {
+        display: none;
+      }
+    }
+    .a-title {
+      font-size: 22px;
+      line-height: 35px;
+    }
+    .a-title-sm {
+      line-height: 28px;
+    }
+    .a-inner-container {
+      overflow: initial;
+      max-height: 100%;
+    }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 1000px) {
+    .a-inner-container {
+      width: 100%;
+      order: 3;
+    }
+    .tabs-nav {
+      order: 2;
+      padding: 30px 0 0;
+    }
+    .a-col {
+      order: 1;
+      position: relative;
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 500px) {
     .sidebar-list {
       max-width: 100%;
+    }
+    .a-col {
+      width: 100%;
+    }
+    .tabs-nav {
+      padding-left: 38px;
+      padding-right: 38px;
+    }
+    .a-inner-container {
+      padding-left: 38px;
+      padding-right: 38px;
     }
   }
 }

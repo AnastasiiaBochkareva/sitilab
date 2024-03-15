@@ -17,7 +17,11 @@ mixin TabsNav(param = {})
 
 
     .tabs-nav
-
+        if (param.tabsBtn)
+          .sidebar-btn
+            +icon('analysis')
+            a Анализы
+            +icon('a-close')
         - for (let i = 0; i < param.items.length; i++)
 
             button.tabs-nav__btn(

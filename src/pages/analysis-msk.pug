@@ -1,0 +1,20 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    main.analysis.analysis-msk
+
+      section.a-container
+        .a-title Анализы в Москве
+      
+        .a-inner-container
+          +Sidebar({
+            analysisBtn: true,
+          })
+          +Analysis-row({})
+        
+        

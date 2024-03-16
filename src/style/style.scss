@@ -647,6 +647,13 @@
       }
     }
   }
+  .a-card-code {
+    margin-bottom: 12px;
+    color: rgb(142, 154, 171) !important;
+    &:hover {
+      color: rgb(0, 171, 223) !important;
+    }
+  }
   .sidebar {
     &-list {
       max-width: 351px;
@@ -754,4 +761,11 @@
 }
 .t-body {
   margin: 0;
+}
+
+.analysis-msk {
+  .a-inner-container {
+    overflow: initial;
+    width: 100%;
+  }
 }

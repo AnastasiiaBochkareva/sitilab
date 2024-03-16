@@ -11,3 +11,5 @@ mixin Analysis-text(param={})
   if (param.listTextLinks)
     each el in param.links
       a(href="#").a-subtitle=el 
+  if (param.listTextLink)
+    a(href="#").a-subtitle.text-blue=param.link

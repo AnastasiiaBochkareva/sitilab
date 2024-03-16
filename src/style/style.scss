@@ -529,6 +529,9 @@
   }
   .a-container {
     padding: 40px 260px 100px;
+    @media (max-width: 1700px) {
+      padding: 40px 130px 50px;
+    }
     @media (max-width: 1440px) {
       padding: 40px 38px 50px;
     }
@@ -592,8 +595,9 @@
       padding-left: 100px !important;
     }
     @media (max-width: 1500px) {
-      padding-right: 38px !important;
+      padding-right: 0px !important;
       padding-left: 38px !important;
+      padding-bottom: 0px !important;
     }
   }
   .a-services {
@@ -665,6 +669,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      column-gap: 17px;
       svg {
         width: 24px;
         height: 24px;
@@ -729,9 +734,21 @@
       padding-left: 38px;
       padding-right: 38px;
     }
+    .a-container {
+      border-bottom: 1px solid rgb(178, 186, 198);
+      .a-title {
+        margin-bottom: 25px;
+      }
+    }
     .a-inner-container {
       padding-left: 38px;
       padding-right: 38px;
+    }
+    .a-title {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 30px;
+      text-align: left;
     }
   }
 }

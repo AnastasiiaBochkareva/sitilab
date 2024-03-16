@@ -78,7 +78,21 @@
       }
     }
   }
-  @media (max-width: 500px) {
-    // width: 100%;
+  @media (max-width: 1440px) {
+    padding: 30px 38px 35px;
+    .a-title-sm {
+      line-height: 22px !important;
+    }
+    .a-title {
+      font-size: 32px;
+      line-height: 22px;
+    }
+    .btn-container {
+      .a-cost__btn {
+        .a-subtitle {
+          font-weight: 400;
+        }
+      }
+    }
   }
 }

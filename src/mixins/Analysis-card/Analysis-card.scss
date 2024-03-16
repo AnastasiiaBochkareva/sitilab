@@ -39,6 +39,7 @@
       align-items: center;
       justify-content: center;
       column-gap: 4px;
+      border-radius: 10px;
       svg {
         width: 30px;
         height: 30px;
@@ -70,6 +71,31 @@
     margin-bottom: 0 !important;
     &:hover {
       color: rgb(0, 171, 223);
+    }
+  }
+  @media (max-width: 500px) {
+    padding: 25px 20px 30px;
+    max-height: 305px;
+    .a-title-sm {
+      line-height: 20px;
+    }
+    &__bottom {
+      .a-subtitle {
+        font-size: 12px !important;
+        line-height: 14px !important;
+      }
+      .a-card__btn {
+        .a-title-sm {
+          font-size: 20px;
+          line-height: 22px;
+        }
+        .a-btn-basket {
+          padding: 5px 12px 5px 8px;
+          .a-subtitle {
+            line-height: 22px !important;
+          }
+        }
+      }
     }
   }
 }

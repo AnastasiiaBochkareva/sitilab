@@ -26,9 +26,27 @@ block content
           
           .a-inner-container
             +Sidebar({})
-          
+            
             +Analisys-list({
+              listDescription: true,
+              listTitle: 'Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови',
               listTitleLink: true,
+              id: '1'
+            })
+            +Analisys-list({
+              listPreparation: true,
+              listTitle: 'Подготовка к исследованию',
+              listTitleLink: true,
+              id: '2'
+            })
+            +Analisys-list({
+              listReadings: true,
+              id: '3'
+            })
+            +Analisys-list({
+              result: true,
+              listText: true,
+              id: '4'
             })
           
           .a-col

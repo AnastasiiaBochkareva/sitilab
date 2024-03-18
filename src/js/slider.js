@@ -33,8 +33,11 @@ const analysisSaleSlider = new Swiper('.a-sale__slider', {
     900: {
       slidesPerView: '3',
     },
+    800: {
+      slidesPerView: '2',
+    },
     600: {
-      slidesPerView: '1.5',
+      slidesPerView: '',
     },
     375: {
       slidesPerView: '1.5',

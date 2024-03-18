@@ -10,11 +10,52 @@ block content
 
       section.a-container
         .a-title Анализы в Москве
+        .a-show-more
+          .a-show-more__btn   
+            span Все разделы
       
         .a-inner-container
           +Sidebar({
             analysisBtn: true,
           })
-          +Analysis-row({})
+          .a-row-wrapper
+            +Analysis-row({
+              aRowTitle: true,
+              code: 'код: 11-10-001',
+              title: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
+              subtitle: 'Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови',
+              infoPrice: '525 ₽',
+            })
+            +Analysis-row({
+              code: 'код: 62-94-803',
+              title: 'ДНК Chlamydia trachomatis, ЦК соскоб',
+              subtitle: 'Номенклатура МЗРФ (Приказ №804н): A26.20.020.001.01 Определение ДНК хламидии трахоматис (Chlamydia trachomatis) в отделяемом из цервикального канала методом ПЦР...',
+              infoPrice: '525 ₽',
+            })
+            +Analysis-row({
+              code: 'код: 11-10-001',
+              title: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
+              subtitle: 'Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови',
+              infoPrice: '525 ₽',
+            })
+            +Analysis-row({
+              code: 'код: 62-94-803',
+              title: 'ДНК Chlamydia trachomatis, ЦК соскоб',
+              subtitle: 'Номенклатура МЗРФ (Приказ №804н): A26.20.020.001.01 Определение ДНК хламидии трахоматис (Chlamydia trachomatis) в отделяемом из цервикального канала методом ПЦР...',
+              infoPrice: '525 ₽',
+            })
+            +Analysis-row({
+              code: 'код: 11-10-001',
+              title: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
+              subtitle: 'Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови',
+              infoPrice: '525 ₽',
+            })
+            +Analysis-row({
+              code: 'код: 62-94-803',
+              title: 'ДНК Chlamydia trachomatis, ЦК соскоб',
+              subtitle: 'Номенклатура МЗРФ (Приказ №804н): A26.20.020.001.01 Определение ДНК хламидии трахоматис (Chlamydia trachomatis) в отделяемом из цервикального канала методом ПЦР...',
+              infoPrice: '525 ₽',
+            })
+
         
         

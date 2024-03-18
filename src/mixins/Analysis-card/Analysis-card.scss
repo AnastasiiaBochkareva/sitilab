@@ -1,5 +1,6 @@
 .a-card {
   max-height: 280px;
+  min-height: 280px;
   height: 100%;
 
   border: 1px solid #b2bac6;
@@ -69,6 +70,7 @@
   @media (max-width: 500px) {
     padding: 25px 20px 30px;
     max-height: 305px;
+    min-height: 305px;
     .a-title-sm {
       line-height: 20px;
     }

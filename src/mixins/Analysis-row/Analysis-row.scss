@@ -1,7 +1,117 @@
 .a-row {
+  display: flex;
+  justify-content: space-between;
   padding: 25px 30px 30px;
+  border-top: 1px solid rgb(178, 186, 198);
+  border-left: 1px solid rgb(178, 186, 198);
+  border-right: 1px solid rgb(178, 186, 198);
+  column-gap: 40px;
+  .a-subtitle {
+    font-weight: 500 !important;
+  }
+  &__type {
+    max-width: 660px;
+    // width: 100%;
+    width: calc(100% - 290px);
+    .a-title-sm {
+      text-align: left !important;
+      font-size: 20px !important;
+      line-height: 28px;
+      &:hover {
+        color: rgb(0, 171, 223) !important;
+      }
+    }
+  }
+  &__info {
+    // width: calc(100% - 700px);
+    max-width: 290px;
+    width: 100%;
+    > div {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      .text-blue {
+        display: inline;
+      }
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    &_price {
+      margin-top: 7px;
+
+      padding: 14px 20px;
+      background-color: rgb(230, 248, 253);
+      border-radius: 10px;
+      width: calc(100% - 58px);
+    }
+    .a-title {
+      font-size: 28px !important;
+      line-height: 22px !important;
+      margin-bottom: 0 !important;
+      text-align: left !important;
+    }
+    &_btn {
+      cursor: pointer;
+      background-color: #00abdf;
+      border-radius: 10px;
+      width: 50px;
+      min-width: 50px;
+      max-width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        fill: #fff;
+        width: 30px;
+        height: 30px;
+      }
+      &:hover {
+        background-color: #11c3f3;
+      }
+    }
+  }
 
   @media (max-width: 1440px) {
     padding: 25px 38px 30px;
+
+    &__type {
+      .a-title-sm {
+        line-height: 22px !important;
+      }
+    }
+    .a-tags {
+      margin-top: 12px;
+    }
+    &__info {
+      &_btn {
+        min-width: 46px;
+        max-width: 46px;
+        width: 46px;
+        height: 46px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    row-gap: 20px;
+    // padding: 25px 0 30px;
+    &__type {
+      width: 100%;
+      max-width: 100%;
+    }
+    &__info {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 900px) {
+    border-left: none;
+    border-right: none;
   }
 }

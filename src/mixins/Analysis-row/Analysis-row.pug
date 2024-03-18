@@ -1,5 +1,34 @@
 mixin Analysis-row(param={})
+  if (param.aRowTitle)
+    .a-row-title
+      .a-title-sm.text-blue Обмен углеводов
+        .a-title-sm 12 
   .a-row
     .a-row__type
-      .a-card-code код: 11-10-001
+      .a-subtitle.a-card-code=param.code
+      a(href="#").a-title-sm=param.title
+      .a-subtitle=param.subtitle
+      +Analysis-tags({
+        tag: [
+          'Клинический анализ крови', 'ОАК', 'ОАК с лейкоформулой', 'Анализ крови'
+        ]
+      })
     .a-row__info
+      div
+        +icon('a-done')
+        .a-subtitle 1 календарный день
+      div
+        +icon('a-clock')
+        .a-subtitle результат за 3-5 часов (CITO):  
+          .text-blue 1050 ₽
+      div
+        +icon('a-home')
+        .a-subtitle доступно с выездом на дом
+      div
+        +icon('a-plus')
+        .a-subtitle взятие биоматериала: 
+          .text-blue +230 ₽
+      div
+        .a-row__info_price.a-title=param.infoPrice
+        .a-row__info_btn 
+          +icon('a-basket')

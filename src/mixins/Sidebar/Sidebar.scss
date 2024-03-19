@@ -4,6 +4,15 @@
       padding-top: 8px;
       padding-bottom: 8px;
     }
+    > div {
+      .accordion__head {
+        svg {
+          fill: #fff;
+          transform: rotate(180deg);
+          transition: transform 0.3s;
+        }
+      }
+    }
   }
   .accordion__body {
     overflow: hidden;
@@ -57,9 +66,9 @@
         }
       }
       svg {
+        fill: #00abdf;
         width: 24px;
         height: 24px;
-        background-color: #3b4b64;
       }
       a {
         font-family: 'Montserrat', sans-serif;

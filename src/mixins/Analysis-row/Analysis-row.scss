@@ -40,6 +40,7 @@
     svg {
       width: 24px;
       height: 24px;
+      fill: #00abdf;
     }
     &_price {
       margin-top: 7px;
@@ -56,6 +57,7 @@
       text-align: left !important;
     }
     &_btn {
+      margin-top: 7px;
       cursor: pointer;
       background-color: #00abdf;
       border-radius: 10px;

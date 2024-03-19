@@ -34,7 +34,7 @@
       font-size: 28px;
     }
     .a-btn-basket {
-      background-color: #11c3f3;
+      background-color: #00abdf;
       padding: 8px 15px 8px 8px;
       display: flex;
       align-items: center;
@@ -48,6 +48,10 @@
       }
       span {
         color: #fff;
+        margin-bottom: 0;
+      }
+      &:hover {
+        background-color: #11c3f3;
       }
     }
   }

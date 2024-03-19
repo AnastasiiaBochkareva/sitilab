@@ -15,15 +15,16 @@ mixin Analysis-row(param={})
       })
     .a-row__info
       div
-        +icon('a-done')
+        +icon('a-calendar')
         .a-subtitle 1 календарный день
       div
         +icon('a-clock')
         .a-subtitle результат за 3-5 часов (CITO):  
           .text-blue 1050 ₽
-      div
-        +icon('a-home')
-        .a-subtitle доступно с выездом на дом
+      if (param.aRowVnd)
+        div
+          +icon('a-home')
+          .a-subtitle доступно с выездом на дом
       div
         +icon('a-plus')
         .a-subtitle взятие биоматериала: 

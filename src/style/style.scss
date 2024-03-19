@@ -561,7 +561,7 @@
   }
   .ico-popup {
     position: absolute;
-    width: 235px;
+    width: 201px;
     background: #00abdf;
     color: #fff;
     font-size: 12px;
@@ -572,8 +572,8 @@
     letter-spacing: -1.5%;
     padding: 26px 17px 18px;
     border-radius: 10px;
-    top: 175px;
-    right: -68px;
+    top: 32px;
+    right: -109px;
     z-index: 2;
     display: none;
     &:before {
@@ -585,8 +585,7 @@
       background-color: #00abdf;
       position: absolute;
       top: -9px;
-      left: 50%;
-      right: 50%;
+      left: 108px;
     }
   }
   .vnd-container {
@@ -599,9 +598,12 @@
       padding-left: 100px !important;
     }
     @media (max-width: 1500px) {
-      padding-right: 0px !important;
+      padding-right: 38px !important;
       padding-left: 38px !important;
       padding-bottom: 0px !important;
+    }
+    @media (max-width: 1000px) {
+      padding-right: 0px !important;
     }
   }
   .a-services {
@@ -643,11 +645,34 @@
         color: rgb(59, 75, 100);
         white-space: nowrap;
       }
+      &:hover {
+        color: $text-1;
+        background-color: transparent !important;
+
+        span {
+          color: #00abdf !important;
+        }
+        svg {
+          fill: #fff;
+        }
+      }
     }
     .tabs-nav__btn.active {
+      position: relative;
       span {
         color: rgb(0, 171, 223);
-        border-bottom: 3px solid rgb(0, 170, 223);
+        background-color: #fff;
+        // border-bottom: 3px solid rgb(0, 170, 223);
+      }
+      &::before {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: rgb(0, 170, 223);
+        display: block;
+        position: absolute;
+        bottom: 0;
+        transition: 1s;
       }
     }
   }
@@ -656,6 +681,12 @@
     color: rgb(142, 154, 171) !important;
     &:hover {
       color: rgb(0, 171, 223) !important;
+    }
+  }
+  .a-p-sm {
+    @media (max-width: 500px) {
+      padding-left: 38px;
+      padding-right: 38px;
     }
   }
   .sidebar {
@@ -685,7 +716,6 @@
       svg {
         width: 24px;
         height: 24px;
-        background-color: #3b4b64;
       }
       a {
         font-family: 'Montserrat', sans-serif;
@@ -698,6 +728,12 @@
         // position: absolute;
         // right: 34px;
         // top: 35%;
+        height: 24px;
+        width: 24px;
+        display: none;
+        svg {
+          fill: #fff;
+        }
       }
     }
   }
@@ -745,6 +781,14 @@
       overflow: initial;
       max-height: 100%;
     }
+    .a-col {
+      margin-top: 37px;
+    }
+  }
+  @media (max-width: 1100px) {
+    .tabs-nav {
+      padding: 0px 0 0;
+    }
   }
   @media (max-width: 1000px) {
     .a-inner-container {
@@ -759,6 +803,13 @@
       order: 1;
       position: relative;
       margin-top: 0;
+    }
+  }
+  @media (max-width: 900px) {
+    .sidebar-btn {
+      &__close {
+        display: block;
+      }
     }
   }
   @media (max-width: 500px) {
@@ -781,6 +832,11 @@
     .a-inner-container {
       padding-left: 38px;
       padding-right: 38px;
+    }
+
+    .a-p-sm.a-title {
+      font-size: 22px;
+      line-height: 35px;
     }
     .a-title {
       font-size: 18px;

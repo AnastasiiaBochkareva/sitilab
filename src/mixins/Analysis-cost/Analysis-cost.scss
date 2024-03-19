@@ -1,26 +1,29 @@
 .a-cost {
-  // height: 568px;
-  // max-width: 340px;
-  // width: 100%;
   background-color: #f1fcff;
   position: sticky;
   padding: 30px 40px 35px;
+  max-width: 260px;
   .a-subtitle {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     column-gap: 8px;
     font-weight: 500 !important;
     svg {
       height: 24px;
       width: 24px;
+      max-width: 24px;
+      min-width: 24px;
+      fill: #00abdf;
+    }
+    span {
+      white-space: break-spaces;
     }
     &__price {
       font-weight: 700;
     }
   }
   .a-title-sm {
-    margin-bottom: 15px !important;
+    margin-bottom: 5px !important;
     text-align: left !important;
     font-size: 14px !important;
     display: flex;
@@ -33,11 +36,17 @@
   }
   .ico-info {
     cursor: pointer;
+    position: relative;
+    width: 18px;
+    height: 18px;
   }
   .ico-info:hover .ico-popup {
     display: block;
   }
   &__row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
     &:not(:last-child) {
       border-bottom: 1px solid rgb(178, 186, 198);
       margin-bottom: 25px;
@@ -46,13 +55,13 @@
   }
   .a-title {
     line-height: 22px;
-    margin-bottom: 15px !important;
+    margin-bottom: 5px !important;
     text-align: left !important;
   }
   .btn-container {
     width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +73,7 @@
       justify-content: center;
       column-gap: 4px;
       border-radius: 10px;
-      width: 76.47%;
+      width: 100%;
       cursor: pointer;
       svg {
         height: 30px;
@@ -79,6 +88,7 @@
     }
   }
   @media (max-width: 1440px) {
+    max-width: 264px;
     padding: 30px 38px 35px;
     .a-title-sm {
       line-height: 22px !important;
@@ -94,5 +104,8 @@
         }
       }
     }
+  }
+  @media (max-width: 700px) {
+    max-width: 100%;
   }
 }

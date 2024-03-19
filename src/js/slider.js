@@ -7,45 +7,46 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// init Swiper:
-const analysisSaleSlider = new Swiper('.a-sale__slider', {
-  modules: [Navigation, Pagination],
-  slidesPerView: '3',
-  spaceBetween: 20,
-  navigation: {
-    prevEl: 'slider-navigation_prev',
-    nextEl: 'slider-navigation_next',
-  },
-  observer: true,
-  observeParents: true,
-  observeSlideChildren: true,
-  grabCursor: true,
-  slideToClickedSlide: true,
-  pagination: {
-    el: '.slider-pagination',
-    type: 'bullets',
-  },
-  breakpoints: {
-    1440: {
+let objectSliders = [];
+const saleCards = document.querySelectorAll('.a-sale__cards');
+if (saleCards) {
+  saleCards.forEach((element, index) => {
+    const btnPrev = element.querySelector('.slider-navigation_prev');
+    const btnNext = element.querySelector('.slider-navigation_next');
+    const saleSlider = element.querySelector('.a-sale__slider');
+    objectSliders[index] = new Swiper(saleSlider, {
+      modules: [Navigation],
       slidesPerView: '3',
       spaceBetween: 20,
-    },
-    900: {
-      slidesPerView: '3',
-    },
-    800: {
-      slidesPerView: '2',
-    },
-    600: {
-      slidesPerView: '',
-    },
-    375: {
-      slidesPerView: '1.5',
-      spaceBetween: 10,
-    },
-    300: {
-      slidesPerView: '1.1',
-      spaceBetween: 10,
-    },
-  },
-});
+      navigation: {
+        prevEl: btnPrev,
+        nextEl: btnNext,
+      },
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+      grabCursor: true,
+      slideToClickedSlide: true,
+      breakpoints: {
+        1440: {
+          slidesPerView: '3',
+          spaceBetween: 20,
+        },
+        1000: {
+          slidesPerView: '3',
+        },
+        800: {
+          slidesPerView: '2.1',
+        },
+        375: {
+          slidesPerView: '1.5',
+          spaceBetween: 10,
+        },
+        300: {
+          slidesPerView: '1.1',
+          spaceBetween: 10,
+        },
+      },
+    });
+  });
+}

@@ -10,12 +10,12 @@ function moveCar(tabBtn, tabsNav) {
   const math = btnLeft - tabsNavLeft;
   const tabsNavWidth = tabsNav.getBoundingClientRect().width;
   const tabCar = document.querySelector('#car');
-  tabCar.style.left = `${math}px`;
-  const widthCar = tabCar.offsetWidth;
+  if (tabCar) tabCar.style.left = `${math}px`;
+  const widthCar = tabCar?.offsetWidth;
   const widthTabBtn = tabBtn.offsetWidth;
   const space = widthTabBtn - widthCar;
   const separate = space / 2;
-  tabCar.style.marginLeft = `${separate}px`;
+  if (tabCar) tabCar.style.marginLeft = `${separate}px`;
 }
 
 (function TabsNav() {
@@ -42,13 +42,13 @@ function moveCar(tabBtn, tabsNav) {
       await animate({
         draw(progress) {
           activeTab.style.opacity = 1 - progress;
-          activeTab1.style.opacity = 1 - progress;
+          if (activeTab1) activeTab1.style.opacity = 1 - progress;
         },
       });
       activeTab.style.display = 'none';
-      activeTab1.style.display = 'none';
+      if (activeTab1) activeTab1.style.display = 'none';
       activeTab.style.opacity = null;
-      activeTab1.style.opacity = null;
+      if (activeTab1) activeTab1.style.opacity = null;
     }
 
     // show
@@ -58,17 +58,17 @@ function moveCar(tabBtn, tabsNav) {
     );
     if (targetTab) {
       targetTab.style.opacity = 0;
-      targetTab1.style.opacity = 0;
+      if (targetTab1) targetTab1.style.opacity = 0;
       targetTab.style.display = null;
-      targetTab1.style.display = null;
+      if (targetTab1) targetTab1.style.display = null;
       await animate({
         draw(progress) {
           targetTab.style.opacity = progress;
-          targetTab1.style.opacity = progress;
+          if (targetTab1) targetTab1.style.opacity = progress;
         },
       });
       targetTab.style.opacity = null;
-      targetTab1.style.opacity = null;
+      if (targetTab1) targetTab1.style.opacity = null;
     }
 
     setTimeout(() => {

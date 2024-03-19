@@ -1,5 +1,6 @@
 mixin Analisys-list (param={})
-  .a-list.tabb(style="width: 100%; height: max-content; background: none;" id=`tab${param.id}`)
+  - const style = param.id != 1 ? 'display: none;' : ''
+  .a-list.tabb(style=`width: 100%; height: max-content; background: none; ${style}` id=`tab${param.id}`)
     if (param.listDescription)
       if (param.listTitleLink)
         div

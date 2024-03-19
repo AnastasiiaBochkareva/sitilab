@@ -28,10 +28,11 @@
       }
       a {
         color: rgb(0, 171, 223);
+        display: inline !important;
       }
     }
   }
-  @media (max-width: 1440px) {
+  @media (max-width: 1000px) {
     padding-right: 38px;
     padding-bottom: 40px;
   }

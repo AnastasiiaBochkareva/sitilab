@@ -1,5 +1,5 @@
 .a-list {
-  width: calc(100% - 351px);
+  width: calc(100% - 376px);
   padding: 30px 25px 0px 30px;
   > div {
     display: flex;
@@ -47,8 +47,9 @@
       }
     }
   }
-  @media (max-width: 1000px) {
-    padding: 30px 0 0;
+  @media (max-width: 1440px) {
+    padding: 30px 25px 0 0;
+    width: calc(100% - 25px) !important;
     > div {
       &:not(:last-child) {
         margin-bottom: 20px;

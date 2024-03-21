@@ -2,7 +2,7 @@ mixin Sidebar(param={})
   .sidebar-list
     if (param.analysisBtn)
       .sidebar-btn
-        +icon('analysis')
+        +icon('a-analysis')
         a Анализы
         .sidebar-btn__close   
           +icon('close')
@@ -14,7 +14,7 @@ mixin Sidebar(param={})
               a(href="#")=listTitle[i]
               if (i > 0)
                 .accordion__head
-                  +icon('arrow-down')
+                  +icon('a-arrow-down')
             ul.accordion__body
               -const listTitleInner = ['Витамины', 'Обмен белков', 'Обмен железа', 'Обмен липидов', 'Обмен углеводов']
                 each el, i in Array(5)

@@ -1,5 +1,7 @@
 .header {
   box-shadow: $box-shadow-2;
+  position: fixed;
+  background-color: #fff;
   &__img {
     width: 164px;
     height: 60px;

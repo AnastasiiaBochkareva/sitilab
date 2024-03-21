@@ -6,21 +6,26 @@ block variables
 
 block content
 
-    main.analysis.analysis-msk
+    main.analysis.analysis-list
 
       section.a-container
         .a-title Анализы в Москве
         .a-show-more
           .a-show-more__btn   
             span Все разделы
-      
+        .a-list__head 
+          .sidebar-btn
+            +icon('a-analysis')
+            a Анализы
+          .a-row-title
+            .a-title-sm.text-blue Обмен углеводов
+              .a-title-sm 12 
         .a-inner-container
           +Sidebar({
             analysisBtn: true,
           })
           .a-row-wrapper
             +Analysis-row({
-              aRowTitle: true,
               aRowVnd: true,
               code: 'код: 11-10-001',
               title: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',

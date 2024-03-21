@@ -11,7 +11,6 @@
   }
   &__type {
     max-width: 660px;
-    // width: 100%;
     width: calc(100% - 290px);
     .a-title-sm {
       text-align: left !important;
@@ -23,7 +22,6 @@
     }
   }
   &__info {
-    // width: calc(100% - 700px);
     max-width: 290px;
     width: 100%;
     > div {
@@ -40,14 +38,15 @@
     svg {
       width: 24px;
       height: 24px;
-      fill: #00abdf;
+      fill: transparent;
+      stroke: #00abdf;
     }
     &_price {
       margin-top: 7px;
 
       padding: 14px 20px;
       background-color: rgb(230, 248, 253);
-      border-radius: 10px;
+      border-radius: 8px;
       width: calc(100% - 58px);
     }
     .a-title {
@@ -60,7 +59,7 @@
       margin-top: 7px;
       cursor: pointer;
       background-color: #00abdf;
-      border-radius: 10px;
+      border-radius: 8px;
       width: 50px;
       min-width: 50px;
       max-width: 50px;
@@ -70,6 +69,7 @@
       justify-content: center;
       svg {
         fill: #fff;
+        stroke: transparent;
         width: 30px;
         height: 30px;
       }

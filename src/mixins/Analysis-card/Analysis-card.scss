@@ -1,6 +1,6 @@
 .a-card {
-  max-height: 280px;
-  min-height: 280px;
+  max-height: 250px;
+  min-height: 250px;
   height: 100%;
 
   border: 1px solid #b2bac6;
@@ -40,7 +40,9 @@
       align-items: center;
       justify-content: center;
       column-gap: 4px;
-      border-radius: 10px;
+      border-radius: 8px;
+      max-width: 107px;
+      width: 100%;
       svg {
         width: 30px;
         height: 30px;
@@ -62,6 +64,8 @@
     svg {
       width: 24px;
       height: 24px;
+      fill: transparent;
+      stroke: #00abdf;
     }
   }
   .a-title-sm {
@@ -73,8 +77,8 @@
   }
   @media (max-width: 500px) {
     padding: 25px 20px 30px;
-    max-height: 305px;
-    min-height: 305px;
+    max-height: 280px;
+    min-height: 280px;
     .a-title-sm {
       line-height: 20px;
     }
@@ -90,6 +94,11 @@
         }
         .a-btn-basket {
           padding: 5px 12px 5px 8px;
+          max-width: 88px;
+          svg {
+            width: 24px;
+            height: 24px;
+          }
           .a-subtitle {
             line-height: 22px !important;
           }

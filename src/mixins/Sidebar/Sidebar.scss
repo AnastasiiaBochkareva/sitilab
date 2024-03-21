@@ -7,9 +7,13 @@
     > div {
       .accordion__head {
         svg {
-          fill: #fff;
+          stroke: #00abdf;
           transform: rotate(180deg);
-          transition: transform 0.3s;
+        }
+      }
+      &:hover {
+        svg {
+          stroke: #fff;
         }
       }
     }
@@ -44,6 +48,12 @@
     }
   }
   .accordion {
+    &__head {
+      cursor: pointer;
+      svg {
+        transition: transform 0.3s;
+      }
+    }
     padding-top: 13px;
   }
   ul {
@@ -64,9 +74,13 @@
         a {
           color: #fff;
         }
+        svg {
+          stroke: #fff;
+        }
       }
       svg {
-        fill: #00abdf;
+        fill: transparent;
+        stroke: #00abdf;
         width: 24px;
         height: 24px;
       }

@@ -536,7 +536,7 @@
       padding: 40px 38px 50px;
     }
     @media (max-width: 500px) {
-      padding: 20px 0 50px;
+      padding: 40px 0 50px;
     }
   }
   .a-row-wrapper {
@@ -569,7 +569,7 @@
   }
   .ico-popup {
     position: absolute;
-    width: 201px;
+    width: 235px;
     background: #00abdf;
     color: #fff;
     font-size: 12px;
@@ -581,7 +581,7 @@
     padding: 26px 17px 18px;
     border-radius: 10px;
     top: 32px;
-    right: -109px;
+    left: -105px;
     z-index: 2;
     display: none;
     &:before {
@@ -593,7 +593,7 @@
       background-color: #00abdf;
       position: absolute;
       top: -9px;
-      left: 108px;
+      left: 44.5%;
     }
   }
   .vnd-container {
@@ -711,10 +711,10 @@
       font-family: 'bold';
     }
     &-btn {
-      width: 321px;
+      width: 351px;
       height: 76px;
       background-color: rgb(0, 170, 223);
-      color: #fff;
+
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -732,6 +732,7 @@
         font-size: 20px;
         line-height: 38px;
         letter-spacing: -2%;
+        color: #fff;
       }
       &__close {
         height: 24px;
@@ -795,6 +796,12 @@
     .a-col {
       margin-top: 37px;
     }
+    .ico-popup {
+      left: -160px !important;
+      &::before {
+        left: 160px !important;
+      }
+    }
   }
   @media (max-width: 1100px) {
     .tabs-nav {
@@ -822,6 +829,12 @@
         display: block;
       }
     }
+    .ico-popup {
+      left: -100px !important;
+      &::before {
+        left: 100px !important;
+      }
+    }
   }
   @media (max-width: 500px) {
     .sidebar-list {
@@ -844,7 +857,12 @@
       padding-left: 38px;
       padding-right: 38px;
     }
-
+    .ico-popup {
+      left: -160px !important;
+      &::before {
+        left: 160px !important;
+      }
+    }
     .a-p-sm.a-title {
       font-size: 22px;
       line-height: 35px;

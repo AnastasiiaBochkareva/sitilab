@@ -5,9 +5,10 @@
       padding-bottom: 8px;
     }
     > div {
+      background-color: rgb(0, 171, 223);
       .accordion__head {
         svg {
-          stroke: #00abdf;
+          stroke: #fff;
           transform: rotate(180deg);
         }
       }
@@ -15,6 +16,9 @@
         svg {
           stroke: #fff;
         }
+      }
+      a {
+        color: #fff;
       }
     }
   }
@@ -25,10 +29,24 @@
     background-color: rgb(241, 252, 255);
     li {
       padding: 6px 30px;
+      &:hover {
+        a {
+          background-color: transparent !important;
+        }
+      }
+      &::before {
+        content: none !important;
+      }
       a {
         font-weight: 500;
         display: flex;
         align-items: center;
+        padding: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        background: transparent !important;
+        border-bottom: none !important;
+        text-transform: none !important;
         &::before {
           content: '';
           width: 5px;
@@ -52,6 +70,16 @@
       cursor: pointer;
       svg {
         transition: transform 0.3s;
+      }
+    }
+    &__item {
+      > div {
+        a {
+          padding: 0 !important;
+          padding-left: 0 !important;
+          border-bottom: none !important;
+          text-transform: none !important;
+        }
       }
     }
     padding-top: 13px;

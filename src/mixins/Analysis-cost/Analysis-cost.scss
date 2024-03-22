@@ -2,7 +2,7 @@
   background-color: #f1fcff;
   position: sticky;
   padding: 30px 40px 35px;
-  max-width: 260px;
+  max-width: 340px;
   .a-subtitle {
     display: flex;
     align-items: center;
@@ -92,7 +92,6 @@
     }
   }
   @media (max-width: 1440px) {
-    max-width: 264px;
     padding: 30px 38px 35px;
     .a-title-sm {
       line-height: 22px !important;

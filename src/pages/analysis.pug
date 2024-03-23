@@ -12,17 +12,19 @@ block content
         .a-title.a-p-sm Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)
       
         .a-services
-          +TabsNav({
-            items: [
-              { label: 'Описание', targetId: 'tab1', },
-              { label: 'Подготовка', targetId: 'tab2', },
-              { label: 'Показания к назначению', targetId: 'tab3', },
-              { label: 'Интерпретация результатов', targetId: 'tab4', },
-            ],
-            noCar: true,
-            noSvg: true,
-            tabsBtn: true
-          })
+          div.tabs-nav__container
+            +TabsNav({
+              class: 'sticky-tab',
+              items: [
+                { label: 'Описание', targetId: 'tab1', },
+                { label: 'Подготовка', targetId: 'tab2', },
+                { label: 'Показания к назначению', targetId: 'tab3', },
+                { label: 'Интерпретация результатов', targetId: 'tab4', },
+              ],
+              noCar: true,
+              noSvg: true,
+              tabsBtn: true
+            })
           
           .a-inner-container
             +Sidebar({})

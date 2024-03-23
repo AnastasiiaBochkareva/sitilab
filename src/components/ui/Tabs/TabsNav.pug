@@ -16,7 +16,7 @@ mixin TabsNav(param = {})
             img(src="/assets/img/categories/vnd/mark.png", alt="")
 
 
-    .tabs-nav
+    .tabs-nav(class=param.class)
         if (param.tabsBtn)
           .sidebar-btn
             +icon('a-analysis')

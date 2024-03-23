@@ -18,6 +18,7 @@ import '@/mixins/Visit-price/Visit-price';
 
 import '@/components/Visit-promo/Visit-promo';
 import '@/mixins/Sidebar/Sidebar';
+import '@/mixins/Sidebar/StickyTabs';
 
 // import MyModal from '@/components/ui/MyModal/MyModal';
 // import Filters from '@/components/ui/Filters/Filters';

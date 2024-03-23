@@ -13,13 +13,14 @@ block content
         .a-show-more
           .a-show-more__btn   
             span Все разделы
-        .a-list__head 
-          .sidebar-btn
-            +icon('a-analysis')
-            a Анализы
-          .a-row-title
-            .a-title-sm.text-blue Обмен углеводов
-              .a-title-sm 12 
+        .a-list__container
+          .a-list__head.sticky-tab
+            .sidebar-btn
+              +icon('a-analysis')
+              a Анализы
+            .a-row-title
+              .a-title-sm.text-blue Обмен углеводов
+                .a-title-sm 12 
         .a-inner-container
           +Sidebar({
             analysisBtn: true,

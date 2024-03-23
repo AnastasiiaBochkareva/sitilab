@@ -1,7 +1,7 @@
 /* eslint-disable */
 const stickyTab = document.querySelector('.sticky-tab');
 const stickyTabParent = stickyTab.parentElement;
-const container = document.querySelector('.a-services .a-inner-container');
+let container = document.querySelector('.a-services .a-inner-container');
 const activeClass = 'sticky-tab-active';
 const opacityClass = 'sticky-tab-opacity';
 const additionalClasses = ['a-container-fix'];
@@ -14,6 +14,9 @@ let isSetListener = false;
 const urlSearch = new URL(window.location.href);
 const debug = urlSearch.searchParams.get('debug') === '1';
 
+if (!container) {
+  container = document.querySelector('.analysis-list .a-inner-container');
+}
 function stickyLog(data) {
   if (debug) {
     console.log(data);
@@ -56,7 +59,7 @@ function needShowStickyTab() {
 
   const topPosition = stickyTabParent.getBoundingClientRect().top;
   const containerIsHide =
-    container.getBoundingClientRect().top + container.clientHeight <=
+    container?.getBoundingClientRect().top + container.clientHeight <=
     headerHeight;
 
   if (topPosition <= headerHeight && !containerIsHide) {
@@ -130,6 +133,9 @@ function handleEvent() {
   if (document.querySelector('.header')) {
     headerHeight = document.querySelector('.header').clientHeight;
   }
+  if (!container) return;
+  if (document.querySelector('.analysis-list') && window.innerWidth < 900)
+    return;
 
   switch (needShowStickyTab()) {
     case 'init':

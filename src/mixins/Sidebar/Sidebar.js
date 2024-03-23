@@ -40,9 +40,9 @@ function initStickyBannerCost() {
     '.tabs-nav__container'
   )?.clientHeight;
 
-  if (window.innerWidth > 1000) return;
+  if (window.innerWidth <= 1000) return;
 
-  if (!cost && !headerHeight && !tabsNavContainerHeight) return;
+  if (!cost || (!cost && !headerHeight && !tabsNavContainerHeight)) return;
 
   cost.style.top = `${headerHeight + tabsNavContainerHeight}px`;
 }

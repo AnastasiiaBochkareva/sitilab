@@ -61,6 +61,10 @@ function moveCar(tabBtn, tabsNav) {
       if (targetTab1) targetTab1.style.opacity = 0;
       targetTab.style.display = null;
       if (targetTab1) targetTab1.style.display = null;
+      const aInnerContainer = document.querySelector('.a-inner-container');
+      if (aInnerContainer) {
+        aInnerContainer.scrollTop = 0;
+      }
       await animate({
         draw(progress) {
           targetTab.style.opacity = progress;

@@ -1,11 +1,12 @@
 /* eslint-disable */
 const stickyTab = document.querySelector('.sticky-tab');
 const stickyTabParent = stickyTab.parentElement;
-const headerHeight = document.querySelector('.header')?.clientHeight;
 const container = document.querySelector('.a-services .a-inner-container');
 const activeClass = 'sticky-tab-active';
 const opacityClass = 'sticky-tab-opacity';
 const additionalClasses = ['a-container-fix'];
+
+let headerHeight = document.querySelector('.header')?.clientHeight;
 
 let isWaitPromise = false;
 let isSetListener = false;
@@ -125,20 +126,27 @@ function removeFixed(element, isUseOpacity = false) {
   }
 }
 
+function handleEvent() {
+  if (document.querySelector('.header')) {
+    headerHeight = document.querySelector('.header').clientHeight;
+  }
+
+  switch (needShowStickyTab()) {
+    case 'init':
+      break;
+    case 'show':
+      addFixed(stickyTab);
+      break;
+    case 'hide-opacity':
+      removeFixed(stickyTab, true);
+      break;
+    case 'hide':
+      removeFixed(stickyTab);
+      break;
+  }
+}
+
 if (stickyTab) {
-  document.addEventListener('scroll', () => {
-    switch (needShowStickyTab()) {
-      case 'init':
-        break;
-      case 'show':
-        addFixed(stickyTab);
-        break;
-      case 'hide-opacity':
-        removeFixed(stickyTab, true);
-        break;
-      case 'hide':
-        removeFixed(stickyTab);
-        break;
-    }
-  });
+  document.addEventListener('scroll', handleEvent);
+  window.addEventListener('resize', handleEvent);
 }

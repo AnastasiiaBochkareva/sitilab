@@ -494,7 +494,6 @@
   }
 }
 .analysis {
-  padding-top: 200px;
   .a-title {
     margin-bottom: 40px;
     text-align: center;
@@ -529,15 +528,15 @@
     color: rgb(59, 75, 100);
   }
   .a-container {
-    padding: 40px 260px 100px;
+    padding: 70px 260px 100px;
     @media (max-width: 1700px) {
-      padding: 40px 130px 50px;
+      padding: 70px 130px 50px;
     }
     @media (max-width: 1440px) {
-      padding: 40px 38px 50px;
+      padding: 70px 38px 50px;
     }
     @media (max-width: 500px) {
-      padding: 40px 0 50px;
+      padding: 70px 0 50px;
     }
     &-fix {
       left: 260px;
@@ -1041,7 +1040,7 @@
         border-right: none;
       }
       .sidebar-btn {
-        width: calc(100% - 29px);
+        width: 100%;
         position: relative;
         justify-content: flex-start;
         padding-left: 42px;

@@ -78,8 +78,6 @@
   }
   @media (max-width: 500px) {
     padding: 25px 20px 30px;
-    max-height: 280px;
-    min-height: 280px;
     .a-title-sm {
       line-height: 20px;
     }
@@ -89,13 +87,14 @@
         line-height: 14px !important;
       }
       .a-card__btn {
+        column-gap: 16px;
         .a-title-sm {
-          font-size: 20px;
+          font-size: 20px !important;
           line-height: 22px;
         }
         .a-btn-basket {
-          padding: 5px 12px 5px 8px;
-          max-width: 88px;
+          padding: 5px 8px 5px 8px;
+          max-width: 111px;
           svg {
             width: 24px;
             height: 24px;

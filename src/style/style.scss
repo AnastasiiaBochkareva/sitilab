@@ -1091,5 +1091,24 @@ body.sidebarOpened {
 .about {
   .bg-blue {
     background-color: rgb(12, 171, 224);
+    min-height: 540px;
+    height: 100%;
+  }
+  @media (min-width: 1501px) {
+    .vnd-container {
+      // padding-left: 443px !important;
+      // padding-right: 443px !important;
+      padding-top: 78px !important;
+      padding-bottom: 78px !important;
+    }
+  }
+  @media (max-width: 700px) {
+    .vnd-container {
+      padding-top: 89px !important;
+      padding-bottom: 89px !important;
+    }
+    .bg-blue {
+      min-height: 594px;
+    }
   }
 }

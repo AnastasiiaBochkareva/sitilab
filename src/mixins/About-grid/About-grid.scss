@@ -1,0 +1,46 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 76px;
+  column-gap: 20px;
+  max-width: 1034px;
+  margin-left: auto;
+  margin-right: auto;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      width: 55px;
+      height: 55px;
+      fill: #13aae0;
+    }
+  }
+  &__title {
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 25px;
+    letter-spacing: 0%;
+    color: rgb(240, 83, 104);
+  }
+  &__subtitle {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0%;
+    color: rgb(62, 62, 62);
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 47px;
+    &__subtitle {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

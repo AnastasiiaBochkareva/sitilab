@@ -927,6 +927,7 @@
 }
 
 .analysis-list {
+  padding-top: 200px;
   .a-inner-container {
     width: 100%;
     .sidebar {
@@ -1085,5 +1086,10 @@ body.sidebarOpened {
       overflow: auto;
       height: calc(100% - 76px);
     }
+  }
+}
+.about {
+  .bg-blue {
+    background-color: rgb(12, 171, 224);
   }
 }

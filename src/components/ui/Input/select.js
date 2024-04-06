@@ -94,7 +94,7 @@ const clickHandler = (e) => {
   const isSelectSearch = select.classList.contains('select_search');
   const input = select.querySelector('input');
 
-  const clickOnInput = e.target.closest('.input');
+  const clickOnInput = e.target.closest('.v-input');
   const clickOnClear = e.target.closest('.input__btn-clear');
   const clickOnLabel = e.target.closest('.select__dropdown label');
 

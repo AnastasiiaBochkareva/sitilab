@@ -2,6 +2,12 @@ mixin Menu-form(param={})
     +MyModal({id: 'modal-menu'})
       +slot('head') Заполните форму ниже:
       +slot('body')
+        .visit-promo__success
+          .visit-promo__success_check 
+            +icon('success-check')
+          .visit-promo__success_title Спасибо! <br> Ваша заявка принята.
+          .visit-promo__success_subtitle Наши специалисты свяжутся с Вами в самое ближайшее время
+          a(href="#").visit-promo__btn_success Вернуться к форме 
         form.my-modal__form.form__error
           +Input({
             text: true,
@@ -38,6 +44,7 @@ mixin Menu-form(param={})
             })
             a(href="#") персональных данных
           .visit-promo__captcha
+              .visit-promo__error_text Неверно введены символы с картинки. Не заполнены обязательные поля под *
               input(type="text" value="Отправить").visit-promo__captcha_btn
               .visit-promo__confirm
                 p Введите символы с картинки:
@@ -49,3 +56,4 @@ mixin Menu-form(param={})
                     text: true,
                     inputClass: param.id === 7 && 'visit-promo__confirm_input'
                   })
+          

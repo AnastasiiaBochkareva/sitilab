@@ -91,7 +91,7 @@ button {
 
     &::after {
       // border
-      content: "";
+      content: '';
       position: absolute;
       inset: 0px;
       border: 1px solid $ui-gray-1;
@@ -165,7 +165,7 @@ button {
 
     &::after {
       // border
-      content: "";
+      content: '';
       position: absolute;
       inset: 0px;
       border: 1px solid $ui-white;

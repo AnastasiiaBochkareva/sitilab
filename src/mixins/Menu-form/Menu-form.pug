@@ -1,0 +1,51 @@
+mixin Menu-form(param={})
+    +MyModal({id: 'modal-menu'})
+      +slot('head') Заполните форму ниже:
+      +slot('body')
+        form.visit-promo__form.form__error
+          +Input({
+            text: true,
+            placeholder: 'ФИО *',
+          })
+          +Input({
+            text: true,
+            placeholder: 'Специальность',
+          })
+          +Input({
+            text: true,
+            placeholder: '+7 (___) ___-__-__ ',
+          })
+          +Input({
+            text: true,
+            placeholder: 'E-mail *',
+          })
+          div.visit-promo__group
+            +Select({
+              name: '1'
+            })
+            +Select({
+              name: '1'
+            })
+          +Input({
+            textarea: true,
+            placeholder: 'Комментарий',
+            class: 'not-required'
+          })
+          .visit-promo__description * Поля, обязательные для заполнения
+          .visit-promo__agree
+            +Checkbox({
+              text: 'Я согласен на обработку',
+            })
+            a(href="#") персональных данных
+          .visit-promo__captcha
+              input(type="text" value="Отправить").visit-promo__captcha_btn
+              .visit-promo__confirm
+                p Введите символы с картинки:
+                div
+                  div
+                    img(src="/assets/img/categories/vnd/new-captcha.jpg" alt="")
+                    //- img(src="/assets/img/categories/vnd/captcha.png", alt="")
+                  +Input({
+                    text: true,
+                    inputClass: param.id === 7 && 'visit-promo__confirm_input'
+                  })

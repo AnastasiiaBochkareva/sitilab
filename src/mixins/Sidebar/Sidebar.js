@@ -11,8 +11,10 @@ function changeSidebarPosition() {
     if (body.classList.contains('sidebarOpened')) {
       body.classList.remove('sidebarOpened');
     }
-    sidebarList.style.top = null;
-    sidebarList.style.height = null;
+    if (sidebarList) {
+      sidebarList.style.top = null;
+      sidebarList.style.height = null;
+    }
   }
 }
 

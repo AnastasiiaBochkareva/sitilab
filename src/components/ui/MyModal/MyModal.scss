@@ -31,22 +31,35 @@
 
   &__head {
     display: flex;
-    padding: 16px 64px 16px 24px;
+    padding: 60px 150px 30px;
+    // padding: 16px 64px 16px 24px;
     position: relative;
 
-    svg { fill: $ui-dark-2 }
+    svg {
+      fill: #b2bac6;
+    }
 
     &-text {
       flex: 1;
-      font-weight: 500;
-      font-size: 17px;
-      line-height: 24px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: -2%;
+      font-family: 'Montserrat', sans-serif;
+      color: rgb(59, 75, 100);
+      text-align: center;
     }
 
     &-close {
       position: absolute;
-      right: 4px;
-      top: 4px;
+      right: 30px;
+      top: 30px;
+      .btn:hover:not([disabled]) {
+        color: #3b4b64 !important;
+        svg {
+          fill: #3b4b64 !important;
+        }
+      }
     }
     &-back {
       position: relative;
@@ -56,7 +69,7 @@
   }
 
   &__body {
-    padding: 0 24px;
+    padding: 0 150px 60px;
     flex: 1;
     overflow: hidden;
   }
@@ -138,7 +151,7 @@
         position: absolute;
         top: -8px;
         left: 16px;
-        background: url("~@/assets/img/svg/bugor.svg") no-repeat;
+        background: url('~@/assets/img/svg/bugor.svg') no-repeat;
       }
     }
   }
@@ -189,6 +202,10 @@
         background: url('/assets/img/svg/success.svg');
       }
     }
+  }
+
+  .visit-promo__form {
+    max-width: 300px;
   }
 
   // Animations
@@ -265,7 +282,9 @@
       padding: 16px;
       gap: 12px;
 
-      .btn { flex: 1; }
+      .btn {
+        flex: 1;
+      }
     }
   }
 }

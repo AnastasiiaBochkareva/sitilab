@@ -1,6 +1,6 @@
 /* eslint-disable */
 const stickyTab = document.querySelector('.sticky-tab');
-const stickyTabParent = stickyTab.parentElement;
+const stickyTabParent = stickyTab?.parentElement;
 let container = document.querySelector('.a-services .a-inner-container');
 const activeClass = 'sticky-tab-active';
 const opacityClass = 'sticky-tab-opacity';

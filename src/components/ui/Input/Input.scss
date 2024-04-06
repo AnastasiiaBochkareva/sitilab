@@ -133,7 +133,8 @@
     border: 1px solid #b2bac6;
     border-radius: $border-radius;
     user-select: none;
-    pointer-events: none;
+    pointer-events: none; // TODO: я бы это убрал, чтобы клик был по всему блоку селекта, а не только по месту где placeholder
+    // TODO: Но надо убедиться, что нигде в других местах не сломается ничего
   }
 
   &.focus {

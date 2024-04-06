@@ -19,13 +19,13 @@ mixin Menu-form(param={})
             text: true,
             placeholder: 'E-mail *',
           })
-          div.visit-promo__group
+          div.form__row
             +Select({
-              name: '1'
+              name: 'Город',
+              itemsInputName: 'city',
+              itemsLabelText: ['EKB', 'MOSCOW', 'YEREVAN']
             })
-            +Select({
-              name: '1'
-            })
+            +Select({})
           +Input({
             textarea: true,
             placeholder: 'Комментарий',

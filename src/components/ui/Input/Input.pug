@@ -40,6 +40,8 @@ mixin Input(param = {})
                 data-mask=param.mask
             )
             label(for=param.id).v-input__placeholder #{param.placeholder}
+            if (param.arrowDown)
+              +icon('a-arrow-down')
 
     // - TYPE COUNT
     - if (param.type === 'count')

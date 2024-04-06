@@ -1,0 +1,31 @@
+.info-popup {
+  .ico-popup {
+    position: absolute;
+    width: 235px;
+    background: #00abdf;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -1.5%;
+    padding: 26px 17px 18px;
+    border-radius: 10px;
+    top: 32px;
+    left: -105px;
+    z-index: 2;
+    display: none;
+    &:before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      transform: rotate(45deg);
+      display: block;
+      background-color: #00abdf;
+      position: absolute;
+      top: -9px;
+      left: 44.5%;
+    }
+  }
+}

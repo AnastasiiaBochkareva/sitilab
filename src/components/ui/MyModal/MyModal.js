@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import { animateCSS, isMobile } from '@/js/utils';
 
 // TODO Возможно хуки надо сделать асинхронными и bind(this)
@@ -28,7 +29,9 @@ export default class MyModal {
     this.eventReset = new Event('modal:reset', { bubbles: true });
 
     // shadow
-    this.shadow = document.querySelector('.my-modal-shadow') || document.createElement('div');
+    this.shadow =
+      document.querySelector('.my-modal-shadow') ||
+      document.createElement('div');
     this.shadow.classList.add('my-modal-shadow');
     document.body.append(this.shadow);
   }
@@ -46,11 +49,16 @@ export default class MyModal {
     if (!modal) return null;
     if (modal.classList.contains('my-modal_menu')) return 'menu';
     if (modal.classList.contains('my-modal_drawer')) return 'drawer';
-    if (modal.classList.contains('my-modal_notification')) return 'notification';
+    if (modal.classList.contains('my-modal_notification'))
+      return 'notification';
     return 'modal';
   }
 
   clickHandler(e) {
+    const icoInfo = e.target.closest('.ico-info');
+    if (icoInfo) {
+      return;
+    }
     // Открытие модалки
     const modalOpener = e.target.closest(`[${this.config.openSelector}]`);
     const modalActive = e.target.closest('.my-modal.active');
@@ -64,7 +72,9 @@ export default class MyModal {
       const targetAttr = modalOpener.getAttribute(this.config.openSelector);
       const targetModal = document.querySelector(targetAttr);
 
-      const openerInDrawerBody = modalOpener.closest('.my-modal_drawer.active .my-modal__body');
+      const openerInDrawerBody = modalOpener.closest(
+        '.my-modal_drawer.active .my-modal__body'
+      );
 
       if (!openerInDrawerBody) {
         this.close(modalActive, false).then(() => this.open(targetModal));
@@ -90,14 +100,17 @@ export default class MyModal {
     }
 
     // Close
-    const clickOnCloseSelector = e.target.closest(`[${this.config.closeSelector}]`);
+    const clickOnCloseSelector = e.target.closest(
+      `[${this.config.closeSelector}]`
+    );
 
     const clickNotInModal = !modalActive?.contains(e.target);
     const activeModals = [...document.querySelectorAll('.my-modal.active')];
-    const clickOutsideActiveModal = (clickNotInModal && activeModals.length);
+    const clickOutsideActiveModal = clickNotInModal && activeModals.length;
 
     if (!activeModals.length) return;
-    if (clickOnCloseSelector || clickOutsideActiveModal) this.closeAllActive(activeModals);
+    if (clickOnCloseSelector || clickOutsideActiveModal)
+      this.closeAllActive(activeModals);
   }
 
   open(modal) {
@@ -109,16 +122,18 @@ export default class MyModal {
     modal.dispatchEvent(this.eventBeforeOpen);
 
     if (
-      MyModal.getMode(modal) === 'notification'
-      && this.shadow.classList.contains('active')
-    ) this.hideShadow();
+      MyModal.getMode(modal) === 'notification' &&
+      this.shadow.classList.contains('active')
+    )
+      this.hideShadow();
 
     if (
-      (this.config.teleportToBody
-        && modal.parentNode.tagName !== 'BODY'
-        && MyModal.getMode(modal) !== 'menu')
-      || MyModal.getMode(modal) === 'notification'
-    ) document.body.append(modal);
+      (this.config.teleportToBody &&
+        modal.parentNode.tagName !== 'BODY' &&
+        MyModal.getMode(modal) !== 'menu') ||
+      MyModal.getMode(modal) === 'notification'
+    )
+      document.body.append(modal);
 
     modal.classList.add('active');
     this.intersectionObserver(modal);
@@ -129,10 +144,7 @@ export default class MyModal {
       document.querySelector('body').style.overflow = 'hidden';
     }
 
-    if (
-      MyModal.getMode(modal) === 'drawer'
-      && isMobile()
-    ) return this;
+    if (MyModal.getMode(modal) === 'drawer' && isMobile()) return this;
 
     this.showShadow(modal);
     return this;
@@ -175,7 +187,9 @@ export default class MyModal {
   }
 
   closeAllActive(activeModals) {
-    activeModals.forEach(async (modal) => { await this.close(modal, true); });
+    activeModals.forEach(async (modal) => {
+      await this.close(modal, true);
+    });
     return this;
   }
 

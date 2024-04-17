@@ -17,6 +17,9 @@
   z-index: 1;
   box-shadow: $box-shadow;
 
+  overflow: auto;
+  max-height: 100vh;
+
   // Status
   &.active {
     display: block;

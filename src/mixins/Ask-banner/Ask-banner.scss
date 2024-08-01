@@ -1,6 +1,170 @@
 .ask-banner{
-    position: relative;
-    &__title, svg{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__promo{
+        position: relative;
+        max-width: 1357px;
+        width: 100%;
+        height: 300px;
+    }
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 38px;
+        letter-spacing: -2%;
+        color:#fff;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
         position: absolute;
+        right: 200px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__img {
+        position: absolute;
+        
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__ask-img {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 60px;
+        img{
+            width: 84px;
+            height: 72px;
+        }
+    }
+    &__answer-img{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 60px;
+        img{
+            width: 87px;
+            height: 76px;
+
+        }
+    }
+    &__doctor{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 21px;
+        max-width: 560px;
+        width: 100%;
+        margin-top: 45px;
+        &_img{
+            width: 146px;
+            height: 146px;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 38px;
+            letter-spacing: -2%;
+            color:rgb(59, 75, 100);
+            display: none;
+        }
+        &_name{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 38px;
+            letter-spacing: -2%;
+            color:rgb(59, 75, 100);
+            margin-bottom: 10px;
+        }
+        &_experience{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: -2%;
+            color:rgb(59, 75, 100);
+            margin-bottom: 8px;
+        }
+        &_position{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -2%;
+            color:rgb(59, 75, 100);
+        }
+    }
+    @include xl{
+        &__info{
+            right: 35px;
+        }
+        &__title{
+            font-size: 35px;
+        }
+    }
+    @include md{
+        
+    }
+    @include xs{
+        margin-top: 93px;
+        padding-right: 20px;
+        padding-left: 20px;
+        background-color: rgb(243, 246, 249);
+        &__promo{
+            display: none;
+        }
+        &__doctor{
+            margin-top: -75px;
+            flex-direction: column;
+            gap: 25px;
+            &_img{
+                width: 150px;
+                height: 150px;
+            }
+            &_title{
+                display: block;
+                margin-bottom: 14px;
+                text-align: center;
+            }
+            &_name{
+                margin-bottom: 14px;
+                text-align: center;
+                font-size: 22px;
+            }
+            &_experience{
+                margin-bottom: 12px;
+                text-align: center;
+            }
+            &_col{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &_position{
+                text-align: center;
+                line-height: 24px;
+            }
+        }
     }
 }

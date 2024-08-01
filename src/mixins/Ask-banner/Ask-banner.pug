@@ -1,7 +1,21 @@
 mixin Ask-banner(param={})
     .ask-banner
-        .ask-banner__img 
-            img(src="/assets/img/categories/ask-banner.png", alt="Спроси эксперта")
-        .ask-banner__title Спроси эксперта
-        +icon('ask')
-        +icon('answer')
+        .ask-banner__promo
+            .ask-banner__img 
+                img(src="/assets/img/categories/ask-banner.png", alt="Спроси эксперта")
+            .ask-banner__info
+                .ask-banner__ask-img
+                    img(src="/assets/img/categories/ask.png", alt="Спроси эксперта")
+                .ask-banner__title Спроси эксперта
+                .ask-banner__answer-img
+                    img(src="/assets/img/categories/answer.png", alt="Спроси эксперта")
+        .ask-banner__doctor
+            .ask-banner__doctor_col
+                .ask-banner__doctor_img
+                    img(src="/assets/img/categories/ask-person.png", alt="Спроси эксперта")
+            .ask-banner__doctor_col
+                .ask-banner__doctor_title Спроси эксперта
+                .ask-banner__doctor_name Элла Андреевна Ильина
+                .ask-banner__doctor_experience стаж 24 года
+                .ask-banner__doctor_position Кандидат медицинских наук, доцент, профессор РАЕ, врач-пульмонолог высшей категории, аллерголог, терапевт
+

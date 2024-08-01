@@ -1,0 +1,167 @@
+.ask-form{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__content, &__success{
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        border: 1px solid #B2BAC6;
+        box-sizing: border-box;
+        padding: 35px 50px 50px;
+        max-width: 560px;
+        width: 100%;
+        min-height: 623px;
+        background-color: #fff;
+    }
+    &__title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+        line-height: 26px; /* 114.286% */
+        letter-spacing: -2%;
+        color: rgb(59, 75, 100);
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .form-group{
+            p{
+                margin: 0 0 10px 0;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 22px; /* 114.286% */
+                letter-spacing: -2%;
+                color: rgb(59, 75, 100);
+            }
+            .v-input input {
+                height: 38px;
+                box-sizing: border-box;
+            }
+            .v-input{
+                &__placeholder{
+                    font-weight: 500;
+                    left: 14px;
+                }
+            }
+            .v-input.v-textarea{
+                textarea{
+                    padding: 9px 14px 47px;
+
+                }
+            }
+            .v-checkbox{
+                .v-checkbox__label {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    &:before{
+                        height: 24px;
+                        width: 24px;
+                        border-radius: 5px;
+                        box-sizing: border-box;
+                    }
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        width: 24px;
+                        height: 24px;
+                        background-color: #00ABDF;
+                        transform: translateY(-50%); 
+                        border-radius: 5px;
+                        border: none;
+                    }
+                }
+                
+            }
+            
+        }
+        
+        .v-checkboxes {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+    }
+    .form-group__btn{
+        background-color: #00ABDF;
+        height: 50px;
+        border-radius: 8px;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px; /* 114.286% */
+        letter-spacing: -2%;
+        color: #fff;
+    }
+    &__success{
+        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        svg{
+            width: 105px;
+            height: 105px;
+            fill: #69C93C;
+            stroke: #fff;
+            margin-bottom: 35px;
+            margin-top: auto;
+        }
+        &_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 28px;
+            letter-spacing: -2%;
+            color: rgb(59, 75, 100);
+            margin-bottom: 20px;
+            max-width: 360px;
+            width: 100%;
+            text-align: center;
+        }
+        &_subtitle{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: -2%;
+            color: rgb(59, 75, 100);
+            max-width: 360px;
+            width: 100%;
+            text-align: center;
+        }
+        .form-group__btn{
+            margin-top: auto;
+        }
+    }
+    @include xs{
+        padding: 15px 20px 40px;
+        background-color: rgb(243, 246, 249);
+        &__content{
+            padding: 35px 20px;
+        }
+        .form{
+            .form-group{
+                p{
+                    line-height: 20px;
+                }
+            }
+        }
+        &__success{
+            padding: 35px 20px;
+            max-height: 611px;
+            &_title{
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    padding-top: 69px;
+    padding-top: 30px;
     padding-bottom: 100px;
     &__title{
         font-family: 'Montserrat', sans-serif;
@@ -14,13 +14,11 @@
         letter-spacing: -2%;
         color: rgb(59, 75, 100);
     }
-    @include sm{
+    @include xs{
         &__title{
             margin-bottom: 10px;
             font-size: 20px;
         } 
-    }
-    @include xs{
         padding: 40px 20px 26px;
     }
 }

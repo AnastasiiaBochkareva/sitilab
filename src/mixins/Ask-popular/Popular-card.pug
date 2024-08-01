@@ -1,0 +1,14 @@
+mixin Popular-card(param={})
+    .popular-card 
+        .popular-card__head
+            .popular-card__head_row
+                span.popular-card__name=param.name
+                span.popular-card__date 31.07.2024
+            .popular-card__head_row
+                p.popular-card__question=param.question
+        .popular-card__body
+            .popular-card__img
+                img(src="/assets/img/categories/ask-person.png", alt="Врач")
+            p.popular-card__doctor Врач: 
+                span.popular-card__doctor-name=param.doctor
+            p.popular-card__answer=param.text

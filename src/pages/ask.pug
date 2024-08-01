@@ -1,0 +1,13 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    main.ask
+        section.a-container
+            //- +Ask-banner()
+        section.container
+            +Ask-popular()

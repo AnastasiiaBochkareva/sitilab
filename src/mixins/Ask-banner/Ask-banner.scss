@@ -1,0 +1,6 @@
+.ask-banner{
+    position: relative;
+    &__title, svg{
+        position: absolute;
+    }
+}

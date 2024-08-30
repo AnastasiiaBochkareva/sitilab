@@ -1,0 +1,34 @@
+mixin Doctor-form(param={})
+    .ask-form
+        .ask-form__img
+            img(src="/assets/img/categories/ask-doctor.png", alt="Спроси доктора")
+        .ask-form__content
+            .ask-form__title Как воспользоваться услугой?
+            form.form(action="")
+                .form__choose-category
+                    +RadioBtn({name: 'test', value: 'Имя 3', text: 'Я пациент', checked: true})
+                    +RadioBtn({name: 'test', value: 'Имя 3', text: 'Я врач'})
+                //- .form-group
+                //-     +Input({placeholder: 'Имя'})
+                //- .form-group
+                //-     p По номеру телефона будет осуществляться звонок Врача-консультанта
+                //-     +Input({placeholder: '+7 (___) ___-__-__', mask: 'phone'})
+                //- .form-group
+                //-     +Input({placeholder: 'E-mail', type: email})
+                .form-group 
+                    p Выбери услугу:
+                    +Checkbox({text: 'Расшифровка результатов Ситилаб'})
+                    +Checkbox({text: 'Расшифровка результатов другой лаборатории'})
+                    +Checkbox({text: 'Задать вопрос врачу - я пациент'})
+                    +Checkbox({text: 'Консультация эксперта на сайте'})
+                    //- +Input({type: 'textarea', placeholder: 'до 500 символов'})
+                //- .form-group.v-checkboxes 
+                //-     +Checkbox({text: 'Скрыть мое имя'})
+                //-     +Checkbox({text: 'Даю согласие на обработку персональных данных', checked: true})
+                .form-group
+                    button.form-group__btn Спросить
+        .ask-form__success.d-none
+            +icon('success')
+            .ask-form__success_title Ваш вопрос отправлен нашему эксперту
+            .ask-form__success_subtitle Ответ придёт на электронную почту и будет опубликован на сайте в разделе “Популярные вопросы”
+            button.form-group__btn Задать новый вопрос

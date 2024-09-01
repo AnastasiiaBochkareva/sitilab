@@ -50,3 +50,31 @@ if (saleCards) {
     });
   });
 }
+
+const doctorSlider = new Swiper('.form-slider', {
+  modules: [Navigation],
+  slidesPerView: '1',
+  spaceBetween: 10,
+  navigation: {
+    prevEl: '.slider-navigation_prev',
+    nextEl: '.slider-navigation_next',
+  },
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+  grabCursor: true,
+  slideToClickedSlide: true,
+  autoplay: { 
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  breakpoints: {
+    401: {
+      slidesPerView: '1',
+    },
+    300: {
+      slidesPerView: '2',
+    },
+  },
+});

@@ -1,0 +1,12 @@
+mixin Doctor-slider(param={})
+    
+    .form__choose-expert
+        .form__choose-expert_title Выберите эксперта:
+        +Slider-navigation()
+        .form-slider
+            .swiper-wrapper 
+                .swiper-slide
+                    +Doctor-card({})
+                .swiper-slide
+                    +Doctor-card({})
+

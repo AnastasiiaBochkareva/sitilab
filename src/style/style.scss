@@ -1162,5 +1162,10 @@ body.sidebarOpened {
   }
 }
 .d-none{
-  display: none;
+  display: none !important;
+}
+.w-xs-100{
+  @include xs{
+    width: 100% !important;
+  }
 }

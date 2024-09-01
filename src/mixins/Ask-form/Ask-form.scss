@@ -116,6 +116,10 @@
         line-height: 22px; /* 114.286% */
         letter-spacing: -2%;
         color: #fff;
+        transition: opacity 0.3s ease;
+        &:hover{
+            opacity: 0.8;
+        }
     }
     &__success{
         display: none;

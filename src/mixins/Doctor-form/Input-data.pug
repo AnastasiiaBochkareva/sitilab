@@ -1,0 +1,20 @@
+mixin Input-data(param={})
+    .form-group
+        +Input({placeholder: 'ФИО *'})
+        +Input({placeholder: 'Город *'})
+        .form-group__row
+            +Input({placeholder: '+7 (___) ___-__-__ *', mask: 'phone', class: 'w-xs-100'})
+            +Input({placeholder: 'E-mail *', type: email, class: 'w-xs-100'})
+        .form-group__row
+            +Input({placeholder: 'Дата рождения *'})
+            .form__choose-gender
+                span Пол *
+                .radio-btns
+                    .radio-btn__left
+                        +RadioBtn({name: 'test', value: 'Имя', text: 'Муж'})
+                    .radio-btn__right
+                        +RadioBtn({name: 'test', value: 'Имя', text: 'Жен'})
+        +Input({placeholder: '№ регистрационной заявки *'})
+        p.form-group__title-sm Жалобы в настоящее время:
+            +Input({type: 'textarea', placeholder: ''})
+    

@@ -25,8 +25,12 @@ mixin Doctor-form(param={})
                 //- .form-group.v-checkboxes 
                 //-     +Checkbox({text: 'Скрыть мое имя'})
                 //-     +Checkbox({text: 'Даю согласие на обработку персональных данных', checked: true})
+                .form__price 
+                    .form__price_title Стоимость услуги:
+                    if(param.free)
+                        .form__price_cost.cost-green бесплатно
                 .form-group
-                    button.form-group__btn Спросить
+                    button.form-group__btn Получить услугу
         .ask-form__success.d-none
             +icon('success')
             .ask-form__success_title Ваш вопрос отправлен нашему эксперту

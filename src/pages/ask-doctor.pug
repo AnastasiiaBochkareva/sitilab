@@ -7,7 +7,13 @@ block variables
 block content
 
     main.ask-doctor
+        section.bg-blue
+            .container
+                +Doctor-banner()
+                
         section.container
             +Doctor-form({
                 free: true,
             })
+
+        

@@ -1163,6 +1163,24 @@ body.sidebarOpened {
   .bg-blue{
     background-color: #00ABDF;
   }
+  .bg-blue-gradient{
+    background: linear-gradient(180deg, rgb(0, 171, 223), rgb(4, 130, 169));
+  }
+  .bg-gray{
+    background-color: #F3F6F9;
+  }
+  .text-green{
+    color: rgb(149, 193, 31);
+    @include md{
+      background-color: rgba(149, 193, 31, 0.1);
+    }
+  }
+  .text-blue{
+    color: rgb(0, 171, 223);
+    @include md{
+      background-color: rgba(0, 171, 223, 0.1);
+    }
+  }
 }
 .d-none{
   display: none !important;

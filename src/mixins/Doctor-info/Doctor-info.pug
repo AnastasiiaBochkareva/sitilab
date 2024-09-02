@@ -1,0 +1,40 @@
+mixin Doctor-info(param={})
+    if(!param.reverce)
+        .ask-info
+            .ask-info__img  
+                img(src="/assets/img/categories/info-patient.png", alt="")
+                span.ask-info__notice-one Почему болит голова?
+                span.ask-info__notice-two Низкий ферритин, что это значит?
+                span.ask-info__notice-three Как долго можно пить железо?
+            .ask-info__content
+                .ask-info__svg  
+                    .ask-info__svg_patient
+                        +icon('info-patient')
+                    .ask-info__svg_done
+                        +icon('info-done')
+                .ask-info__title для пациента
+                .ask-info__subtitle Опытные врачи Ситилаб помогу грамотно интерпретировать результаты анализов, помогут в выборе анализов, а также ответят на все интересующие вас вопросы.
+                ul.ask-info__list
+                    li Интерпретация результатов анализов
+                    li Помощь в выборе анализов
+                    li Задать вопрос врачу о здоровье
+                    li Консультация с экспертом 
+    
+    if (param.reverce)
+        .ask-info.reverce
+            .ask-info__img  
+                img(src="/assets/img/categories/info-doctor.png", alt="")
+                span.ask-info__notice-one Какие анализы назначить?
+                span.ask-info__notice-two Сомневаюсь в диагнозе
+                span.ask-info__notice-three Причины отклонений от нормы?
+            .ask-info__content
+                .ask-info__svg  
+                    .ask-info__svg_patient
+                        +icon('info-doctor')
+                    .ask-info__svg_done
+                        +icon('info-done')
+                .ask-info__title для медицинского<br>специалиста
+                .ask-info__subtitle Эксперты клинической лабораторной диагностики Ситилаб консультируют профильных врачей по любым анализам. Также коллеги могут спросить мнение у врача своего профиля.
+                ul.ask-info__list
+                    li Помощь в интерпретации результатов анализов пациента
+                    li Помощь в назначении необходимых анализов

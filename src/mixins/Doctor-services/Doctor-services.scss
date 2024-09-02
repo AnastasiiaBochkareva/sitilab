@@ -1,0 +1,219 @@
+.ask-doctor{
+    .ask-services{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 90px;
+        &__title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 36px;
+            letter-spacing: 0%;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+        .ask-services__cards{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+    .ask-services__card{
+        border-radius: 20px;
+        background-color: #fff;
+        padding: 35px 30px 30px;
+        box-sizing: border-box;
+        // max-width: 580px;
+        // width: 100%;
+        width: calc(50% - 10px);
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        box-sizing: border-box;
+        &_title{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            justify-content: space-between;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 22px;
+            letter-spacing: -2%;
+            color: rgb(0, 171, 223);
+            margin-bottom: 20px;
+            .form__choose-category{
+                display: flex;
+                justify-content: space-around;
+                border: 1px solid rgb(178, 186, 198);
+                border-radius: 10px;
+                padding: 3px;
+                max-width: 232px;
+                width: 100%;
+                height: 38px;
+                box-sizing: border-box;
+                .radio-btn{
+                    width: calc(50% - 1px);
+                    text-align: center;
+                    input:checked + label {
+                        background-color: rgb(0, 171, 223);
+                        color: #fff;
+                    }
+                    label{
+                        padding: 3px;
+                        border-radius: 8px;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 24px;
+                        letter-spacing: -2%;
+                        color: rgb(59, 75, 100);
+                        transition: background-color 0.3s ease;
+                        &:hover{
+                            background-color: #F3F6F9;
+                        }
+                    }
+                }
+            }
+        }
+        &_list{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 0;
+            padding-left: 0;
+            li{
+                list-style: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                display: flex;
+                // align-items: center;
+                gap: 8px;
+                svg{
+                    margin-top: 3px;  
+                    width: 14px;
+                    min-width: 14px;
+                    height: 12px;
+                    min-height: 12px;
+                    fill: rgb(0, 171, 223);
+                }
+                span{
+                    position: relative;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: -2%; 
+                }
+            }
+        }
+        &_mark {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            svg{
+                width: 18px;
+                height: 18px;
+                stroke: #fff;
+                fill: rgb(217, 225, 233);
+            }
+            span{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: -2%; 
+                color: rgb(59, 75, 100);
+            }
+        }
+        &_price{
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+        }
+        &_cost{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 18px;
+            letter-spacing: -2%; 
+        }
+        &_btn{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: -2%; 
+            background-color: #00ABDF;
+            border-radius: 10px;
+            height: 45px;
+            max-width: 232px;
+            width: 100%;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            &:hover{
+                background-color: #33BDE8;
+            }
+        }
+    }
+    @include md{
+        .ask-services{
+            padding-left: 20px;
+            padding-right: 20px;
+            .ask-services__cards{
+                flex-wrap: nowrap;
+                overflow: scroll;
+                .ask-services__card{
+                    padding: 25px 24px;
+                    min-width: calc(33% - 10px);
+                    min-height: 380px;
+                    &_price{
+                        flex-direction: column;
+                        gap: 15px;
+                    }
+                    &_cost{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 38px;
+                        width: 100%;
+                        border-radius: 0 0 10px 10px;
+                        border-top: 1px solid #B2BAC6;
+                        font-size: 14px;
+                    }
+                    &_title{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    @include sm{
+        .ask-services{
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 0;
+            padding-right: 0;
+            &__title{
+                padding-left: 20px;
+            }
+            .ask-services__cards{
+                .ask-services__card{
+                    min-width: 280px;
+                    &:first-of-type{
+                        margin-left: 20px;
+                    }
+                    &:last-of-type{
+                        margin-right: 20px;
+                    }
+                }
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,19 @@
+mixin Ask-services-card(param={})
+    .ask-services__card
+        .ask-services__card_title=param.title
+            if(param.check)
+                .form__choose-category
+                    +RadioBtn({name: 'gender', value: 'Имя', text: 'Я пациент', checked: true})
+                    +RadioBtn({name: 'gender', value: 'Имя', text: 'Я врач'})
+        ul.ask-services__card_list 
+            each el in param.li
+                li
+                    +icon('ask-done')
+                    span=el 
+        if(param.mark)
+            .ask-services__card_mark 
+                +icon('info')
+                span Доступно для анализов, сданных на территории РФ.
+        .ask-services__card_price
+            .ask-services__card_cost(class=param.costClass)=param.cost
+            button.ask-services__card_btn Получить услугу

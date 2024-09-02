@@ -10,7 +10,23 @@ block content
         section.bg-blue
             .container
                 +Doctor-banner()
-                
+
+        section.container
+            +Doctor-info({})
+
+        section.container
+            +Doctor-info({
+                reverce: true
+            })
+        
+        section.bg-blue-gradient
+            .container
+                +Doctor-services({
+                })
+        section.bg-gray.container
+                +Doctor-experts({
+                })
+
         section.container
             +Doctor-form({
                 free: true,

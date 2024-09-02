@@ -64,14 +64,12 @@ const doctorSlider = new Swiper('.form-slider', {
   observeSlideChildren: true,
   grabCursor: true,
   slideToClickedSlide: true,
-  autoplay: { 
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  loop: true,
   breakpoints: {
-    401: {
+    1308: {
       slidesPerView: '1',
+    },
+    401: {
+      slidesPerView: '2',
     },
     300: {
       slidesPerView: '2',

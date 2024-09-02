@@ -6,20 +6,24 @@
     display: flex;
     align-items: center;
     gap: 14px;
+    &.active{
+        border: 1px solid #00ABDF;
+        background-color: #F0FCFF;
+    }
     &__img{
         height: 100px;
         min-width: 100px;
         width: 100px;
         overflow: hidden;
         border-radius: 8px;
+        svg, span{
+            display: none;
+        }
         img{
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-    }
-    &__content{
-        
     }
     &__title{
         font-family: 'Montserrat', sans-serif;
@@ -40,7 +44,7 @@
     &__experience{
         color: rgb(142, 154, 171);
     }
-    @media (max-width: 400px) {
+    @include xs{
         flex-direction: column;
         &__content{
             display: flex;
@@ -49,15 +53,50 @@
             justify-content: center;
             text-align: center;
         }
-        &__img{
-            // width: 150px;
-            // height: 131px;
-        }
         &__title{
             margin-bottom: 7px;
         }
         &__experience{
             margin-bottom: 3px;
         }
+        &__img{
+            width: 100%;
+            height: 131px;
+            position: relative;
+            svg{
+                display: block;
+                fill: transparent;
+                stroke: #fff;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 8px;
+                left: 8px;
+            }
+            .expert{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0 10px;
+                background: linear-gradient(to right, rgb(255, 204, 0), rgb(235, 164, 12));
+                height: 22px;
+                max-width: 92px;
+                width: 100%;
+            }
+            span{
+                display: block;
+                color: #fff;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+    @media (max-width: 400px) {
+        
     }
 }

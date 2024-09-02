@@ -1161,9 +1161,9 @@ body.sidebarOpened {
     }
   }
 }
-.d-none{
-  display: none !important;
-}
+// .d-none{
+//   display: none !important;
+// }
 .w-xs-100{
   @include xs{
     width: 100% !important;

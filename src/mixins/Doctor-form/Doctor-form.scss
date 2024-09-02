@@ -2,13 +2,14 @@
 .ask-doctor{
     .ask-form{
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         padding-top: 70px;
-        padding-bottom: 70px;
+        padding-bottom: 105px;
         min-height: 872px;
         height: 100%;
         &__img{
-            width: 777px;
+            max-width: 777px;
+            width: 100%;
             height: auto;
             overflow: hidden;
             img{
@@ -23,16 +24,21 @@
             padding: 40px 90px 105px;
             margin: 0;
             border-radius: 0;
-            // min-height: 872px;
             min-height: initial;
             height: auto;
             min-height: 100%;
             max-width: 583px;
+            width: 100%;
             position: relative;
             .form{
                 flex-grow: 1;
                 min-height: 0;
                 gap: 25px;
+                .v-input.active{
+                    &:after{
+                        border: 1px solid #00ABDF;
+                    }
+                }
                 &__choose-category{
                     display: flex;
                     justify-content: space-around;
@@ -179,13 +185,19 @@
                     }
                     .v-input textarea{
                         padding: 0;
-                        height: 84px;
+                        height: 74px;
+                        margin: 5px;
                     }
-                    p{
+                    &__title-sm{
+                        font-family: 'Montserrat', sans-serif;
                         font-weight: 600;
                         font-size: 14px;
                         line-height: 22px;
                         margin-bottom: 5px;
+                        color: rgb(59, 75, 100);
+                        .v-input{
+                            margin-top: 10px;
+                        }
                     }
                     &__btn{
                         height: 45px;
@@ -325,12 +337,21 @@
                 line-height: 26px;
                 margin-top: -12px;
                 margin-bottom: 15px;
+                color: rgb(59, 75, 100);
                 span{
                     font-weight: 600;
                 }
             }
             &_subtitle{
                 line-height: 26px;
+            }
+            &_answer{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 26px;
+                color: rgb(59, 75, 100);
+                margin-bottom: 20px;
             }
             &_time{
                 text-align: center;
@@ -376,8 +397,10 @@
                 border: none;
                 padding: 0;
                 position: static;
-            }
-            &__title{
+                .form-agreement{
+                    max-width: 100%;
+                    width: 290px;
+                }
             }
             .form{
                 .form-group{
@@ -408,7 +431,7 @@
         @include xs{
             background-color: transparent;
             padding-top: 50px;
-            padding-bottom: 44px;
+            padding-bottom: 110px;
             padding-left: 15px;
             padding-right: 15px;
             &__title{
@@ -439,14 +462,6 @@
                         }
                     }
                 }
-                .form-group{
-                    &__row{
-                        >div{
-                        }
-                    }
-                }
-            }
-            &__content{
             }
         }
     }
@@ -479,7 +494,6 @@
             gap: 10px;
             .radio-btn{
                 width: calc(33% - 6px);
-                // min-width: 95px;
                 label{
                     display: flex;
                     align-items: center;
@@ -558,9 +572,6 @@
                 -webkit-transform: rotate(90deg);
                 transform: rotate(90deg);
             }
-        }
-        @include xs{
-            
         }
     }
 }

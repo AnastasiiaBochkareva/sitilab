@@ -1,7 +1,9 @@
 mixin Doctor-card(param={})
-    .form-card
+    button.form-card
         .form-card__img     
             img(src="/assets/img/categories/form-card.png", alt="")
+            +icon('education')
+            span.expert эксперт
         .form-card__content  
             .form-card__title Ильина Элла Андреевна
             .form-card__experience стаж 24 года

@@ -21,6 +21,8 @@ import '@/mixins/Sidebar/Sidebar';
 import '@/mixins/Sidebar/StickyTabs';
 import '@/mixins/Info-popup/Info-popup';
 
+import '@/mixins/Doctor-card/Doctor-card';
+
 import MyModal from '@/components/ui/MyModal/MyModal';
 // import Filters from '@/components/ui/Filters/Filters';
 // import Validation from '@/components/ui/Form/Validation';

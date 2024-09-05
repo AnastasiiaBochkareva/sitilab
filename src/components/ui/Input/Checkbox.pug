@@ -14,7 +14,11 @@ mixin Checkbox(param = {})
 
 	.v-checkbox(class=param.reverse ? 'checkbox_reverse' : '')
 		input.v-checkbox__input(type="checkbox" name=param.name value=param.value checked=param.checked disabled=param.disabled id=param.id)
-		label(for=param.id).v-checkbox__label #{param.text}
+		if(param.link)
+			label(for=param.id).v-checkbox__label #{param.text}
+				a(href='#') #{param.textLink}
+		else
+			label(for=param.id).v-checkbox__label #{param.text}
 
 mixin CheckboxBtn(param = {})
 

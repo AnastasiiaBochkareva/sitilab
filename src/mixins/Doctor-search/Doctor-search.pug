@@ -1,0 +1,6 @@
+mixin Doctor-search(param={})
+    .ask-search
+        .ask-search__title Вопрос - Ответ
+        +Input({placeholder: 'Поиск по тексту', type: 'search', askSearch: true})
+        button.ask-search__btn Задать свой вопрос
+        .ask-search__subtitle Пока вопросов не было. Станьте первыми!

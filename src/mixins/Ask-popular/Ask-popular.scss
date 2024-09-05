@@ -14,11 +14,24 @@
         letter-spacing: -2%;
         color: rgb(59, 75, 100);
     }
+    &__subtitle{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 26px; /* 114.286% */
+        letter-spacing: -2%;
+        color: rgb(59, 75, 100);
+        margin-top: 20px;
+    }
     @include xs{
         &__title{
             margin-bottom: 10px;
             font-size: 20px;
         } 
+        &__subtitle{
+            margin-top: 0;
+        }
         padding: 40px 20px 26px;
     }
 }

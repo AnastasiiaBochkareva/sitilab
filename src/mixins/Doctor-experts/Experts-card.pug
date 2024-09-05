@@ -1,0 +1,18 @@
+mixin Experts-card(param={})
+    .experts-cards
+        .experts-cards__img 
+            img(src="/assets/img/categories/form-card.png", alt="")
+            button.experts-cards__btn   
+                +icon('education')
+            if(param.expert)
+                span.expert эксперт
+            if(!param.expert)
+                span.specialist специалист
+        .experts-cards__title Карпеева<br>Юлия Сергеевна
+        .experts-cards__experience стаж 17 лет
+        .experts-cards__job Акушер-гинеколог
+        .experts-cards__backside
+            button.experts-cards__btn   
+                +icon('education')
+            .experts-cards__univercity 2019 г. Первый Московский Государственный Медицинский Университет им. И.М. Сеченова
+            .experts-cards__job Специальность: Лечебное дело

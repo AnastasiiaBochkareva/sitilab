@@ -2,7 +2,7 @@
     .ask-banner{
         // padding-left: 90px;
         // padding-right: 90px;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: center;
         gap: 102px;
         &__img{
@@ -30,6 +30,7 @@
                 font-size: 14px;
                 line-height: 20px;
                 letter-spacing: 0%;
+                font-style: italic;
             }
             &::before{
                 content: "";
@@ -76,11 +77,17 @@
             font-size: 14px;
             line-height: 24px;
             letter-spacing: -2%;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &:hover{
                 background-color: #F26E88;
             }
         }
         @include sm{
+            padding-left: 28px;
+            padding-right: 28px;
             gap: 20px;
         }
         @include xs{
@@ -89,8 +96,6 @@
             background-color: transparent;
             padding-top: 46px;
             padding-bottom: 50px;
-            padding-left: 28px;
-            padding-right: 28px;
             &__img{
                 width: 289px;
                 min-width: 289px;

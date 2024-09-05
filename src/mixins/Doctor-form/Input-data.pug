@@ -14,7 +14,10 @@ mixin Input-data(param={})
                         +RadioBtn({name: 'test', value: 'Имя', text: 'Муж'})
                     .radio-btn__right
                         +RadioBtn({name: 'test', value: 'Имя', text: 'Жен'})
-        +Input({placeholder: '№ регистрационной заявки *'})
+        if(param.file)
+            +Input({placeholder: 'Прикрепить результаты анализов <span>PDF, JPG</span>', type: 'file'})
+        else
+            +Input({placeholder: '№ регистрационной заявки *'})
         .form-group__title-sm Жалобы в настоящее время:
             +Input({type: 'textarea', placeholder: ''})
     

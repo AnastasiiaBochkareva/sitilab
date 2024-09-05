@@ -1,2 +1,30 @@
 mixin Doctor-experts(param={})
     .ask-experts
+        .ask-experts__head
+            .ask-experts__title Эксперты и специалисты Ситилаб
+            .ask-experts__subtitle 
+                span Врачи клинической лабораторной диагностики высшей категории 
+                .ask-experts__rating 
+                    each el in Array(5)
+                        +icon('ask-star')
+        .ask-experts__body
+            +Experts-card({
+                expert: true,
+            })
+            +Experts-card({
+            })
+            +Experts-card({
+                expert: true,
+            })
+            +Experts-card({
+            })
+            +Experts-card({
+                expert: true,
+            })
+            +Experts-card({
+            })
+            +Experts-card({
+                expert: true,
+            })
+            +Experts-card({
+            })

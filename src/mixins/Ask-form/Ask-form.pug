@@ -15,7 +15,11 @@ mixin Ask-form(param={})
                     +Input({type: 'textarea', placeholder: 'до 500 символов'})
                 .form-group.v-checkboxes 
                     +Checkbox({text: 'Скрыть мое имя'})
-                    +Checkbox({text: 'Даю согласие на обработку персональных данных', checked: true})
+                    +Checkbox({
+                        link: true,
+                        textLink: 'персональных данных',
+                        text: 'Даю согласие на обработку ', 
+                        })
                 .form-group
                     button.form-group__btn Спросить
         .ask-form__success

@@ -10,10 +10,10 @@ mixin Doctor-form(param={})
                     +RadioBtn({name: 'gender', value: 'Имя', text: 'Я врач'})
                 .form-group 
                     p Выбери услугу:
-                    +Checkbox({text: 'Расшифровка результатов Ситилаб'})
-                    +Checkbox({text: 'Расшифровка результатов другой лаборатории'})
-                    +Checkbox({text: 'Задать вопрос врачу - я пациент'})
-                    +Checkbox({text: 'Консультация эксперта на сайте'})
+                    +Radio({text: 'Расшифровка результатов Ситилаб', name: 'result'})
+                    +Radio({text: 'Расшифровка результатов другой лаборатории', name: 'result'})
+                    +Radio({text: 'Задать вопрос врачу - я пациент', name: 'result'})
+                    +Radio({text: 'Консультация эксперта на сайте', name: 'result'})
                 .form__price 
                     .form__price_title Стоимость услуги:
                     if(param.free)
@@ -28,7 +28,7 @@ mixin Doctor-form(param={})
                 +Choose-time()
                 .form-required * Поля, обязательные для заполнения
                 button.form-group__btn Отправить
-            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку персональных данных и принимаете пользовательское соглашение
+            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку <a href="#"> персональных данных </a> и принимаете<a href="#"> пользовательское соглашение</a>
             button.ask-form__btn-back     
                 +icon('back')
 
@@ -44,7 +44,9 @@ mixin Doctor-form(param={})
         .ask-form__content.d-none
             .ask-form__title-sm Расшифровка результатов другой лаборатории
             form.form(action="")
-                +Input-data()
+                +Input-data({
+                    file: true
+                })
                 +Choose-time()
                 .form-required * Поля, обязательные для заполнения
                 .form__price 
@@ -52,7 +54,7 @@ mixin Doctor-form(param={})
                     if(param.free)
                         .form__price_cost.cost-blue 50 руб
                 button.form-group__btn Перейти к оплате
-            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку персональных данных и принимаете пользовательское соглашение
+            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку <a href="#"> персональных данных </a> и принимаете<a href="#"> пользовательское соглашение</a>
             button.ask-form__btn-back     
                 +icon('back')
 
@@ -87,7 +89,7 @@ mixin Doctor-form(param={})
                     if(param.free)
                         .form__price_cost.cost-blue Платно
                 button.form-group__btn Отправить
-            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку персональных данных и принимаете пользовательское соглашение
+            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку <a href="#"> персональных данных </a> и принимаете<a href="#"> пользовательское соглашение</a>
             button.ask-form__btn-back     
                 +icon('back')
         
@@ -130,7 +132,7 @@ mixin Doctor-form(param={})
                 +Choose-time()
                 .form-required * Поля, обязательные для заполнения
                 button.form-group__btn Отправить
-            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку персональных данных и принимаете пользовательское соглашение
+            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку <a href="#"> персональных данных </a> и принимаете<a href="#"> пользовательское соглашение</a>
             button.ask-form__btn-back     
                 +icon('back')
 
@@ -149,7 +151,7 @@ mixin Doctor-form(param={})
                 +Choose-time()
                 .form-required * Поля, обязательные для заполнения
                 button.form-group__btn Отправить
-            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку персональных данных и принимаете пользовательское соглашение
+            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку <a href="#"> персональных данных </a> и принимаете<a href="#"> пользовательское соглашение</a>
             button.ask-form__btn-back     
                 +icon('back')
         

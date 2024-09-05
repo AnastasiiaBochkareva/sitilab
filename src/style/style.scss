@@ -1138,6 +1138,13 @@ body.sidebarOpened {
   }
 }
 .ask-doctor{
+  padding-bottom: 40px;
+  @include xs{
+    padding-bottom: 20px;
+  }
+  .ask-banner{
+    margin-top: 0 !important;
+  }
   .container {
     width: 100%;
     max-width: 1360px;
@@ -1188,5 +1195,11 @@ body.sidebarOpened {
 .w-xs-100{
   @include xs{
     width: 100% !important;
+  }
+}
+.m-neg-sm{
+  @media(max-width: 998px){
+    margin-left: -15px;
+    margin-right: -15px;
   }
 }

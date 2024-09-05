@@ -31,12 +31,14 @@
         font-size: 14px;
         line-height: 18px;
         color: rgb(59, 75, 100);
+        text-align: left;
     }
     &__subtitle, &__experience{
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 12px;
         line-height: 18px;
+        text-align: left;
     }
     &__subtitle{
         color: rgb(59, 75, 100);
@@ -55,6 +57,9 @@
         }
         &__title{
             margin-bottom: 7px;
+        }
+        &__subtitle{
+            text-align: center;
         }
         &__experience{
             margin-bottom: 3px;

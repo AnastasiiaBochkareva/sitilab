@@ -77,7 +77,7 @@ mixin Input(param = {})
             class='input_' + param.type
             class=param.class
         )
-            label.input__label #{param.unit}
+            label.v-input__label #{param.unit}
             input(
                 type="text"
                 id=param.id
@@ -90,12 +90,12 @@ mixin Input(param = {})
                 maxlength=3
                 value=666
             )
-            label(for=param.id).input__placeholder #{param.placeholder}
+            label(for=param.id).v-input__placeholder #{param.placeholder}
 
     // - TYPE SEARCH
         param.mode - НЕ пременим
     - if (param.type === 'search')
-        .input(
+        .v-input(
             class=param.status ? 'input_' + param.status : ''
             class=param.size ? 'input_' + param.size : ''
             class='input_' + param.type
@@ -108,12 +108,15 @@ mixin Input(param = {})
                 disabled=param.disabled
                 class=param.inputClass
             )
-            label(for=param.id).input__placeholder #{param.placeholder}
-            .input__btns
-                button(type='reset' style="display:none;").input__btn-clear
+            label(for=param.id).v-input__placeholder #{param.placeholder}
+            .v-input__btns
+                button(type='reset' style="display:none;").v-input__btn-clear
                     +icon('clear')
-                button(type='submit').input__btn-search
-                    +icon('search')
+                button(type='submit').v-input__btn-search
+                    if(param.askSearch)
+                        +icon('ask-search')
+                    else
+                        +icon('search')
 
     // - TYPE TEXTAREA
     - if (param.type === 'textarea')
@@ -133,3 +136,25 @@ mixin Input(param = {})
                 data-row=param.row || 2
             )
             label(for=param.id).v-input__placeholder #{param.placeholder}
+
+    
+    // - TYPE file
+    - if (param.type === 'file')
+        .v-input.v-input-file(
+            class=param.status ? 'input_' + param.status : ''
+            class=param.size ? 'input_' + param.size : ''
+            class=param.mode ? 'input_' + param.mode : ''
+            class=param.class
+        )   
+            +icon('ask-file')
+            input(
+                type="file"
+                id=param.id
+                name=param.name
+                placeholder=" "
+                disabled=param.disabled
+                class=param.inputClass
+                required=param.required
+                data-mask=param.mask
+            )
+            label(for=param.id).v-input__placeholder !{param.placeholder}

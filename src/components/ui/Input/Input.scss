@@ -152,7 +152,7 @@
     }
   }
 
-  input {
+  &:not(.v-input-file) input {
     position: relative;
     width: 100%;
     border-radius: $border-radius;
@@ -194,6 +194,33 @@
     &:not(:placeholder-shown) {
       + .v-input__placeholder {
         display: none;
+      }
+    }
+  }
+  &-file{
+    height: 38px;
+    box-sizing: border-box;
+    input{
+        width: 0;
+        height: 0;
+    }
+    svg{
+      fill: transparent;
+      stroke: #00ABDF;
+      height: 16px;  
+      width: 14px;    
+      position: absolute;
+      left: 12px;                     
+    }
+    .v-input__placeholder{
+      right: 0 !important;
+      padding: 10px 12px 10px 38px;
+      left: 0 !important;
+      line-height: 17px !important;
+      color: rgb(59, 75, 100) !important;
+      cursor: pointer;
+      span{
+        color: rgb(142, 154, 171);
       }
     }
   }
@@ -737,7 +764,7 @@
 }
 
 ///////// radio ///////////
-.radio {
+.v-radio {
   display: flex;
   align-items: center;
 

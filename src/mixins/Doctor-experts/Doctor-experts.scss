@@ -210,6 +210,7 @@
         &__head{
             padding: 40px 20px 15px;
             flex-direction: column;
+            align-items: flex-start;
         }
         &__body{
             padding: 20px 0 40px;
@@ -221,6 +222,21 @@
                     margin-right: 20px;
                 }
             }
+        }
+    }
+    @media (max-width: 360px){
+        // .ask-experts__title {
+        //     max-width: 100%; /* чтобы текст занимал всю ширину контейнера */
+        //     word-break: break-word; /* позволяет перенести текст */
+        //   }
+        
+        //   .ask-experts__title::after {
+        //     content: "Эксперты\nи специалисты\nСитилаб";
+        //     white-space: pre-line; /* сохраняет переносы строк */
+        //     display: block; /* переносит текст на следующие строки */
+        //   }
+        .ask-experts__title span {
+            display: block; /* Каждое слово будет на новой строке */
         }
     }
 }

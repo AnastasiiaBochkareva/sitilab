@@ -2,7 +2,6 @@
 .ask-doctor{
     .ask-form{
         display: flex;
-        // flex-wrap: wrap;
         padding-top: 70px;
         padding-bottom: 105px;
         min-height: 872px;
@@ -574,6 +573,9 @@
         .form-slider{
             overflow: hidden;
         }
+        .swiper-button-disabled {
+            display: none;
+        }
         .slider-navigation_next, .slider-navigation_prev{
             top: 60%;
             transform: translateY(-60%);
@@ -583,6 +585,8 @@
             height: 35px;
             svg{
                 fill: #00ABDF;
+                width: 30px;
+                height: 30px;
             }
             &:hover{
                 background-color: #00ABDF;

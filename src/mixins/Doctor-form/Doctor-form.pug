@@ -2,7 +2,7 @@ mixin Doctor-form(param={})
     .ask-form
         .ask-form__img
             img(src="/assets/img/categories/ask-doctor.png", alt="Спроси доктора")
-        .ask-form__content.d-none
+        .ask-form__content
             .ask-form__title.ask-form__notice Как воспользоваться услугой?
             form.form(action="")
                 .form__choose-category
@@ -21,7 +21,7 @@ mixin Doctor-form(param={})
                 .form-group
                     button.form-group__btn Получить услугу
 
-        .ask-form__content.d-none
+        .ask-form__content
             .ask-form__title-sm Расшифровка результатов Ситилаб
             form.form(action="")
                 +Input-data()
@@ -32,7 +32,7 @@ mixin Doctor-form(param={})
             button.ask-form__btn-back     
                 +icon('back')
 
-        .ask-form__success.d-none
+        .ask-form__success
             +icon('success')
             .ask-form__success_title Ваша заявка оформлена успешно
             .ask-form__success_time
@@ -41,7 +41,7 @@ mixin Doctor-form(param={})
             .ask-form__success_subtitle Заявка будет обработана в течение 24 часов с момента поступления заявки к врачу-консультанту.
             button.form-group__btn Вернуться к выбору услуг
 
-        .ask-form__content.d-none
+        .ask-form__content
             .ask-form__title-sm Расшифровка результатов другой лаборатории
             form.form(action="")
                 +Input-data({
@@ -58,7 +58,7 @@ mixin Doctor-form(param={})
             button.ask-form__btn-back     
                 +icon('back')
 
-        .ask-form__success.d-none
+        .ask-form__success
             +icon('success')
             .ask-form__success_title Оплата прошла успешно
             .ask-form__success_order Номер заказа: 
@@ -93,7 +93,7 @@ mixin Doctor-form(param={})
             button.ask-form__btn-back     
                 +icon('back')
         
-        .ask-form__success.d-none
+        .ask-form__success
             +icon('success')
             .ask-form__success_title Оплата прошла успешно
             .ask-form__success_order Номер заказа: 
@@ -106,7 +106,7 @@ mixin Doctor-form(param={})
                         .form__price_cost.cost-gray Открыть
             button.form-group__btn Вернуться к выбору услуг
 
-        .ask-form__content.d-none
+        .ask-form__content
             .ask-form__title-sm Задать вопрос врачу - я пациент
             form.form(action="")
                 .form-group
@@ -136,7 +136,7 @@ mixin Doctor-form(param={})
             button.ask-form__btn-back     
                 +icon('back')
 
-        .ask-form__content.d-none
+        .ask-form__content
             .ask-form__title-sm Задать вопрос врачу - я врач
             form.form(action="")
                 .form-group

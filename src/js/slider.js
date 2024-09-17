@@ -59,20 +59,55 @@ const doctorSlider = new Swiper('.form-slider', {
     prevEl: '.slider-navigation_prev',
     nextEl: '.slider-navigation_next',
   },
-  observer: true,
-  observeParents: true,
-  observeSlideChildren: true,
+  // observer: true,
+  // observeParents: true,
+  // observeSlideChildren: true,
   grabCursor: true,
   slideToClickedSlide: true,
   breakpoints: {
     1308: {
       slidesPerView: '1',
     },
-    401: {
+    // 401: {
+    //   slidesPerView: '2',
+    // },
+    // 300: {
+    //   slidesPerView: '2',
+    // },
+    300: {
+      slidesPerView: '1',
+    },
+  },
+});
+
+const askExpertsSlider = new Swiper('.ask-experts__body', {
+  modules: [Navigation],
+  slidesPerView: '4.9',
+  spaceBetween: 28,
+  // observer: true,
+  // observeParents: true,
+  // observeSlideChildren: true,
+  grabCursor: true,
+  slideToClickedSlide: true,
+  breakpoints: {
+    1308: {
+      slidesPerView: '4.9',
+    },
+    901: {
+      slidesPerView: '3.5',
+      spaceBetween: 20,
+    },
+    701: {
+      slidesPerView: '2.8',
+    },
+    450: {
       slidesPerView: '2',
     },
+    400: {
+      slidesPerView: '1.8',
+    },
     300: {
-      slidesPerView: '2',
+      slidesPerView: '1.4',
     },
   },
 });

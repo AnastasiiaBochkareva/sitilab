@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     gap: 14px;
+    width: 100%;
     &.active{
         border: 1px solid #00ABDF;
         background-color: #F0FCFF;
@@ -16,6 +17,7 @@
         width: 100px;
         overflow: hidden;
         border-radius: 8px;
+        background: linear-gradient(90deg, rgb(223, 230, 240), rgb(178, 186, 198));
         svg, span{
             display: none;
         }
@@ -46,7 +48,7 @@
     &__experience{
         color: rgb(142, 154, 171);
     }
-    @include xs{
+    @media (max-width: 400px){
         flex-direction: column;
         &__content{
             display: flex;
@@ -100,8 +102,5 @@
                 line-height: 20px;
             }
         }
-    }
-    @media (max-width: 400px) {
-        
     }
 }

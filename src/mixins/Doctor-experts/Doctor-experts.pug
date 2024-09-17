@@ -8,23 +8,32 @@ mixin Doctor-experts(param={})
                     each el in Array(5)
                         +icon('ask-star')
         .ask-experts__body
-            +Experts-card({
-                expert: true,
-            })
-            +Experts-card({
-            })
-            +Experts-card({
-                expert: true,
-            })
-            +Experts-card({
-            })
-            +Experts-card({
-                expert: true,
-            })
-            +Experts-card({
-            })
-            +Experts-card({
-                expert: true,
-            })
-            +Experts-card({
-            })
+            .swiper-wrapper 
+                .swiper-slide
+                    +Experts-card({
+                        expert: true,
+                    })
+                .swiper-slide
+                    +Experts-card({
+                    })
+                .swiper-slide
+                    +Experts-card({
+                        expert: true,
+                    })
+                .swiper-slide
+                    +Experts-card({
+                    })
+                .swiper-slide
+                    +Experts-card({
+                        expert: true,
+                    })
+                .swiper-slide
+                    +Experts-card({
+                    })
+                .swiper-slide
+                    +Experts-card({
+                        expert: true,
+                    })
+                .swiper-slide
+                    +Experts-card({
+                    })

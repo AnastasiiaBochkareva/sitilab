@@ -42,6 +42,8 @@ mixin Input(param = {})
             label(for=param.id).v-input__placeholder #{param.placeholder}
             if (param.arrowDown)
               +icon('a-arrow-down')
+            if (param.dateBirth)
+              +icon('date-birth')
 
     // - TYPE COUNT
     - if (param.type === 'count')

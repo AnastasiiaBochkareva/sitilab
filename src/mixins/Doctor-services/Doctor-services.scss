@@ -224,4 +224,14 @@
             
         }
     }
+    @media (max-width: 500px){
+        .ask-services{
+            &__title{
+                span{
+                    display: block;
+                }
+            }
+        }
+        
+    }
 }

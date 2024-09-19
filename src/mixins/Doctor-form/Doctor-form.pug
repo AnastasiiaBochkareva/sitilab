@@ -73,7 +73,7 @@ mixin Doctor-form(param={})
                         .form__price_cost.cost-gray Открыть
             button.form-group__btn Вернуться к выбору услуг
 
-        .ask-form__content
+        .ask-form__content.d-none
             .ask-form__title-sm Консультация эксперта
             form.form(action="")
                 .form-group
@@ -136,7 +136,7 @@ mixin Doctor-form(param={})
             button.ask-form__btn-back     
                 +icon('back')
 
-        .ask-form__content.d-none
+        .ask-form__content
             .ask-form__title-sm Задать вопрос врачу - я врач
             form.form(action="")
                 .form-group

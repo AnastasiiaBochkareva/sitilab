@@ -8,6 +8,16 @@ document.addEventListener('click', (event) => {
     }
 });
 
+// document.addEventListener('click', (event) => {
+//     const btn = event.target.closest('.experts-cards__btn');
+//     if (btn) {
+//         event.stopPropagation(); // Останавливаем распространение события, чтобы не срабатывало событие на слайдере
+//         const card = btn.closest('.experts-cards');
+//         const backside = card.querySelector('.experts-cards__backside');
+//         backside.classList.toggle('active');
+//     }
+// });
+
 // const container = document.querySelector('.ask-experts__body');
 
 // container.addEventListener('wheel', (e) => {
@@ -26,7 +36,7 @@ document.addEventListener('click', (event) => {
 //   e.preventDefault();
 //   const scrollStep = e.deltaY * 5; // Меньший шаг для более плавного скролла
 //   scrollAmount += scrollStep;
-  
+
 //   if (!isScrolling) {
 //     isScrolling = true;
 //     smoothScroll();
@@ -36,7 +46,7 @@ document.addEventListener('click', (event) => {
 // function smoothScroll() {
 //   container.scrollLeft += scrollAmount * 3.2; // Плавное увеличение значения
 //   scrollAmount *= 0.9; // Постепенное замедление
-  
+
 //   if (Math.abs(scrollAmount) > 0.1) {
 //     requestAnimationFrame(smoothScroll); // Продолжает анимацию до остановки
 //   } else {

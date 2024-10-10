@@ -70,6 +70,10 @@
             object-fit: cover;
         }
     }
+    @media (max-width: 1400px) {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
     @include sm {
         padding: 20px 28px 40px;
         grid-template-columns: 1fr;

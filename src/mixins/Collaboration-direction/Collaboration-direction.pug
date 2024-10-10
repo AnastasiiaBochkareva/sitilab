@@ -1,0 +1,11 @@
+mixin Collaboration-direction(param={})
+    .collaboration-direction
+        .collaboration-direction__title 
+            span Все направления 
+            span исследований 
+            span для врачей-специалистов
+        .collaboration-direction__subtitle Достоверная и точная диагностика<br>для принятия верных клинических решений</br>
+        ul.collaboration-direction__list 
+            - const collabList = ['Гематология', 'Биохимия', 'Иммуногематология', 'ИХЛА', 'Иммунология', 'ИФА', 'Проточная цитофлуориметрия', 'Аллергология', 'Цитология', 'Бактериология', 'Генетика', 'ПЦР', 'Гистология, ИГХ', 'ВЭЖХ']
+                each el in collabList 
+                    li=el

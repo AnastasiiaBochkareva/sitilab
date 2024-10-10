@@ -51,47 +51,74 @@ if (saleCards) {
     });
 }
 
-const doctorSlider = new Swiper('.form-slider', {
+// const doctorSlider = new Swiper('.form-slider', {
+//     modules: [Navigation],
+//     slidesPerView: '1',
+//     spaceBetween: 10,
+//     navigation: {
+//         prevEl: '.slider-navigation_prev',
+//         nextEl: '.slider-navigation_next',
+//     },
+//     observer: true,
+//     observeParents: true,
+//     observeSlideChildren: true,
+//     grabCursor: true,
+//     loop: false,
+//     slideToClickedSlide: true,
+//     breakpoints: {
+//         1308: {
+//             slidesPerView: '1',
+//         },
+//         // 401: {
+//         //   slidesPerView: '2',
+//         // },
+//         // 300: {
+//         //   slidesPerView: '2',
+//         // },
+//         300: {
+//             slidesPerView: '1',
+//         },
+//     },
+// });
+
+// setTimeout(() => {
+//     const doctorSlider = new Swiper('.form-slider', {
+//         modules: [Navigation],
+//         slidesPerView: '1',
+//         spaceBetween: 10,
+//         navigation: {
+//             prevEl: '.slider-navigation_prev',
+//             nextEl: '.slider-navigation_next',
+//         },
+//         observer: true,
+//         observeParents: true,
+//         observeSlideChildren: true,
+//         grabCursor: true,
+//         loop: false,
+//         slideToClickedSlide: true,
+//         watchOverflow: true,
+//         breakpoints: {
+//             1308: {
+//                 slidesPerView: '1',
+//             },
+//             300: {
+//                 slidesPerView: '1',
+//             },
+//         },
+//     });
+// }, 10000);
+
+const askExpertsSlider = new Swiper('.ask-experts__body', {
     modules: [Navigation],
-    slidesPerView: '1',
-    spaceBetween: 10,
-    navigation: {
-        prevEl: '.slider-navigation_prev',
-        nextEl: '.slider-navigation_next',
-    },
-    // observer: true,
-    // observeParents: true,
-    // observeSlideChildren: true,
+    slidesPerView: '4.5',
+    spaceBetween: 28,
+    noSwiping: true,
+    noSwipingSelector: '.experts-cards__btn',
     grabCursor: true,
     slideToClickedSlide: true,
     breakpoints: {
         1308: {
-            slidesPerView: '1',
-        },
-        // 401: {
-        //   slidesPerView: '2',
-        // },
-        // 300: {
-        //   slidesPerView: '2',
-        // },
-        300: {
-            slidesPerView: '1',
-        },
-    },
-});
-
-const askExpertsSlider = new Swiper('.ask-experts__body', {
-    modules: [Navigation],
-    slidesPerView: '4.9',
-    spaceBetween: 28,
-    // observer: true,
-    // observeParents: true,
-    // observeSlideChildren: true,
-    grabCursor: true,
-    slideToClickedSlide: false,
-    breakpoints: {
-        1308: {
-            slidesPerView: '4.9',
+            slidesPerView: '4.5',
         },
         901: {
             slidesPerView: '3.5',

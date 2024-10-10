@@ -73,7 +73,7 @@ mixin Doctor-form(param={})
                         .form__price_cost.cost-gray Открыть
             button.form-group__btn Вернуться к выбору услуг
 
-        .ask-form__content.d-none
+        .ask-form__content
             .ask-form__title-sm Консультация эксперта
             form.form(action="")
                 .form-group
@@ -136,7 +136,7 @@ mixin Doctor-form(param={})
             button.ask-form__btn-back     
                 +icon('back')
 
-        .ask-form__content
+        .ask-form__content.d-none
             .ask-form__title-sm Задать вопрос врачу - я врач
             form.form(action="")
                 .form-group
@@ -147,7 +147,7 @@ mixin Doctor-form(param={})
                         +Input({placeholder: 'E-mail *', type: email, class: 'w-xs-100 active'})
                     +Input({placeholder: '№ регистрационной заявки *', class: 'active'})
                     .form-group__title-sm Напишите ваш вопрос:
-                        +Input({type: 'textarea', placeholder: ''})
+                        +Input({type: 'textarea', rows: '5', placeholder: ''})
                 +Choose-time()
                 .form-required * Поля, обязательные для заполнения
                 button.form-group__btn Отправить

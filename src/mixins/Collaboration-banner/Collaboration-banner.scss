@@ -1,0 +1,112 @@
+.collaboration-banner {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    display: grid;
+    grid-template-columns: 1fr 398px;
+    column-gap: 92px;
+    row-gap: 22px;
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        letter-spacing: 0%;
+        color: #fff;
+        display: flex;
+        align-items: flex-end;
+    }
+    &__subtitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: #fff;
+        grid-row-start: 2;
+    }
+    &__btn {
+        grid-row-start: 3;
+        display: flex;
+        align-items: flex-start;
+        a {
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -2%;
+            background-color: rgb(234, 81, 109);
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            max-height: 45px;
+            height: 100%;
+            max-width: 242px;
+            width: 100%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color: hsl(350, 72%, 66%) !important;
+            }
+        }
+    }
+    &__img {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        max-width: 398px;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    @include sm {
+        padding: 20px 28px 40px;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        &__title {
+            grid-row-start: 2;
+            font-size: 28px;
+            line-height: 36px;
+            justify-content: center;
+        }
+        &__subtitle {
+            grid-row-start: 3;
+            font-size: 14px;
+            text-align: center;
+        }
+        &__btn {
+            grid-row-start: 4;
+            margin-top: 5px;
+            a {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &__img {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @include xs {
+        &__btn {
+            a {
+                max-width: 100%;
+            }
+        }
+    }
+}

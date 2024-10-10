@@ -1,0 +1,18 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    main.collaboration
+
+        section.container
+            +Breadcrumbs({
+                toDoctors: true,
+            })
+
+        section.bg-blue
+            .container
+                +Collaboration-banner({})

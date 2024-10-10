@@ -244,7 +244,7 @@
                     }
                     .v-input textarea {
                         padding: 0;
-                        height: 74px;
+                        // height: 74px;
                         margin: 5px;
                         color: #000;
                         font-family: 'Montserrat', sans-serif;
@@ -627,7 +627,13 @@
             margin-bottom: 10px;
         }
         .form-slider {
+            max-width: 100vw;
             overflow: hidden;
+            .swiper-wrapper {
+                .swiper-slide {
+                    // max-width: 100%;
+                }
+            }
         }
         .swiper-button-disabled {
             display: none;

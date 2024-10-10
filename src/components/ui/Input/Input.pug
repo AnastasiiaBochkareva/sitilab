@@ -136,6 +136,7 @@ mixin Input(param = {})
                 disabled=param.disabled
                 class=param.inputClass
                 data-row=param.row || 2
+                rows=param.rows
             )
             label(for=param.id).v-input__placeholder #{param.placeholder}
 

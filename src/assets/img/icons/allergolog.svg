@@ -1,0 +1,35 @@
+<svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip6101_15286">
+			<rect id="_Ð¡Ð»Ð¾Ð¹_" rx="-0.500000" width="37.000000" height="37.000000" transform="translate(5.500000 5.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g opacity="0.100000">
+		<rect id="Rectangle 1869" rx="10.000000" width="48.000000" height="48.000000" fill="#95C11F" fill-opacity="1.000000"/>
+	</g>
+	<rect id="_Ð¡Ð»Ð¾Ð¹_" rx="-0.500000" width="37.000000" height="37.000000" transform="translate(5.500000 5.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip6101_15286)">
+		<path id="Vector" d="M22 20L22 41" stroke="#95C11F" stroke-opacity="1.000000" stroke-width="1.800000" stroke-linecap="round"/>
+		<path id="Vector" d="M23 42L24.01 42" stroke="#95C11F" stroke-opacity="1.000000" stroke-width="1.800000"/>
+		<rect id="Vector 235" rx="-0.500000" width="5.000000" height="7.500000" transform="translate(19.500000 7.000000)" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Vector 235" d="M22 13L22 10L22 6.5M22 10L24.5 7.5M22 10L19.5 7.5" stroke="#95C11F" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		<rect id="Vector 236" rx="-0.500000" width="5.000000" height="7.500000" transform="translate(9.500000 23.500000) rotate(-90.000000)" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Vector 235" d="M15.5 20L12.5 20L9 20M12.5 20L10 17.5M12.5 20L10 22.5" stroke="#95C11F" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		<rect id="Vector 237" rx="-0.500000" width="5.000000" height="7.500000" transform="translate(11.500000 12.742188) rotate(-45.000000)" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Vector 235" d="M17.71 14.71L15.59 12.59L13.12 10.12M15.59 12.59L15.59 9.06M15.59 12.59L12.05 12.59" stroke="#95C11F" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		<rect id="Vector 239" rx="-0.500000" width="5.000000" height="7.500000" transform="translate(32.511719 6.500000) rotate(45.000004)" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Vector 235" d="M29.53 12.71L31.66 10.59L34.13 8.12M31.66 10.59L35.19 10.59M31.66 10.59L31.66 7.05" stroke="#95C11F" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		<rect id="Vector 242" rx="-0.500000" width="5.000000" height="7.500000" transform="translate(41.695312 12.210938) rotate(69.697540)" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Vector 235" d="M36.13 16.78L38.95 15.73L42.23 14.52M38.95 15.73L42.16 17.21M38.95 15.73L40.42 12.52" stroke="#95C11F" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		<rect id="Vector 238" rx="-0.500000" width="5.000000" height="7.500000" transform="translate(15.742188 32.750000) rotate(-135.000000)" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Vector 235" d="M17.71 25.53L15.59 27.65L13.12 30.12M15.59 27.65L12.06 27.65M15.59 27.65L15.59 31.19" stroke="#95C11F" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		<rect id="Vector 240" rx="-0.500000" width="5.000000" height="7.500000" transform="translate(32.753906 28.507812) rotate(135.000000)" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Vector 235" d="M25.53 25.53L27.65 27.65L30.12 30.12M27.65 27.65L27.65 31.18M27.65 27.65L31.19 27.65" stroke="#95C11F" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		<rect id="Vector 241" rx="-0.500000" width="5.000000" height="7.500000" transform="translate(38.578125 21.523438) rotate(110.858543)" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Vector 235" d="M30.93 21.51L33.73 22.58L37 23.82M33.73 22.58L35.18 25.8M33.73 22.58L36.96 21.13" stroke="#95C11F" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		<circle id="Ellipse 564" cx="22.000000" cy="20.000000" r="2.000000" fill="#95C11F" fill-opacity="1.000000"/>
+	</g>
+</svg>

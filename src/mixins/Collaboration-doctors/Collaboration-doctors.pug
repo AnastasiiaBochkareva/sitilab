@@ -3,80 +3,36 @@ mixin Collaboration-doctors(param={})
         .collaboration-doctors__title Врачи
 
         .collaboration-doctors__list
-            .collaboration-doctors__col
-                a(href="#", style="fill: rgb(234, 81, 109)")
-                    +icon('gine') 
-                    | Гинеколог
-                a(href="#", style="fill: rgb(99, 195, 209)")
-                    +icon('akush')
-                    | Акушер-гинеколог
-                a(href="#", style="fill: rgb(149, 193, 31)") 
-                    +icon('reproduct') 
-                    | Репродуктолог
-                a(href="#", style="fill: rgb(255, 204, 0)") 
-                    +icon('urolog') 
-                    | Уролог
-                a(href="#", style="fill: rgb(0, 171, 223)") 
-                    +icon('androlog') 
-                    | Андролог
-                a(href="#", style="fill: rgb(149, 193, 31)")
-                    +icon('dermatolog')
-                    | Дерматолог
-
-            .collaboration-doctors__col
-                a(href="#", style="fill: rgb(149, 193, 31)")
-                    +icon('allergolog')
-                    | Аллерголог
-                a(href="#", style="fill: rgb(255, 204, 0)") 
-                    +icon('immunolog') 
-                    | Иммунолог
-                a(href="#", style="fill: rgb(234, 81, 109)")
-                    +icon('gastroenterolog')
-                    | Гастроэнтеролог
-                a(href="#", style="fill: rgb(0, 171, 223)") 
-                    +icon('gepatolog') 
-                    | Гепатолог
-                a(href="#", style="fill: rgb(99, 195, 209)")
-                    +icon('pulmonolog')
-                    | Пульмонолог
-                a(href="#", style="fill: rgb(255, 204, 0)") 
-                    +icon('nefrolog') 
-
-            .collaboration-doctors__col
-                a(href="#", style="fill: rgb(0, 171, 223)") 
-                    +icon('terapevt') 
-                    | Терапевт
-                a(href="#", style="fill: rgb(234, 81, 109)") 
-                    +icon('kardiolog') 
-                    | Кардиолог
-                a(href="#", style="fill: rgb(99, 195, 209)") 
-                    +icon('preventiv') 
-                    | Врач превентивной медицины
-                a(href="#", style="fill: rgb(149, 193, 31)")
-                    +icon('revmatolog')
-                    | Ревматолог
-                a(href="#", style="fill: rgb(234, 81, 109)")
-                    +icon('onkolog')
-                    | Онколог
-                a(href="#", style="fill: rgb(0, 171, 223)") 
-                    +icon('hirurg') 
-
-            .collaboration-doctors__col
-                a(href="#", style="fill: rgb(255, 204, 0)") 
-                    +icon('pediatr') 
-                    | Педиатр
-                a(href="#", style="fill: rgb(99, 195, 209)") 
-                    +icon('endokrinolog') 
-                    | Эндокринолог
-                a(href="#", style="fill: rgb(0, 171, 223)") 
-                    +icon('nevrolog') 
-                    | Невролог
-                a(href="#", style="fill: rgb(234, 81, 109)")
-                    +icon('gematolog')
-                    | Гематолог
-                a(href="#", style="fill: rgb(255, 204, 0)") 
-                    +icon('infekcionist') 
-                    | Инфекционист
-                a(href="#", style="fill: rgb(149, 193, 31)") 
-                    +icon('sports') 
-                    | Врач спортивной медицины
+            - 
+                const doctors = [
+                    "Гинеколог",
+                    "Акушер-гинеколог",
+                    "Репродуктолог",
+                    "Уролог",
+                    "Андролог",
+                    "Дерматолог",
+                    "Аллерголог",
+                    "Иммунолог",
+                    "Гастроэнтеролог",
+                    "Гепатолог",
+                    "Пульмонолог",
+                    "Нефролог",
+                    "Терапевт",
+                    "Кардиолог",
+                    "Врач превентивной медицины",
+                    "Ревматолог",
+                    "Онколог",
+                    "Хирург",
+                    "Педиатр",
+                    "Эндокринолог",
+                    "Невролог",
+                    "Гематолог",
+                    "Инфекционист",
+                    "Врач спортивной медицины"
+                ];
+            - for (let i = 0; i < doctors.length; i += 6)
+                div.collaboration-doctors__col
+                    - for (let j = i; j < i + 6 && j < doctors.length; j++)
+                        a(href='#')
+                            img(src="/assets/img/categories/akusher.png", alt="")
+                            | #{doctors[j]}

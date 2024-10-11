@@ -1,0 +1,18 @@
+mixin Collaboration-choosing(param={})
+    
+    .collaboration-choosing
+        .collaboration-choosing__title Почему выбирают СИТИЛАБ
+        - 
+            const colArray = [
+                {icon: 'blood', contentTitle: 'Доступность редких анализов', contentSubtitle: 'СИТИЛАБ проводит максимально широкий спектр исследований. Не все клиники владеют необходимым техническим оснащением, из-за чего многие важные анализы оказываются недоступны для пациентов. Сотрудничество с СИТИЛАБ позволяет назначать пациентам все анализы, которые им по-настоящему необходимы, не выбирая из того, что имеется в наличии в клинике.'},
+                {icon: 'health', contentTitle: 'Доверие качеству', contentSubtitle: 'Многолетний опыт и репутация среди медицинского сообщества позволяют доверять нам здоровье своих пациентов. С СИТИЛАБ сотрудничают клиники репродукции, кардиологические и онкологические центры, многопрофильные клиники во всей стране.'},
+                {icon: 'diagnosis', contentTitle: 'Информационная поддержка партнеров', contentSubtitle: 'Врачи лаборатории СИТИЛАБ консультируют по выбору лабораторных тестов и помогают интерпретировать результаты анализов через сервис «Спроси врача».'},
+            ]
+        each item, index in colArray
+            .collaboration-choosing__col
+                .collaboration-choosing__head
+                    span= String(index + 1).padStart(2, '0') + '.'
+                    +icon(item.icon)
+                .collaboration-choosing__content
+                    .collaboration-choosing__content_title= item.contentTitle
+                    .collaboration-choosing__content_subtitle= item.contentSubtitle

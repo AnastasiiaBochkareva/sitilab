@@ -1,0 +1,97 @@
+.collaboration-advantages {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        svg {
+            width: 74px;
+            height: 60px;
+        }
+        span {
+            max-width: 60%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 34px;
+            letter-spacing: 0%;
+            color: rgb(59, 75, 100);
+            margin-top: 10px;
+        }
+    }
+    ul {
+        max-width: 780px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        li {
+            position: relative;
+            padding-left: 24px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 34px;
+            letter-spacing: 0%;
+            color: rgb(59, 75, 100);
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 11px;
+                width: 10px;
+                height: 6px;
+                border-width: 3px;
+                border-style: solid;
+                border-color: rgb(0, 171, 223);
+                border-top: none;
+                border-right: none;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    @media (max-width: 1400px) {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    @include xs {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        gap: 40px;
+        &__row {
+            flex-direction: column;
+            gap: 30px;
+        }
+        &__col {
+            span {
+                font-size: 22px;
+                line-height: 28px;
+            }
+            svg {
+                width: 61px;
+                height: 50px;
+            }
+        }
+        ul {
+            li {
+                font-size: 14px;
+                line-height: 23px;
+                &::before {
+                    top: 4px;
+                }
+            }
+        }
+    }
+}

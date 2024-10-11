@@ -8,16 +8,25 @@
         display: flex;
         justify-content: space-between;
         gap: 50px;
+        > div {
+            min-width: 250px;
+            max-width: 250px;
+        }
     }
     &__col {
         display: flex;
         flex-direction: column;
-        svg {
+
+        // svg {
+        //     width: 74px;
+        //     height: 60px;
+        // }
+        img {
             width: 74px;
             height: 60px;
         }
         span {
-            max-width: 60%;
+            // max-width: 60%;
             font-family: 'Montserrat', sans-serif;
             font-size: 28px;
             font-style: normal;
@@ -79,10 +88,14 @@
                 font-size: 22px;
                 line-height: 28px;
             }
-            svg {
+            img {
                 width: 61px;
                 height: 50px;
             }
+            // svg {
+            //     width: 61px;
+            //     height: 50px;
+            // }
         }
         ul {
             li {

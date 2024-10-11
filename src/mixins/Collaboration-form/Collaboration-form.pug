@@ -1,0 +1,32 @@
+mixin Collaboration-form(param={})
+    .ask-form.collaboration-form
+        .ask-form__img
+            img(src="/assets/img/categories/collaboration-form.png", alt="")
+        .ask-form__content
+            .ask-form__title-sm По вопросам сотрудничества, пожалуйста, заполните форму:
+            form.form(action="")
+                +Input({placeholder: 'ФИО *'})
+                +Input({placeholder: 'Специальность *'})
+                +Input({placeholder: '+7 (___) ___-__-__ *', mask: 'phone', class: 'w-xs-100'})
+                +Input({placeholder: 'E-mail *', type: email, class: 'w-xs-100'})
+                +Input({placeholder: 'Дата рождения *'})
+                .form-group
+                    +Input({placeholder: 'Город *'})
+                    +Input({placeholder: 'Область *'})
+                .form-group__title-sm Комментарий:
+                    +Input({type: 'textarea', placeholder: ''})
+                .form-required * Поля, обязательные для заполнения
+                +Checkbox({
+                    link: true,
+                    text:'Даю согласие на обработку ',
+                    textLink: 'персональных данных',
+                })
+                button.form-group__btn Отправить
+            //- .form-agreement Нажимая на кнопку, вы даёте согласие на обработку <a href="#"> персональных данных </a> и принимаете<a href="#"> пользовательское соглашение</a>
+            
+
+        .ask-form__success.d-none
+            +icon('success')
+            .ask-form__success_title Спасибо! <br>Ваша заявка принята.</br>
+            .ask-form__success_subtitle Наши специалисты свяжутся с Вами в самое ближайшее время
+            button.form-group__btn Вернуться к форме

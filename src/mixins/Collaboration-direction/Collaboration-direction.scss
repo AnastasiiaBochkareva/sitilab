@@ -38,7 +38,6 @@
         margin: 0;
         padding: 0;
         max-width: 616px;
-        counter-reset: item;
         li {
             height: 38px;
             position: relative;
@@ -56,9 +55,8 @@
             color: rgb(59, 75, 100);
             max-width: 278px;
             width: 100%;
-            counter-increment: item;
             &::before {
-                content: counter(item);
+                content: '1';
                 background-color: rgb(230, 248, 253);
                 border-radius: 10px;
                 color: rgb(0, 171, 223);

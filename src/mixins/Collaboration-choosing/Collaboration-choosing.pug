@@ -12,7 +12,8 @@ mixin Collaboration-choosing(param={})
             .collaboration-choosing__col
                 .collaboration-choosing__head
                     span= String(index + 1).padStart(2, '0') + '.'
-                    +icon(item.icon)
+                    //- +icon(item.icon)
+                    img(src=`/assets/img/categories/${item.icon}.png`, alt="")
                 .collaboration-choosing__content
                     .collaboration-choosing__content_title= item.contentTitle
                     .collaboration-choosing__content_subtitle= item.contentSubtitle

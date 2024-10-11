@@ -60,6 +60,9 @@
             padding-left: 28px;
             padding-right: 28px;
         }
+        &__list::-webkit-scrollbar {
+            display: none;
+        }
     }
     @include xl {
     }

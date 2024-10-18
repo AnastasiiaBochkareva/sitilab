@@ -47,7 +47,6 @@
         gap: 16px;
         li {
             position: relative;
-            padding-left: 24px;
             font-family: 'Montserrat', sans-serif;
             font-size: 16px;
             font-style: normal;
@@ -55,6 +54,7 @@
             line-height: 34px;
             letter-spacing: 0%;
             color: rgb(59, 75, 100);
+            padding: 0 0 0 24px !important;
             &::before {
                 content: '';
                 position: absolute;
@@ -68,6 +68,8 @@
                 border-top: none;
                 border-right: none;
                 transform: rotate(-45deg);
+                background: transparent !important;
+                border-radius: 0 !important;
             }
         }
     }

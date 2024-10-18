@@ -46,17 +46,19 @@
             align-items: center;
             box-sizing: border-box;
             padding: 10px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 26px;
-            letter-spacing: 0%;
-            color: rgb(59, 75, 100);
             max-width: 278px;
             width: 100%;
-            &::before {
-                content: '1';
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 26px;
+                letter-spacing: 0%;
+                color: rgb(59, 75, 100);
+                margin: 0 !important;
+            }
+            span {
                 background-color: rgb(230, 248, 253);
                 border-radius: 10px;
                 color: rgb(0, 171, 223);
@@ -74,6 +76,25 @@
                 line-height: 26px;
                 letter-spacing: 0%;
             }
+            // &::before {
+            //     content: '1';
+            //     background-color: rgb(230, 248, 253);
+            //     border-radius: 10px;
+            //     color: rgb(0, 171, 223);
+            //     width: 38px;
+            //     height: 38px;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     position: absolute;
+            //     left: 0;
+            //     font-family: 'Montserrat', sans-serif;
+            //     font-size: 22px;
+            //     font-style: normal;
+            //     font-weight: 800;
+            //     line-height: 26px;
+            //     letter-spacing: 0%;
+            // }
         }
     }
     @media (max-width: 1400px) {
@@ -97,11 +118,23 @@
                 max-width: 100%;
                 height: 28px;
                 padding-left: 42px !important;
+                &:nth-of-type(odd) {
+                    order: -1; // Нечётные идут первыми
+                }
+                &:nth-of-type(even) {
+                    order: 1; // Чётные идут последними
+                }
                 &:before {
                     font-size: 16px;
                     line-height: 30px;
                     width: 28px;
                     height: 28px;
+                }
+                span {
+                    height: 28px;
+                    width: 28px;
+                    font-size: 16px;
+                    line-height: 30px;
                 }
             }
         }

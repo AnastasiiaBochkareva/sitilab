@@ -8,6 +8,7 @@ mixin Doctor-experts(param={})
                     each el in Array(5)
                         +icon('ask-star')
         .ask-experts__body
+            +Slider-navigation()
             .swiper-wrapper 
                 .swiper-slide
                     +Experts-card({

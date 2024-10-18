@@ -1,0 +1,20 @@
+mixin Invite-form(param={})
+    .invite-form.ask-form
+        .ask-form__content.d-none
+            .ask-form__title-sm Хочу быть рекомендателем!
+            .ask-form__subtitle Расскажите нам о себе и мы свяжемся с вами
+            form.form(action="")
+                +Input({placeholder: 'ФИО *'})
+                +Input({placeholder: 'Имя *'})
+                +Input({placeholder: '+7 (___) ___-__-__ *', mask: 'phone',})
+                +Input({placeholder: 'E-mail *', type: email,})
+                .form-required * Поля, обязательные для заполнения
+                button.form-group__btn Отправить
+            .form-agreement Нажимая на кнопку, вы даёте согласие на обработку <a href="#"> персональных данных </a>
+            
+
+        .ask-form__success
+            img(src="/assets/img/categories/success.png", alt="")
+            .ask-form__success_title Спасибо!
+            .ask-form__success_subtitle Ваша заявка успешно отправлена.<br>Мы свяжемся с вами в ближайшее время.</br>
+            button.form-group__btn Вернуться к форме

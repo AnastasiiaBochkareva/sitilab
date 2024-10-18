@@ -1,0 +1,117 @@
+.invite-accordion {
+    box-sizing: border-box;
+    max-width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    padding-bottom: 60px;
+    gap: 20px;
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0%;
+        color: rgb(59, 75, 100);
+        margin-bottom: 28px;
+    }
+    .accordion {
+        &__item {
+            border-bottom: none;
+            padding: 10px 0 10px 0 !important;
+            list-style: none !important;
+            &::before {
+                content: none !important;
+            }
+            &.active {
+                .accordion {
+                    &__icon {
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    &__head {
+                        background-color: rgb(243, 246, 249);
+                        border-color: rgb(243, 246, 249);
+                    }
+                }
+            }
+        }
+        &__head {
+            border: 1px solid rgb(178, 186, 198);
+            border-radius: 20px;
+            padding: 25px 20px;
+            &:hover {
+                .accordion__head-text {
+                    color: rgb(59, 75, 100);
+                }
+            }
+            &-content {
+                padding: 0;
+                min-height: max-content;
+                padding-left: 36px;
+            }
+            &-text {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26px;
+                letter-spacing: 0%;
+                color: rgb(59, 75, 100);
+            }
+        }
+        &__body {
+            &-content {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 22px;
+                letter-spacing: 0%;
+                color: rgb(59, 75, 100);
+                padding: 20px 20px 0px 55px;
+                a {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 22px;
+                    letter-spacing: 0%;
+                    color: rgb(0, 171, 223);
+                }
+            }
+        }
+        &__icon {
+            left: 20px;
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: rgb(0, 171, 223);
+            }
+        }
+    }
+    @media (max-width: 1400px) {
+        padding-bottom: 30px;
+        padding-right: 28px;
+        padding-left: 28px;
+        &__title {
+            padding-right: 28px;
+            padding-left: 28px;
+            margin-bottom: 20px;
+        }
+        .accordion {
+            &__head {
+                padding: 20px;
+                &-text {
+                    font-size: 18px;
+                }
+            }
+            &__body {
+                &-content {
+                    padding: 15px 0 0 0;
+                }
+            }
+        }
+    }
+}

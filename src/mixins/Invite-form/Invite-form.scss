@@ -1,0 +1,155 @@
+.invite-form.ask-form {
+    background: linear-gradient(
+        to bottom,
+        rgb(0, 171, 223),
+        rgb(2, 150, 196),
+        rgb(4, 130, 169)
+    );
+    border-radius: 20px;
+    padding: 60px 150px;
+    .ask-form {
+        &__content {
+            border: none;
+            background-color: transparent;
+            max-width: 100%;
+            min-height: max-content;
+            padding: 0;
+            .form {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+                .v-input {
+                    width: calc(50% - 8px);
+                    border-radius: 10px;
+                    input {
+                        border-radius: 10px;
+                        height: 48px;
+                        box-sizing: border-box;
+                        padding: 14px !important;
+                        margin: 0 !important;
+                    }
+                    label {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 20px;
+                        letter-spacing: 0%;
+                        color: rgb(142, 154, 171);
+                    }
+                    &::after {
+                        border: none;
+                    }
+                }
+                .form-required {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20px;
+                    letter-spacing: 0%;
+                    color: #fff;
+                    margin-top: 5px;
+                    margin-bottom: 25px;
+                }
+                &-group {
+                    &__btn {
+                        line-height: 28px;
+                        height: 48px;
+                    }
+                }
+            }
+            .form-agreement {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0%;
+                color: #fff;
+                text-align: center;
+                margin-top: 30px;
+                a {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20px;
+                    letter-spacing: 0%;
+                    color: #fff;
+                }
+            }
+        }
+        &__title-sm {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0%;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        &__subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+            letter-spacing: 0%;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        &__success {
+            background-color: transparent;
+            border: none;
+            &_title {
+                color: #fff;
+                font-size: 28px;
+            }
+            &_subtitle {
+                color: #fff;
+                font-size: 18px;
+            }
+            .form-group__btn {
+                background-color: transparent;
+                border: 1px solid #fff;
+            }
+            img {
+                width: 105px;
+                height: 105px;
+            }
+        }
+    }
+    @media (max-width: 1400px) {
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+    @include sm {
+        padding: 40px 20px 50px;
+        border-radius: 0;
+        margin-left: 0;
+        margin-right: 0;
+        &__subtitle {
+            font-size: 18px;
+        }
+        .ask-form {
+            &__content {
+                .form {
+                    gap: 10px;
+                    .v-input {
+                        width: 100%;
+                    }
+                    .form-required {
+                        margin-bottom: 20px;
+                    }
+                }
+                .form-agreement {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

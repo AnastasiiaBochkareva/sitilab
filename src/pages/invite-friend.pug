@@ -1,0 +1,27 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    main.invite-friend
+
+        //- section.container
+        //-     +Breadcrumbs({
+        //-         toDoctors: true,
+        //-     })
+
+        section.bg-blue
+            .container
+                +Invite-banner({})
+
+        section.container
+            +Invite-steps({})
+
+        section.container
+            +Invite-how-work({})
+            
+        section.container
+            +Invite-form({})

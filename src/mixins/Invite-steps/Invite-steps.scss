@@ -1,0 +1,76 @@
+.invite-steps .collaboration-choosing {
+    &__cards {
+        overflow: hidden;
+        display: flex;
+        gap: 20px;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    &__cards::-webkit-scrollbar {
+        display: none;
+    }
+    &__content {
+        background-color: rgb(243, 246, 249);
+        padding: 35px 30px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        row-gap: 20px;
+        column-gap: 15px;
+        width: calc(33% - 8px);
+        min-width: 380px;
+        &_number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 58px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 58px;
+            letter-spacing: -2%;
+            color: rgb(0, 171, 223);
+        }
+        &_title {
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 0;
+            align-self: center;
+            span {
+                display: block;
+            }
+        }
+        &_subtitle {
+            line-height: 22px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+    @include xl {
+        &__content {
+            column-gap: 8px;
+            row-gap: 15px;
+            padding: 25px 20px 37px;
+            min-width: 285px;
+            &_number {
+                font-size: 54px;
+            }
+            &_title {
+                font-size: 18px;
+            }
+        }
+        &__cards {
+            overflow-x: scroll;
+        }
+    }
+}
+.invite-steps {
+    padding-bottom: 70px !important;
+    border-bottom: none !important;
+    flex-wrap: nowrap;
+    padding-right: 0;
+    padding-left: 0;
+    @include sm {
+        padding-bottom: 40px !important;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

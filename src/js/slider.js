@@ -112,6 +112,10 @@ const askExpertsSlider = new Swiper('.ask-experts__body', {
     modules: [Navigation],
     slidesPerView: '4.5',
     spaceBetween: 28,
+    navigation: {
+        prevEl: document.querySelector('.ask-experts .slider-navigation_prev'),
+        nextEl: document.querySelector('.ask-experts .slider-navigation_next'),
+    },
     noSwiping: true,
     noSwipingSelector: '.experts-cards__btn',
     grabCursor: true,

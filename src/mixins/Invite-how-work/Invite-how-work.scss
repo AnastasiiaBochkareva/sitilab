@@ -92,9 +92,9 @@
         }
     }
     @media (max-width: 1400px) {
-        padding-bottom: 30px;
-        padding-right: 28px;
-        padding-left: 28px;
+        padding-bottom: 30px !important;
+        padding-right: 28px !important;
+        padding-left: 28px !important;
         &__title {
             padding-right: 28px;
             padding-left: 28px;

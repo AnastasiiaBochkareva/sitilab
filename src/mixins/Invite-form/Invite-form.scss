@@ -7,6 +7,7 @@
     );
     border-radius: 20px;
     padding: 60px 150px;
+    margin-bottom: 80px;
     .ask-form {
         &__content {
             border: none;
@@ -117,7 +118,8 @@
                 background-color: transparent;
                 border: 1px solid #fff;
             }
-            img {
+            img,
+            svg {
                 width: 105px;
                 height: 105px;
             }
@@ -128,6 +130,7 @@
         margin-right: 28px;
     }
     @include sm {
+        margin-bottom: 40px;
         padding: 40px 20px 50px;
         border-radius: 0;
         margin-left: 0;

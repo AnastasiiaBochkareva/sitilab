@@ -13,6 +13,7 @@
             background: transparent;
             &::before {
                 content: '';
+                border-radius: 0 !important;
                 position: absolute;
                 left: 0;
                 top: 6px;
@@ -35,7 +36,7 @@
     }
     &__img {
         max-width: 785px;
-        max-height: 366px;
+        // max-height: 366px;
         position: relative;
         z-index: 2;
         img {

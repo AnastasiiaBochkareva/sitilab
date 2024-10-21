@@ -3,8 +3,6 @@
         overflow: hidden;
         display: flex;
         gap: 20px;
-        padding-left: 28px;
-        padding-right: 28px;
     }
     &__cards::-webkit-scrollbar {
         display: none;
@@ -42,6 +40,12 @@
             line-height: 22px;
             grid-column-start: 1;
             grid-column-end: 3;
+        }
+    }
+    @media (max-width: 1400px) {
+        &__cards {
+            padding-left: 28px;
+            padding-right: 28px;
         }
     }
     @include xl {

@@ -6,7 +6,7 @@ block variables
 
 block content
 
-    main.corporate-clients
+    main.corporate-clients.m-neg-sm
 
         //- section.container
         //-     +Breadcrumbs({
@@ -16,5 +16,12 @@ block content
         section.bg-gray
             .container
                 +Corporate-actual({
-
                 })
+
+        section.container
+            .coprorate-info__title Почему мы?
+            +Corporation-ask-info({
+            })
+            +Corporation-ask-info({
+                reverce: true
+            })

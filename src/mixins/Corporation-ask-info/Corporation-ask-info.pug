@@ -1,0 +1,40 @@
+mixin Corporation-ask-info(param={})
+    if(!param.reverce)
+        .corporate-info.ask-info
+            .ask-info__img  
+                img(src="/assets/img/categories/ask-info-one.png", alt="")
+            ul.ask-info__list
+                li 
+                    img(src="/assets/img/categories/labs.png", alt="")
+                    .ask-info__title 14 лабораторных комплексов
+                    .ask-info__subtitle Компания СИТИЛАБ представлена в крупных городах по всей России, а также в Европе и Азии
+                li 
+                    img(src="/assets/img/categories/labs.png", alt="")
+                    .ask-info__title Клинические испытания
+                    .ask-info__subtitle Наша лаборатория совместно с научным медицинским сообществом активно учувствует в клинических испытаниях, направленных на разработку и внедрение новых методов диагностики,  лечения и проофилактики заболеваний
+                
+                li 
+                    img(src="/assets/img/categories/support.png", alt="")
+                    .ask-info__title Поддержка 24/7
+                    .ask-info__subtitle Компания СИТИЛАБ обеспечивает полный спектр клиентской поддержки в круглосуточном режиме
+                
+                
+    
+    if (param.reverce)
+        .corporate-info.ask-info.reverce
+            .ask-info__img  
+                img(src="/assets/img/categories/ask-info-one.png", alt="")
+            ul.ask-info__list
+                li 
+                    img(src="/assets/img/categories/logistic.png", alt="")
+                    .ask-info__title Логистика
+                    .ask-info__subtitle Надежная логистическая цепочка обеспечит бесперебойную доставку биоматериала из Вашей клиники
+                li 
+                    img(src="/assets/img/categories/education.png", alt="")
+                    .ask-info__title Обучение
+                    .ask-info__subtitle Предоставляем возможность обучения Вашего медицинского персонала по системе МНО
+                li 
+                    img(src="/assets/img/categories/it.png", alt="")
+                    .ask-info__title Полный ИТ
+                    .ask-info__subtitle Компания СИТИЛАБ разработала ряд уникальных ИТ решений, которые позволяют настроить корректную работу с Вашей МИС
+                     

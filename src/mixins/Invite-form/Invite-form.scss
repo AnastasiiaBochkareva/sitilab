@@ -153,6 +153,12 @@
                     margin-top: 20px;
                 }
             }
+            &__success {
+                svg,
+                img {
+                    margin-bottom: 15px;
+                }
+            }
         }
     }
 }

@@ -1,0 +1,20 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    main.corporate-clients
+
+        //- section.container
+        //-     +Breadcrumbs({
+        //-         toDoctors: true,
+        //-     })
+
+        section.bg-gray
+            .container
+                +Corporate-actual({
+
+                })

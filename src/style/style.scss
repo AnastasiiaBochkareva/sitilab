@@ -1207,7 +1207,11 @@ body.sidebarOpened {
     background-color: #00abdf;
 }
 .collaboration,
-.invite-friend {
+.invite-friend,
+.corporate-clients {
+    .bg-gray {
+        background-color: rgb(243, 246, 249);
+    }
     .container {
         width: 100%;
         max-width: 1360px;

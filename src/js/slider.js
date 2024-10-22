@@ -142,3 +142,37 @@ const askExpertsSlider = new Swiper('.ask-experts__body', {
         },
     },
 });
+const corporateSlider = new Swiper('.corporate-slider', {
+    modules: [Navigation, Pagination],
+    slidesPerView: '5',
+    spaceBetween: 40,
+    navigation: {
+        prevEl: document.querySelector('.slider-navigation_prev'),
+        nextEl: document.querySelector('.slider-navigation_next'),
+    },
+    noSwiping: true,
+    // noSwipingSelector: '.experts-cards__btn',
+    grabCursor: true,
+    slideToClickedSlide: true,
+    breakpoints: {
+        1308: {
+            slidesPerView: '4.5',
+        },
+        901: {
+            slidesPerView: '3.5',
+            spaceBetween: 20,
+        },
+        701: {
+            slidesPerView: '2.8',
+        },
+        450: {
+            slidesPerView: '2',
+        },
+        400: {
+            slidesPerView: '1.8',
+        },
+        300: {
+            slidesPerView: '1.4',
+        },
+    },
+});

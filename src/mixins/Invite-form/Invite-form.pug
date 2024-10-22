@@ -1,6 +1,6 @@
 mixin Invite-form(param={})
     .invite-form.ask-form
-        .ask-form__content.d-none
+        .ask-form__content
             .ask-form__title-sm Хочу быть рекомендателем!
             .ask-form__subtitle Расскажите нам о себе и мы свяжемся с вами
             form.form(action="")
@@ -13,7 +13,7 @@ mixin Invite-form(param={})
             .form-agreement Нажимая на кнопку, вы даёте согласие на обработку <a href="#"> персональных данных </a>
             
 
-        .ask-form__success
+        .ask-form__success.d-none
             img(src="/assets/img/categories/success.png", alt="")
             //- +icon('success')
             .ask-form__success_title Спасибо!

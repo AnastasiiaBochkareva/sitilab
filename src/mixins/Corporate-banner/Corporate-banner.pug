@@ -1,0 +1,15 @@
+mixin Corporate-banner(param={})
+    .corporate-banner.collaboration-banner
+        img(src="/assets/img/categories/corp-banner.png", alt="")
+        .container 
+            .collaboration-banner__title Станьте партнером международной 
+                span сети лабораторий СИТИЛАБ
+            .collaboration-banner__subtitle Сотрудничество с нашей лабораторией повысит диагностические возможности Вашего медицинского учреждения
+            
+            .ask-form
+                form.form(action="")
+                    +Input({placeholder: 'Имя*', inputClass: 'required'})
+                    +Input({placeholder: 'Город'})
+                    +Input({placeholder: 'E-mail*'})
+                    +Input({placeholder: 'Телефон*', mask: 'phone'})
+                    button.form-group__btn(data-my-modal="#modal-request") Стать партнером

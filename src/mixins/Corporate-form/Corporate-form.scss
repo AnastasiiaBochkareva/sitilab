@@ -1,0 +1,261 @@
+.corporate-callback {
+    background-color: rgba(0, 121, 175, 0.9);
+    border-radius: 40px;
+    padding: 48px;
+    box-sizing: border-box;
+    // max-width: 706px;
+    // width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 86px;
+    right: 374px;
+    left: 0;
+    bottom: 86px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 0%;
+        color: #fff;
+        margin-bottom: 60px;
+        // margin-top: auto;
+    }
+    &__phone {
+        margin-bottom: 20px;
+    }
+    &__phone,
+    &__mail {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: #fff;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 8px;
+        svg {
+            width: 24px;
+            height: 24px;
+            stroke: #fff;
+            fill: transparent;
+        }
+    }
+    @media (max-width: 1450px) {
+        left: 28px;
+    }
+    @include sm {
+        position: initial;
+        background-color: transparent;
+        padding: 52px 28px 18px;
+        &__title {
+            margin-bottom: 37px;
+            font-size: 28px;
+            line-height: 28px;
+        }
+    }
+}
+.ask-form.corporate-form {
+    position: relative;
+    z-index: 2;
+    padding-top: 136px;
+    padding-bottom: 136px;
+    .ask-form {
+        &__content {
+            margin-right: initial;
+            padding: 40px;
+            border-radius: 20px;
+            border: none;
+            max-width: 500px;
+            .form {
+                .v-input {
+                    input {
+                        box-sizing: border-box;
+                        height: 50px;
+                        border-radius: 10px;
+                        padding: 20px 20px 4px 20px !important;
+                        background-color: rgb(243, 246, 249);
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                        color: rgb(59, 75, 100);
+                        &:focus + .v-input__placeholder {
+                            display: block;
+                            top: 12px;
+                        }
+                        &:not(:placeholder-shown) + .v-input__placeholder {
+                            display: block;
+                            top: 12px;
+                        }
+                    }
+                    label {
+                        left: 20px;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                        color: rgb(142, 154, 171);
+                    }
+                    &:after {
+                        border: none;
+                        border-radius: 10px;
+                    }
+                }
+                .v-input.required {
+                    input {
+                        background-color: rgb(255, 216, 216);
+                    }
+                    label {
+                        color: rgb(234, 81, 109);
+                    }
+                    &::after {
+                        border: 1px solid rgb(234, 81, 109);
+                    }
+                }
+                .v-checkbox.required {
+                    &__label {
+                        &::before {
+                            border: 1px solid rgb(234, 81, 109);
+                        }
+                    }
+                }
+                .form-required.required {
+                    display: block;
+                }
+                .v-textarea {
+                    textarea {
+                        padding: 20px 20px 12px 20px;
+                        background-color: rgb(243, 246, 249);
+                        border-radius: 10px;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                        color: rgb(59, 75, 100);
+                        &:focus + .v-input__placeholder {
+                            display: block;
+                            top: 2px;
+                        }
+                        &:not(:placeholder-shown) + .v-input__placeholder {
+                            display: block;
+                            top: 2px;
+                        }
+                    }
+                    textarea::-webkit-scrollbar {
+                        width: 5px;
+                    }
+
+                    textarea::-webkit-scrollbar-track {
+                        background-color: #f1f1f1;
+                        border-radius: 12px; /* Закругление трека скроллбара */
+                    }
+
+                    textarea::-webkit-scrollbar-thumb {
+                        background-color: #8e9aab;
+                        border-radius: 5px; /* Закругление ползунка */
+                    }
+
+                    textarea::-webkit-scrollbar-thumb:hover {
+                        background-color: #555;
+                    }
+                    &__count {
+                        position: absolute;
+                        right: 0;
+                        bottom: -24px;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: 0%;
+                        color: rgb(142, 154, 171);
+                    }
+                }
+                .v-checkbox {
+                    margin-top: 24px;
+                    margin-bottom: 8px;
+                    label {
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                        color: rgb(59, 75, 100);
+                        &::before {
+                            width: 24px;
+                            height: 24px;
+                            box-sizing: border-box;
+                            border-radius: 4px;
+                        }
+                        &::after {
+                            border-color: #fff;
+                            border-width: 0 2px 2px 0;
+                            left: 9px;
+                        }
+                        a {
+                            font-family: 'Montserrat', sans-serif;
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 24px;
+                            letter-spacing: 0%;
+                            color: rgb(0, 171, 223);
+                        }
+                    }
+                    &__input:checked + .v-checkbox__label::before {
+                        border-color: rgb(0, 171, 223);
+                        background-color: rgb(0, 171, 223);
+                    }
+                }
+                .form-required {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 24px;
+                    letter-spacing: 0%;
+                    color: rgb(234, 81, 109);
+                    display: none;
+                }
+                .form-group {
+                    &__btn {
+                        background-color: rgb(234, 81, 109);
+                        height: 56px;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1450px) {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    @include sm {
+        padding: 19px 28px 52px;
+        background-color: rgb(0, 171, 223);
+        .ask-form {
+            &__content {
+                max-width: 100%;
+                padding: 24px;
+                .form {
+                    gap: 17px;
+                    .v-input {
+                        input {
+                            height: 48px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

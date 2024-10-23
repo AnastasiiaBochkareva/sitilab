@@ -1,6 +1,8 @@
 .actual.corporate-quality {
     padding-top: 52px;
     padding-bottom: 52px;
+    margin-top: 72px;
+    margin-bottom: 72px;
     .actual {
         &__title {
             font-family: 'Montserrat', sans-serif;
@@ -27,6 +29,9 @@
                 flex-direction: column;
                 align-items: center;
                 position: relative;
+                &::before {
+                    content: none;
+                }
                 &:not(:last-child) {
                     // padding-right: 20px;
                     // margin-right: 20px;
@@ -115,6 +120,8 @@
         }
     }
     @include sm {
+        margin-top: 0;
+        margin-bottom: 0;
         .actual {
             &__title {
                 font-size: 28px;

@@ -1,0 +1,9 @@
+mixin Modal-request(param={})
+    +MyModal({id: 'modal-request'})
+      +slot('body')
+        .modal-request
+          .modal-request__title Спасибо за заявку!
+          .modal-request__subtitle В ближайшее время мы с Вами свяжемся!
+          a(href="#").modal-request__btn(data-my-modal-close) Закрыть
+        
+          

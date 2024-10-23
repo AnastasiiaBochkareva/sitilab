@@ -150,29 +150,32 @@ const corporateSlider = new Swiper('.corporate-slider', {
         prevEl: document.querySelector('.slider-navigation_prev'),
         nextEl: document.querySelector('.slider-navigation_next'),
     },
+    pagination: {
+        el: '.corporate-pagination',
+    },
     noSwiping: true,
     // noSwipingSelector: '.experts-cards__btn',
     grabCursor: true,
     slideToClickedSlide: true,
     breakpoints: {
         1308: {
-            slidesPerView: '4.5',
+            slidesPerView: '5',
         },
         901: {
-            slidesPerView: '3.5',
+            slidesPerView: '4',
             spaceBetween: 20,
         },
         701: {
-            slidesPerView: '2.8',
+            slidesPerView: '3',
         },
         450: {
             slidesPerView: '2',
         },
         400: {
-            slidesPerView: '1.8',
+            slidesPerView: '1',
         },
         300: {
-            slidesPerView: '1.4',
+            slidesPerView: '1',
         },
     },
 });

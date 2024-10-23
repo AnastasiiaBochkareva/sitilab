@@ -139,6 +139,8 @@ mixin Input(param = {})
                 rows=param.rows
             )
             label(for=param.id).v-input__placeholder #{param.placeholder}
+            if(param.textareaCount)
+                .v-textarea__count 0 / 300
 
     
     // - TYPE file

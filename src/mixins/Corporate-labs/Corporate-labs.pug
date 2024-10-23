@@ -1,0 +1,34 @@
+mixin Corporate-labs(param={})
+    .corporate-labs
+        .corporate-labs__title Наши лаборатории
+        .corporate-labs__number 15
+        .corporate-labs__lists 
+            .corporate-labs__columns
+                ul.corporate-labs__list
+                    li.corporate-labs__list_title Россия
+                        +icon('labs-map')
+                    li Москва
+                    li Санкт-Петербург
+                    li Вологда
+                    li Воронеж
+                    li Екатеринбург
+                    li Казань
+                ul.corporate-labs__list
+                    li Красноярск
+                    li Махачкала
+                    li Новосибирск
+                    li Ростов-на-Дону
+                    li Самара
+                    li Тюмень
+                    li Уфа
+            .corporate-labs__columns
+                ul.corporate-labs__list 
+                    li.corporate-labs__list_title Сербия
+                        +icon('labs-map')
+                    li Белград
+                ul.corporate-labs__list 
+                    li.corporate-labs__list_title Кыргызстан
+                        +icon('labs-map')
+                    li Бишкек
+        .corporate-labs__img 
+            img(src="/assets/img/categories/labs-map.png", alt="")

@@ -6,13 +6,16 @@ block variables
 
 block content
 
-    main.corporate-clients.m-neg-sm
+    main.corporate-clients
 
         //- section.container
         //-     +Breadcrumbs({
         //-         toDoctors: true,
         //-     })
 
+        section
+            +Corporate-banner({})
+        
         section.bg-gray
             .container
                 +Corporate-actual({
@@ -31,6 +34,19 @@ block content
                 +Corporate-quality({
                 })
 
+        section.bg-sm-img 
+            img(src="/assets/img/categories/labs-map-sm.png", alt="")
+            .container  
+                +Corporate-labs({})
+
         section.container
             +Corporate-slider({
             })
+
+        section.bg-img 
+            img(src="/assets/img/categories/bg-form.png", alt="")
+            .container  
+                +Corporate-form({})
+
+        include _modals
+                

@@ -41,6 +41,9 @@
             grid-template-columns: 44px 1fr;
             column-gap: 20px;
             row-gap: 8px;
+            &::before {
+                content: none;
+            }
         }
     }
     &__subtitle {

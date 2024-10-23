@@ -1,0 +1,22 @@
+mixin Corporate-form(param={})
+    .corporate-callback
+        .corporate-callback__title Свяжитесь с нами
+        .corporate-callback__phone +7 (499) 719-95-95
+            +icon('corp-phone')
+        .corporate-callback__mail corp@citilab.ru
+            +icon('corp-mail')
+    .ask-form.corporate-form
+        .ask-form__content
+            form.form(action="")
+                +Input({placeholder: 'Имя*'})
+                +Input({placeholder: 'Город'})
+                +Input({placeholder: 'E-mail*'})
+                +Input({placeholder: 'Телефон*', mask: 'phone'})
+                +Input({type: 'textarea', placeholder: 'Комментарий', rows: '5', row: '5', inputClass: 'disable-change-rows', textareaCount:true})
+                +Checkbox({
+                    link: true,
+                    text:'Я согласен с ',
+                    textLink: 'обработкой персональных данных',
+                })
+                .form-required * Поля, обязательные для заполнения
+                button.form-group__btn Стать партнером

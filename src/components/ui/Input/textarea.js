@@ -2,6 +2,7 @@
 const inputTextarea = (e) => {
     const textarea = e.target;
     if (textarea.tagName !== 'TEXTAREA') return;
+    if (textarea.classList.contains('disable-change-rows')) return;
 
     const textareaInitRows = textarea.dataset.row || 5;
 

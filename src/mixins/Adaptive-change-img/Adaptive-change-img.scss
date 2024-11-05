@@ -1,0 +1,19 @@
+.adaptive-img {
+    .adaptive-img {
+        &-desktop {
+        }
+        &-mobile {
+            display: none;
+        }
+    }
+    @include md {
+        .adaptive-img {
+            &-desktop {
+                display: none;
+            }
+            &-mobile {
+                display: block;
+            }
+        }
+    }
+}

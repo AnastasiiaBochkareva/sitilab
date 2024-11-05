@@ -1,0 +1,29 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    main.main-page.font.box-sizing
+
+        section.bg-blue
+            +Main-banner({})
+
+        section.container 
+            +Card-links({})
+
+        section.container 
+            +Main-analysis-slider({
+                sliderTitle: 'Популярные анализы',
+            })
+
+        section.container 
+            +About-banner({
+            })
+
+        section.container 
+            +Main-map({
+            })
+        

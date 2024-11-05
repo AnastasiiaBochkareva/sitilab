@@ -112,8 +112,9 @@ mixin Input(param = {})
             )
             label(for=param.id).v-input__placeholder #{param.placeholder}
             .v-input__btns
-                button(type='reset' style="display:none;").v-input__btn-clear
-                    +icon('clear')
+                if(!param.noClear)
+                    button(type='reset' style="display:none;").v-input__btn-clear
+                        +icon('clear')
                 button(type='submit').v-input__btn-search
                     if(param.askSearch)
                         +icon('ask-search')

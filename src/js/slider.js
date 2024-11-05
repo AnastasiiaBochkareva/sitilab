@@ -1,11 +1,12 @@
 /* eslint-disable */
 // core version + navigation, pagination modules:
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 let objectSliders = [];
 const saleCards = document.querySelectorAll('.a-sale__cards');
@@ -14,7 +15,7 @@ if (saleCards) {
         const btnPrev = element.querySelector('.slider-navigation_prev');
         const btnNext = element.querySelector('.slider-navigation_next');
         const saleSlider = element.querySelector('.a-sale__slider');
-        objectSliders[index] = new Swiper(saleSlider, {
+        const swiperParams = {
             modules: [Navigation],
             slidesPerView: '3',
             spaceBetween: 20,
@@ -47,7 +48,26 @@ if (saleCards) {
                     spaceBetween: 10,
                 },
             },
-        });
+        };
+        if (saleSlider.classList.contains('a-main__slider')) {
+            swiperParams.breakpoints = {
+                1001: {
+                    slidesPerView: '3',
+                },
+                768: {
+                    slidesPerView: '2',
+                },
+                360: {
+                    slidesPerView: '1.5',
+                    spaceBetween: 10,
+                },
+                300: {
+                    slidesPerView: '1',
+                    spaceBetween: 10,
+                },
+            };
+        }
+        objectSliders[index] = new Swiper(saleSlider, swiperParams);
     });
 }
 
@@ -174,6 +194,47 @@ const corporateSlider = new Swiper('.corporate-slider', {
         400: {
             slidesPerView: '1',
         },
+        300: {
+            slidesPerView: '1',
+        },
+    },
+});
+const mainBannerSlider = new Swiper('.main-banner__slider', {
+    modules: [Pagination, Autoplay],
+    slidesPerView: '1',
+    spaceBetween: 0,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    pagination: {
+        el: '.main-banner-pagination',
+        type: 'bullets',
+    },
+    noSwiping: true,
+    grabCursor: true,
+    slideToClickedSlide: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+        // 1308: {
+        //     slidesPerView: '5',
+        // },
+        // 901: {
+        //     slidesPerView: '4',
+        //     spaceBetween: 20,
+        // },
+        // 701: {
+        //     slidesPerView: '3',
+        // },
+        // 450: {
+        //     slidesPerView: '2',
+        // },
+        // 400: {
+        //     slidesPerView: '1',
+        // },
         300: {
             slidesPerView: '1',
         },

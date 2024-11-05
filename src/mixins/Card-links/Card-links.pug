@@ -1,0 +1,24 @@
+mixin Card-links(param={})
+    .attention ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+    .card-links
+        -
+            const cardContent = [
+                {title: 'Подписки', titleSm: 'на анализы', subtitle: 'Сдавай анализы с выгодой весь год', img: 'one'},
+                {title: 'Covid, грипп', titleSm: 'или ОРВИ?', subtitle: 'Комплексный анализ на определение возбудителя', img: 'two'},
+                {title: 'Спроси врача', subtitle: 'Сервис для пациентов и врачей', img: 'three'},
+                {title: 'Бонусная программа', subtitle: 'Копи бонусы и трать их на анализы', img: 'four'},
+                {title: 'Подарочные карты', titleSm: 'Ситилаб', subtitle: 'Подари здоровье своим близким', img: 'five'},
+            ]
+        each el in cardContent
+            .card-link
+                .card-link__title=el.title
+                    if(el.titleSm)
+                        span=el.titleSm
+                .card-link__subtitle=el.subtitle
+                +Adaptive-change-img({
+                    desktop: 'link-' + el.img,
+                    mobile: 'link-' + el.img,
+                    class: 'card-link__img',
+                })
+                a(href="#").card-link__btn
+                    +icon('arrow-down')

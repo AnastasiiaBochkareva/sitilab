@@ -1,0 +1,4 @@
+mixin Adaptive-change-img(param={})
+    .adaptive-img(class=`${param.class ? param.class : ''}`)
+        img(src=`/assets/img/categories/${param.desktop}.png`, alt="", class='adaptive-img-desktop')
+        img(src=`/assets/img/categories/${param.mobile}-mob.png`, alt="", class='adaptive-img-mobile')

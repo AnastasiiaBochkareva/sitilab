@@ -1,0 +1,59 @@
+mixin Main-map(param={})
+    .main-map
+        ._title Медицинские центры
+        .main-map__top
+            .col
+                a(href="#").active Списком
+                a(href="#") На карте
+            .col
+                a(href="#").active Все
+                a(href="#") СИТИЛАБ
+                a(href="#") Партнёры
+                a(href="#") скоро открытие
+
+        .main-map__body.bg-light-gray 
+            +Input({type: 'search', askSearch: false, placeholder: 'Введите адрес или метро',noClear: true})
+            a(href="#").c-btn.c-btn_primary Фильтры
+                +icon('filter')
+            a(href="#").c-btn.c-btn_outline Сбросить фильтры 
+            
+            
+        .main-map__bottom
+            .col
+                .filter-result-search.bg-blue Найдено: 40
+                ul 
+                    each el in Array(3)
+                        li.filter-result__item 
+                            a(href="#") г. Москва, Хорошевское шоссе, 90
+                            ul 
+                                li 
+                                    img(src="/assets/img/categories/m.png", alt="")
+                                    p Хорошёвская 
+                                        +icon('man') 
+                                        span 132 м
+                                li 
+                                    img(src="/assets/img/categories/m.png", alt="")
+                                    p Хорошёвская 
+                                        +icon('man') 
+                                        span 132 м
+                                li 
+                                    img(src="/assets/img/categories/m.png", alt="")
+                                    p Хорошёвская 
+                                        +icon('man') 
+                                        span 132 м
+                            div Режим работы:
+                            ul 
+                                li 
+                                    span пн - пт 
+                                    p 07:00 - 19:00
+                                li 
+                                    span сб - вс 
+                                    p 07:30 - 15:30
+                            img(src="/assets/img/categories/garant.png", alt="")
+                            img(src="/assets/img/categories/garant.png", alt="")
+                            img(src="/assets/img/categories/garant.png", alt="")
+                            img(src="/assets/img/categories/garant.png", alt="")
+                            a(href="#").c-btn.c-btn_primary Подробнее 
+                            a(href="#").c-btn.c-btn_outline Оставить отзыв
+            .col.active
+                img(src="/assets/img/categories/map.png", alt="")

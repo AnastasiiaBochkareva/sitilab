@@ -1208,11 +1208,20 @@ body.sidebarOpened {
 }
 .collaboration,
 .invite-friend,
-.corporate-clients {
+.corporate-clients,
+.main-page {
     .bg-gray {
         background-color: rgb(243, 246, 249);
     }
-    .container {
+    .pagination-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .container,
+    .pagination-wrapper {
         width: 100%;
         max-width: 1360px;
         margin-right: auto;
@@ -1267,6 +1276,12 @@ body.sidebarOpened {
         .container {
             z-index: 2;
             position: relative;
+            &::before {
+                content: none !important;
+            }
+            &::after {
+                content: none !important;
+            }
         }
         @include sm {
             border-bottom: 1px solid rgb(217, 225, 233);
@@ -1301,5 +1316,44 @@ body.sidebarOpened {
                 display: none;
             }
         }
+    }
+}
+.c-btn {
+    text-decoration: none;
+}
+._title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0%;
+    color: rgb(59, 75, 100);
+    text-align: center;
+    @include sm {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+.bg-light-gray {
+    background-color: rgb(243, 246, 249);
+}
+.attention {
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: 0%;
+    color: rgb(178, 186, 198);
+    text-align: center;
+    padding-top: 30px;
+    @media (max-width: 1400px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @include sm {
+        padding-top: 20px;
+        font-size: 18px;
+        line-height: 24px;
     }
 }

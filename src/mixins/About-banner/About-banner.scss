@@ -1,0 +1,164 @@
+.about-banner {
+    background-color: rgb(0, 171, 223);
+    border-radius: 20px;
+    position: relative;
+    margin-top: 56px;
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 9%;
+        max-width: 376px;
+        width: 100%;
+        height: auto;
+        max-height: 428px;
+        overflow: hidden;
+        z-index: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__img-right {
+        position: absolute;
+        overflow: hidden;
+        width: 126px;
+        height: 149px;
+        right: 20px;
+        bottom: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+    }
+    &__img-left {
+        position: absolute;
+        width: 148px;
+        height: 175px;
+        top: 20px;
+        left: 20px;
+        overflow: hidden;
+        z-index: 0;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        max-width: 143px;
+        svg {
+            width: 55px;
+            height: 55px;
+            fill: #fff;
+            margin-bottom: 5px;
+        }
+    }
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        color: #fff;
+    }
+    &__subtitle {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        color: #fff;
+        text-align: center;
+    }
+    &__columns {
+        display: flex;
+        padding: 85px 90px 113px;
+        box-sizing: border-box;
+        gap: 45px;
+        justify-content: flex-end;
+    }
+    @include xl {
+        &__columns {
+            padding-right: 40px;
+            gap: 20px;
+        }
+    }
+    @media (max-width: 1400px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    @include md {
+        margin-top: 0;
+        &__img {
+            left: 1%;
+            max-width: 323px;
+            max-height: 348px;
+        }
+        &__columns {
+            padding-right: 10px;
+            gap: 10px;
+        }
+    }
+    @media (max-width: 1000px) {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 20px 0;
+        align-items: center;
+        gap: 42px;
+        &__img {
+            position: static;
+            order: 2;
+        }
+        &__columns {
+            order: 1;
+            padding: 0;
+            flex-direction: column;
+            gap: 40px;
+        }
+        &__img-right {
+            max-width: 119px;
+            max-height: 141px;
+            right: 34px;
+            bottom: 134px;
+        }
+        &__img-left {
+            max-width: 121px;
+            max-height: 142px;
+            left: 23px;
+            bottom: 181px;
+            top: initial;
+        }
+        &__col {
+            display: grid;
+            grid-template-columns: 65px 1fr;
+            column-gap: 15px;
+            row-gap: 8px;
+            max-width: 100%;
+            svg {
+                width: 65px;
+                height: 65px;
+                margin-bottom: 0;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+            .about-banner {
+                &__subtitle {
+                    grid-column-start: 2;
+                    grid-row-start: 2;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

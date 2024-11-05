@@ -87,6 +87,7 @@
                         line-height: 24px;
                         letter-spacing: 0%;
                         color: rgb(59, 75, 100);
+                        margin: 0 !important;
                         &:focus + .v-input__placeholder {
                             display: block;
                             top: 12px;
@@ -213,6 +214,11 @@
                     &__input:checked + .v-checkbox__label::before {
                         border-color: rgb(0, 171, 223);
                         background-color: rgb(0, 171, 223);
+                    }
+                    &__input {
+                        height: 0 !important;
+                        opacity: 0 !important;
+                        width: 0 !important;
                     }
                 }
                 .form-required {

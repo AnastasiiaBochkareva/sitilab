@@ -1,10 +1,10 @@
-$border-radius: 5px;
+$border-radius: 10px;
 $border-radius-plus: 8px;
 $box-shadow: 0 0 2px rgba(0, 0, 0, 0.16);
 $box-shadow-bottom: inset 0 -1px 0 #dfe1e6;
 $box-shadow-2: 0 1px 16px rgba(0, 0, 0, 0.16);
 $filter-shadow: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.04))
-  drop-shadow(0px 4px 32px rgba(0, 0, 0, 0.16));
+    drop-shadow(0px 4px 32px rgba(0, 0, 0, 0.16));
 $animation-type: ease-in-out;
 $animation-duration: 0.2s;
 $transition: $animation-duration $animation-type;
@@ -14,8 +14,11 @@ $black: #000000;
 $gray: #7e7e7e;
 $darkGray: #323640;
 
+// Font
+$font-family: 'Montserrat', sans-serif;
+
 // colors
-$text-1: var(--blue-gray, #3b4b64);
+$text-1: rgb(142, 154, 171);
 $text-2: #42526e;
 $text-3: #6b778c;
 $text-4: #ffffff;
@@ -31,7 +34,8 @@ $ui-dark-2: #051945;
 //$ui-gray-1: #dfe1e6;
 $ui-gray-1: #f5f5f5;
 $ui-gray-2: #c1c7d0;
-$ui-primary: #fec110;
+$ui-primary: rgb(0, 171, 223);
+$ui-primary-hover: rgb(21, 195, 250);
 $ui-primary-2: #dc1818;
 
 $ui-secondary: #f4f5f7;
@@ -50,15 +54,15 @@ $ui-purple12: rgba(101, 84, 192, 0.12);
 
 // mixins
 @mixin hideScroll {
-  &::-webkit-scrollbar,
-  &::-webkit-scrollbar-track,
-  &::-webkit-scrollbar-thumb {
-    display: none;
-  }
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+        display: none;
+    }
 }
 
 @mixin card {
-  background: $ui-white;
-  box-shadow: $box-shadow;
-  border-radius: $border-radius-plus;
+    background: $ui-white;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius-plus;
 }

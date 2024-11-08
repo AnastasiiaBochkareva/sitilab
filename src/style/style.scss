@@ -1357,3 +1357,11 @@ body.sidebarOpened {
         line-height: 24px;
     }
 }
+.map-madal {
+    max-width: 335px;
+    max-height: max-content;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px 0px rgba(49, 54, 73, 0.2);
+}

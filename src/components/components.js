@@ -23,6 +23,7 @@ import '@/mixins/Info-popup/Info-popup';
 
 import '@/mixins/Doctor-card/Doctor-card';
 import '@/mixins/Doctor-experts/Doctor-experts';
+import '@/mixins/Main-map/Main-map';
 
 import MyModal from '@/components/ui/MyModal/MyModal';
 // import Filters from '@/components/ui/Filters/Filters';

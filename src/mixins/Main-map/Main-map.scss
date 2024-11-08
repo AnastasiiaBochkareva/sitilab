@@ -19,7 +19,7 @@
             border-radius: 10px;
             padding: 3px;
             box-sizing: border-box;
-            a {
+            button {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -56,13 +56,94 @@
         grid-template-columns: 391px minmax(0, 1fr);
         max-height: 544px;
         overflow: hidden;
+        position: relative;
+        > .c-btn {
+            position: absolute;
+            left: 20px;
+            bottom: 10px;
+            display: none;
+            max-width: 124px;
+            padding: 8px 10px;
+            border: none;
+            color: rgb(0, 171, 223);
+            line-height: 24px;
+            box-shadow: 0px 4px 20px 0px rgba(49, 54, 73, 0.2);
+            svg {
+                stroke: rgb(0, 171, 223);
+                fill: transparent;
+                width: 24px;
+                height: 24px;
+            }
+            &:hover {
+                svg {
+                    fill: transparent;
+                }
+                color: rgb(0, 171, 223);
+            }
+        }
+        .col:nth-child(2) {
+            position: relative;
+        }
+        [data-choosing-filters] {
+            padding: 25px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 20px 0px rgba(49, 54, 73, 0.2);
+            border-radius: 8px;
+            max-height: 230px;
+            max-width: 305px;
+            height: 100%;
+            width: calc(100% - 40px);
+            flex-direction: column;
+            display: none;
+            gap: 15px;
+            svg {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                fill: rgb(178, 186, 198);
+            }
+            .v-checkbox {
+                min-height: 24px;
+                align-items: center;
+                &__input {
+                    width: 0 !important;
+                    height: 0 !important;
+                    &:checked + .v-checkbox__label::before {
+                        border-color: rgb(0, 171, 223);
+                        background-color: rgb(0, 171, 223);
+                    }
+                }
+
+                &__label {
+                    font-size: 14px;
+                    line-height: 20px;
+                    &::before {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 5px;
+                    }
+                    &::after {
+                        border: solid #fff;
+                        border-width: 0 2px 2px 0;
+                        left: 10px;
+                    }
+                }
+            }
+        }
+        [data-choosing-filters].open {
+            display: flex;
+        }
         .col {
             max-height: 544px;
             height: 100%;
             .filter-result {
                 &-search {
                     color: #fff;
-
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 600;
@@ -70,31 +151,6 @@
                     letter-spacing: 0%;
                     padding: 15px 30px;
                     box-sizing: border-box;
-                }
-                &__item {
-                    a:not(.c-btn) {
-                        text-decoration: none;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: 28px;
-                        letter-spacing: 0%;
-                        color: rgb(59, 75, 100);
-                        transition: color 0.3s ease;
-                        &:hover {
-                            color: rgb(0, 171, 223);
-                        }
-                    }
-                    > div {
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 20px;
-                        letter-spacing: 0%;
-                        color: rgb(59, 75, 100);
-                        margin-top: 20px;
-                        margin-bottom: 10px;
-                    }
                 }
             }
             > ul {
@@ -108,143 +164,9 @@
                 > li:not(:last-child) {
                     border-bottom: 1px solid rgb(178, 186, 198);
                 }
-                > li {
-                    padding: 20px 30px 22px;
-                    list-style: none;
-                    &::before {
-                        content: none;
-                    }
-                    .c-btn {
-                        max-width: 160px;
-                        width: calc(50% - 5px);
-                        margin-top: 30px;
-                    }
-                    .c-btn_primary {
-                        margin-right: 10px;
-                    }
-                    a:not(.c-btn) {
-                        text-decoration: none;
-                        font-size: 16px;
-                        font-style: normal;
-                        line-height: 28px;
-                        letter-spacing: 0%;
-                    }
-                    > p {
-                        margin: 0;
-
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 12px;
-                        letter-spacing: 0%;
-                        color: rgb(59, 75, 100);
-                        display: none;
-                    }
-                    img,
-                    picture {
-                        width: 40px;
-                        min-width: 40px;
-                        height: 40px;
-                        min-height: 40px;
-                        display: inline-block;
-                        margin-right: 8px;
-                        position: relative;
-                        &:hover {
-                            .filter-result__item {
-                                > p {
-                                    display: block;
-                                }
-                            }
-                            &::after,
-                            &::before {
-                                display: block;
-                            }
-                        }
-                        &::after {
-                            content: 'Гарантийные письма';
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: 12px;
-                            letter-spacing: 0%;
-                            color: rgb(59, 75, 100);
-                            background-color: #fff;
-                            border-radius: 8px;
-                            position: absolute;
-                            display: none;
-                            z-index: 1;
-                            white-space: nowrap;
-                            padding: 6px 10px;
-                            bottom: -28px;
-                            left: 0;
-                            min-height: 26px;
-                            box-sizing: border-box;
-                            box-shadow: 0px 2px 10px 0px rgba(49, 54, 73, 0.15);
-                        }
-                        &::before {
-                            content: '';
-                            width: 5px;
-                            height: 5px;
-                            background-color: #fff;
-                            display: none;
-                            transform: rotate(45deg);
-                            bottom: -5px;
-                            position: absolute;
-                            left: 20px;
-                            z-index: 2;
-                        }
-                    }
-                    > ul {
-                        padding: 0;
-                        margin: 15px 0 20px 0;
-                        li {
-                            display: flex;
-                            align-items: center;
-                            gap: 10px;
-
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: 20px;
-                            letter-spacing: 0%;
-                            color: rgb(59, 75, 100);
-                            img,
-                            picture {
-                                width: 16px;
-                                min-width: 16px;
-                                height: 16px;
-                                min-height: 16px;
-                                margin-right: 0;
-                                &::before,
-                                &::after {
-                                    content: none;
-                                }
-                            }
-                            svg {
-                                width: 15px;
-                                height: 15px;
-                                fill: rgb(142, 154, 171);
-                                margin: 0 4px 0 10px;
-                            }
-                            p {
-                                margin: 0;
-                            }
-                            span {
-                                color: rgb(142, 154, 171);
-                            }
-                        }
-                        &:nth-child(2) {
-                            li {
-                                &:not(:last-child) {
-                                    margin-bottom: 10px;
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
-        .col:last-child {
+        .col:nth-child(2) {
             max-width: 969px;
             width: 100%;
             overflow: hidden;
@@ -303,6 +225,15 @@
         &__bottom {
             grid-template-columns: 1fr;
             max-height: 537px;
+            min-height: 535px;
+            [data-choosing-filters] {
+                left: 20px;
+                bottom: 60px;
+                top: initial;
+            }
+            > .c-btn {
+                display: flex;
+            }
             .col {
                 max-height: 537px;
                 .filter-result-search {
@@ -319,23 +250,6 @@
                     border-left: none;
                     border-right: none;
                     border-bottom: none;
-                    .filter-result__item {
-                        padding: 20px;
-                        &:first-child {
-                            padding-top: 10px;
-                        }
-                        .c-btn_outline {
-                            display: none;
-                        }
-                        .c-btn_primary {
-                            margin-right: 0;
-                            display: block;
-                            text-align: center;
-                        }
-                        .c-btn {
-                            margin-top: 20px;
-                        }
-                    }
                 }
             }
         }
@@ -344,21 +258,9 @@
         &__top {
             .col {
                 width: 100%;
-                a {
+                button {
                     min-width: 49%;
                     width: calc(50% - 1px);
-                }
-            }
-        }
-        &__bottom {
-            .col {
-                > ul {
-                    .filter-result__item {
-                        .c-btn_primary {
-                            width: 100%;
-                            max-width: 100%;
-                        }
-                    }
                 }
             }
         }

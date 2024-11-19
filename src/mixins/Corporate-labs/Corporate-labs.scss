@@ -58,6 +58,9 @@
         width: 50%;
         row-gap: 8px;
         column-gap: 36px;
+        &::before {
+            content: none;
+        }
         &_title {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700 !important;
@@ -157,7 +160,7 @@
                 &:not(:first-child) {
                 }
                 &:not(.corporate-labs__list_title) {
-                    padding-left: 26px;
+                    padding: 0 0 0 26px !important;
                     &::before {
                         display: block;
                     }

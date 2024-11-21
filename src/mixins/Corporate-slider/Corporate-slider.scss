@@ -1,7 +1,7 @@
 .corporate-clientage {
     // padding: 32px 72px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 84px;
+    padding-bottom: 64px;
     // position: relative;
     &__title {
         font-family: 'Montserrat', sans-serif;
@@ -21,6 +21,9 @@
             justify-content: center;
             margin-top: 32px;
             display: flex;
+            .swiper-pagination-bullet-active {
+                background: rgb(0, 171, 223);
+            }
         }
     }
     .slider-navigation {
@@ -75,6 +78,8 @@
         }
     }
     @include sm {
+        padding-top: 52px;
+        padding-bottom: 52px;
         &__title {
             font-size: 28px;
             line-height: 28px;

@@ -71,63 +71,6 @@ if (saleCards) {
     });
 }
 
-// const doctorSlider = new Swiper('.form-slider', {
-//     modules: [Navigation],
-//     slidesPerView: '1',
-//     spaceBetween: 10,
-//     navigation: {
-//         prevEl: '.slider-navigation_prev',
-//         nextEl: '.slider-navigation_next',
-//     },
-//     observer: true,
-//     observeParents: true,
-//     observeSlideChildren: true,
-//     grabCursor: true,
-//     loop: false,
-//     slideToClickedSlide: true,
-//     breakpoints: {
-//         1308: {
-//             slidesPerView: '1',
-//         },
-//         // 401: {
-//         //   slidesPerView: '2',
-//         // },
-//         // 300: {
-//         //   slidesPerView: '2',
-//         // },
-//         300: {
-//             slidesPerView: '1',
-//         },
-//     },
-// });
-
-// setTimeout(() => {
-//     const doctorSlider = new Swiper('.form-slider', {
-//         modules: [Navigation],
-//         slidesPerView: '1',
-//         spaceBetween: 10,
-//         navigation: {
-//             prevEl: '.slider-navigation_prev',
-//             nextEl: '.slider-navigation_next',
-//         },
-//         observer: true,
-//         observeParents: true,
-//         observeSlideChildren: true,
-//         grabCursor: true,
-//         loop: false,
-//         slideToClickedSlide: true,
-//         watchOverflow: true,
-//         breakpoints: {
-//             1308: {
-//                 slidesPerView: '1',
-//             },
-//             300: {
-//                 slidesPerView: '1',
-//             },
-//         },
-//     });
-// }, 10000);
-
 const askExpertsSlider = new Swiper('.ask-experts__body', {
     modules: [Navigation],
     slidesPerView: '4.5',
@@ -162,8 +105,9 @@ const askExpertsSlider = new Swiper('.ask-experts__body', {
         },
     },
 });
+
 const corporateSlider = new Swiper('.corporate-slider', {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Autoplay],
     slidesPerView: '5',
     spaceBetween: 40,
     navigation: {
@@ -174,9 +118,15 @@ const corporateSlider = new Swiper('.corporate-slider', {
         el: '.corporate-pagination',
     },
     noSwiping: true,
-    // noSwipingSelector: '.experts-cards__btn',
     grabCursor: true,
     slideToClickedSlide: true,
+    autoplay:
+        window.innerWidth <= 768
+            ? {
+                  delay: 2500,
+                  disableOnInteraction: false,
+              }
+            : false,
     breakpoints: {
         1308: {
             slidesPerView: '5',

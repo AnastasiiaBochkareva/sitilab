@@ -114,12 +114,18 @@
                 padding-right: 20px;
             }
             &__list {
-                justify-content: flex-start;
                 overflow-x: scroll;
                 scrollbar-width: none;
             }
             &__list::-webkit-scrollbar {
                 display: none; /* Для WebKit-браузеров (Chrome, Safari) */
+            }
+        }
+    }
+    @media (max-width: 1270px) {
+        .actual {
+            &__list {
+                justify-content: flex-start;
             }
         }
     }

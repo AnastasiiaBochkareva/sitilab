@@ -184,6 +184,7 @@
                 .v-checkbox {
                     margin-top: 24px;
                     margin-bottom: 8px;
+                    padding-left: 38px;
                     label {
                         font-family: 'Montserrat', sans-serif;
                         font-weight: 500;
@@ -191,6 +192,7 @@
                         line-height: 24px;
                         letter-spacing: 0%;
                         color: rgb(59, 75, 100);
+                        align-self: center;
                         &::before {
                             width: 24px;
                             height: 24px;
@@ -262,6 +264,14 @@
                     .v-input {
                         input {
                             height: 48px;
+                        }
+                    }
+                    .v-checkbox {
+                        label {
+                            line-height: 15px;
+                            a {
+                                line-height: 15px;
+                            }
                         }
                     }
                 }

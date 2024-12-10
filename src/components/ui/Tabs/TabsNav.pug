@@ -29,6 +29,8 @@ mixin TabsNav(param = {})
                 class=i==0 ? 'active' : ''
                 data-tab-target=param.items[i].targetId
             ) 
+
+              // не добавлять svg на кнопку
               if (!param.noSvg)
                 +icon('icon-' + param.items[i].svg)
               span !{param.items[i].label}

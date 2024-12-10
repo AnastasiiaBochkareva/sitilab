@@ -1,6 +1,6 @@
 mixin Injection-tabs(param={})
   ._title Рекомендованный минимум на 2025 год
-  .c-btn.c-btn_outline 
+  a(href="#").c-btn.c-btn_outline 
     +icon('plus-calendar')
     span календарь прививок
   +TabsNav({
@@ -19,9 +19,34 @@ mixin Injection-tabs(param={})
       { label: 'декабрь', targetId: 'tab12' },
     ],
     noCar: true,
+    noSvg: true,
   })
 
-  .tabb#tab1(style="width: 100%; height: 100%; ") content 1
+  .tabb#tab1(style="width: 100%; height: 100%; ") 
+    +Analysis-card({
+      cardRow: true,
+      codeSubtitle: 'код: 11-10-001',
+      titleSm: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
+      typeSubtitle: 'Биоматериал: венозная кровь', 
+      vndSubtitle: 'доступно с выездом на дом',
+      price: '525 ₽', 
+    })
+    +Analysis-card({
+      cardRow: true,
+      codeSubtitle: 'код: 11-10-001',
+      titleSm: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
+      typeSubtitle: 'Биоматериал: венозная кровь', 
+      vndSubtitle: 'доступно с выездом на дом',
+      price: '1525 ₽', 
+    })
+    +Analysis-card({
+      cardRow: true,
+      codeSubtitle: 'код: 11-10-001',
+      titleSm: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
+      typeSubtitle: 'Биоматериал: венозная кровь', 
+      vndSubtitle: 'доступно с выездом на дом',
+      price: '11525 ₽', 
+    })
   .tabb#tab2(style="width: 100%; height: 100%;  display: none;") content 2
   .tabb#tab3(style="width: 100%; height: 100%;  display: none;") content 3
   .tabb#tab4(style="width: 100%; height: 100%;  display: none;") content 4

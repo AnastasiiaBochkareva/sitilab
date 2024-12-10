@@ -1,0 +1,138 @@
+.banner {
+}
+.calendar-banner {
+  min-height: max-content;
+  .container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 40px !important;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .banner {
+    &__col {
+      position: relative;
+      &_text {
+        span {
+          width: max-content;
+          display: block;
+          box-sizing: border-box;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          font-size: 44px;
+          line-height: 52px;
+          letter-spacing: 0%;
+          color: #fff;
+          background-color: rgb(234, 81, 109);
+          padding: 14px 60px 1px 38px;
+          &:last-child {
+            padding: 1px 70px 14px 38px;
+          }
+        }
+      }
+      &_img {
+        max-width: 698px;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &-hand {
+          max-width: 365px;
+          width: 100%;
+          max-height: 257px;
+          height: 100%;
+          overflow: hidden;
+          position: absolute;
+          bottom: 0;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .adaptive-img {
+            @include md {
+              &-desktop {
+                display: block;
+              }
+              &-mobile {
+                display: none;
+              }
+            }
+            @include xs {
+              &-desktop {
+                display: none;
+              }
+              &-mobile {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1400px) {
+    .container {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  }
+  @include sm {
+    .container {
+      gap: 20px;
+      padding-top: 55px !important;
+    }
+    .banner {
+      &__col {
+        &_text {
+          display: flex;
+          flex-direction: column;
+          span {
+            font-size: 28px;
+            line-height: 32px;
+            padding: 5px 8px;
+            &:last-child {
+              padding: 5px 28px;
+            }
+          }
+        }
+        &_img {
+          &-hand {
+            max-width: 265px;
+            max-height: 157px;
+          }
+        }
+      }
+    }
+  }
+  @include xs {
+    .container {
+      flex-direction: column;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      gap: 58px;
+    }
+    .banner {
+      &__col {
+        &_img {
+          max-width: 100%;
+          &-hand {
+            max-width: 163px;
+            right: -45px;
+            max-height: 87px;
+            bottom: -62px;
+          }
+        }
+        &_text {
+          align-items: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+mixin Banner(param={})
+  .banner(class=`${param.bannerClass ? param.bannerClass : ''}`) 
+    .container
+      .banner__col
+        .banner__col_text
+          span=param.colTextOne
+          span=param.colTextTwo
+        if(param.textImg)
+          +Adaptive-change-img({
+            desktop: 'hand-desk',
+            mobile: 'hand',
+            class: 'banner__col_img-hand',
+          })
+      .banner__col
+        .banner__col_img
+          img(src=`/assets/img/categories/${param.colImg}.png`, alt="")

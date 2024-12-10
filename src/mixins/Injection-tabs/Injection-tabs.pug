@@ -1,0 +1,35 @@
+mixin Injection-tabs(param={})
+  ._title Рекомендованный минимум на 2025 год
+  .c-btn.c-btn_outline 
+    +icon('plus-calendar')
+    span календарь прививок
+  +TabsNav({
+    items: [
+      { label: 'январь', targetId: 'tab1' },
+      { label: 'февраль', targetId: 'tab2' },
+      { label: 'март', targetId: 'tab3' },
+      { label: 'апрель', targetId: 'tab4' },
+      { label: 'май', targetId: 'tab5' },
+      { label: 'июнь', targetId: 'tab6' },
+      { label: 'июль', targetId: 'tab7' },
+      { label: 'август', targetId: 'tab8' },
+      { label: 'сентябрь', targetId: 'tab9' },
+      { label: 'октябрь', targetId: 'tab10' },
+      { label: 'ноябрь', targetId: 'tab11' },
+      { label: 'декабрь', targetId: 'tab12' },
+    ],
+    noCar: true,
+  })
+
+  .tabb#tab1(style="width: 100%; height: 100%; ") content 1
+  .tabb#tab2(style="width: 100%; height: 100%;  display: none;") content 2
+  .tabb#tab3(style="width: 100%; height: 100%;  display: none;") content 3
+  .tabb#tab4(style="width: 100%; height: 100%;  display: none;") content 4
+  .tabb#tab5(style="width: 100%; height: 100%;  display: none;") content 5
+  .tabb#tab6(style="width: 100%; height: 100%;  display: none;") content 6
+  .tabb#tab7(style="width: 100%; height: 100%;  display: none;") content 7
+  .tabb#tab8(style="width: 100%; height: 100%;  display: none;") content 8
+  .tabb#tab9(style="width: 100%; height: 100%;  display: none;") content 9
+  .tabb#tab10(style="width: 100%; height: 100%;  display: none;") content 10
+  .tabb#tab11(style="width: 100%; height: 100%;  display: none;") content 11
+  .tabb#tab12(style="width: 100%; height: 100%;  display: none;") content 12

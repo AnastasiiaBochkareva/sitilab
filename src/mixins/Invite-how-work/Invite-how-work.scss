@@ -70,7 +70,12 @@
                 line-height: 22px;
                 letter-spacing: 0%;
                 color: rgb(59, 75, 100);
-                padding: 20px 20px 0px 55px;
+                padding: 20px 0px 0px;
+                p {
+                    margin: 0 !important;
+                    padding-left: 55px;
+                    padding-right: 20px;
+                }
                 a {
                     font-family: 'Montserrat', sans-serif;
                     font-size: 14px;
@@ -79,6 +84,77 @@
                     line-height: 22px;
                     letter-spacing: 0%;
                     color: rgb(0, 171, 223);
+                }
+                .row {
+                    padding-left: 55px;
+                    padding-right: 20px;
+                    display: flex;
+                    column-gap: 17px;
+                    row-gap: 10px;
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                    &:not(:last-child) {
+                        border-bottom: 1px solid rgb(217, 225, 233);
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+                    }
+                    .col {
+                        p {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+                        .title {
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 22px;
+                            color: rgb(59, 75, 100);
+                            margin-bottom: 14px;
+                        }
+                        &:first-child {
+                            color: rgb(0, 171, 223);
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 22px;
+                            letter-spacing: 0%;
+                            white-space: nowrap;
+                            min-width: 70px;
+                        }
+                        ul {
+                            list-style: none !important;
+                            padding: 0 !important;
+                            margin: 0 !important;
+                            li {
+                                &:first-child {
+                                    margin-top: 10px !important;
+                                }
+                                list-style: none !important;
+                                padding: 0 0 0 15px !important;
+                                margin: 0 !important;
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+
+                                &::before {
+                                    content: '';
+                                    width: 6px;
+                                    height: 6px;
+                                    background-color: rgb(0, 171, 223);
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    display: block;
+                                    left: 0;
+                                    top: 7px;
+                                }
+                            }
+                            &::before {
+                                content: none !important;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -107,9 +183,38 @@
                     font-size: 18px;
                 }
             }
+        }
+    }
+    @include xs {
+        .accordion {
+            &__head {
+                padding: 20px;
+                &-text {
+                    font-size: 18px;
+                }
+            }
             &__body {
                 &-content {
                     padding: 15px 0 0 0;
+                    .row {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    p {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 400px) {
+        .accordion {
+            &__body {
+                &-content {
+                    .row {
+                        flex-direction: column;
+                    }
                 }
             }
         }

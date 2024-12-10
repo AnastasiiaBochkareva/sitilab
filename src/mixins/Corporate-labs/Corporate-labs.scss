@@ -110,7 +110,7 @@
                 }
             }
             &::before {
-                content: none;
+                content: none !important;
             }
         }
     }

@@ -1,197 +1,206 @@
 .filter-result {
-    &__item {
-        padding: 20px 30px 22px;
-        list-style: none;
-        position: relative;
-        > svg {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            fill: rgb(178, 186, 198);
-            width: 20px;
-            height: 20px;
-        }
-        &::before {
-            content: none;
-        }
-        .c {
-            &-btn {
-                max-width: 160px;
-                width: calc(50% - 5px);
-                margin-top: 30px;
-                &_primary {
-                    margin-right: 10px;
-                }
-            }
-        }
-        a:not(.c-btn) {
-            text-decoration: none;
-            font-size: 16px;
-            font-style: normal;
-            line-height: 28px;
-            letter-spacing: 0%;
-            margin-bottom: 15px;
+  &__img {
+    width: 100%;
+    margin-top: 0 !important;
+    margin-bottom: 30px !important;
+    img,
+    picture {
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      min-height: 40px;
+      display: inline-block;
+      margin-right: 8px;
+      position: relative;
+      &:hover {
+        .filter-result__item {
+          > p {
             display: block;
+          }
         }
-        > p {
-            margin: 0;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 12px;
-            letter-spacing: 0%;
-            color: rgb(59, 75, 100);
-            display: none;
+        &::after,
+        &::before {
+          display: block;
+        }
+      }
+      &::after {
+        content: 'Гарантийные письма';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 0%;
+        color: rgb(59, 75, 100);
+        background-color: #fff;
+        border-radius: 8px;
+        position: absolute;
+        display: none;
+        z-index: 1;
+        white-space: nowrap;
+        padding: 6px 10px;
+        bottom: -28px;
+        left: 0;
+        min-height: 26px;
+        box-sizing: border-box;
+        box-shadow: 0px 2px 10px 0px rgba(49, 54, 73, 0.15);
+      }
+      &::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        display: none;
+        transform: rotate(45deg);
+        bottom: -5px;
+        position: absolute;
+        left: 20px;
+        z-index: 2;
+      }
+    }
+  }
+  &__item {
+    padding: 20px 30px 22px;
+    list-style: none;
+    position: relative;
+    > svg {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      fill: rgb(178, 186, 198);
+      width: 20px;
+      height: 20px;
+    }
+    &::before {
+      content: none;
+    }
+    .c {
+      &-btn {
+        max-width: 160px;
+        width: calc(50% - 5px);
+        // margin-top: 30px;
+        &_primary {
+          margin-right: 10px;
+        }
+      }
+    }
+    a:not(.c-btn) {
+      text-decoration: none;
+      font-size: 16px;
+      font-style: normal;
+      line-height: 28px;
+      letter-spacing: 0%;
+      margin-bottom: 15px;
+      display: block;
+    }
+    > p {
+      margin: 0;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 12px;
+      letter-spacing: 0%;
+      color: rgb(59, 75, 100);
+      display: none;
+    }
+
+    > ul {
+      padding: 20px 30px 22px;
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 20px 0;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+        color: rgb(59, 75, 100);
+        &::before {
+          content: none !important;
         }
         img,
         picture {
-            width: 40px;
-            min-width: 40px;
-            height: 40px;
-            min-height: 40px;
-            display: inline-block;
-            margin-right: 8px;
-            position: relative;
-            &:hover {
-                .filter-result__item {
-                    > p {
-                        display: block;
-                    }
-                }
-                &::after,
-                &::before {
-                    display: block;
-                }
-            }
-            &::after {
-                content: 'Гарантийные письма';
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 12px;
-                letter-spacing: 0%;
-                color: rgb(59, 75, 100);
-                background-color: #fff;
-                border-radius: 8px;
-                position: absolute;
-                display: none;
-                z-index: 1;
-                white-space: nowrap;
-                padding: 6px 10px;
-                bottom: -28px;
-                left: 0;
-                min-height: 26px;
-                box-sizing: border-box;
-                box-shadow: 0px 2px 10px 0px rgba(49, 54, 73, 0.15);
-            }
-            &::before {
-                content: '';
-                width: 5px;
-                height: 5px;
-                background-color: #fff;
-                display: none;
-                transform: rotate(45deg);
-                bottom: -5px;
-                position: absolute;
-                left: 20px;
-                z-index: 2;
-            }
+          width: 16px;
+          min-width: 16px;
+          height: 16px;
+          min-height: 16px;
+          margin-right: 0;
+          &::before,
+          &::after {
+            content: none;
+          }
         }
-        > ul {
-            padding: 20px 30px 22px;
-            list-style: none;
-            padding: 0;
-            margin: 15px 0 20px 0;
-            li {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 20px;
-                letter-spacing: 0%;
-                color: rgb(59, 75, 100);
-                img,
-                picture {
-                    width: 16px;
-                    min-width: 16px;
-                    height: 16px;
-                    min-height: 16px;
-                    margin-right: 0;
-                    &::before,
-                    &::after {
-                        content: none;
-                    }
-                }
-                svg {
-                    width: 15px;
-                    height: 15px;
-                    fill: rgb(142, 154, 171);
-                    margin: 0 4px 0 10px;
-                }
-                p {
-                    margin: 0;
-                }
-                span {
-                    color: rgb(142, 154, 171);
-                }
-            }
-            &:nth-child(2) {
-                li {
-                    &:not(:last-child) {
-                        margin-bottom: 10px;
-                    }
-                }
-            }
+        svg {
+          width: 15px;
+          height: 15px;
+          fill: rgb(142, 154, 171);
+          margin: 0 4px 0 10px;
         }
-        a:not(.c-btn) {
-            text-decoration: none;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 28px;
-            letter-spacing: 0%;
-            color: rgb(59, 75, 100);
-            transition: color 0.3s ease;
-            &:hover {
-                color: rgb(0, 171, 223);
-            }
+        p {
+          margin: 0;
         }
-        > div {
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 20px;
-            letter-spacing: 0%;
-            color: rgb(59, 75, 100);
-            margin-top: 20px;
+        span {
+          color: rgb(142, 154, 171);
+        }
+      }
+      &:nth-child(2) {
+        li {
+          &:not(:last-child) {
             margin-bottom: 10px;
+          }
         }
-        @media (max-width: 1000px) {
-            padding: 20px;
-            &:first-child {
-                padding-top: 10px;
-            }
-            .c {
-                &-btn {
-                    margin-top: 20px;
-                    &_outline {
-                        display: none;
-                    }
-                    &_primary {
-                        margin-right: 0;
-                        display: flex;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-        @include xs {
-            .c-btn_primary {
-                width: 100%;
-                max-width: 100%;
-            }
-        }
+      }
     }
+    a:not(.c-btn) {
+      text-decoration: none;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: 0%;
+      color: rgb(59, 75, 100);
+      transition: color 0.3s ease;
+      &:hover {
+        color: rgb(0, 171, 223);
+      }
+    }
+    > div {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0%;
+      color: rgb(59, 75, 100);
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 1000px) {
+      padding: 20px;
+      &:first-child {
+        padding-top: 10px;
+      }
+      .c {
+        &-btn {
+          margin-top: 20px;
+          &_outline {
+            display: none;
+          }
+          &_primary {
+            margin-right: 0;
+            display: flex;
+            text-align: center;
+          }
+        }
+      }
+    }
+    @include xs {
+      .c-btn_primary {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
 }

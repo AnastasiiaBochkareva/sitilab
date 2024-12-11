@@ -1303,16 +1303,16 @@ body.sidebarOpened {
   }
 }
 .calendar {
+  position: relative;
   ._subtitle {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 0;
+    padding: 50px 0 25px;
     @media (max-width: 1400px) {
       padding-left: 20px !important;
       padding-right: 20px !important;
     }
     @include xs {
-      margin-top: 30px;
-      margin-bottom: 30px;
+      padding: 15px 20px;
     }
   }
   .calendar-tabs {
@@ -1320,11 +1320,19 @@ body.sidebarOpened {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 30px;
+    padding: 25px 0 30px;
     ._title {
       text-align: left;
       font-weight: 700;
       line-height: 24px;
+      @include md {
+        font-size: 32px;
+        margin-bottom: 30px;
+        line-height: 38px;
+      }
+      @include xs {
+        font-size: 28px;
+      }
     }
     .c-btn {
       padding: 12px 16px;
@@ -1454,21 +1462,90 @@ body.sidebarOpened {
       }
     }
   }
+  .outside-section-img {
+    stroke: rgb(0, 171, 223);
+    fill: transparent;
+    max-width: 332px;
+    max-height: 213px;
+    bottom: 43px;
+    left: 0;
+    svg {
+      width: 332px;
+      height: 213px;
+    }
+    @media (max-width: 1600px) {
+      display: none;
+    }
+  }
+  .movable-element {
+    padding-top: 30px;
+    padding-bottom: 80px;
+    max-width: 1115px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 38px;
+      letter-spacing: 0%;
+      color: #fff;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 25px;
+      text-align: center;
+      @include xs {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 8px 15px;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  .movable-element.desktop {
+    @include xs {
+      display: none;
+    }
+  }
+  .movable-element.mobile {
+    display: none;
+    @include xs {
+      display: block;
+      padding: 30px 20px 15px;
+    }
+  }
   @media (max-width: 1400px) {
+    .movable-element {
+      padding: 30px 20px;
+    }
     ._title {
       padding-left: 20px;
+      padding-right: 20px;
     }
     .c-btn_outline {
       margin-right: 20px;
       margin-left: 20px;
     }
-    .tabs-nav {
-      padding-left: 20px;
+    .calendar-tabs {
+      .tabs-nav {
+        padding: 30px 20px 40px;
+      }
+      .tabb {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
     }
   }
+
   @include xs {
     .calendar-tabs {
-      ._title {
+      padding: 15px 0 0;
+      .tabb {
+        padding-left: 0;
+        padding-right: 0;
       }
       .tabs-nav {
         padding: 30px 20px 40px;

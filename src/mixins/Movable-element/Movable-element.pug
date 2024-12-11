@@ -1,0 +1,4 @@
+mixin Movable-element(param={})
+  .movable-element(class=`${param.classElement ? param.classElement : ''}`)
+    p(class=`${param.classText ? param.classText : ''}`)=param.text
+      span=param.span

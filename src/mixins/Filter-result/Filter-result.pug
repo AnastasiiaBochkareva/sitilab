@@ -3,9 +3,10 @@ mixin Filter-result(param={})
         if(param.btnClose)
             +icon('close')
         a(href="#") г. Москва, Хорошевское шоссе, 90
-        ul 
+        ul.metro-block-new
             li 
                 img(src="/assets/img/categories/m.png", alt="")
+                //- +icon('arrow')
                 p Хорошёвская 
                     +icon('man') 
                     span 132 м

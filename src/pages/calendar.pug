@@ -16,9 +16,27 @@ block content
             class: 'banner__col_img-hand',
             colImg: 'kids'
           })
+        section.container
+          +Movable-element({
+            classText: 'bg-red',
+            text: 'Забота о каждом - наша профессия.',
+            span: 'Любовь к каждому - наша миссия.',
+            classElement: 'mobile'
+          })
 
         section.container 
           p._subtitle Каждый ребенок уникален и развивается в собственном темпе. При этом растущий организм меняется так быстро, что легко не заметить начинающиеся проблемы. Чтобы организм ребенка формировался правильно, ему необходимы все витамины, минералы и питательные вещества. Скрытые инфекции и другие заболевания препятствуют росту и развитию. Лабораторная диагностика позволяет контролировать все важные показатели здоровья ребенка, с детского сада до старших классов. 
 
         section.container.calendar-tabs
           +Injection-tabs({})
+
+        section.container 
+          +Movable-element({
+            classText: 'bg-red',
+            text: 'Забота о каждом - наша профессия. ',
+            span: 'Любовь к каждому - наша миссия.',
+            classElement: 'desktop'
+          })
+        
+        .outside-section-img 
+          +icon('bg-heart')

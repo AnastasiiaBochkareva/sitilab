@@ -10,7 +10,7 @@ mixin Card-links(param={})
                 {title: 'Подарочные карты', titleSm: 'Ситилаб', subtitle: 'Подари здоровье своим близким', img: 'five'},
             ]
         each el in cardContent
-            .card-link
+            a(href="#").card-link
                 .card-link__title=el.title
                     if(el.titleSm)
                         span=el.titleSm
@@ -20,5 +20,5 @@ mixin Card-links(param={})
                     mobile: 'link-' + el.img,
                     class: 'card-link__img',
                 })
-                a(href="#").card-link__btn
+                .card-link__btn
                     +icon('arrow-down')

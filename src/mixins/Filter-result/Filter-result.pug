@@ -3,31 +3,32 @@ mixin Filter-result(param={})
         if(param.btnClose)
             +icon('close')
         a(href="#") г. Москва, Хорошевское шоссе, 90
-        ul.metro-block-new
-            li 
-                img(src="/assets/img/categories/m.png", alt="")
-                //- +icon('arrow')
-                p Хорошёвская 
-                    +icon('man') 
-                    span 132 м
-            li 
-                img(src="/assets/img/categories/m.png", alt="")
-                p Хорошёвская 
-                    +icon('man') 
-                    span 132 м
-            li 
-                img(src="/assets/img/categories/m.png", alt="")
-                p Хорошёвская 
-                    +icon('man') 
-                    span 132 м
-        div Режим работы:
-        ul 
-            li 
-                span пн - пт 
-                p 07:00 - 19:00
-            li 
-                span сб - вс 
-                p 07:30 - 15:30
+        .all-blick-data
+            ul.metro-block-new
+                li 
+                    img(src="/assets/img/categories/m.png", alt="")
+                    //- +icon('arrow')
+                    p Хорошёвская 
+                        +icon('man') 
+                        span 132 м
+                li 
+                    img(src="/assets/img/categories/m.png", alt="")
+                    p Хорошёвская 
+                        +icon('man') 
+                        span 132 м
+                li 
+                    img(src="/assets/img/categories/m.png", alt="")
+                    p Хорошёвская 
+                        +icon('man') 
+                        span 132 м
+            div Режим работы:
+            ul 
+                li 
+                    span пн - пт 
+                    p 07:00 - 19:00
+                li 
+                    span сб - вс 
+                    p 07:30 - 15:30
         .filter-result__img
             img(src="/assets/img/categories/garant.png", alt="")
             img(src="/assets/img/categories/garant.png", alt="")

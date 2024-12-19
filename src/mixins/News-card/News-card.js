@@ -12,11 +12,5 @@ hoverContainers.forEach((container) => {
   hoverTarget.addEventListener('mouseout', () => {
     styleTarget.style.display = 'none';
   });
-  // hoverTarget.addEventListener('click', () => {
-  //   if (styleTarget.style.display === 'block') {
-  //     styleTarget.style.display = 'none';
-  //   } else {
-  //     styleTarget.style.display = 'block';
-  //   }
-  // });
+
 });

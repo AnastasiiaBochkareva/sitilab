@@ -3,7 +3,10 @@
   gap: 40px;
   flex-direction: column;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  ._title {
+    align-self: center;
+  }
   &__top,
   &__body {
     display: flex;
@@ -208,13 +211,18 @@
       margin-right: 20px;
     }
   }
+  @include md {
+    ._title {
+      align-self: flex-start;
+      padding-left: 20px;
+    }
+  }
   @media (max-width: 1000px) {
     gap: 10px;
     padding-top: 60px;
-    padding-bottom: 0;
+    padding-bottom: 30px;
     ._title {
       margin-bottom: 10px;
-      text-align: left;
       padding-left: 20px;
       padding-right: 20px;
     }

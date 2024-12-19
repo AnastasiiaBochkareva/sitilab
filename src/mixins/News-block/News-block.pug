@@ -1,0 +1,15 @@
+mixin News-block(param={})
+  .news-block
+    ._title 
+      span.active Новости
+      span /
+      span Акции
+    a(href="#")._subtitle=param.titleLink 
+    +News-card({
+    })
+    +News-card({
+    })
+    +News-card({
+    })
+    +News-card({
+    })

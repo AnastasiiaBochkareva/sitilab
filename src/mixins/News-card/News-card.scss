@@ -1,0 +1,131 @@
+.news-card {
+  max-width: 340px;
+  position: relative;
+  .tooltip {
+    display: none;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: rgb(142, 154, 171);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    max-width: 178px;
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 1;
+    right: -36px;
+    top: -57px;
+  }
+  &__ad {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 0.65);
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &__img {
+    max-width: 340px;
+    width: 100%;
+    max-height: 204px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    border-right: 1px solid rgb(178, 186, 198);
+    border-bottom: 1px solid rgb(178, 186, 198);
+    border-left: 1px solid rgb(178, 186, 198);
+    padding: 20px 20px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    ._title {
+      display: -webkit-box; /* Активация флекс-бокса для ограничения текста */
+      -webkit-box-orient: vertical; /* Указание вертикальной ориентации */
+      overflow: hidden; /* Скрытие текста за пределами блока */
+      text-overflow: ellipsis; /* Добавление многоточия */
+      -webkit-line-clamp: 2; /* Ограничение в две строки */
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 26px;
+      text-align: left;
+      width: 100%;
+    }
+    ._subtitle {
+      display: -webkit-box; /* Активация флекс-бокса для ограничения текста */
+      -webkit-box-orient: vertical; /* Указание вертикальной ориентации */
+      overflow: hidden; /* Скрытие текста за пределами блока */
+      text-overflow: ellipsis; /* Добавление многоточия */
+      -webkit-line-clamp: 2; /* Ограничение в две строки */
+      line-height: 22px;
+      font-size: 14px;
+      color: rgb(59, 75, 100);
+    }
+    ._date {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0%;
+      color: rgb(142, 154, 171);
+      width: max-content;
+    }
+    ._link {
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0%;
+      color: rgb(0, 171, 223);
+      width: max-content;
+    }
+  }
+  @media (max-width: 1600px) {
+    .tooltip {
+      right: 0;
+    }
+  }
+  @include md {
+    max-width: 50%;
+    &__img {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+    }
+  }
+  @include xs {
+    max-width: 100%;
+    &__content {
+      padding: 20px;
+    }
+    &__img {
+      // max-width: 335px;
+      // max-height: 201px;
+    }
+  }
+}

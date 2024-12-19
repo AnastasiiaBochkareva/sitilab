@@ -24,7 +24,8 @@ import '@/mixins/Info-popup/Info-popup';
 import '@/mixins/Doctor-card/Doctor-card';
 import '@/mixins/Doctor-experts/Doctor-experts';
 import '@/mixins/Main-map/Main-map';
-
+import '@/mixins/Filter-result/Filter-result';
+import '@/mixins/News-card/News-card';
 import MyModal from '@/components/ui/MyModal/MyModal';
 // import Filters from '@/components/ui/Filters/Filters';
 // import Validation from '@/components/ui/Form/Validation';

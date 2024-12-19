@@ -30,9 +30,21 @@ mixin Filter-result(param={})
                     span сб - вс 
                     p 07:30 - 15:30
         .filter-result__img
-            img(src="/assets/img/categories/garant.png", alt="")
-            img(src="/assets/img/categories/garant.png", alt="")
-            img(src="/assets/img/categories/garant.png", alt="")
-            img(src="/assets/img/categories/garant.png", alt="")
+            .filter-result__img-container
+                img(src="/assets/img/categories/garant.png", alt="picture 1")
+                .alt-text
+                    span
+            .filter-result__img-container
+                img(src="/assets/img/categories/garant.png", alt="this is picture number 2")
+                .alt-text
+                    span
+            .filter-result__img-container
+                img(src="/assets/img/categories/garant.png", alt="3 3 3 3 3 3 3 3 3 3 3 3")
+                .alt-text
+                    span
+            .filter-result__img-container
+                img(src="/assets/img/categories/garant.png", alt="Капельницы, уколы, инъекции")
+                .alt-text
+                    span
         a(href="#").c-btn.c-btn_primary Подробнее 
         a(href="#").c-btn.c-btn_outline Оставить отзыв

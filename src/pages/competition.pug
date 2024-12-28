@@ -1,0 +1,25 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    main.competition
+
+        section.container
+          .competition__banner
+            .competition__col
+              ._title-xl Конкурс
+              ._title для врачей
+              ._subtitle Условия конкурса появятся в мае
+            .competition__col.competition__img
+              .competition__img-desktop
+                img(src="/assets/img/categories/competition-desk.png", alt="")
+              .competition__img-mobile
+                img(src="/assets/img/categories/competition-mob.png", alt="")
+            +Movable-element({
+              text: 'Забота о каждом - наша профессия.',
+              span: 'Любовь к каждому - наша миссия.'
+            })

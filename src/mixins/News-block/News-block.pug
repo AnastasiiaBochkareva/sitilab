@@ -5,11 +5,12 @@ mixin News-block(param={})
       span /
       span Акции
     a(href="#")._subtitle=param.titleLink 
-    +News-card({
-    })
-    +News-card({
-    })
-    +News-card({
-    })
-    +News-card({
-    })
+    .news-block-tab.active
+      +News-card({
+      })
+      +News-card({
+      })
+      +News-card({
+      })
+      +News-card({
+      })

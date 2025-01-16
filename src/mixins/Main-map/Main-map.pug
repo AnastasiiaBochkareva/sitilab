@@ -21,7 +21,7 @@ mixin Main-map(param={})
         .main-map__bottom
             .col.active
                 .filter-result-search.bg-blue Найдено: 40
-                ul 
+                ul.accordion
                     each el in Array(3)
                         +Filter-result()
             .col

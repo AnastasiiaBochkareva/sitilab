@@ -1,50 +1,108 @@
 mixin Filter-result(param={})
-    li.filter-result__item 
-        if(param.btnClose)
-            +icon('close')
-        a(href="#") г. Москва, Хорошевское шоссе, 90
-        .all-blick-data
-            ul.metro-block-new
-                li 
-                    img(src="/assets/img/categories/m.png", alt="")
-                    //- +icon('arrow')
-                    p Хорошёвская 
-                        +icon('man') 
-                        span 132 м
-                li 
-                    img(src="/assets/img/categories/m.png", alt="")
-                    p Хорошёвская 
-                        +icon('man') 
-                        span 132 м
-                li 
-                    img(src="/assets/img/categories/m.png", alt="")
-                    p Хорошёвская 
-                        +icon('man') 
-                        span 132 м
-            div Режим работы:
-            ul 
-                li 
-                    span пн - пт 
-                    p 07:00 - 19:00
-                li 
-                    span сб - вс 
-                    p 07:30 - 15:30
-        .filter-result__img
-            .filter-result__img-container
-                img(src="/assets/img/categories/garant.png", alt="picture 1")
-                .alt-text
-                    span
-            .filter-result__img-container
-                img(src="/assets/img/categories/garant.png", alt="this is picture number 2")
-                .alt-text
-                    span
-            .filter-result__img-container
-                img(src="/assets/img/categories/garant.png", alt="3 3 3 3 3 3 3 3 3 3 3 3")
-                .alt-text
-                    span
-            .filter-result__img-container
-                img(src="/assets/img/categories/garant.png", alt="Капельницы, уколы, инъекции")
-                .alt-text
-                    span
-        a(href="#").c-btn.c-btn_primary Подробнее 
-        a(href="#").c-btn.c-btn_outline Оставить отзыв
+    if(param.modal)
+        li.filter-result__item 
+            if(param.btnClose)
+                +icon('close')
+            a(href="#") г. Москва, Хорошевское шоссе, 90
+            .all-blick-data
+                ul.metro-block-new
+                    li 
+                        img(src="/assets/img/categories/m.png", alt="")
+                        //- +icon('arrow')
+                        p Хорошёвская 
+                            +icon('man') 
+                            span 132 м
+                    li 
+                        img(src="/assets/img/categories/m.png", alt="")
+                        p Хорошёвская 
+                            +icon('man') 
+                            span 132 м
+                    li 
+                        img(src="/assets/img/categories/m.png", alt="")
+                        p Хорошёвская 
+                            +icon('man') 
+                            span 132 м
+                div Режим работы:
+                ul 
+                    li 
+                        span пн - пт 
+                        p 07:00 - 19:00
+                    li 
+                        span сб - вс 
+                        p 07:30 - 15:30
+            .filter-result__img
+                .filter-result__img-container
+                    img(src="/assets/img/categories/garant.png", alt="picture 1")
+                    .alt-text
+                        span
+                .filter-result__img-container
+                    img(src="/assets/img/categories/garant.png", alt="this is picture number 2")
+                    .alt-text
+                        span
+                .filter-result__img-container
+                    img(src="/assets/img/categories/garant.png", alt="3 3 3 3 3 3 3 3 3 3 3 3")
+                    .alt-text
+                        span
+                .filter-result__img-container
+                    img(src="/assets/img/categories/garant.png", alt="Капельницы, уколы, инъекции")
+                    .alt-text
+                        span
+            a(href="#").c-btn.c-btn_primary Подробнее 
+            a(href="#").c-btn.c-btn_outline Оставить отзыв
+    else 
+         li.filter-result__item.accordion__item
+            .accordion__head
+                .accordion__head-content
+                    if(param.btnClose)
+                        +icon('close')
+                    a(href="#") г. Москва, Хорошевское шоссе, 90
+                    .all-blick-data
+                        ul.metro-block-new
+                            li 
+                                img(src="/assets/img/categories/m.png", alt="")
+                                //- +icon('arrow')
+                                p Хорошёвская 
+                                    +icon('man') 
+                                    span 132 м
+                            li 
+                                img(src="/assets/img/categories/m.png", alt="")
+                                p Хорошёвская 
+                                    +icon('man') 
+                                    span 132 м
+                            li 
+                                img(src="/assets/img/categories/m.png", alt="")
+                                p Хорошёвская 
+                                    +icon('man') 
+                                    span 132 м
+                if(!param.closeIcon)
+                    .accordion__icon
+                        +icon('plus')
+            .accordion__body
+                .accordion__body-content
+                    div Режим работы:
+                    ul 
+                        li 
+                            span пн - пт 
+                            p 07:00 - 19:00
+                        li 
+                            span сб - вс 
+                            p 07:30 - 15:30
+                    .filter-result__img
+                        .filter-result__img-container
+                            img(src="/assets/img/categories/garant.png", alt="picture 1")
+                            .alt-text
+                                span
+                        .filter-result__img-container
+                            img(src="/assets/img/categories/garant.png", alt="this is picture number 2")
+                            .alt-text
+                                span
+                        .filter-result__img-container
+                            img(src="/assets/img/categories/garant.png", alt="3 3 3 3 3 3 3 3 3 3 3 3")
+                            .alt-text
+                                span
+                        .filter-result__img-container
+                            img(src="/assets/img/categories/garant.png", alt="Капельницы, уколы, инъекции")
+                            .alt-text
+                                span
+                    a(href="#").c-btn.c-btn_primary Подробнее 
+                    a(href="#").c-btn.c-btn_outline Оставить отзыв

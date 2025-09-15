@@ -1,0 +1,12 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+
+    .ask-doctor
+        .bg-gray.container
+            +Doctor-experts({
+            })

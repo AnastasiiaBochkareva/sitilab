@@ -6,64 +6,69 @@ block variables
 
 block content
 
-    main.analysis.analysis-list
+    main
 
-      section.a-container
-        .a-title Анализы в Москве
-        .a-show-more
-          .a-show-more__btn   
-            span Все разделы
-        .a-list__container
-          .a-list__head.sticky-tab
-            .sidebar-btn
-              +icon('a-analysis')
-              a Анализы
-            .a-row-title
-              .a-title-sm.text-blue Обмен углеводов
-                .a-title-sm 12 
-        .a-inner-container
-          +Sidebar({
-            analysisBtn: true,
-          })
-          .a-row-wrapper
-            +Analysis-row({
-              aRowVnd: true,
-              code: 'код: 11-10-001',
-              title: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
-              subtitle: 'Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови',
-              infoPrice: '525 ₽',
+      section.a-container.analysis-result-search.analysis
+        .analysis-result-search__sidebar-wrapper
+          .analysis-result-search__sidebar
+            .analysis-result-search__sidebar-head
+              .a-title Фильтры
+              a(href='/').text-blue Lorem, ipsum.
+            .analysis-result-search__sidebar-block
+              .a-title-sm Кто я
+              .sidebar-row
+                +Checkbox({text: 'Женщина', labelClass: 'a-subtitle'})
+              .sidebar-row
+                +Checkbox({text: 'Мужчина', labelClass: 'a-subtitle'})
+              .sidebar-row
+                +Checkbox({text: 'Ребенок', labelClass: 'a-subtitle'})
+              .a-show-more__btn
+                span Еще
+                +icon('arrow-down') 
+            .analysis-result-search__sidebar-categories
+              .analysis-result-search__sidebar-name Анализы по категориям
+              +Sidebar()
+            .analysis-result-search__popular
+              .analysis-result-search__popular-head
+                .a-title Часто ищут
+                each el in Array(6)
+                  a(href='/') Lorem, ipsum.
+                    span 21
+                .a-show-more__btn
+                  span Еще
+                  +icon('arrow-down')
+        .analysis-result-search__container
+          .a-title Результаты поиска
+          a(href='/').analysis-result-search__popular-link.text-blue Популярные исследования 
+            span (12)
+          .analysis-result-search__toggle
+            +Toggle({ label: 'Выезд на дом', reverse: true, icon: true, iconName: 'a-home'})
+          .analysis-result-search__wrapper
+            +TabsNav({
+              items: [
+                { label: 'Анализы 22', targetId: 'ars-tab1' },
+                { label: 'Чекапы  5', targetId: 'ars-tab2' },
+                { label: 'Услуги  1', targetId: 'ars-tab3' },
+                { label: 'Инфоповод  2', targetId: 'ars-tab4' },
+              ],
+              noCar: true,
+              noSvg: true
             })
-            +Analysis-row({
-              code: 'код: 62-94-803',
-              title: 'ДНК Chlamydia trachomatis, ЦК соскоб',
-              subtitle: 'Номенклатура МЗРФ (Приказ №804н): A26.20.020.001.01 Определение ДНК хламидии трахоматис (Chlamydia trachomatis) в отделяемом из цервикального канала методом ПЦР...',
-              infoPrice: '525 ₽',
-            })
-            +Analysis-row({
-              aRowVnd: true,
-              code: 'код: 11-10-001',
-              title: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
-              subtitle: 'Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови',
-              infoPrice: '525 ₽',
-            })
-            +Analysis-row({
-              code: 'код: 62-94-803',
-              title: 'ДНК Chlamydia trachomatis, ЦК соскоб',
-              subtitle: 'Номенклатура МЗРФ (Приказ №804н): A26.20.020.001.01 Определение ДНК хламидии трахоматис (Chlamydia trachomatis) в отделяемом из цервикального канала методом ПЦР...',
-              infoPrice: '525 ₽',
-            })
-            +Analysis-row({
-              code: 'код: 11-10-001',
-              title: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
-              subtitle: 'Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови',
-              infoPrice: '525 ₽',
-            })
-            +Analysis-row({
-              code: 'код: 62-94-803',
-              title: 'ДНК Chlamydia trachomatis, ЦК соскоб',
-              subtitle: 'Номенклатура МЗРФ (Приказ №804н): A26.20.020.001.01 Определение ДНК хламидии трахоматис (Chlamydia trachomatis) в отделяемом из цервикального канала методом ПЦР...',
-              infoPrice: '525 ₽',
-            })
-
-        
-        
+            .tabb#ars-tab1(style="width: 100%;")
+              each el in Array(5)
+                +Analysis-row({
+                  aRowVnd: true,
+                  code: 'код: 11-10-001',
+                  title: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
+                  subtitle: 'Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови',
+                  infoPrice: '525 ₽',
+                  bonus: true,
+                  sale: true,
+                  arIcon: 'search-result-icon',
+                  arSpan: 'Акция',
+                  saleClass: 'a-row__sale-block'
+                })
+            .tabb#ars-tab2(style="width: 100%; display: none;") content 2
+            .tabb#ars-tab3(style="width: 100%; display: none;") content 3
+            .tabb#ars-tab4(style="width: 100%; display: none;") content 4
+            

@@ -1,0 +1,31 @@
+mixin Drop-down-list()
+    .drop-down-list
+        .drop-down-list__top
+            +TabsNav({
+                items: [
+                    { label: 'Анализы  50', targetId: 's-tab1' },
+                    { label: 'Чекапы  5', targetId: 's-tab2' },
+                    { label: 'Услуги  2', targetId: 's-tab3' },
+                    { label: 'Инфоповод  2', targetId: 's-tab4' },
+                ],
+                noCar: true,
+                noSvg: true
+                })
+        .tabb#s-tab1(style="width: 100%;")
+            .drop-down-list__body
+                each el in Array(10)
+                    .drop-down-list__item
+                        .drop-down-list__block-name
+                            p.drop-down-list__code код: 62-94-803
+                            p.drop-down-list__category ДНК Chlamydia trachomatis, ЦК соскоб
+                            img(src="/assets/img/drop-down-list/sale.png", alt="Sale")
+                        .drop-down-list__block-price
+                            p.drop-down-list__bonus от 55 бонусов
+                                img(src="/assets/img/drop-down-list/coins.png", alt="Coins")
+                            p.drop-down-list__price 525 ₽
+                            a(href='#').img-basket
+                                img(src="/assets/img/drop-down-list/basket.png", alt="Basket")
+        .tabb#s-tab2(style="width: 100%; display: none;") content 2
+        .tabb#s-tab3(style="width: 100%; display: none;") content 3
+        .tabb#s-tab4(style="width: 100%; display: none;") content 4
+        

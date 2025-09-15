@@ -1,24 +1,24 @@
-// @import '../components/ui/Typography/Typography';
+@import '../components/ui/Typography/Typography';
 @import '../components/ui/Input/Input';
 @import '../components/ui/Btn/Btn';
-// @import '../components/ui/Grid/Grid';
-// @import '../components/ui/Tooltip/Tooltip';
-// @import '../components/ui/Menu/Menu';
-// @import '../components/ui/Tag/Tag';
-// @import '../components/ui/Breadcrumbs/Breadcrumbs';
+@import '../components/ui/Grid/Grid';
+@import '../components/ui/Tooltip/Tooltip';
+@import '../components/ui/Menu/Menu';
+@import '../components/ui/Tag/Tag';
+@import '../components/ui/Breadcrumbs/Breadcrumbs';
 @import '../components/ui/MyModal/MyModal';
-// @import '../components/ui/Accordion/Accordion';
-// @import '../components/ui/СhoosingСity/ChoosingCity';
-// @import '../components/ui/Pagination/Pagination';
+@import '../components/ui/Accordion/Accordion';
+@import '../components/ui/СhoosingСity/ChoosingCity';
+@import '../components/ui/Pagination/Pagination';
 @import '../components/ui/Form/Form';
-// @import '../components/ui/Loading/Loading';
+@import '../components/ui/Loading/Loading';
 @import '../components/ui/Tabs/TabsNav';
-// @import '../components/ui/Table/Table';
-// @import '../components/ui/Filters/Filters';
+@import '../components/ui/Table/Table';
+@import '../components/ui/Filters/Filters';
 
-// @import 'Header/Header';
-// @import 'Services-card/Services-card';
-// @import 'Reviews-card/Reviews-card';
+@import 'Header/Header';
+@import 'Services-card/Services-card';
+@import 'Reviews-card/Reviews-card';
 @import 'Visit-service/Visit-service';
 @import 'Visit-price/Visit-price';
 @import 'Visit-attention/Visit-attention';
@@ -89,3 +89,6 @@
 @import 'Doctor-services/Doctor-services';
 @import 'Doctor-experts/Doctor-experts';
 @import 'Doctor-search/Doctor-search';
+
+@import 'Drop-down-list/Drop-down-list';
+@import 'Analysis-result-search/Analysis-result-search';

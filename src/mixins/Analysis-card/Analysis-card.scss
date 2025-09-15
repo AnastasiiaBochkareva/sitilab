@@ -1,110 +1,110 @@
 .a-card {
-  height: 100%;
-  border: 1px solid #b2bac6;
-  display: flex;
-  flex-direction: column;
-  padding: 25px 40px 35px;
-  &__top {
+    height: 100%;
+    border: 1px solid #b2bac6;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    .a-title-sm {
-      font-size: 20px !important;
-    }
-  }
-  &__bottom {
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    .a-subtitle {
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      column-gap: 8px;
-    }
-  }
-  &__btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 26px;
-    .a-title-sm {
-      color: rgb(0, 171, 223) !important;
-      font-size: 28px !important;
-    }
-    .a-btn-basket {
-      background-color: #00abdf;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      column-gap: 4px;
-      border-radius: 8px;
-      width: 100%;
-      max-width: 130px;
-      padding: 8px 8px 8px 8px;
-      svg {
-        width: 30px;
-        height: 30px;
-        fill: #fff;
-      }
-      span {
-        color: #fff;
-        margin-bottom: 0;
-      }
-      &:hover {
-        background-color: #11c3f3;
-      }
-    }
-  }
-  .a-subtitle {
-    font-weight: 500 !important;
-    color: rgb(59, 75, 100);
-    white-space: nowrap;
-
-    svg {
-      width: 24px;
-      height: 24px;
-      fill: transparent;
-      stroke: #00abdf;
-    }
-  }
-  .a-title-sm {
-    text-align: left !important;
-    margin-bottom: 0 !important;
-    &:hover {
-      color: rgb(0, 171, 223);
-    }
-  }
-  @media (max-width: 500px) {
-    padding: 25px 20px 30px;
-    .a-title-sm {
-      line-height: 20px;
+    padding: 25px 40px 35px;
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        .a-title-sm {
+            font-size: 20px !important;
+        }
     }
     &__bottom {
-      .a-subtitle {
-        font-size: 12px !important;
-        line-height: 14px !important;
-      }
-      .a-card__btn {
-        column-gap: 16px;
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        .a-subtitle {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 8px;
+        }
+    }
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 26px;
         .a-title-sm {
-          font-size: 20px !important;
-          line-height: 22px;
+            color: rgb(0, 171, 223) !important;
+            font-size: 28px !important;
         }
         .a-btn-basket {
-          padding: 5px 8px 5px 8px;
-          max-width: 111px;
-          svg {
+            background-color: #00abdf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 4px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 130px;
+            padding: 8px 8px 8px 8px;
+            svg {
+                width: 30px;
+                height: 30px;
+                fill: #fff;
+            }
+            span {
+                color: #fff;
+                margin-bottom: 0;
+            }
+            &:hover {
+                background-color: #11c3f3;
+            }
+        }
+    }
+    .a-subtitle {
+        font-weight: 500 !important;
+        color: rgb(59, 75, 100);
+        white-space: nowrap;
+
+        svg {
             width: 24px;
             height: 24px;
-          }
-          .a-subtitle {
-            line-height: 22px !important;
-          }
+            fill: transparent;
+            stroke: #00abdf;
         }
-      }
     }
-  }
+    .a-title-sm {
+        text-align: left !important;
+        margin-bottom: 0 !important;
+        &:hover {
+            color: rgb(0, 171, 223);
+        }
+    }
+    @media (max-width: 500px) {
+        padding: 25px 20px 30px;
+        .a-title-sm {
+            line-height: 20px;
+        }
+        &__bottom {
+            .a-subtitle {
+                font-size: 12px !important;
+                line-height: 14px !important;
+            }
+            .a-card__btn {
+                column-gap: 16px;
+                .a-title-sm {
+                    font-size: 20px !important;
+                    line-height: 22px;
+                }
+                .a-btn-basket {
+                    padding: 5px 8px 5px 8px;
+                    max-width: 111px;
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                    .a-subtitle {
+                        line-height: 22px !important;
+                    }
+                }
+            }
+        }
+    }
 }

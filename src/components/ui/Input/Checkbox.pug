@@ -18,7 +18,9 @@ mixin Checkbox(param = {})
 			label(for=param.id).v-checkbox__label #{param.text}
 				a(href='#') #{param.textLink}
 		else
-			label(for=param.id).v-checkbox__label #{param.text}
+			label(for=param.id class=`${param.labelClass}`).v-checkbox__label #{param.text}
+				if(param.span)
+					span(class=`${param.spanClass}`)=`${param.spanText}`
 
 mixin CheckboxBtn(param = {})
 

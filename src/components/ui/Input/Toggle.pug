@@ -21,5 +21,8 @@ mixin Toggle(param = {})
     )
         - if (param.labelTwo)
             label(for=param.id) #{param.labelTwo}
+        
         input(type="checkbox" name=param.name id=param.id value=param.value checked=param.checked disabled=param.disabled)
         label(for=param.id) #{param.label}
+            if(param.icon)
+                +icon(`${param.iconName}`)

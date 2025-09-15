@@ -18,9 +18,9 @@ const closeItem = (item) => {
 function fixScroll(activeItem, itemToScroll) {
     if (!activeItem) return;
     const body = activeItem.querySelector('.accordion__body');
-    console.log(body.scrollHeight);
+    // console.log(body.scrollHeight);
     const viewportHeight = window.innerHeight;
-    console.log(viewportHeight);
+    // console.log(viewportHeight);
     if (body.scrollHeight > viewportHeight) {
         setTimeout(() => {
             const header = document.querySelector('.header');
@@ -39,7 +39,7 @@ function fixScroll(activeItem, itemToScroll) {
 const clickHandler = (e) => {
     const accordionHead = e.target.closest('.accordion__head');
     if (!accordionHead) return;
-    console.log(e);
+    // console.log(e);
     const accordion = e.target.closest('.accordion');
     const targetItem = e.target.closest('.accordion__item');
     const activeItem = accordion.querySelector('.accordion__item.active');

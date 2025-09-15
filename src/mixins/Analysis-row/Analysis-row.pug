@@ -3,9 +3,14 @@ mixin Analysis-row(param={})
     .a-row-title
       .a-title-sm.text-blue Обмен углеводов
         .a-title-sm 12 
-  .a-row
+  .a-row(class=param.saleClass)
     .a-row__type
       .a-subtitle.a-card-code=param.code
+      a(href="#").a-subtitle.a-card-notice Lorem, ipsum dolor.
+      if(param.sale)
+        .analysis-row__sale
+          +icon(`${param.arIcon}`)
+          span=param.arSpan
       a(href="#").a-title-sm=param.title
       .a-subtitle=param.subtitle
       +Analysis-tags({
@@ -15,16 +20,21 @@ mixin Analysis-row(param={})
       })
     .a-row__info
       div
-        +icon('a-calendar')
-        .a-subtitle 1 календарный день
-      div
-        +icon('a-clock')
-        .a-subtitle результат за 3-5 часов (CITO):  
+        //- +icon('a-calendar')
+        +Checkbox({text: '1 календарный день:', labelClass: 'a-subtitle', span: true, spanText: '1050 ₽', spanClass: 'text-blue'})
+        //- .a-subtitle 1 календарный день
           .text-blue 1050 ₽
+      div
+        //- +icon('a-clock')
+        +Checkbox({text: 'результат за 3-5 часов (CITO):', labelClass: 'a-subtitle', span: true, spanText: '150 ₽', spanClass: 'text-blue'})
+        //- .a-subtitle результат за 3-5 часов (CITO):  
+        //-   .text-blue 1050 ₽
       if (param.aRowVnd)
         div
           +icon('a-home')
           .a-subtitle доступно с выездом на дом
+            .tooltip-icon i
+              .tooltip-text Стоимость выезда на дом рассчитывается после указания адреса при оформлении заказа 
       div
         +icon('a-plus')
         .a-subtitle взятие биоматериала: 
@@ -33,3 +43,7 @@ mixin Analysis-row(param={})
         .a-row__info_price.a-title=param.infoPrice
         .a-row__info_btn 
           +icon('a-basket')
+      if(param.bonus)
+        .a-row__bonus
+          img(src='/assets/img/drop-down-list/coins.png')
+          p.text-blue.a-subtitle от 55 бонусов

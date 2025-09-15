@@ -1,0 +1,66 @@
+mixin Analysis-result-search()
+    section.analysis-result-serach
+      .ars__sidebar-wrapper
+        .ars__sidebar
+          .ars__sidebar-head
+            .a-title Фильтры
+            a(href='/').text-blue Сбросить все
+          .ars__sidebar-block
+            .a-title-sm Кто я
+            .sidebar-row
+              +Checkbox({text: 'Женщина', labelClass: 'a-subtitle'})
+            .sidebar-row
+              +Checkbox({text: 'Мужчина', labelClass: 'a-subtitle'})
+            .sidebar-row
+              +Checkbox({text: 'Ребенок', labelClass: 'a-subtitle'})
+            .a-show-more__btn
+              span Еще
+              +icon('arrow-down') 
+          .ars__sidebar-categories
+            .ars__sidebar-name Анализы по категориям
+            +Sidebar()
+
+          .ars__popular
+            .ars__popular-head
+              .a-title Часто ищут
+              each el in Array(6)
+                a(href='/') Lorem, ipsum.
+                  span 21
+              .a-show-more__btn
+                span Еще
+                +icon('arrow-down')
+
+      .ars__container
+        .ars-title Результаты поиска
+        a(href='/').ars-title-link.text-blue Популярные исследования 
+          span (12)
+        .ars__toggle
+          +Toggle({ label: 'Выезд на дом', reverse: true, icon: true, iconName: 'a-home'})
+        .ars__wrapper
+          +TabsNav({
+            items: [
+              { label: 'Анализы 22', targetId: 'ars-tab1' },
+              { label: 'Чекапы  5', targetId: 'ars-tab2' },
+              { label: 'Услуги  1', targetId: 'ars-tab3' },
+              { label: 'Инфоповод  2', targetId: 'ars-tab4' },
+            ],
+            noCar: true,
+            noSvg: true
+          })
+          .tabb#ars-tab1(style="width: 100%;")
+            each el in Array(5)
+              +Analysis-row({
+                aRowVnd: true,
+                code: 'код: 11-10-001',
+                title: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)',
+                subtitle: 'Номенклатура МЗРФ (Приказ №804н): B03.016.002 Общий (клинический) анализ крови',
+                infoPrice: '525 ₽',
+                bonus: true,
+                sale: true,
+                arIcon: 'search-result-icon',
+                arSpan: 'Акция',
+                saleClass: 'a-row__sale-block'
+              })
+          .tabb#ars-tab2(style="width: 100%; display: none;") content 2
+          .tabb#ars-tab3(style="width: 100%; display: none;") content 3
+          .tabb#ars-tab4(style="width: 100%; display: none;") content 4

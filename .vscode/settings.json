@@ -1,5 +1,14 @@
 {
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true,
-  "prettier.useEditorConfig": false
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "prettier.useEditorConfig": false,
+
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#003546",
+        "titleBar.inactiveBackground": "#60A5FA",
+        "titleBar.activeForeground": "#ffffff",
+        "titleBar.inactiveForeground": "#eeeeee",
+        "activityBar.background": "#003546",
+        "activityBar.foreground": "#ffffff"
+    }
 }

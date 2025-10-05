@@ -1,58 +1,15 @@
+@font-face {
+    font-family: 'Arialnarrow';
+    src: url('~@/assets/fonts/arialnarrow/arialnarrow.ttf') format('truetype');
+    font-weight: 100 1000;
+    font-style: normal;
+}
 // @font-face {
-//   font-family: 'Ubuntu';
-//   src: url("~@/assets/fonts/ubuntu/Ubuntu-Light.ttf") format('truetype');
-//   font-weight: 300;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'Ubuntu';
-//   src: url("~@/assets/fonts/ubuntu/Ubuntu-Regular.ttf") format('truetype');
-//   font-weight: 400;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'Ubuntu';
-//   src: url("~@/assets/fonts/ubuntu/Ubuntu-Medium.ttf") format('truetype');
-//   font-weight: 500;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'Ubuntu';
-//   src: url("~@/assets/fonts/ubuntu/Ubuntu-Bold.ttf") format('truetype');
-//   font-weight: 700;
-//   font-style: normal;
-// }
-
-// Montserrat
-// @font-face {
-//   font-family: 'Montserrat';
-//   src: url("~@/assets/fonts/montserrat/Montserrat-Light.ttf") format('truetype');
-//   font-weight: 300;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'Montserrat';
-//   src: url("~@/assets/fonts/montserrat/Montserrat-Regular.ttf") format('truetype');
-//   font-weight: 400;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'Montserrat';
-//   src: url("~@/assets/fonts/montserrat/Montserrat-Medium.ttf") format('truetype');
-//   font-weight: 500;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'Montserrat';
-//   src: url("~@/assets/fonts/montserrat/Montserrat-SemiBold.ttf") format('truetype');
-//   font-weight: 600;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'Montserrat';
-//   src: url("~@/assets/fonts/montserrat/Montserrat-Bold.ttf") format('truetype');
-//   font-weight: 700;
-//   font-style: normal;
+//     font-family: 'Montserrat';
+//     src: url('~@/assets/fonts/montserrat/Montserrat-Regular.otf')
+//         format('truetype');
+//     font-weight: 100 1000;
+//     font-style: normal;
 // }
 
 h1,
@@ -69,7 +26,7 @@ h5 {
 .h4,
 .h5 {
     font-weight: 500;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .h1 {
@@ -184,4 +141,85 @@ a {
             }
         }
     }
+}
+.n-title-xl {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 32px;
+    // font-family: "Montserrat", sans-serif;
+    // color: rgb(59, 75, 100);
+}
+.n-title-xl-alt {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+}
+.n-title-md {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+}
+.n-title-md-alt {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+}
+.n-title-aux {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+}
+.n-title-lg {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+}
+.n-title-lg-alt {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+}
+.n-title-sm {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.n-title-sm-alt {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+.n-title-xs {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
+.n-title-xs-alt {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+@media (max-width: 768px) {
+    .n-title-xl {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .n-title-md {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .n-title-lg {
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+.text-blue {
+    color: rgb(0, 171, 223);
+}
+
+.n-dark-blue {
+    background: rgba(0, 140, 186, 1);
 }

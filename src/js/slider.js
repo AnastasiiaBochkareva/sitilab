@@ -175,3 +175,28 @@ const corporateSlider = new Swiper('.corporate-slider', {
 //     },
 //   },
 // });
+const sliderWrapper = document.querySelector('.cart-order__slider');
+if (sliderWrapper) {
+    const cartOrderSlider = sliderWrapper.querySelector(
+        '.cart-order__slider_container'
+    );
+    const btnPrev = sliderWrapper.querySelector('.slider-navigation_prev');
+    const btnNext = sliderWrapper.querySelector('.slider-navigation_next');
+
+    const swiperParams = {
+        modules: [Navigation],
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        navigation: {
+            prevEl: btnPrev,
+            nextEl: btnNext,
+        },
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        grabCursor: true,
+        slideToClickedSlide: true,
+    };
+
+    objectSliders[0] = new Swiper(cartOrderSlider, swiperParams);
+}

@@ -27,3 +27,11 @@ mixin RadioBtn(param = {})
 	.radio-btn
 		input(type="radio" name=param.name value=param.value checked=param.checked disabled=param.disabled id=param.id)
 		label(for=param.id) #{param.text}
+
+mixin NRadioBtn(param = {})
+	.n-btn-radio
+		input(type="radio", name=`${param.name}`, id=`${param.radioId}`, checked=param.checked)
+		label(for=`${param.radioId}`)
+			p(class=`${param.labelClass}`)=param.label
+			if(param.price)
+				span.price=param.price

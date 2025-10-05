@@ -10,6 +10,7 @@
 @import 'ui/breakpoints.scss';
 @import 'ui/keyframes.scss';
 @import 'ui/global.scss';
+@import 'ui/pages.scss';
 
 // Основные стили
 @import '~@/components/components';
@@ -326,10 +327,10 @@
             margin-bottom: 6px;
         }
         &__title {
-            text-align: start;
+            text-align: left;
         }
         &__subtitle {
-            text-align: start;
+            text-align: left;
         }
         &__bottom {
             justify-content: initial;

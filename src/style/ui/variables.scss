@@ -14,6 +14,49 @@ $black: #000000;
 $gray: #7e7e7e;
 $darkGray: #323640;
 
+// ========== SHADOWS ==========
+$box-shadow-light: 0 2px 6px rgba(62, 57, 46, 0.1);
+$box-shadow: 0 4px 10px rgba(62, 57, 46, 0.25);
+$text-shadow: 1px 1px 5px rgba(62, 57, 46, 0.3);
+$text-shadow-light: 1px 1px 4px rgba(62, 57, 46, 0.1);
+
+// ========== BORDERS ==========
+$border-radius: 20px;
+$border-radius-50: 50%;
+$border-light: 1px solid #d9cec3;
+$border-dark: 1px solid #3e392e;
+// $gray-border: 1px solid rgb(178, 186, 198);
+
+// ========== SPACING ==========
+$indent5: 5px;
+$indent10: 10px;
+$indent20: 20px;
+$indent30: 30px;
+$indent40: 40px;
+$indent60: 60px;
+
+$padding-card: 20px;
+$padding-section: 60px;
+
+// ========== ZOOM ==========
+$zoom-transition-duration: 0.3s;
+$zoom-scale: 1.05;
+
+// ========== TYPOGRAPHY ==========
+$font-family-default: 'Montserrat', sans-serif;
+$font-family-heading: 'Montserrat', sans-serif;
+
+$font-size-base: 16px;
+$font-size-heading: 32px;
+
+// ========== TRANSITIONS ==========
+$transition-default: all 0.3s ease-in-out;
+$transition-fast: all 0.2s ease;
+$transition-slow: all 0.5s ease;
+
+// ========== TRANSFORM ==========
+$translate-default: translate(-5px, -5px);
+
 // Font
 $font-family: 'Montserrat', sans-serif;
 
@@ -51,6 +94,18 @@ $ui-red12: rgba(255, 86, 48, 0.12);
 $ui-green12: rgba(54, 179, 126, 0.12);
 $ui-yellow12: rgba(255, 171, 0, 0.12);
 $ui-purple12: rgba(101, 84, 192, 0.12);
+
+$blue: rgb(0, 171, 223);
+$blue-hover: rgb(21, 195, 250);
+$blue-back: rgb(230, 248, 253);
+
+$gray-light: rgb(217, 225, 233);
+$gray-border: rgb(178, 186, 198);
+
+$gray-text: rgb(142, 154, 171);
+
+$dark-blue: rgb(59, 75, 100);
+$light-blue: rgb(230, 248, 253);
 
 // mixins
 @mixin hideScroll {

@@ -13,7 +13,7 @@ mixin Attention(param={})
     if(param.isCartCardWarning)
         img(src=`/assets/img/categories/${param.img}` alt='warning')
         //- +Img({
-        //-     src: `img/${param.img}`,
+        //-     src: `${param.img}`,
         //-     alt: 'warning'
         //- })
         .n-title-sm-alt Данные анализы недоступны на дому, но вы можете их сдать в наших медицинских центрах
@@ -24,7 +24,7 @@ mixin Attention(param={})
                 if(param.img)
                     img(src='/assets/img/categories/trash.svg' alt='delite')
                     //- +Img({
-                    //-     src: 'img/trash.svg',
+                    //-     src: 'trash.svg',
                     //-     alt: 'delite'
                     //- })
                 span.n-title-xs Удалить эти анализы
@@ -33,7 +33,7 @@ mixin Attention(param={})
         .cart-order__alert
             img(src=`/assets/img/categories/${param.img}` alt='warning')
             //- +Img({
-            //-     src: `img/${param.img}`,
+            //-     src: `${param.img}`,
             //-     alt: 'warning'
             //- })
             .n-title-xs-alt Стоимость заказа не фиксируется при выборе данного способа оплаты.

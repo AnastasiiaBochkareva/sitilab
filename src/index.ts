@@ -16,7 +16,7 @@ import '@/js/tabs';
 // import "swiper/css/navigation";
 // import '@/sites/Analysis-result-search/components/Filter-result/Filter-result';
 // import '@/components/ui/Accordion/Accordion';
-// import { initModal } from '@/components/ui/MyModal/index';
+import { initModal } from './components/ui/MyModal/index';
 import { setActiveStars } from './mixins/reviews-rating/index';
 import { initAddressSelector } from './mixins/reviews-input/index';
 
@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setupModalClose();
   initCategoryItems();
-  // initModal();
+  initModal();
   initAddressSelector();
   setActiveStars();
   initTabs();

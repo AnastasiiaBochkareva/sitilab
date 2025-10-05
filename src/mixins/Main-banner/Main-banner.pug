@@ -1,25 +1,22 @@
 mixin Main-banner(param={})
-    .main-banner
-        .main-banner__slider
-            .swiper-wrapper 
-                .swiper-slide
-                    .container
-                        .main-banner__content
-                            .main-banner__title Выезд на дом 
-                                span за 1 рубль
-                            .main-banner__subtitle Сдавайте анализы, не выходя из дома
-                            .main-banner__btn 
-                                a(href="#") Подробнее
-                        .main-banner__img
-                            img(src="/assets/img/categories/main-banner.png", alt="")
-                .swiper-slide
-                    .container
-                        .main-banner__content
-                            .main-banner__title Выезд на дом за 1 рубль
-                            .main-banner__subtitle Сдавайте анализы, не выходя из дома
-                            .main-banner__btn 
-                                a(href="#") Подробнее
-                        .main-banner__img
-                            img(src="/assets/img/categories/main-banner.png", alt="")
-            .pagination-wrapper
-                .main-banner-pagination
+    .n-main-banner
+        .container
+            .new-banner__slider
+                .swiper-wrapper 
+                    each slide in param.slides
+                        .swiper-slide
+                            .main-banner__slide
+                                .main-banner__content
+                                    .main-banner__title=slide.title 
+                                    .main-banner__subtitle=slide.subtitle 
+                                    a(href="#" class='main-banner__btn')=slide.btn 
+                                .main-banner__img(class=slide.addImgClass)
+                                    if(slide.isImg)
+                                        +Img({
+                                            src: `${slide.img}.png`,
+                                            alt: 'slider img'
+                                        })
+                .slider-controls
+                    +Slider-navigation({
+                        mainBanner: true
+                    })

@@ -13,13 +13,12 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'linebreak-style': ['error', 'windows'],
     'no-param-reassign': ['error', { props: false }],
+    indent: ['error', 2],
   },
   settings: {
     'import/resolver': {
       alias: {
-        map: [
-          ['@', './src/'],
-        ],
+        map: [['@', './src/']],
       },
     },
   },

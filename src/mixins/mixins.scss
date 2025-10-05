@@ -1,20 +1,20 @@
-@import '../components/ui/Typography/Typography';
-@import '../components/ui/Input/Input';
-@import '../components/ui/Btn/Btn';
-@import '../components/ui/Grid/Grid';
-@import '../components/ui/Tooltip/Tooltip';
-@import '../components/ui/Menu/Menu';
-@import '../components/ui/Tag/Tag';
-@import '../components/ui/Breadcrumbs/Breadcrumbs';
-@import '../components/ui/MyModal/MyModal';
-@import '../components/ui/Accordion/Accordion';
-@import '../components/ui/СhoosingСity/ChoosingCity';
-@import '../components/ui/Pagination/Pagination';
-@import '../components/ui/Form/Form';
-@import '../components/ui/Loading/Loading';
-@import '../components/ui/Tabs/TabsNav';
-@import '../components/ui/Table/Table';
-@import '../components/ui/Filters/Filters';
+// @import '../components/ui/Typography/Typography';
+// @import '../components/ui/Input/Input';
+// @import '../components/ui/Btn/Btn';
+// @import '../components/ui/Grid/Grid';
+// @import '../components/ui/Tooltip/Tooltip';
+// @import '../components/ui/Menu/Menu';
+// @import '../components/ui/Tag/Tag';
+// @import '../components/ui/Breadcrumbs/Breadcrumbs';
+// @import '../components/ui/MyModal/MyModal';
+// @import '../components/ui/Accordion/Accordion';
+// @import '../components/ui/СhoosingСity/ChoosingCity';
+// @import '../components/ui/Pagination/Pagination';
+// @import '../components/ui/Form/Form';
+// @import '../components/ui/Loading/Loading';
+// @import '../components/ui/Tabs/TabsNav';
+// @import '../components/ui/Table/Table';
+// @import '../components/ui/Filters/Filters';
 
 @import 'Header/Header';
 @import 'Services-card/Services-card';
@@ -92,3 +92,33 @@
 
 @import 'Drop-down-list/Drop-down-list';
 @import 'Analysis-result-search/Analysis-result-search';
+
+// Footer-components
+@import 'Footer/Footer-accordion/index.scss';
+@import 'Footer/Footer-app/index.scss';
+@import 'Footer/Footer-bottom/index.scss';
+@import 'Footer/Footer-logo/index.scss';
+@import 'Footer/Footer-payment/index.scss';
+@import 'Footer/Footer-social/index.scss';
+@import 'Footer/index.scss';
+
+// Cart-page
+@import 'Btn-radio-full/index.scss';
+@import 'Attention/index.scss';
+@import 'cart-page/cart-card/index.scss';
+@import 'cart-page/cart-sidebar/index.scss';
+@import 'code/index.scss';
+@import 'tooltip-info/index.scss';
+@import 'toggle-block/index.scss';
+@import 'bonuses/index.scss';
+@import 'progress-bar/index.scss';
+@import 'slider/index.scss';
+
+// modals
+@import 'modals/modal-cheaper/index.scss';
+@import 'modals/modal-map/index.scss';
+@import 'modals/modal-required-documents/index.scss';
+
+// reviews
+@import 'Ars-sidebar-sheckboxes/index.scss';
+@import 'ars-sidebar-showmore/index.scss';

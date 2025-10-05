@@ -1,0 +1,16 @@
+.ars-sidebar {
+    &__showmore {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: $gray-text;
+        img {
+            max-width: 12px;
+            max-height: 6px;
+        }
+    }
+}

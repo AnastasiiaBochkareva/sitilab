@@ -1,6 +1,7 @@
 {
-    "name": "myWebpack",
+    "name": "mywebpack",
     "version": "1.0.0",
+    "type": "module",
     "description": "",
     "private": true,
     "scripts": {
@@ -12,12 +13,13 @@
     },
     "browserslist": "> 0.25%, not dead",
     "keywords": [],
-    "author": "Bogdan Makhnorylov <Bogdan.m.i@yandex.ru>",
+    "author": "-",
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.16.12",
         "@babel/eslint-parser": "^7.16.5",
         "@babel/preset-env": "^7.16.11",
+        "@babel/preset-typescript": "^7.27.1",
         "autoprefixer": "^10.4.2",
         "babel-loader": "^8.2.3",
         "bootstrap": "^5.2.3",
@@ -56,6 +58,8 @@
         "svg-sprite-loader": "^6.0.11",
         "svgo-loader": "^3.0.0",
         "terser-webpack-plugin": "^5.3.0",
+        "ts-loader": "^9.5.4",
+        "typescript": "^5.9.3",
         "webpack": "^5.68.0",
         "webpack-cli": "^4.9.2",
         "webpack-dev-server": "^4.7.4"

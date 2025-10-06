@@ -1,0 +1,80 @@
+.franchise-banner {
+  position: relative;
+  .img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    padding-top: 168px;
+    padding-bottom: 289px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    color: rgba(76, 81, 85, 1);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+  .c-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .c-btn {
+    padding: 15px;
+    flex: 1 1 calc(50% - 6px);
+    max-width: calc(50% - 6px);
+    border-radius: 8px;
+    min-height: 60px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    align-items: center;
+    span {
+      display: inline;
+    }
+  }
+  @include xs {
+    .container {
+      padding-top: 119px;
+      padding-bottom: 54px;
+      gap: 20px;
+    }
+    .title {
+      font-size: 32px;
+    }
+    .subtitle {
+      font-size: 24px;
+    }
+    .c-btns {
+      margin-top: 15px;
+      gap: 30px;
+    }
+    .c-btn {
+      padding: 10px;
+      flex: 1 1 100%;
+      max-width: 100%;
+      font-size: 20px;
+    }
+  }
+}

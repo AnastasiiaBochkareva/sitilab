@@ -1,538 +1,533 @@
 button {
-    cursor: pointer;
-    padding: 0;
-    background: none;
-    border: none;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
 }
 
-.c-btn {
-    position: relative;
-    background: transparent;
-    font-size: 14px;
-    line-height: 30px;
-    padding: 5px 10px;
-    outline: none;
-    border: none;
-    color: $text-1;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: $border-radius;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    max-width: 200px;
-    width: 100%;
-    transition: border $transition, color $transition,
-        background-color $transition, background $transition;
+// .c-btn {
 
-    svg {
-        width: 20px;
-        height: 20px;
-        margin-left: 20px;
-        fill: $ui-gray-2;
-        transition: fill $transition;
-    }
+//   &:hover:not([disabled]) {
+//     color: $text-5;
+//     svg {
+//       fill: $text-5;
+//     }
+//   }
+//   &[disabled] {
+//     opacity: 0.4;
+//     cursor: not-allowed;
+//   }
 
-    &:hover {
-        text-decoration: none;
-    }
+//   // COLORS
+//   // primary
+//   &_primary {
+//     background: $ui-primary;
+//     color: $ui-white;
 
-    &:hover:not([disabled]) {
-        color: $text-5;
-        svg {
-            fill: $text-5;
-        }
-    }
-    &[disabled] {
-        opacity: 0.4;
-        cursor: not-allowed;
-    }
+//     &:hover:not([disabled]) {
+//       background-color: $ui-primary-hover;
+//       color: $ui-white;
+//       svg {
+//         stroke: $ui-white;
+//         fill: transparent;
+//       }
+//     }
 
-    // COLORS
-    // primary
-    &_primary {
-        background: $ui-primary;
-        color: $ui-white;
+//     svg {
+//       stroke: $ui-white;
+//       fill: transparent;
+//     }
+//   }
 
-        &:hover:not([disabled]) {
-            background-color: $ui-primary-hover;
-            color: $ui-white;
-            svg {
-                stroke: $ui-white;
-                fill: transparent;
-            }
-        }
+//   // secondary
+//   &_secondary {
+//     background: $ui-secondary;
+//     color: $text-1;
 
-        svg {
-            stroke: $ui-white;
-            fill: transparent;
-        }
-    }
+//     &:hover:not([disabled]) {
+//       background-color: mix(black, $ui-secondary, 8);
+//       color: $text-1;
 
-    // secondary
-    &_secondary {
-        background: $ui-secondary;
-        color: $text-1;
+//       svg {
+//         fill: $ui-dark-2;
+//       }
+//     }
 
-        &:hover:not([disabled]) {
-            background-color: mix(black, $ui-secondary, 8);
-            color: $text-1;
+//     svg {
+//       fill: $ui-dark-2;
+//     }
+//   }
 
-            svg {
-                fill: $ui-dark-2;
-            }
-        }
+//   // outline
+//   &_outline {
+//     color: $text-1;
+//     border: 1px solid rgb(178, 186, 198);
+//     background-color: $ui-white;
 
-        svg {
-            fill: $ui-dark-2;
-        }
-    }
+//     &:hover:not([disabled]) {
+//       color: $ui-primary-hover;
+//     }
+//   }
 
-    // outline
-    &_outline {
-        color: $text-1;
-        border: 1px solid rgb(178, 186, 198);
-        background-color: $ui-white;
+//   &_dark {
+//     color: $text-4;
 
-        &:hover:not([disabled]) {
-            color: $ui-primary-hover;
-        }
-    }
+//     &:hover:not([disabled]) {
+//       color: $text-5;
+//     }
+//   }
 
-    &_dark {
-        color: $text-4;
+//   &_primary-dark {
+//     background: $ui-white;
+//     color: $text-1;
 
-        &:hover:not([disabled]) {
-            color: $text-5;
-        }
-    }
+//     &:hover:not([disabled]) {
+//       background-color: mix(black, $ui-white, 12);
+//       color: $text-1;
+//       svg {
+//         fill: $ui-dark-2;
+//       }
+//     }
 
-    &_primary-dark {
-        background: $ui-white;
-        color: $text-1;
+//     svg {
+//       fill: $ui-dark-2;
+//     }
+//   }
 
-        &:hover:not([disabled]) {
-            background-color: mix(black, $ui-white, 12);
-            color: $text-1;
-            svg {
-                fill: $ui-dark-2;
-            }
-        }
+//   &_secondary-dark {
+//     background: $ui-dark-2;
+//     color: $text-4;
 
-        svg {
-            fill: $ui-dark-2;
-        }
-    }
+//     &:hover:not([disabled]) {
+//       background-color: mix(white, $ui-dark-2, 8);
+//       color: $text-4;
 
-    &_secondary-dark {
-        background: $ui-dark-2;
-        color: $text-4;
+//       svg {
+//         fill: $ui-white;
+//       }
+//     }
 
-        &:hover:not([disabled]) {
-            background-color: mix(white, $ui-dark-2, 8);
-            color: $text-4;
+//     svg {
+//       fill: $ui-white;
+//     }
+//   }
 
-            svg {
-                fill: $ui-white;
-            }
-        }
+//   &_outline-dark {
+//     color: $text-4;
 
-        svg {
-            fill: $ui-white;
-        }
-    }
+//     &::after {
+//       // border
+//       content: '';
+//       position: absolute;
+//       inset: 0px;
+//       border: 1px solid $ui-white;
+//       border-radius: $border-radius;
+//       user-select: none;
+//       transition: border $transition;
+//     }
 
-    &_outline-dark {
-        color: $text-4;
+//     &:hover:not([disabled]) {
+//       color: $text-5;
 
-        &::after {
-            // border
-            content: '';
-            position: absolute;
-            inset: 0px;
-            border: 1px solid $ui-white;
-            border-radius: $border-radius;
-            user-select: none;
-            transition: border $transition;
-        }
+//       &::after {
+//         border-color: $ui-primary;
+//       }
 
-        &:hover:not([disabled]) {
-            color: $text-5;
+//       svg {
+//         fill: $ui-primary;
+//       }
+//     }
 
-            &::after {
-                border-color: $ui-primary;
-            }
+//     svg {
+//       fill: $ui-white;
+//     }
+//   }
 
-            svg {
-                fill: $ui-primary;
-            }
-        }
+//   // SIZES
+//   // medium size
+//   &_md {
+//     padding: 8px 16px;
 
-        svg {
-            fill: $ui-white;
-        }
-    }
+//     svg {
+//       width: 16px;
+//       height: 16px;
+//       margin-left: 16px;
+//       margin-right: -6px;
+//     }
+//   }
+//   &_100 {
+//     width: 100%;
 
-    // SIZES
-    // medium size
-    &_md {
-        padding: 8px 16px;
+//     svg {
+//       margin-left: auto;
+//     }
+//   }
 
-        svg {
-            width: 16px;
-            height: 16px;
-            margin-left: 16px;
-            margin-right: -6px;
-        }
-    }
-    &_100 {
-        width: 100%;
+//   // TYPE
+//   // square
+//   &_square {
+//     padding: 10px;
 
-        svg {
-            margin-left: auto;
-        }
-    }
-
-    // TYPE
-    // square
-    &_square {
-        padding: 10px;
-
-        svg {
-            width: 24px;
-            height: 24px;
-            margin: 0;
-        }
-    }
-    &_square.btn_md {
-        padding: 8px;
-        svg {
-            width: 20px;
-            height: 20px;
-            margin: 0;
-        }
-    }
-}
+//     svg {
+//       width: 24px;
+//       height: 24px;
+//       margin: 0;
+//     }
+//   }
+//   &_square.btn_md {
+//     padding: 8px;
+//     svg {
+//       width: 20px;
+//       height: 20px;
+//       margin: 0;
+//     }
+//   }
+// }
 
 // vite
 
 .btn-reset {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: center;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    span {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -2%;
-        color: $gray-text;
-    }
-    svg {
-        width: 20px;
-        height: 20px;
-    }
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: $gray-text;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 
-    @media (max-width: 768px) {
-        gap: 6px;
-    }
+  @media (max-width: 768px) {
+    gap: 6px;
+  }
 }
 
 .n-btn {
-    background-color: $blue;
-    transition: $transition-default;
-    border-radius: 5px;
-    padding: 9px 7px 7px;
+  background-color: $blue;
+  transition: $transition-default;
+  border-radius: 5px;
+  padding: 9px 7px 7px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  display: block;
+  text-align: center;
+  &:hover {
+    background-color: $blue-hover;
     text-decoration: none;
-    cursor: pointer;
-    border: none;
-    width: 100%;
-    display: block;
-    text-align: center;
-    &:hover {
-        background-color: $blue-hover;
-        text-decoration: none;
-    }
-    span {
-        color: #fff;
-    }
+  }
+  span {
+    color: #fff;
+  }
 }
 
 .n-btn-secondary {
-    background-color: #fff;
-    transition: $transition-default;
-    border-radius: 5px;
-    padding: 10px;
+  background-color: #fff;
+  transition: $transition-default;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  display: block;
+  text-align: center;
+  border: 1px solid rgb(0, 171, 223);
+  &:hover {
+    background-color: $blue-hover;
     text-decoration: none;
-    cursor: pointer;
-    border: none;
-    width: 100%;
-    display: block;
-    text-align: center;
-    border: 1px solid rgb(0, 171, 223);
-    &:hover {
-        background-color: $blue-hover;
-        span {
-            color: #fff;
-        }
-    }
     span {
-        color: rgb(0, 171, 223);
+      color: #fff;
     }
+  }
+  span {
+    color: rgb(0, 171, 223);
+  }
 }
 
 .n-btn-gray {
-    background-color: #fff;
-    transition: $transition-default;
-    border-radius: 5px;
-    padding: 10px;
+  background-color: #fff;
+  transition: $transition-default;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid rgb(142, 154, 171);
+  &:hover {
+    background-color: rgb(142, 154, 171, 0.1);
     text-decoration: none;
-    cursor: pointer;
-    border: none;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    justify-content: center;
-    text-align: center;
-    border: 1px solid rgb(142, 154, 171);
-    &:hover {
-        background-color: rgb(142, 154, 171, 0.1);
-    }
-    span {
-        color: rgb(142, 154, 171);
-    }
+  }
+  span {
+    color: rgb(142, 154, 171);
+  }
 }
 
 .n-btn-red {
+  border: 1.5px solid rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(234, 81, 109, 1),
+    rgba(255, 107, 149, 1) 100%
+  );
+  color: #fff;
+  padding: 26px 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  text-decoration: none;
+  &:not(.box-sizing .n-btn-red) {
     box-sizing: border-box;
-    border: 1.5px solid rgba(255, 255, 255, 1);
-    border-radius: 10px;
-    background: linear-gradient(
-        90deg,
-        rgba(234, 81, 109, 1),
-        rgba(255, 107, 149, 1) 100%
-    );
-    color: #fff;
-    padding: 26px 25px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    text-decoration: none;
+  }
 }
 
 .c-btn {
-    position: relative;
+  position: relative;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: border 0.2s ease-in-out, color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out, background 0.2s ease-in-out;
+
+  &:not(.c-btn_red, .c-btn_primary) {
+    color: rgb(142, 154, 171);
     background: transparent;
+  }
+  &:not(.franchise-banner .c-btn, .modal-business-application .c-btn) {
     font-size: 14px;
     line-height: 30px;
-    padding: 5px 10px;
-    outline: none;
-    border: none;
-    color: rgb(142, 154, 171);
-    text-decoration: none;
     font-weight: 500;
     border-radius: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
     max-width: 200px;
-    width: 100%;
-    transition: border 0.2s ease-in-out, color 0.2s ease-in-out,
-        background-color 0.2s ease-in-out, background 0.2s ease-in-out;
+    white-space: nowrap;
+    padding: 5px 10px;
+  }
 
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    fill: #c1c7d0;
+    transition: fill 0.2s ease-in-out;
+  }
+
+  &:hover:not(.default-styles a:hover) {
+    text-decoration: none;
+  }
+
+  &:hover:not([disabled]) {
+    color: #0a3fb4;
     svg {
-        width: 20px;
-        height: 20px;
-        margin-left: 20px;
-        fill: #c1c7d0;
-        transition: fill 0.2s ease-in-out;
+      fill: #0a3fb4;
+    }
+  }
+  &[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  // COLORS
+  // primary
+  &_primary {
+    background: rgb(0, 171, 223);
+    color: #fff;
+
+    &:hover:not([disabled]) {
+      background-color: rgb(21, 195, 250);
+      color: #fff;
+      svg {
+        stroke: #fff;
+        fill: transparent;
+      }
     }
 
-    &:hover {
-        text-decoration: none;
+    svg {
+      stroke: #fff;
+      fill: transparent;
+    }
+  }
+
+  // secondary
+  &_secondary {
+    background: #f4f5f7;
+    color: rgb(142, 154, 171);
+
+    &:hover:not([disabled]) {
+      background-color: mix(black, #f4f5f7, 8);
+      color: rgb(142, 154, 171);
+
+      svg {
+        fill: #051945;
+      }
+    }
+
+    svg {
+      fill: #051945;
+    }
+  }
+  &_red {
+    background: $red;
+    color: $white;
+
+    &:hover:not([disabled]) {
+      background-color: $red-hover;
+      color: $white;
+
+      svg {
+        fill: #051945;
+      }
+    }
+
+    svg {
+      fill: #051945;
+    }
+  }
+
+  // outline
+  &_outline {
+    color: rgb(142, 154, 171);
+    border: 1px solid rgb(178, 186, 198);
+    background-color: #fff;
+
+    &:hover:not([disabled]) {
+      color: rgb(21, 195, 250);
+    }
+  }
+
+  &_dark {
+    color: #ffffff;
+
+    &:hover:not([disabled]) {
+      color: #0a3fb4;
+    }
+  }
+
+  &_primary-dark {
+    background: #fff;
+    color: rgb(142, 154, 171);
+
+    &:hover:not([disabled]) {
+      background-color: mix(black, #fff, 12);
+      color: rgb(142, 154, 171);
+      svg {
+        fill: #051945;
+      }
+    }
+
+    svg {
+      fill: #051945;
+    }
+  }
+
+  &_secondary-dark {
+    background: #051945;
+    color: #ffffff;
+
+    &:hover:not([disabled]) {
+      background-color: mix(white, #051945, 8);
+      color: #ffffff;
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &_outline-dark {
+    color: #ffffff;
+
+    &::after {
+      // border
+      content: '';
+      position: absolute;
+      inset: 0px;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      user-select: none;
+      transition: border 0.2s ease-in-out;
     }
 
     &:hover:not([disabled]) {
-        color: #0a3fb4;
-        svg {
-            fill: #0a3fb4;
-        }
-    }
-    &[disabled] {
-        opacity: 0.4;
-        cursor: not-allowed;
-    }
+      color: #0a3fb4;
 
-    // COLORS
-    // primary
-    &_primary {
-        background: rgb(0, 171, 223);
-        color: #fff;
+      &::after {
+        border-color: rgb(0, 171, 223);
+      }
 
-        &:hover:not([disabled]) {
-            background-color: rgb(21, 195, 250);
-            color: #fff;
-            svg {
-                stroke: #fff;
-                fill: transparent;
-            }
-        }
-
-        svg {
-            stroke: #fff;
-            fill: transparent;
-        }
+      svg {
+        fill: rgb(0, 171, 223);
+      }
     }
 
-    // secondary
-    &_secondary {
-        background: #f4f5f7;
-        color: rgb(142, 154, 171);
-
-        &:hover:not([disabled]) {
-            background-color: mix(black, #f4f5f7, 8);
-            color: rgb(142, 154, 171);
-
-            svg {
-                fill: #051945;
-            }
-        }
-
-        svg {
-            fill: #051945;
-        }
+    svg {
+      fill: #fff;
     }
+  }
 
-    // outline
-    &_outline {
-        color: rgb(142, 154, 171);
-        border: 1px solid rgb(178, 186, 198);
-        background-color: #fff;
+  // SIZES
+  // medium size
+  &_md {
+    padding: 8px 16px;
 
-        &:hover:not([disabled]) {
-            color: rgb(21, 195, 250);
-        }
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-left: 16px;
+      margin-right: -6px;
     }
+  }
+  &_100 {
+    width: 100%;
 
-    &_dark {
-        color: #ffffff;
-
-        &:hover:not([disabled]) {
-            color: #0a3fb4;
-        }
+    svg {
+      margin-left: auto;
     }
+  }
 
-    &_primary-dark {
-        background: #fff;
-        color: rgb(142, 154, 171);
+  // TYPE
+  // square
+  &_square {
+    padding: 10px;
 
-        &:hover:not([disabled]) {
-            background-color: mix(black, #fff, 12);
-            color: rgb(142, 154, 171);
-            svg {
-                fill: #051945;
-            }
-        }
-
-        svg {
-            fill: #051945;
-        }
+    svg {
+      width: 24px;
+      height: 24px;
+      margin: 0;
     }
-
-    &_secondary-dark {
-        background: #051945;
-        color: #ffffff;
-
-        &:hover:not([disabled]) {
-            background-color: mix(white, #051945, 8);
-            color: #ffffff;
-
-            svg {
-                fill: #fff;
-            }
-        }
-
-        svg {
-            fill: #fff;
-        }
+  }
+  &_square.btn_md {
+    padding: 8px;
+    svg {
+      width: 20px;
+      height: 20px;
+      margin: 0;
     }
-
-    &_outline-dark {
-        color: #ffffff;
-
-        &::after {
-            // border
-            content: '';
-            position: absolute;
-            inset: 0px;
-            border: 1px solid #fff;
-            border-radius: 10px;
-            user-select: none;
-            transition: border 0.2s ease-in-out;
-        }
-
-        &:hover:not([disabled]) {
-            color: #0a3fb4;
-
-            &::after {
-                border-color: rgb(0, 171, 223);
-            }
-
-            svg {
-                fill: rgb(0, 171, 223);
-            }
-        }
-
-        svg {
-            fill: #fff;
-        }
-    }
-
-    // SIZES
-    // medium size
-    &_md {
-        padding: 8px 16px;
-
-        svg {
-            width: 16px;
-            height: 16px;
-            margin-left: 16px;
-            margin-right: -6px;
-        }
-    }
-    &_100 {
-        width: 100%;
-
-        svg {
-            margin-left: auto;
-        }
-    }
-
-    // TYPE
-    // square
-    &_square {
-        padding: 10px;
-
-        svg {
-            width: 24px;
-            height: 24px;
-            margin: 0;
-        }
-    }
-    &_square.btn_md {
-        padding: 8px;
-        svg {
-            width: 20px;
-            height: 20px;
-            margin: 0;
-        }
-    }
+  }
 }

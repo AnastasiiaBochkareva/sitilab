@@ -3,7 +3,7 @@
     transform: rotate(180deg) !important;
     left: -25px;
   }
-  &_next {
+  &_next:not(.main-analysis-slider .a-sale__cards .slider-navigation_next) {
     transform: rotate(0deg) !important;
     right: -25px;
   }
@@ -48,4 +48,8 @@
       display: none;
     }
   }
+}
+.main-analysis-slider .a-sale__cards .slider-navigation_next svg,
+.main-analysis-slider .a-sale__cards .slider-navigation_prev svg {
+  transform: rotate(-90deg);
 }

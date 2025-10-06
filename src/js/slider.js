@@ -346,3 +346,61 @@ window.addEventListener('resize', () => {
 
 initOrderSlider();
 initLabudaAnalysisSlider();
+
+function createSlider(element, navBlock) {
+  const btnPrev = navBlock.querySelector('.slider-navigation_prev');
+  const btnNext = navBlock.querySelector('.slider-navigation_next');
+  const swiperParams = {
+    modules: [Navigation],
+    slidesPerView: '3',
+    spaceBetween: 20,
+    navigation: {
+      prevEl: btnPrev,
+      nextEl: btnNext,
+    },
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    grabCursor: true,
+    slideToClickedSlide: true,
+    breakpoints: {
+      1440: {
+        slidesPerView: '3',
+        spaceBetween: 20,
+      },
+      800: {
+        slidesPerView: '2.1',
+      },
+      450: {
+        slidesPerView: '1.5',
+        spaceBetween: 10,
+      },
+      300: {
+        slidesPerView: '1.1',
+        spaceBetween: 10,
+      },
+    },
+  };
+  return new Swiper(element, swiperParams);
+}
+
+const modalCheaper = document.querySelectorAll('.modal-cheaper__slider');
+if (modalCheaper) {
+  modalCheaper.forEach((element, index) => {
+    const navBlock = element.previousElementSibling;
+    if (!navBlock.classList.contains('modal-cheaper__navigation')) return;
+
+    objectSliders[index] = createSlider(element, navBlock);
+  });
+}
+
+document.addEventListener('createSlider', (event) => {
+  if (!event || (event && !event.detail)) return;
+
+  const element = document.querySelector(event?.detail?.sliderClass);
+  const navBlock = document.querySelector(event?.detail?.sliderNavigationClass);
+
+  if (!element || !navBlock) return;
+
+  createSlider(element, navBlock);
+});

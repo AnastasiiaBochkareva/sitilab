@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Arialnarrow';
-    src: url('~@/assets/fonts/arialnarrow/arialnarrow.ttf') format('truetype');
-    font-weight: 100 1000;
-    font-style: normal;
+  font-family: 'Arialnarrow';
+  src: url('~@/assets/fonts/arialnarrow/arialnarrow.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-style: normal;
 }
 // @font-face {
 //     font-family: 'Montserrat';
@@ -17,7 +17,7 @@ h2,
 h3,
 h4,
 h5 {
-    margin: 0;
+  margin: 0;
 }
 
 .h1,
@@ -25,201 +25,201 @@ h5 {
 .h3,
 .h4,
 .h5 {
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .h1 {
-    font-size: 56px;
-    line-height: 64px;
+  font-size: 56px;
+  line-height: 64px;
 }
 .h2 {
-    font-size: 40px;
-    line-height: 48px;
+  font-size: 40px;
+  line-height: 48px;
 }
 .h3 {
-    font-size: 28px;
-    line-height: 36px;
+  font-size: 28px;
+  line-height: 36px;
 }
 .h4 {
-    font-size: 24px;
-    line-height: 28px;
+  font-size: 24px;
+  line-height: 28px;
 }
 .h5 {
-    font-size: 20px;
-    line-height: 26px;
+  font-size: 20px;
+  line-height: 26px;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
-a {
-    color: $text-5;
-    text-decoration: none;
-    position: relative;
-    transition: color $transition;
+a:not(.default-styles a) {
+  color: $text-5;
+  text-decoration: none;
+  position: relative;
+  transition: color $transition;
 
-    > * {
-        cursor: pointer;
+  > * {
+    cursor: pointer;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.link {
+    // Colors
+    &_dark {
+      color: $text-2;
+    }
+    &_light {
+      color: $text-4;
     }
 
-    &:hover {
-        text-decoration: underline;
+    // Modifications
+    &_icon {
+      &-after,
+      &-before,
+      &-around {
+        svg.svg-icon {
+          fill: $ui-gray-2;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      &-after {
+        padding-right: 16px;
+        svg {
+          right: 0px;
+        }
+      }
+      &-before {
+        padding-left: 20px;
+        svg {
+          left: 0px;
+        }
+      }
+      &-around {
+        padding-right: 16px;
+        padding-left: 20px;
+        svg {
+          &:first-child {
+            left: 0px;
+          }
+          &:last-child {
+            right: 0px;
+          }
+        }
+      }
     }
 
-    &.link {
-        // Colors
-        &_dark {
-            color: $text-2;
-        }
-        &_light {
-            color: $text-4;
-        }
+    &-adaptive {
+      @include sm {
+        width: 100%;
+        display: inline-block;
 
-        // Modifications
-        &_icon {
-            &-after,
-            &-before,
-            &-around {
-                svg.svg-icon {
-                    fill: $ui-gray-2;
-                    width: 16px;
-                    height: 16px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
-
-            &-after {
-                padding-right: 16px;
-                svg {
-                    right: 0px;
-                }
-            }
-            &-before {
-                padding-left: 20px;
-                svg {
-                    left: 0px;
-                }
-            }
-            &-around {
-                padding-right: 16px;
-                padding-left: 20px;
-                svg {
-                    &:first-child {
-                        left: 0px;
-                    }
-                    &:last-child {
-                        right: 0px;
-                    }
-                }
-            }
+        &:hover {
+          text-decoration: none;
         }
 
-        &-adaptive {
-            @include sm {
-                width: 100%;
-                display: inline-block;
-
-                &:hover {
-                    text-decoration: none;
-                }
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    right: 0px;
-                    transform: translateY(-50%) rotate(-90deg);
-                    width: 20px;
-                    height: 20px;
-                    background: url('~@/assets/img/svg/select-toggle.svg')
-                        center center no-repeat;
-                }
-            }
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0px;
+          transform: translateY(-50%) rotate(-90deg);
+          width: 20px;
+          height: 20px;
+          background: url('~@/assets/img/svg/select-toggle.svg') center center
+            no-repeat;
         }
+      }
     }
+  }
 }
 .n-title-xl {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 32px;
-    // font-family: "Montserrat", sans-serif;
-    // color: rgb(59, 75, 100);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  // font-family: "Montserrat", sans-serif;
+  // color: rgb(59, 75, 100);
 }
 .n-title-xl-alt {
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 28px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 28px;
 }
 .n-title-md {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 24px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
 }
 .n-title-md-alt {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 28px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
 }
 .n-title-aux {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 22px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
 }
 .n-title-lg {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
 }
 .n-title-lg-alt {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
 }
 .n-title-sm {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .n-title-sm-alt {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
 }
 .n-title-xs {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 22px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
 }
 .n-title-xs-alt {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 @media (max-width: 768px) {
-    .n-title-xl {
-        font-size: 22px;
-        line-height: 22px;
-    }
-    .n-title-md {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 18px;
-    }
-    .n-title-lg {
-        font-size: 14px;
-        line-height: 14px;
-    }
+  .n-title-xl {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .n-title-md {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .n-title-lg {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 .text-blue {
-    color: rgb(0, 171, 223);
+  color: rgb(0, 171, 223);
 }
 
 .n-dark-blue {
-    background: rgba(0, 140, 186, 1);
+  background: rgba(0, 140, 186, 1);
 }

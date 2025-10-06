@@ -118,6 +118,7 @@
 @import 'modals/modal-cheaper/index.scss';
 @import 'modals/modal-map/index.scss';
 @import 'modals/modal-required-documents/index.scss';
+@import 'modals/modal-business-application/index.scss';
 
 // reviews
 @import 'Ars-sidebar-sheckboxes/index.scss';
@@ -150,3 +151,13 @@
 
 // main
 @import 'N-cards-links/index.scss';
+
+// analysis-result-search
+@import 'ars-sidebar/index';
+@import 'ars-sidebar-popular/index';
+@import 'ars-tags/index';
+@import 'ars-filters-modal/index';
+@import 'ars-categories-modal/index';
+
+// Franchise
+@import 'Franchise-page/Franchise-banner/index';

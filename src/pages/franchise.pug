@@ -1,0 +1,11 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Франшиза'
+    - const description = 'Описание'
+
+block content
+    .franchise-page.default-styles.font.box-sizing
+        +Franchise-banner({})
+
+        +Modal-business-application()

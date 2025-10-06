@@ -1,0 +1,13 @@
+mixin Franchise-banner(param={})
+    .franchise-banner.banner
+        .img-container
+            +Img({
+                src: 'franchise-banner.jpg',
+                alt: 'franchise-banner'
+            })
+        .container
+            .title.text-blue Франшиза с паушальным взносом 1 ₽
+            .subtitle Ваш прибыльный бизнес начинается здесь
+            .c-btns
+                a(href='#' data-open-modal='#modal-business-application').c-btn.c-btn_red Узнайте больше о <br class="xs-br"> нашей франшизе
+                a(href='#').c-btn.c-btn_primary Получить уникальное предложение

@@ -1,0 +1,182 @@
+.franchise-survey {
+  background-color: $blue;
+  padding: 52.5px 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    min-height: 700px;
+  }
+  .survey {
+    &__step {
+      display: none;
+      gap: 30px 86px;
+      align-items: center;
+      grid-template-columns: 1fr 462px;
+      &.active {
+        display: grid;
+      }
+    }
+  }
+  .franchise-form {
+    padding: 0;
+    .title {
+      color: rgba(255, 255, 255, 1);
+      font-size: 33.26px;
+      font-weight: 600;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    .form {
+      padding: 0;
+      &__row {
+        gap: 18px 28px;
+        max-width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 28px;
+        }
+      }
+    }
+    .v-input {
+      max-width: calc(50% - 14px);
+      &__placeholder {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 100%;
+      }
+    }
+    input {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 100%;
+      padding: 25px 5px 25px 20px;
+    }
+    .disclaimer {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 100%;
+      order: 2;
+    }
+    .c-btn {
+      max-width: 100%;
+      order: 1;
+      font-size: 28px;
+      line-height: 100%;
+      max-height: 69px;
+      padding: 17.5px;
+    }
+  }
+  .title:not(.franchise-form .title) {
+    color: $white;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    grid-column: 1 / 3;
+  }
+
+  .title-sm {
+    color: $white;
+    font-size: 33.26px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .button-back {
+    margin-bottom: 50px;
+    svg {
+      width: 71px;
+      height: 71px;
+      stroke: $white;
+      fill: transparent;
+    }
+  }
+  .img-container {
+    max-width: 462px;
+    width: 100%;
+  }
+  .radio-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    align-items: stretch;
+    justify-items: stretch;
+    grid-auto-rows: 1fr;
+  }
+  .radio-btn {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    label {
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 38px 20px;
+
+      color: $white;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    input:checked + label {
+      background-color: rgba(234, 81, 109, 1);
+    }
+  }
+  @include sm {
+    min-height: 725px;
+    padding: 40px 0;
+    .container {
+      gap: 20px;
+    }
+    .survey {
+      &__step {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+    }
+    .radio-btns {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+    .img-container {
+      max-width: 220px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .title:not(.franchise-form .title) {
+      font-size: 20px;
+      grid-column: 1 / 2;
+    }
+    .title-sm {
+      font-size: 20px;
+      margin-bottom: 20px;
+      padding-left: 54px;
+    }
+    .radio-btn {
+      label {
+        padding: 18px 5px;
+        font-size: 20px;
+      }
+    }
+    .button-back {
+      position: absolute;
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

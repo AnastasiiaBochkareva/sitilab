@@ -702,18 +702,34 @@
 
 .modal-fixed {
   display: none;
+  > * {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(50px); // чтобы по умолчанию был немного ниже
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
   &.active {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
+    // overflow: hidden;
     z-index: 8888;
     background-color: rgba(34, 34, 34, 0.7);
     align-items: center;
     justify-content: center;
     display: flex;
+    opacity: 1;
+
+    height: 100%;
+    overflow: auto;
+
+    > * {
+      opacity: 1;
+      pointer-events: auto;
+      animation: modalShow 0.3s forwards;
+    }
   }
   &__close {
     position: absolute;

@@ -316,7 +316,7 @@ button {
     color: rgb(142, 154, 171);
     background: transparent;
   }
-  &:not(.franchise-banner .c-btn, .modal-business-application .c-btn) {
+  &:not(.franchise-page .c-btn) {
     font-size: 14px;
     line-height: 30px;
     font-weight: 500;

@@ -119,6 +119,7 @@
 @import 'modals/modal-map/index.scss';
 @import 'modals/modal-required-documents/index.scss';
 @import 'modals/modal-business-application/index.scss';
+@import 'modals/modal-franchise-format/index.scss';
 
 // reviews
 @import 'Ars-sidebar-sheckboxes/index.scss';
@@ -161,3 +162,10 @@
 
 // Franchise
 @import 'Franchise-page/Franchise-banner/index';
+@import 'Franchise-page/Franchise-format/index';
+@import 'Franchise-page/Franchise-advantages/index';
+@import 'Franchise-page/Franchise-form/index';
+@import 'Franchise-page/Franchise-accordion/index';
+@import 'Franchise-page/Franchise-slider/index';
+@import 'Franchise-page/Franchise-survey/index';
+@import 'Franchise-page/Franchise-calculation/index';

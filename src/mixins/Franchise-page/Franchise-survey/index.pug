@@ -1,0 +1,58 @@
+mixin Franchise-survey(param={})
+    .franchise-survey.survey
+        .container 
+            .survey__content
+                .survey__step.active
+                    .title.survey__title.active Ответьте на 3 вопроса - получите финрасчет по открытию вашего Ситилаб
+                    div
+                        .title-sm 1. Есть ли у Вас подходящее помещение:
+                        .radio-btns
+                            +RadioBtn({name: 'premises', value: 'premises-1', id: '', text: 'Да, в собственности'})
+                            +RadioBtn({name: 'premises', value: 'premises-2', id: '', text: 'Нахожусь в поиске'})
+                            +RadioBtn({name: 'premises', value: 'premises-3', id: '', text: 'Нет, нужна помощь в подборе'})
+                    .img-container
+                        +Img({
+                            src: 'franchise-calculation.png',
+                            alt: 'franchise-calculation'
+                        })
+                .survey__step
+                    div
+                        button.button-back
+                            +icon('franchise-back')
+                        .title-sm 2. Формат франшизы
+                        .radio-btns
+                            +RadioBtn({name: 'format', value: 'format-1', id: '', text: 'Процедурный кабинет'})
+                            +RadioBtn({name: 'format', value: 'format-2', id: '', text: 'Медицинский центр'})
+                            +RadioBtn({name: 'format', value: 'format-3', id: '', text: 'Процедурный кабинет + врач'})
+                    .img-container
+                        +Img({
+                            src: 'franchise-calculation.png',
+                            alt: 'franchise-calculation'
+                        })
+                .survey__step
+                    div
+                        button.button-back
+                            +icon('franchise-back')
+                        .title-sm 3. Есть ли опыт предпринимательской деятельности в медицине?
+                        .radio-btns
+                            +RadioBtn({name: 'experience', value: 'experience-1', id: '', text: 'Есть опыт в медицине, но не в бизнесе'})
+                            +RadioBtn({name: 'experience', value: 'experience-2', id: '', text: 'Есть опыт управления бизнесом в медицине'})
+                            +RadioBtn({name: 'experience', value: 'experience-3', id: '', text: 'Это мой первый опыт'})
+                            +RadioBtn({name: 'experience', value: 'experience-4', id: '', text: 'Есть опыт управления бизнесом, но не в медицине'})
+                    .img-container
+                        +Img({
+                            src: 'franchise-calculation.png',
+                            alt: 'franchise-calculation'
+                        })
+                .survey__step.final__step
+                    +Franchise-form({
+                        title: 'Ваши контактные данные для консультации специалиста и отправки финансового отчета'
+                    })
+                    .img-container
+                        +Img({
+                            src: 'franchise-calculation.png',
+                            alt: 'franchise-calculation'
+                        })
+            +Progress-bar({
+                franchiseProgress: true,
+            })

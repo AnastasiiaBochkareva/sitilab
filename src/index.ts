@@ -19,6 +19,9 @@ import '@/js/tabs';
 import { initModal } from './components/ui/MyModal/index';
 import { setActiveStars } from './mixins/reviews-rating/index';
 import { initAddressSelector } from './mixins/reviews-input/index';
+import { initFranchiseSurvey } from './mixins/Franchise-page/Franchise-survey/index';
+import { setupProgressBar } from './mixins/progress-bar/index';
+import { processFranchiseCalculation } from './mixins/Franchise-page/Franchise-calculation/index';
 
 // сайдбар
 function setupAccordion(category: HTMLElement) {
@@ -364,4 +367,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   setupModalEventListeners();
   initPaginationCircles();
+  initFranchiseSurvey();
+  setupProgressBar();
+  processFranchiseCalculation();
+
+  document.addEventListener('submitSurvey', (e: Event) => {
+    const { detail } = e as CustomEvent;
+    console.log(detail);
+  });
 });

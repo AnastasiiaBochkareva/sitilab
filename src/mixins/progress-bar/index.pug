@@ -14,3 +14,24 @@ mixin Progress-bar(param={})
 
             if(param.text)
                 .n-title-xs-alt=param.text
+    if(param.franchiseProgress)
+        .progress-bar
+            .progress-bar__fill
+    if(param.franchiseCalculation)
+        .progress-bar__wrapper
+            //- .progress-bar
+            //-     .progress-bar__fill
+            //-     .progress-bar__thumb
+            .progress-bar__params
+                if(param.population)
+                    +RadioBtn({name: 'population', value: '20 000', id: '', text: '20 000'})
+                    +RadioBtn({name: 'population', value: '100 000', id: '', text: '100 000'})
+                    +RadioBtn({name: 'population', value: '500 000', id: '', text: '500 000'})
+                    +RadioBtn({name: 'population', value: '1 000 000', id: '', text: '1 000 000'})
+                    +RadioBtn({name: 'population', value: '3 000 000', id: '', text: '3 000 000'})
+                    +RadioBtn({name: 'population', value: '6 000 000', id: '', text: '6 000 000'})
+                    +RadioBtn({name: 'population', value: '6 000 001', id: '', text: '> 6 000 000'})
+                if(param.hours)
+                    +RadioBtn({name: 'hours', value: '2', id: '', text: '2-4 часа'})
+                    +RadioBtn({name: 'hours', value: '4', id: '', text: '4-6 часов'})
+                    +RadioBtn({name: 'hours', value: '8', id: '', text: '+8 часов в день'})

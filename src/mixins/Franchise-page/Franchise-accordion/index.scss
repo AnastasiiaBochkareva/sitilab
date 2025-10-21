@@ -1,0 +1,91 @@
+.franchise-accordion {
+  background-color: rgba(243, 247, 250, 1);
+  padding: 48px 0 44px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .accordion {
+    max-width: 1180px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__item {
+      border-radius: 8px;
+      background-color: $white;
+      border-bottom: none;
+      padding: 26.5px 32px;
+      &.active {
+        .accordion__icon svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &__head {
+      &-text {
+        color: rgba(47, 52, 65, 1);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      &:hover {
+        .accordion__head-text {
+          color: rgba(47, 52, 65, 1);
+        }
+      }
+      &-content {
+        padding: 0;
+        min-height: initial;
+        max-width: calc(100% - 40px);
+      }
+    }
+    &__icon {
+      width: 36px;
+      height: 36px;
+      right: 0;
+      svg {
+        width: 36px;
+        height: 36px;
+        stroke: #606981;
+        fill: transparent;
+      }
+    }
+    &__body {
+      &-content {
+        padding: 27.5px 0 2.5px;
+        color: rgba(47, 52, 65, 1);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: left;
+        max-width: calc(100% - 40px);
+      }
+    }
+  }
+  @include xs {
+    .accordion {
+      &__head {
+        &-text {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 31px;
+          letter-spacing: -0.6px;
+          text-align: left;
+        }
+      }
+      &__body {
+        &-content {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 31px;
+          letter-spacing: -0.6px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

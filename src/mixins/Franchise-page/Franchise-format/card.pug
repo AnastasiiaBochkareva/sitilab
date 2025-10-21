@@ -1,0 +1,13 @@
+mixin Franchise-format-card(param={})
+    .format__card
+        .format__card_head
+            .name=param.name
+            each desc in [].concat(param.description || [])
+                p.description= desc
+        .format__card_body
+            .img-container 
+                +Img({
+                    src: `franchise-scheme-${param.img}.png`,
+                    alt: `franchise-scheme-${param.img}`
+                })
+            a(href='#' data-open-modal=`#modal-franchise-format-${param.number}`).c-btn.c-btn_primary Подробнее

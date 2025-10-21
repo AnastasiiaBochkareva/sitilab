@@ -1,35 +1,15 @@
-.modal-business-application {
+.modal-business-application,
+.modal-franchise-format {
   background-color: $white;
   border-radius: 20px;
   margin: 20px 17px;
-  .modal {
-    &__head {
-      position: relative;
-      padding: 96px 96px 20px;
-    }
-    &__body {
-      padding: 20px 96px 96px;
-    }
-    &__close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      svg {
-        width: 24px;
-        height: 24px;
-        fill: rgba(177, 178, 180, 1);
-      }
-    }
-  }
-  .title {
-    color: rgba(76, 81, 85, 1);
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    text-transform: uppercase;
-  }
+
+  max-height: calc(100% - 40px);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   .form {
     display: flex;
     flex-direction: column;
@@ -49,6 +29,7 @@
     white-space: nowrap;
     padding: 16px 5px;
     font-family: 'Montserrat', sans-serif;
+    gap: 5px;
   }
   .v-input {
     &__placeholder {
@@ -106,24 +87,36 @@
     font-weight: 400;
     line-height: 15px;
     letter-spacing: 0%;
-    margin-top: 40px;
+    margin-top: 10px;
     max-width: 1177px;
     width: 100%;
   }
-
+  .modal {
+    &__head {
+      position: relative;
+    }
+    &__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: rgba(177, 178, 180, 1);
+      }
+    }
+  }
+  .title {
+    color: rgba(76, 81, 85, 1);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+  }
   @include xs {
     border-radius: 10px;
-    .title {
-      font-size: 16px;
-    }
-    .modal {
-      &__head {
-        padding: 44px 24px 10px;
-      }
-      &__body {
-        padding: 10px 24px 30px;
-      }
-    }
     .form {
       gap: 10px;
       &__row {
@@ -147,11 +140,66 @@
       color: rgba(51, 51, 51, 1);
       font-weight: 500;
       line-height: 100%;
-      margin-top: 23px;
+      margin-top: 13px;
     }
     .c-btn {
       font-size: 20px;
       line-height: 100%;
+    }
+    &:not(.modal-success) {
+      .title {
+        font-size: 16px;
+      }
+    }
+  }
+}
+.modal-business-application {
+  &:not(.modal-success) {
+    .title {
+      margin-bottom: 10px;
+    }
+    .modal__body {
+      padding: 96px;
+    }
+  }
+  &.modal-success {
+    .title {
+      margin-bottom: 20px;
+    }
+    .modal__body {
+      padding: 96px 96px 48px;
+    }
+  }
+  .subtitle {
+    color: rgba(76, 81, 85, 1);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  @include xs {
+    .subtitle {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    &:not(.modal-success) {
+      .title {
+        margin-bottom: 10px;
+      }
+      .modal__body {
+        padding: 44px 24px 30px;
+      }
+    }
+    &.modal-success {
+      .title {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+      .modal__body {
+        padding: 40px 24px;
+      }
     }
   }
 }

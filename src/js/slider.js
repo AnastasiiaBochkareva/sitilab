@@ -149,6 +149,32 @@ const corporateSlider = new Swiper('.corporate-slider', {
     },
   },
 });
+
+// Franchise-page
+const franchiseSlider = new Swiper('.franchise-slider', {
+  modules: [Navigation, Pagination],
+  slidesPerView: '2',
+  spaceBetween: 0,
+  navigation: {
+    prevEl: document.querySelector('.slider-nav_prev'),
+    nextEl: document.querySelector('.slider-nav_next'),
+  },
+  pagination: {
+    el: '.franchise-slider-pagination',
+  },
+  noSwiping: true,
+  grabCursor: true,
+  slideToClickedSlide: true,
+  breakpoints: {
+    1025: {
+      slidesPerView: '2',
+    },
+    300: {
+      slidesPerView: '1',
+    },
+  },
+});
+
 // const mainBannerSlider = new Swiper('.main-banner__slider', {
 //   modules: [Pagination, Autoplay],
 //   slidesPerView: '1',

@@ -1,0 +1,13 @@
+mixin Franchise-accordion(param={})
+    .franchise-accordion
+        .container
+            ul.accordion
+                each item in [].concat(param.list || [])
+                    li.accordion__item
+                        .accordion__head
+                            .accordion__head-content
+                                .accordion__head-text!=item.head
+                            .accordion__icon
+                                +icon('a-arrow-down')
+                        .accordion__body
+                            .accordion__body-content!=item.body

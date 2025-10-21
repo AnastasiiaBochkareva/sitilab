@@ -1,0 +1,7 @@
+mixin Franchise-format(param={})
+    .franchise-format.format
+        .container
+            .title Форматы франшизы
+            .format__cards
+                each card in param.cards
+                    +Franchise-format-card(card)

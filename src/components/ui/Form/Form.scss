@@ -5,7 +5,10 @@
   position: relative;
   width: 100%;
 
-  &__row:not(.modal-business-application .form__row) {
+  &__row:not(
+      .business-application-form .form__row,
+      .franchise-form .form__row
+    ) {
     display: flex;
     gap: 8px;
     align-items: flex-start;

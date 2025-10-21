@@ -12,8 +12,8 @@
 
 mixin Toggle(param = {})
 
-    - param.id = param.id || 'id-' + Math.floor(Math.random() * 666);
-    - param.name = param.name || 'name-' + Math.floor(Math.random() * 666);
+    - param.id = param.id || 'id-' + Math.floor(Math.random() * 6666);
+    - param.name = param.name || 'name-' + Math.floor(Math.random() * 6666);
 
     .toggle(
         class=param.reverse ? 'toggle_reverse' : ''
@@ -21,8 +21,10 @@ mixin Toggle(param = {})
     )
         - if (param.labelTwo)
             label(for=param.id) #{param.labelTwo}
-        
-        input(type="checkbox" name=param.name id=param.id value=param.value checked=param.checked disabled=param.disabled)
+        if(!param.isRadio)
+            input(type="checkbox" name=param.name id=param.id value=param.value checked=param.checked disabled=param.disabled)
+        else
+            input(type="radio" name=param.name id=param.id value=param.value checked=param.checked disabled=param.disabled)
         label(for=param.id) #{param.label}
             if(param.icon)
                 +icon(`${param.iconName}`)

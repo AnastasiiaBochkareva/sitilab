@@ -1,0 +1,136 @@
+.franchise-form {
+  padding: 179px 0;
+  .form {
+    background-color: $blue;
+    border-radius: 20px;
+    padding: 54px;
+    align-items: center;
+    &__row {
+      display: flex;
+      gap: 19px 23px;
+      flex-wrap: wrap;
+      max-width: 677px;
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .title {
+    color: $white;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .v-input {
+    flex: 0 0 50%;
+    width: 100%;
+    max-width: calc(50% - 12px);
+    &__placeholder {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+      color: $white;
+      cursor: text;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 600;
+      transition: top $transition, font-size $transition;
+    }
+  }
+  input {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 18px 5px 18px 20px;
+    border: none !important;
+    color: $white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: -0.28px;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &:required {
+      + .v-input__placeholder::before {
+        content: '*';
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        color: $text-error;
+      }
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      + .v-input__placeholder {
+        display: none;
+      }
+    }
+  }
+  .disclaimer {
+    flex: 1;
+    color: $white;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.6px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  .c-btn {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 200px;
+    max-height: 56px;
+    padding: 16px;
+    font-size: 14.88px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: center;
+  }
+  @include sm {
+    padding: 38px 0 49px;
+    background-color: $blue;
+    .form {
+      padding: 0;
+      &__row {
+        gap: 10px;
+        flex-direction: column;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .title {
+      font-size: 20px;
+      line-height: 100%;
+      margin-bottom: 35px;
+    }
+    .v-input {
+      flex: 1;
+      max-width: 100%;
+    }
+    .c-btn {
+      max-width: 100%;
+      font-size: 20px;
+      line-height: 100%;
+      order: 1;
+    }
+    .disclaimer {
+      order: 2;
+      margin-top: 30px;
+    }
+  }
+}

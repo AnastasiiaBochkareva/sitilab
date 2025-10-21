@@ -1,18 +1,19 @@
 mixin Modal-business-application(param={})
-    .modal-fixed.active(id='modal-business-application')
+    .modal-fixed(id='modal-business-application')
         .modal-business-application
             .modal__head
-                .title Заявка на консультацию по запуску бизнеса с Ситилаб
-                button.modal__close(data-close-modal)
+                button.modal__close(data-close-modal aria-label='Закрыть модальное окно')
                     +icon('close')
             .modal__body
-                form.form
-                    .form__row
-                        +Input({ placeholder: 'Имя', required: false })
-                        +Input({ placeholder: 'Телефон', required: false, mask: 'phone' })
-                        +Input({ placeholder: 'Почта', required: false, type: email })
-                        +Input({ placeholder: 'Город', required: false, type: email })
-                    .form__row
-                        button(type='reset').c-btn.c-btn_red Отправить заявку
-                p.disclaimer * Нажимая кнопку «Отправить», вы даете свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в согласии на обработку персональных данных и на получение вами рекламной информации (в том числе в форме рекламной рассылки) в информационных, рекламно-информационных целях.
+                +Business-application-form()
+                
+    .modal-fixed(id='modal-business-application-success')
+        .modal-business-application.modal-success
+            .modal__head
+                button.modal__close(data-close-modal aria-label='Закрыть модальное окно')
+                    +icon('close')
+            .modal__body
+                .title Ваша заявка отправлена!
+                p.subtitle Спасибо за заявку! Менеджер свяжется с вами.
+                a.c-btn.c-btn_red(href='presentation.pdf' download) Скачать презентацию <span class='n-d-none-sm'>о франшизе Ситилаб</span>
 

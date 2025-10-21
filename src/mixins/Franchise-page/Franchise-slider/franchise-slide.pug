@@ -1,0 +1,22 @@
+mixin Franchise-slide(param={})
+    .franchise-slide
+        .franchise-slide__top 
+            .img-container
+                +Img({
+                    src: 'franchise-slide.png',
+                    alt: 'franchise-slide'
+                })
+            .info-container
+                .name=param.name
+                .position=param.position
+                .company=param.company
+            .date=param.date
+        .franchise-slide__body
+            p.text=param.text
+            .white-shadow-block
+            //- div(id="wrapper") 
+            //-     .scrollbar(id="style-default")
+            //-         .force-overflow
+
+            //-     .scrollbar(id="style-1")
+            //-         .force-overflow

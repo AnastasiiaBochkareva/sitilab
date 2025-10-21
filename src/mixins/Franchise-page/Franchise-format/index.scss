@@ -1,0 +1,125 @@
+.franchise-format {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-bottom: 2px solid #f1f1f1;
+  .title {
+    color: rgba(76, 81, 85, 1);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .format {
+    &__cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 27px;
+      justify-content: center;
+    }
+    &__card {
+      flex: 1 1 354px;
+      max-width: 354px;
+      width: 100%;
+      display: grid;
+      border-radius: 10px;
+      overflow: hidden;
+      &_head {
+        background-color: $blue;
+        border-radius: 10px 10px 0 0;
+        padding: 20px;
+      }
+      .name {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      .description {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+      .name,
+      .description {
+        color: $white;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      &_body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 3px solid rgba(187, 191, 197, 1);
+        border-left: 3px solid rgba(187, 191, 197, 1);
+        border-right: 3px solid rgba(187, 191, 197, 1);
+        transition: $transition-default;
+        border-radius: 0 0 10px 10px;
+        padding: 20px 27px;
+      }
+      &:hover {
+        .format__card_body {
+          border-bottom: 3px solid $blue;
+          border-left: 3px solid $blue;
+          border-right: 3px solid $blue;
+        }
+      }
+      .img-container {
+        max-height: 277px;
+        max-width: 300px;
+      }
+      .c-btn {
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 19px;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+    }
+  }
+  @include xs {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 0;
+    .title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .format {
+      &__card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        .name {
+          margin-bottom: 18px;
+        }
+        .name,
+        .description {
+          font-size: 14px;
+          line-height: 17px;
+        }
+        &_head {
+          padding: 18px;
+        }
+        &_body {
+          padding: 18px 25px;
+        }
+        .img-container {
+          max-width: 277px;
+          max-height: 255px;
+        }
+        .c-btn {
+          padding: 18px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

@@ -24,30 +24,54 @@
 // }
 
 // export { initModal };
+
 function clickHandler(event: MouseEvent) {
-  const openElementModal = (event.target as HTMLElement).closest(
+  const target = event.target as HTMLElement;
+
+  // Открытие модалки
+  const openElementModal = target.closest(
     '[data-open-modal]'
   ) as HTMLElement | null;
   if (openElementModal) {
     event.preventDefault();
-
     const idOpenModal = openElementModal.dataset.openModal;
-    if (idOpenModal) {
-      const modal = document.querySelector(idOpenModal) as HTMLElement | null;
-      if (modal) {
-        modal.classList.add('active');
-      }
+    const modal = idOpenModal
+      ? (document.querySelector(idOpenModal) as HTMLElement)
+      : null;
+    if (modal) {
+      modal.classList.add('active');
+      document.documentElement.classList.add('overflow-hidden');
     }
   }
 
-  const closeElementModal = (event.target as HTMLElement).closest(
+  // Закрытие по крестику
+  const closeElementModal = target.closest(
     '[data-close-modal]'
   ) as HTMLElement | null;
-  const modal = closeElementModal?.closest(
+  const modalForClose = closeElementModal?.closest(
     '.modal-fixed'
   ) as HTMLElement | null;
-  if (closeElementModal && modal && modal.classList.contains('active')) {
-    modal.classList.remove('active');
+  if (
+    closeElementModal &&
+    modalForClose &&
+    modalForClose.classList.contains('active')
+  ) {
+    modalForClose.classList.remove('active');
+    if (!document.querySelector('.modal-fixed.active')) {
+      document.documentElement.classList.remove('overflow-hidden');
+    }
+  }
+
+  // Закрытие по клику на фон
+  const clickedModal = target.closest('.modal-fixed') as HTMLElement | null;
+  if (clickedModal) {
+    const modalContent = clickedModal.firstElementChild as HTMLElement | null;
+    if (modalContent && !modalContent.contains(target)) {
+      clickedModal.classList.remove('active');
+      if (!document.querySelector('.modal-fixed.active')) {
+        document.documentElement.classList.remove('overflow-hidden');
+      }
+    }
   }
 }
 

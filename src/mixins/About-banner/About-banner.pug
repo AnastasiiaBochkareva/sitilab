@@ -1,25 +1,50 @@
 mixin About-banner(param={})
-    .about-banner
-        .about-banner__img
-            img(src="/assets/img/categories/lab-search.png", alt="")
-        .about-banner__columns
-            .about-banner__col
-                +icon('col-1')
-                .about-banner__title 3900+
-                .about-banner__subtitle видов исследований
-            .about-banner__col
-                +icon('col-2')
-                .about-banner__title 14
-                .about-banner__subtitle лабораторных комплексов
-            .about-banner__col
-                +icon('col-3')
-                .about-banner__title 600+
-                .about-banner__subtitle медицинских центров
-            .about-banner__col
-                +icon('col-4')
-                .about-banner__title 200+
-                .about-banner__subtitle городов присутствия
-        .about-banner__img-left
-            img(src="/assets/img/categories/bg-one.png", alt="")
-        .about-banner__img-right
-            img(src="/assets/img/categories/bg-two.png", alt="")
+    .about-banner(class=param.addClass)
+        if(param.container)
+            .container
+                if(param.isTitle)
+                    .title=param.title
+                if(param.isSubtitle)
+                    p.subtitle=param.subtitle
+                if(param.isColumns)
+                    .about-banner__columns
+                        .about-banner__col
+                            +icon('col-1')
+                            .about-banner__title 3900+
+                            .about-banner__subtitle видов исследований
+                        .about-banner__col
+                            +icon('col-2')
+                            .about-banner__title 14
+                            .about-banner__subtitle лабораторных комплексов
+                        .about-banner__col
+                            +icon('col-3')
+                            .about-banner__title 600+
+                            .about-banner__subtitle медицинских центров
+                        .about-banner__col
+                            +icon('col-4')
+                            .about-banner__title 200+
+                            .about-banner__subtitle городов присутствия
+        else
+            .about-banner__img
+                img(src="/assets/img/categories/lab-search.png", alt="")
+            .about-banner__columns
+                .about-banner__col
+                    +icon('col-1')
+                    .about-banner__title 3900+
+                    .about-banner__subtitle видов исследований
+                .about-banner__col
+                    +icon('col-2')
+                    .about-banner__title 14
+                    .about-banner__subtitle лабораторных комплексов
+                .about-banner__col
+                    +icon('col-3')
+                    .about-banner__title 600+
+                    .about-banner__subtitle медицинских центров
+                .about-banner__col
+                    +icon('col-4')
+                    .about-banner__title 200+
+                    .about-banner__subtitle городов присутствия
+            .about-banner__img-left
+                img(src="/assets/img/categories/bg-one.png", alt="")
+            .about-banner__img-right
+                img(src="/assets/img/categories/bg-two.png", alt="")

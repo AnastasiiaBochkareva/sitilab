@@ -1,0 +1,42 @@
+mixin Franchise-calculation(param={})
+    .franchise-calculation.calculation
+        .container
+            .title Узнайте размер вашей прибыли от бизнеса Ситилаб
+            .calculation__params
+                .col.calculation__progress
+                    .calculation-input
+                        .calculation-input__header
+                            .title-sm Численность населения в городе
+                            p.calculation-input__value
+                            .progress-bar
+                                .progress-bar__fill
+                                .progress-bar__thumb
+                        +Progress-bar({
+                            franchiseCalculation: true,
+                            population: true,
+                        })
+                    .calculation-input
+                        .calculation-input__header
+                            .title-sm Сколько времени лично вы готовы уделять развитию бизнеса?
+                            p.calculation-input__value
+                            .progress-bar
+                                .progress-bar__fill
+                                .progress-bar__thumb
+                        +Progress-bar({
+                            franchiseCalculation: true,
+                            hours: true,
+                        })
+                .col.calculation__toggles
+                    //- +RadioBtn({name: 'franchise', value: '1', text: 'Процедурный кабинет'})
+                    //- +RadioBtn({name: 'franchise', value: '2', text: 'Процедурный кабинет + Врач'})
+                    //- +RadioBtn({name: 'franchise', value: '3', text: 'Медицинский центр'})
+                    .title-sm Формат франшизы
+                    +Toggle({isRadio: true, name: 'franchise', value: '1', label: 'Процедурный кабинет'})
+                    .devider
+                    +Toggle({isRadio: true, name: 'franchise', value: '2', label: 'Процедурный кабинет + Врач'})
+                    +Toggle({isRadio: true, name: 'franchise', value: '3', label: 'Медицинский центр'})
+                .col.calculation__total
+                    p.title Прибыль в месяц
+                    p.total 247 324 ₽
+                    p.description *Представленные данные являются предварительным расчетным показателем
+                    button.c-btn.c-btn_primary Оставить заявку на консультацию

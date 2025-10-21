@@ -1,0 +1,26 @@
+mixin Modal-franchise-format(param={})
+    .modal-fixed(id=`modal-franchise-format-${param.modalNumber}`)
+        .modal-franchise-format
+            .modal__head
+                button.modal__close(data-close-modal aria-label='Закрыть модальное окно')
+                    +icon('close')
+            .modal__body
+                .content-container
+                    .title-type.text-blue=param.title
+                    .price-block
+                        each subt in [].concat(param.subtitle || [])
+                            p.subtitle!=subt.text
+                    .list-block
+                        each list in [].concat(param.list || [])
+                            .list-title=list.listTitle
+                            ul.list
+                                each item in [].concat(list.items || [])
+                                    
+                                    li=item
+                                        //- +icon('list-item')
+                .img-container
+                    +Img({
+                        src: `franchise-scheme-modal-${param.img}.png`,
+                        alt: 'franchise-scheme-modal'
+                    })
+                +Business-application-form()

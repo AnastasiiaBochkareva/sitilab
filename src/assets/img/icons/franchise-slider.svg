@@ -1,0 +1,31 @@
+<svg viewBox="0 0 63.3516 63.3521" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63.351562" height="63.352051" fill="none" customFrame="#000000">
+	<defs>
+		<g id="pixso_custom_effect_0">
+			<effect x="0.000000" y="1.810056" visibility="visible" fill="rgb(78,127,222)" fill-opacity="0.200000003" effectType="dropShadow" showShadowBehind="1" stdDeviation="9.05027962" radius="0" />
+		</g>
+		<filter id="filter_0" width="63.351562" height="63.352051" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_0)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feOffset dx="0.000000" dy="1.810056" in="SourceAlpha" />
+			<feGaussianBlur stdDeviation="3.01675987" />
+			<feColorMatrix type="matrix" values="0 0 0 0 0.305882 0 0 0 0 0.498039 0 0 0 0 0.870588 0 0 0 0.2 0 " />
+			<feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
+			<feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
+		</filter>
+	</defs>
+	<g id="arrows">
+		<g filter="url(#filter_0)">
+			<circle id="Ellipse 9" cx="22.6256981" cy="22.6256981" r="22.6256981" fill="rgb(255,255,255)" transform="matrix(-1,0,0,1,54.3008,7.24023)" />
+		</g>
+		<g id="Group">
+			<g id="Group">
+				<path id="Vector" d="M10.2211 3.82007L6.67149 0.288658C6.32468 -0.05638 5.75377 -0.107693 5.38917 0.21965C5.00038 0.567519 4.98865 1.16381 5.35396 1.52761L6.96282 3.12858C7.14458 3.30942 7.01582 3.618 6.759 3.618L0.95742 3.618C0.466545 3.618 0.0268916 3.98357 0.00128076 4.47122C-0.0261087 4.99072 0.389357 5.4214 0.906199 5.4214L6.759 5.4214C7.01582 5.4214 7.14458 5.73034 6.96282 5.91082L5.39024 7.4757C5.04342 7.82074 4.9922 8.38872 5.32052 8.7511C5.67053 9.1379 6.27026 9.14958 6.63557 8.78649L10.2211 5.21898C10.6095 4.83289 10.6095 4.20616 10.2211 3.82007Z" fill="rgb(11,54,85)" fill-rule="nonzero" transform="matrix(-1,0,0,1,33.1367,25.3408)" />
+			</g>
+			<g id="Group">
+				<path id="Vector" d="M1.95069 0L0.90634 0C0.405861 0 0 0.403783 0 0.901699C0 1.39961 0.405861 1.8034 0.90634 1.8034L1.95069 1.8034C2.45117 1.8034 2.85668 1.39961 2.85668 0.901699C2.85668 0.403783 2.45117 0 1.95069 0Z" fill="rgb(11,54,85)" fill-rule="nonzero" transform="matrix(-1,0,0,1,37.5391,28.959)" />
+			</g>
+			<g id="Group">
+				<path id="Vector" d="M1.0038 0L0.905985 0C0.405861 0 0 0.404137 0 0.902052C0 1.39997 0.405861 1.80375 0.905985 1.80375L1.00345 1.80375C1.50428 1.80375 1.90943 1.39997 1.90943 0.902052C1.90943 0.404137 1.50428 0 1.0038 0Z" fill="rgb(11,54,85)" fill-rule="nonzero" transform="matrix(-1,0,0,1,40.7266,28.959)" />
+			</g>
+		</g>
+	</g>
+</svg>

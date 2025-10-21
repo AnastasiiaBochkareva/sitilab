@@ -1,0 +1,11 @@
+mixin Business-application-form(param={})
+    form.form.business-application-form
+        .title Заявка на консультацию по запуску бизнеса с Ситилаб
+        .form__row
+            +Input({ placeholder: 'Имя', required: false })
+            +Input({ placeholder: 'Телефон', required: false, mask: 'phone' })
+            +Input({ placeholder: 'Почта', required: false, type: email })
+            +Input({ placeholder: 'Город', required: false })
+        .form__row
+            button(type='submit').c-btn.c-btn_red Отправить заявку
+        p.disclaimer * Нажимая кнопку «Отправить», вы даете свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в согласии на обработку персональных данных и на получение вами рекламной информации (в том числе в форме рекламной рассылки) в информационных, рекламно-информационных целях.

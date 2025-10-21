@@ -1,0 +1,37 @@
+mixin Franchise-slider(param={})
+    .franchise-reviews
+        .container
+            .title Отзывы франчайзи-партнеров
+            .franchise-slider__container
+                .franchise-slider
+                    .swiper-wrapper 
+                        .swiper-slide
+                            +Franchise-slide({
+                                name: 'Ирина Фёдорова',
+                                position: '40 лет, врач',
+                                company: 'Медицинский центр “Ситилаб”',
+                                date: '02/05/25',
+                                text: 'Работаю в медицине более 17 лет и выбрал Ситилаб за отлаженные механизмы запуска бизнеса, гибкие условия сотрудничества и уверенность в бренде. Для меня очень важно: персональный менеджер на связи, четкое пошаговое руководство для запуска, обучение, поддержка колл-центра, надежная логистика, готовые IT и маркетинговые решения — это ускоряет запуск и снижает риски. Я начинал с маленького города Талицы, а теперь у меня уже четыре точки, две из которых в Екатеринбурге. Рекомендую «спальные» районы и помещения в собственность — управляемые расходы и быстрая окупаемость. Поиск и адаптация профессионалов требуют времени, но сильная команда сотрудников, нацеленных на высокие стандарты сервиса имеет решающее значение.',
+                            })
+                        .swiper-slide
+                            +Franchise-slide({
+                                name: 'Озорников Дмитрий Сергеевич',
+                                position: 'Педиатр',
+                                company: 'ООО «Медиклаб» формат «Процедурный кабинет + кабинет врача»',
+                                date: '02/05/25',
+                                text: 'Запустились уверенно: уже в первые недели пошли приемы и выручка, вопреки летнему сезону. Кураторство на высоте — специалисты на связи даже вечером по местному времени, быстро наладили логистику и операционные процессы. Отмечаю оперативность, отзывчивость, выдержанную цветовую гамму, ценовую политику и «широкоформатность» — от анализов до допусков и договоров с клиниками. Планируем долицензирование и разделение кабинета — будем расти и развиваться. Спрос растет.',
+                            })
+                        .swiper-slide
+                            +Franchise-slide({
+                                name: 'Lorem, ipsum.',
+                                position: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+                                company: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis optio odit ex error architecto earum doloribus fugit, cupiditate provident exercitationem!',
+                                date: '02/05/25',
+                                text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sit quasi aut voluptatem soluta, aliquam nostrum adipisci molestias? Consectetur quos sequi nulla. Recusandae ipsa itaque repudiandae ipsam. Voluptatibus inventore, commodi facilis deleniti neque similique esse a maxime illo eius pariatur nobis odio sequi iusto aliquid molestias excepturi dolorum dolores maiores magnam beatae numquam amet quas! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum quos ducimus laudantium, quasi quae, consequuntur repellat, ipsam iure blanditiis placeat sequi amet accusamus voluptatem eligendi eius? Illum, amet! Nostrum earum id repellendus facilis tempore dolore. Repellat modi placeat eligendi sit est quasi provident non illo facilis, voluptate beatae officiis cupiditate, minima vero ab molestias eveniet?',
+                            })
+                .franchise-slider-nav
+                    button(type='button').slider-nav_prev
+                        +icon('franchise-slider')
+                    button(type='button').slider-nav_next
+                        +icon('franchise-slider')
+                .franchise-slider-pagination

@@ -1,0 +1,15 @@
+mixin Franchise-advantages(param={})
+    .franchise-advantages
+        .container
+            .title Преимущества франшизы ситилаб
+            ul.list
+                each li in param.advantages || []
+                    li
+                        .img-container
+                            +Img({
+                                src: `franchise-advantages-${li.img}.png`,
+                                alt: 'franchise-advantages'
+                            })
+                        .title-sm.text-blue=li.titleSm
+                        p.subtitle-sm=li.subtitleSm
+            a(href='' download).c-btn.c-btn_primary Скачать презентацию

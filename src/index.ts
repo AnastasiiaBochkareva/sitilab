@@ -23,6 +23,11 @@ import { initFranchiseSurvey } from './mixins/Franchise-page/Franchise-survey/in
 import { setupProgressBar } from './mixins/progress-bar/index';
 import { processFranchiseCalculation } from './mixins/Franchise-page/Franchise-calculation/index';
 
+import './mixins/Franchise-page/Franchise-slider/index';
+
+import { initCartServicesCheckboxes } from './mixins/cart-page/cart-services/index';
+import { initPromocode } from './mixins/Promocode/index';
+
 // сайдбар
 function setupAccordion(category: HTMLElement) {
   const head = category.querySelector(
@@ -368,11 +373,35 @@ document.addEventListener('DOMContentLoaded', () => {
   setupModalEventListeners();
   initPaginationCircles();
   initFranchiseSurvey();
-  setupProgressBar();
+
   processFranchiseCalculation();
 
-  document.addEventListener('submitSurvey', (e: Event) => {
-    const { detail } = e as CustomEvent;
-    console.log(detail);
-  });
+  setupProgressBar();
+
+  initCartServicesCheckboxes();
+
+  initPromocode();
+
+  // document.addEventListener('submitSurvey', (e)  => {
+  //   const { detail } = e;
+  //   console.log(detail);
+  // });
+
+  // // @ts-ignore
+  // const initialValue = window.franchiseCalculationData;
+  // document.addEventListener('onChangeFranchiseCalculation', (e) => {
+  //   const { detail } = e;
+  //   const changedValue = detail;
+  // });
 });
+
+//
+// Находим все формы
+// const forms = document.querySelectorAll<HTMLFormElement>('form');
+
+// forms.forEach((form, index) => {
+//   form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     console.log(`Форма #${index + 1} сабмитнулась`);
+//   });
+// });

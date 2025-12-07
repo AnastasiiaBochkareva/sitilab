@@ -6,6 +6,16 @@
     flex-direction: column;
     align-items: center;
   }
+  .title {
+    color: rgba(76, 81, 85, 1);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
   .accordion {
     max-width: 1180px;
     display: flex;
@@ -46,6 +56,8 @@
       width: 36px;
       height: 36px;
       right: 0;
+      top: 0;
+      transform: initial;
       svg {
         width: 36px;
         height: 36px;
@@ -67,7 +79,23 @@
     }
   }
   @include xs {
+    .title {
+      font-size: 24px;
+      line-height: 100%;
+      margin-bottom: 10px;
+    }
     .accordion {
+      gap: 24px;
+      &__item {
+        padding: 24px 32px;
+        &.active {
+          .accordion__head {
+            &-content {
+              display: none;
+            }
+          }
+        }
+      }
       &__head {
         &-text {
           font-size: 20px;
@@ -79,6 +107,7 @@
       }
       &__body {
         &-content {
+          padding: 0;
           font-size: 20px;
           font-weight: 500;
           line-height: 31px;

@@ -178,5 +178,14 @@
         height: 40px;
       }
     }
+    .franchise-form {
+      .v-input {
+        max-width: 100%;
+      }
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 }

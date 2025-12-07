@@ -12,7 +12,8 @@ mixin Franchise-form(param={})
                 .title=param.title 
                 .form__row
                     +Input({ placeholder: 'Имя', required: false })
-                    +Input({ placeholder: 'Телефон', required: false, mask: 'phone' })
+                    //- +Input({ placeholder: 'Телефон', required: false, mask: 'phone' })
+                    +Input({placeholder: 'Телефон', mask: 'phone'})
                     +Input({ placeholder: 'Почта', required: false, type: email })
                     +Input({ placeholder: 'Город', required: false })
                 .form__row

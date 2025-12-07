@@ -259,7 +259,7 @@ if (sliderWrapper) {
 
   const swiperParams = {
     modules: [Navigation],
-    slidesPerView: 1.2,
+    slidesPerView: 1.4,
     spaceBetween: 20,
     navigation: {
       prevEl: btnPrev,
@@ -270,6 +270,16 @@ if (sliderWrapper) {
     observeSlideChildren: true,
     grabCursor: true,
     slideToClickedSlide: true,
+    breakpoints: {
+      768: {
+        slidesPerView: '1.4',
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: '1',
+        spaceBetween: 10,
+      },
+    },
   };
 
   objectSliders[0] = new Swiper(cartOrderSlider, swiperParams);

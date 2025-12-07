@@ -1,3 +1,4 @@
+import { logIfDebug } from '../../../mydebug';
 // const START_INDEX = 0;
 
 // interface IChosenStep {
@@ -185,6 +186,8 @@ function initFranchiseSurvey() {
     }
 
     if (!input) return;
+
+    logIfDebug('[survey] clicked');
 
     const currentStep = survey.querySelector(
       '.survey__step.active'

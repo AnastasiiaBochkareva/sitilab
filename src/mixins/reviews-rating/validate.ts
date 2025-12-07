@@ -1,123 +1,245 @@
-function validateFormFields(): boolean {
-    const fields = [
-        {
-            input: document.getElementById(
-                'reviews-username'
-            ) as HTMLInputElement,
-            validator: (v: string) => !!v.trim(),
-        },
-        {
-            input: document.getElementById('reviews-phone') as HTMLInputElement,
-            validator: (v: string) => v.replace(/\D/g, '').length >= 10,
-        },
-        {
-            input: document.getElementById('reviews-email') as HTMLInputElement,
-            validator: (v: string) =>
-                /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
-        },
-        {
-            input: document.getElementById(
-                'reviews-message'
-            ) as HTMLTextAreaElement,
-            validator: (v: string) => !!v.trim(),
-        },
-    ];
+// function validateFormFields(): boolean {
+//   const fields = [
+//     {
+//       input: document.getElementById('reviews-username') as HTMLInputElement,
+//       validator: (v: string) => !!v.trim(),
+//     },
+//     {
+//       input: document.getElementById('reviews-phone') as HTMLInputElement,
+//       validator: (v: string) => v.replace(/\D/g, '').length >= 10,
+//     },
+//     {
+//       input: document.getElementById('reviews-email') as HTMLInputElement,
+//       validator: (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+//     },
+//     {
+//       input: document.getElementById('reviews-message') as HTMLTextAreaElement,
+//       validator: (v: string) => !!v.trim(),
+//     },
+//   ];
 
-    const form = document.getElementById('reviews-form') as HTMLElement | null;
-    const checkbox = form?.querySelector(
-        "input[type='checkbox']"
-    ) as HTMLInputElement | null;
+//   const form = document.getElementById('reviews-form') as HTMLElement | null;
+//   const checkbox = form?.querySelector(
+//     "input[type='checkbox']"
+//   ) as HTMLInputElement | null;
 
-    let isValid = true;
+//   let isValid = true;
 
-    fields.forEach(({ input, validator }) => {
-        const wrapper = input.closest('.form__input');
-        if (!wrapper) return;
+//   fields.forEach(({ input, validator }) => {
+//     const wrapper = input.closest('.form__input');
+//     if (!wrapper) return;
 
-        if (input.value) {
-            if (!validator(input.value)) {
-                wrapper.classList.add('error');
-                isValid = false;
-            } else {
-                wrapper.classList.remove('error');
-            }
-        } else {
-            wrapper.classList.remove('error');
-            isValid = false;
-        }
-    });
+//     if (input.value) {
+//       if (!validator(input.value)) {
+//         wrapper.classList.add('error');
+//         isValid = false;
+//       } else {
+//         wrapper.classList.remove('error');
+//       }
+//     } else {
+//       wrapper.classList.remove('error');
+//       isValid = false;
+//     }
+//   });
 
-    if (!checkbox?.checked) isValid = false;
+//   if (!checkbox?.checked) isValid = false;
 
-    return isValid;
-}
+//   return isValid;
+// }
 
-const inputs = document.querySelectorAll<
-    HTMLInputElement | HTMLTextAreaElement
->('#reviews-form input, #reviews-form textarea');
-inputs.forEach((input) => {
-    input.addEventListener('input', () => validateFormFields());
-});
+// const inputs = document.querySelectorAll<
+//   HTMLInputElement | HTMLTextAreaElement
+// >('#reviews-form input, #reviews-form textarea');
+// inputs.forEach((input) => {
+//   input.addEventListener('input', () => validateFormFields());
+// });
 
-function initPhoneValidation() {
-    const phoneInput = document.getElementById(
-        'reviews-phone'
-    ) as HTMLInputElement;
-    if (!phoneInput) return;
+// function initPhoneValidation() {
+//   const phoneInput = document.getElementById(
+//     'reviews-phone'
+//   ) as HTMLInputElement;
+//   if (!phoneInput) return;
 
-    const wrapper = phoneInput.closest('.form__input') as HTMLElement;
+//   const wrapper = phoneInput.closest('.form__input') as HTMLElement;
+//   if (!wrapper) return;
+
+//   const maskTemplate = '+7 (XXX) XXX XX XX';
+//   const prefixLength = 4;
+
+//   phoneInput.addEventListener('focus', () => {
+//     if (!phoneInput.value) {
+//       phoneInput.value = '+7 (';
+//     }
+//     setCursorToEnd();
+//   });
+
+//   phoneInput.addEventListener('input', (e) => {
+//     let digits = phoneInput.value.replace(/\D/g, '');
+//     digits = digits.slice(1);
+
+//     let formatted = '+7 (';
+//     if (digits.length > 0) formatted += digits.slice(0, 3);
+//     if (digits.length > 3) formatted += ') ' + digits.slice(3, 6);
+//     if (digits.length > 6) formatted += ' ' + digits.slice(6, 8);
+//     if (digits.length > 8) formatted += ' ' + digits.slice(8, 10);
+
+//     phoneInput.value = formatted;
+
+//     setCursorToEnd();
+
+//     if (digits.length < 10) {
+//       wrapper.classList.add('error');
+//     } else {
+//       wrapper.classList.remove('error');
+//     }
+//   });
+
+//   function setCursorToEnd() {
+//     const pos = phoneInput.value.length;
+//     phoneInput.setSelectionRange(pos, pos);
+//   }
+
+//   phoneInput.addEventListener('keydown', (e) => {
+//     if (
+//       (e.key === 'Backspace' || e.key === 'Delete') &&
+//       phoneInput.selectionStart! <= prefixLength
+//     ) {
+//       e.preventDefault();
+//     }
+//   });
+
+//   phoneInput.addEventListener('blur', () => {
+//     const digits = phoneInput.value.replace(/\D/g, '').slice(1);
+//     if (!digits.length) phoneInput.value = '';
+//   });
+// }
+
+// export { validateFormFields };
+// export { initPhoneValidation };
+
+function validateReviewsForm(): boolean {
+  const form = document.getElementById(
+    'reviews-form'
+  ) as HTMLFormElement | null;
+  if (!form) return true; // если формы нет — возвращаем true, чтобы не ломать другие формы
+
+  const fields = [
+    {
+      input: form.querySelector<HTMLInputElement>('#reviews-username'),
+      validator: (v: string) => !!v.trim(),
+    },
+    {
+      input: form.querySelector<HTMLInputElement>('#reviews-phone'),
+      validator: (v: string) => v.replace(/\D/g, '').length >= 10,
+    },
+    {
+      input: form.querySelector<HTMLInputElement>('#reviews-email'),
+      validator: (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+    },
+    {
+      input: form.querySelector<HTMLTextAreaElement>('#reviews-message'),
+      validator: (v: string) => !!v.trim(),
+    },
+  ];
+
+  const checkbox = form.querySelector<HTMLInputElement>(
+    "input[type='checkbox']"
+  );
+
+  let isValid = true;
+
+  fields.forEach(({ input, validator }) => {
+    if (!input) return;
+
+    const wrapper = input.closest('.form__input');
     if (!wrapper) return;
 
-    const maskTemplate = '+7 (XXX) XXX XX XX';
-    const prefixLength = 4;
-
-    phoneInput.addEventListener('focus', () => {
-        if (!phoneInput.value) {
-            phoneInput.value = '+7 (';
-        }
-        setCursorToEnd();
-    });
-
-    phoneInput.addEventListener('input', (e) => {
-        let digits = phoneInput.value.replace(/\D/g, '');
-        digits = digits.slice(1);
-
-        let formatted = '+7 (';
-        if (digits.length > 0) formatted += digits.slice(0, 3);
-        if (digits.length > 3) formatted += ') ' + digits.slice(3, 6);
-        if (digits.length > 6) formatted += ' ' + digits.slice(6, 8);
-        if (digits.length > 8) formatted += ' ' + digits.slice(8, 10);
-
-        phoneInput.value = formatted;
-
-        setCursorToEnd();
-
-        if (digits.length < 10) {
-            wrapper.classList.add('error');
-        } else {
-            wrapper.classList.remove('error');
-        }
-    });
-
-    function setCursorToEnd() {
-        const pos = phoneInput.value.length;
-        phoneInput.setSelectionRange(pos, pos);
+    if (input.value) {
+      if (!validator(input.value)) {
+        wrapper.classList.add('error');
+        isValid = false;
+      } else {
+        wrapper.classList.remove('error');
+      }
+    } else {
+      wrapper.classList.remove('error');
+      isValid = false;
     }
+  });
 
-    phoneInput.addEventListener('keydown', (e) => {
-        if (
-            (e.key === 'Backspace' || e.key === 'Delete') &&
-            phoneInput.selectionStart! <= prefixLength
-        ) {
-            e.preventDefault();
-        }
-    });
+  if (!checkbox?.checked) isValid = false;
 
-    phoneInput.addEventListener('blur', () => {
-        const digits = phoneInput.value.replace(/\D/g, '').slice(1);
-        if (!digits.length) phoneInput.value = '';
-    });
+  return isValid;
 }
 
-export { validateFormFields };
-export { initPhoneValidation };
+// --- Навешиваем обработчики только на форму reviews ---
+function initReviewsFormInputs() {
+  const form = document.getElementById('reviews-form');
+  if (!form) return;
+
+  const inputs = form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>(
+    'input, textarea'
+  );
+
+  inputs.forEach((input) => {
+    input.addEventListener('input', () => validateReviewsForm());
+  });
+}
+
+// --- Телефон ---
+function initReviewsPhoneValidation() {
+  const phoneInput = document.getElementById(
+    'reviews-phone'
+  ) as HTMLInputElement;
+  if (!phoneInput) return;
+
+  const wrapper = phoneInput.closest('.form__input') as HTMLElement;
+  if (!wrapper) return;
+
+  const prefixLength = 4;
+
+  phoneInput.addEventListener('focus', () => {
+    if (!phoneInput.value) phoneInput.value = '+7 (';
+    setCursorToEnd();
+  });
+
+  phoneInput.addEventListener('input', () => {
+    let digits = phoneInput.value.replace(/\D/g, '').slice(1);
+    let formatted = '+7 (';
+    if (digits.length > 0) formatted += digits.slice(0, 3);
+    if (digits.length > 3) formatted += ') ' + digits.slice(3, 6);
+    if (digits.length > 6) formatted += ' ' + digits.slice(6, 8);
+    if (digits.length > 8) formatted += ' ' + digits.slice(8, 10);
+
+    phoneInput.value = formatted;
+    setCursorToEnd();
+
+    if (digits.length < 10) wrapper.classList.add('error');
+    else wrapper.classList.remove('error');
+  });
+
+  function setCursorToEnd() {
+    const pos = phoneInput.value.length;
+    phoneInput.setSelectionRange(pos, pos);
+  }
+
+  phoneInput.addEventListener('keydown', (e) => {
+    if (
+      (e.key === 'Backspace' || e.key === 'Delete') &&
+      phoneInput.selectionStart! <= prefixLength
+    ) {
+      e.preventDefault();
+    }
+  });
+
+  phoneInput.addEventListener('blur', () => {
+    const digits = phoneInput.value.replace(/\D/g, '').slice(1);
+    if (!digits.length) phoneInput.value = '';
+  });
+}
+
+export {
+  validateReviewsForm,
+  initReviewsFormInputs,
+  initReviewsPhoneValidation,
+};

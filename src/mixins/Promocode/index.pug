@@ -1,0 +1,17 @@
+mixin Promocode(param={})
+    .promo-code.promo-code__error
+        if(param.title)
+            .promo-code__title=param.titleText
+        if(param.input)
+            .promo-code__row
+                .promo-code__field
+                    input.promo-code__input(
+                        type="text"
+                        placeholder=param.inputText
+                        name="promocode"
+                        data-promo-code-input
+                    )
+                    button.promo-code__clear(type="button" data-promo-code-clear) ×
+                button.promo-code__btn(type="button")
+                    span=param.btnText
+            .promo-code__error-text Промокод не действует на добавленные услуги

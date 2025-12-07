@@ -1,6 +1,7 @@
 mixin Franchise-accordion(param={})
     .franchise-accordion
         .container
+            .title Часто задаваемые вопросы
             ul.accordion
                 each item in [].concat(param.list || [])
                     li.accordion__item

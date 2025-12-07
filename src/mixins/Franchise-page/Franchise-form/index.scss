@@ -56,6 +56,9 @@
     font-weight: 600;
     line-height: 16px;
     letter-spacing: -0.28px;
+    margin-bottom: 0;
+    height: initial !important;
+    margin: 0 !important;
 
     &:active,
     &:focus {

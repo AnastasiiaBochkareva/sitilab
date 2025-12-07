@@ -34,8 +34,16 @@
       .name {
         text-transform: uppercase;
         margin-bottom: 20px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
       }
       .description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
         &:not(:last-child) {
           margin-bottom: 10px;
         }

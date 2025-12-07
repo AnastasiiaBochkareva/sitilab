@@ -1,0 +1,107 @@
+.cart-page {
+  .radio-group {
+    &__payments {
+      display: flex;
+      border-radius: 8px;
+
+      &-title {
+        color: rgba(16, 24, 40, 1);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 12px;
+      }
+      .radio-item {
+        width: 100%;
+        flex: 1;
+        border: 1px solid rgba(208, 213, 221, 1);
+        background-color: rgba(255, 255, 255, 1);
+        cursor: pointer;
+        position: relative;
+
+        &:first-child {
+          border-radius: 8px 0 0 8px;
+          .radio-item__text {
+            border-radius: 8px 0 0 8px;
+          }
+        }
+        &:last-child {
+          border-radius: 0 8px 8px 0;
+          margin-left: -1px;
+          .radio-item__text {
+            border-radius: 0 8px 8px 0;
+          }
+        }
+        input {
+          width: 0;
+          height: 0;
+          position: absolute;
+          left: -9999px;
+          &:checked + div {
+            background-color: rgba(249, 250, 251, 1);
+            .radio-item__box {
+              border-color: rgba(0, 171, 223, 1);
+              background-color: rgba(240, 249, 255, 1);
+              position: relative;
+              &::before {
+                background-color: rgba(0, 171, 223, 1);
+              }
+            }
+          }
+        }
+        &__text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 11px;
+          height: 100%;
+        }
+        &__box {
+          border: 1px solid rgba(208, 213, 221, 1);
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 1);
+          width: 16px;
+          height: 16px;
+          min-width: 16px;
+          min-height: 16px;
+          transition: all 0.3s ease;
+          &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 5.5px;
+            height: 5.5px;
+            min-width: 5.5px;
+            min-height: 5.5px;
+            background-color: transparent;
+            border-radius: 50%;
+          }
+        }
+      }
+      @include xs {
+        flex-direction: column;
+        .radio-item {
+          &:first-child {
+            border-radius: 0;
+            .radio-item__text {
+              border-radius: 0;
+            }
+          }
+          &:last-child {
+            border-radius: 0;
+            margin-top: -1px;
+            margin-left: 0;
+            .radio-item__text {
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

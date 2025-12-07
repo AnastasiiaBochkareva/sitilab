@@ -1,0 +1,5 @@
+mixin Cart-radio-services(param={})
+    .radio-group.radio-group__service
+        +Radio({name: 'service', value: 'med-center', text: 'В медицинском центре', checked: true})
+        +Radio({name: 'service', value: 'home-visit', text: 'Выезд медсестры на дом'})
+        +Radio({name: 'service', value: 'extra-order', text: 'Дозаказ исследования'})

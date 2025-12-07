@@ -1,0 +1,4 @@
+mixin Cart-radio-duration(param={})
+    .radio-group.radio-group__duration
+        +Radio({complex: true, name: `${param.name}`, value: `${param.valueHours}`, text: '3 часа', checked: true, additional: true, addText: '2 880.00', addClass: 'price'})
+        +Radio({complex: true, name: `${param.name}`, value: `${param.valueDays}`, text: '1 день', additional: true, addText: '550.00', addClass: 'price'})

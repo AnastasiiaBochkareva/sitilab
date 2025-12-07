@@ -47,8 +47,9 @@ mixin Filter-result(param={})
                     img(src="/assets/img/categories/garant.png", alt="Капельницы, уколы, инъекции")
                     .alt-text
                         span
-            a(href="#").c-btn.c-btn_primary Подробнее 
-            a(href="#").c-btn.c-btn_outline Оставить отзыв
+            .filter-result__btns
+                a(href="#").c-btn.c-btn_primary Подробнее 
+                a(href="#").c-btn.c-btn_outline Оставить отзыв
     else 
          li.filter-result__item.accordion__item
             .accordion__head
@@ -104,5 +105,6 @@ mixin Filter-result(param={})
                             img(src="/assets/img/categories/garant.png", alt="Капельницы, уколы, инъекции")
                             .alt-text
                                 span
-                    a(href="#").c-btn.c-btn_primary Подробнее 
-                    a(href="#").c-btn.c-btn_outline Оставить отзыв
+                    .filter-result__btns
+                        a(href="#").c-btn.c-btn_primary Подробнее 
+                        a(href="#").c-btn.c-btn_outline Оставить отзыв

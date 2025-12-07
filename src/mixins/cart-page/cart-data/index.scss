@@ -1,0 +1,28 @@
+.cart-page {
+  &__data {
+    .title {
+      color: rgba(16, 24, 40, 1);
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 38px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    .total:not(.order-details__summary .order-total .total) {
+      color: rgba(16, 24, 40, 1);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0%;
+      text-align: right;
+    }
+    .total-bold {
+      color: rgba(16, 24, 40, 1);
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0%;
+      text-align: right;
+      font-size: 20px;
+    }
+  }
+}

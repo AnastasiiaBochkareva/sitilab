@@ -1,0 +1,107 @@
+.cart-page {
+  &__payments {
+    border-radius: 12px;
+    box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+      0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+    padding: 24px;
+    &-title {
+      color: rgba(16, 24, 40, 1);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: 0%;
+    }
+    &-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+    &-link {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background-color: rgba(243, 246, 249, 1);
+      color: rgba(52, 64, 84, 1);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: -2%;
+      text-align: left;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      transition: all 0.3s ease;
+      &:hover {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      svg {
+        width: 13px;
+        height: 12px;
+        min-width: 13px;
+        min-height: 12px;
+        fill: transparent;
+        stroke: rgba(102, 112, 133, 1);
+      }
+    }
+    &-success,
+    &-pending {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      .devider {
+        background-color: rgba(234, 236, 240, 1);
+        height: 1px;
+        width: 100%;
+      }
+      .cart-page__payments-title {
+        margin: 9px 0 5px;
+      }
+      .n-btn {
+        margin-top: 9px;
+        transition: all 0.3s ease;
+      }
+      .n-btn-link {
+        display: block;
+        color: rgba(0, 171, 223, 1);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      .gray-container {
+        color: rgba(52, 64, 84, 1);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -2%;
+        text-align: left;
+        margin: 0 0 9px;
+      }
+    }
+    &-success {
+    }
+  }
+  .cart-order__block {
+    margin: 20px 0;
+  }
+  .n-title-xs:not(.text-blue) {
+    color: rgba(16, 24, 40, 1);
+  }
+  .n-title-xs {
+    // font-size: 14px;
+    // font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0%;
+  }
+  .n-flex-align-center {
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}

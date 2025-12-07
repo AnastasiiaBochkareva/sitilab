@@ -1,0 +1,50 @@
+mixin Cart-services(param={})
+    .cart-page__services
+        .cart-page__services-controls
+            +Checkbox({ name: 'service', value: 'service', text: 'Выделить все', id: 'cart-page-toggle-all'})
+            button.cart-page__services-clear(type="button")
+                +icon('cart-clear') 
+                span Очистить корзину
+        .cart-page__table-wrapper
+            table.cart-page__table
+                thead
+                    tr
+                        th 
+                        th Код услуги
+                        th Название услуги
+                        th.cell-head__price.text-end Цена, ₽
+                        th.text-end Скидка, ₽
+                        th.text-end Итог, ₽
+                        th 
+                tbody
+                    each service in param.services
+                        tr
+                            td
+                                .cell-wrapper
+                                    if(service.check)
+                                        +Checkbox({ name: 'service', value: service.code, checked: service.checked, text: '' })
+                            td 
+                                .cell-wrapper.code
+                                    if(service.code)
+                                        | 00-00-000
+                            td
+                                .cell-wrapper(class=service.tdClassBold ? service.tdClassBold : null)=service.nameService
+                            td
+                                .cell-wrapper.flex-end(class=service.tdClass ? service.tdClass : null)
+                                    if(service.duration)
+                                        +Cart-radio-duration({
+                                            valueHours: `${service.valueHours}`,
+                                            valueDays: `${service.valueDays}`,
+                                            name: `${service.name}`
+                                        })
+                                    if(service.noDuration)
+                                        span.price=service.noDurationPrice
+                            td
+                                .cell-wrapper.flex-end(class=service.priceClass ? service.priceClass : null)= service.price || ''
+                            td
+                                .cell-wrapper.flex-end(class=service.tdClassBold ? service.tdClassBold : null)= service.discount || ''
+                            td
+                                .cell-wrapper
+                                    if(service.delete)
+                                        button.delete
+                                            +icon('cart-trash')

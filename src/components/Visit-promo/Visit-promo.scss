@@ -121,6 +121,10 @@
         letter-spacing: -0.24px;
       }
       .v-input {
+        border-radius: 5px;
+        input {
+          border-radius: 5px;
+        }
         &:not(.not-required) {
           &:after {
             border-color: #ea516d;
@@ -212,6 +216,9 @@
     .v-input {
       &__placeholder {
         font-family: 'Montserrat', sans-serif;
+      }
+      &::after {
+        border-radius: 5px;
       }
     }
   }

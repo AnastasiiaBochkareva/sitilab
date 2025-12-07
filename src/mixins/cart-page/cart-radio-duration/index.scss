@@ -1,0 +1,54 @@
+.cart-page {
+  .radio-group {
+    &__duration {
+      display: flex;
+      // flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+
+      .v-radio {
+        input + div {
+          border-radius: 8px;
+          padding: 9px 8px;
+          cursor: pointer;
+
+          &::before,
+          &::after {
+            content: none;
+          }
+        }
+
+        input:checked + div {
+          background-color: rgba(240, 249, 255, 1);
+          border: 1px solid rgba(0, 171, 223, 1);
+
+          &::before,
+          &::after {
+            content: none;
+          }
+        }
+        input:not(:checked) + div {
+          transition: all 0.3s ease;
+          border: 1px solid rgba(208, 213, 221, 1);
+          &:hover {
+            color: rgb(59, 75, 100);
+          }
+        }
+        .radio-btn__complex {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid #fff;
+          gap: 4px;
+          align-items: center;
+          justify-content: center;
+          min-width: 79px;
+          min-height: 54px;
+          .price,
+          .radio-btn__text {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

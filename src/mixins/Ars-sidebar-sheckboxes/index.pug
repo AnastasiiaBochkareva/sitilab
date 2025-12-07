@@ -3,9 +3,10 @@ mixin Ars-sidebar-sheckboxes(param)
         if(!param.noTitle)
             .ars-checkboxes__title=param.title
                 span=param.number
-        each label in param.checkboxes
+        each label, i in param.checkboxes
+            - const inputName = typeof label === 'string' ? label : `consent-${i}`
             label.ars-checkbox
-                input.ars-checkbox__input(type="checkbox" name=label)
+                input.ars-checkbox__input(type="checkbox" name=inputName)
                 span.ars-checkbox__custom
                 span.ars-checkbox__label
                     if typeof label === 'string'

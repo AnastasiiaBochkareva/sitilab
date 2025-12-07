@@ -1,0 +1,7 @@
+mixin Cart-radio-gender(param={})
+    .radio-group.radio-group__gender
+        span.v-input__label-top Пол
+            span.v-input__label-required * 
+        .v-input__wrapper
+            +Radio({name: 'gender', value: 'male', text: 'Мужской', checked: true})
+            +Radio({name: 'gender', value: 'female', text: 'Женский'})

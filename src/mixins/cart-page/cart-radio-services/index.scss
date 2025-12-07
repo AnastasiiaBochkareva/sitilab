@@ -1,0 +1,45 @@
+.cart-page {
+  .radio-group {
+    &__service {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      padding: 20px 0;
+      .v-radio {
+        input + span {
+          color: rgba(102, 112, 133, 1);
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 20px;
+          letter-spacing: 0%;
+          text-align: left;
+          border-radius: 6px;
+          padding: 8px 12px;
+
+          &::before,
+          &::after {
+            content: none;
+          }
+
+          &:hover {
+            color: rgb(59, 75, 100);
+          }
+        }
+
+        input:checked + span {
+          color: rgba(0, 171, 223, 1);
+          background-color: rgba(240, 249, 255, 1);
+
+          &::before,
+          &::after {
+            content: none;
+          }
+        }
+        input:not(:checked) + span {
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}

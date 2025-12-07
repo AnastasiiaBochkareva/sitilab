@@ -1,0 +1,56 @@
+.cart-page {
+  .radio-group__gender {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    .v-input__wrapper {
+      flex-direction: row !important;
+      gap: 0 !important;
+    }
+    .v-radio {
+      input:checked + span:before,
+      input:checked + span:after,
+      input:not(:checked) + span:before,
+      input:not(:checked) + span:after {
+        content: none;
+      }
+      input:checked + span {
+        background-color: rgba(249, 250, 251, 1);
+        padding: 10px 16px;
+        border: 1px solid rgba(208, 213, 221, 1);
+        color: rgba(29, 41, 57, 1);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+      }
+      input:not(:checked) + span {
+        border: 1px solid rgba(208, 213, 221, 1);
+        padding: 10px 16px;
+        color: rgba(29, 41, 57, 1);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+        &:first-child {
+        }
+        &:last-child {
+          //   margin-left: -1px;
+        }
+      }
+      &:first-child {
+        input:not(:checked) + span,
+        input:checked + span {
+          border-radius: 8px 0 0 8px;
+        }
+      }
+      &:last-child {
+        input:not(:checked) + span,
+        input:checked + span {
+          //   margin-left: -1px;
+          border-radius: 0 8px 8px 0;
+        }
+      }
+    }
+  }
+}

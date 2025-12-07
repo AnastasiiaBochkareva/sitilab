@@ -1,0 +1,107 @@
+mixin Cart-payments(param={})
+    .cart-page__payments
+        if(param.title)
+            .cart-page__payments-title.cart-order__border Детали заказа
+        if(param.orderPayment)
+            .cart-page__payments-success
+                +Img({
+                    src: 'success.svg',
+                    alt: 'Оплата прошла успешно'
+                })
+                .cart-page__payments-title Оплата прошла успешно
+                .devider
+                .cart-page__payments-links
+                    a.cart-page__payments-link(href='#') 
+                        |Документы необходимые для посещения
+                        +icon('cart-follow-link')
+                    a.cart-page__payments-link(href='#') 
+                        |Правила подготовки к исследованиям
+                        +icon('cart-follow-link')
+                a.n-btn(href='#') Перейти  в личный кабинет
+                a.n-btn-link(href='#') Создать новый заказ
+            .cart-page__payments-pending
+                +Img({
+                    src: 'alert.svg',
+                    alt: 'Заказ ожидает оплаты',
+                    class: 'active'
+                })
+                .cart-page__payments-title Заказ ожидает оплаты
+                +Gray-info({
+                    grayInfoSm: true,
+                    icon: true,
+                    iconName: 'cart-info',
+                    text: 'Оплатите онлайн, чтобы зафиксировать цену и скидку на 30 дней. При оплате в медцентре стоимость услуг может отличаться.',
+                })
+                .devider
+                .cart-page__payments-links
+                    a.cart-page__payments-link(href='#') 
+                        |Документы необходимые для посещения
+                        +icon('cart-follow-link')
+                    a.cart-page__payments-link(href='#') 
+                        |Правила подготовки к исследованиям
+                        +icon('cart-follow-link')
+                a.n-btn(href='#') Оплатить заказ
+                a.n-btn-link(href='#') Перейти в личный кабинет
+        else
+            if(param.orderBlock)
+                .cart-order__block
+                    .n-flex-align-center
+                        p.n-title-xs Общая сумма заказа
+                        p.n-title-xs 3 470 ₽
+                    .n-flex-align-center
+                        p.n-title-xs Скидка по промокоду
+                        p.n-title-xs - 520.5 ₽
+                    .n-flex-align-center
+                        p.n-title-xs Расшифровка результатов
+                        p.n-title-xs 0 ₽
+            .cart-page__payments-title.cart-order__border
+                | Итого  
+                span.total 4 420 ₽
+            if(param.paymentOnline)
+                .cart-order__block
+                    .n-flex-align-center
+                        p.n-title-xs Способ оплаты
+                        p.n-title-xs.text-blue онлайн
+            .cart-order__block.cart-order__toggle
+                +Toggle-block({
+                    ifImg: true,
+                    img: 'n-tablet-done.svg',
+                    ifText: true,
+                    text: 'Бесплатная расшифровка результатов',
+                    textClass: 'n-title-xs',
+                    ifToggle: true
+                })
+                p.n-title-md Ваш заказ:
+            p.radio-group__payments-title Способ оплаты
+            +Cart-radio-payments({})
+            +Gray-info({
+                grayInfoSm: true,
+                icon: true,
+                iconName: 'cart-info',
+                text: 'Оплатите онлайн, чтобы зафиксировать цену и скидку на 30 дней. При оплате в медцентре стоимость услуг может отличаться.',
+            })
+            +Bonus-block({
+                cartPage: true,
+                title: 'Участникам бонусной программы',
+                value: '+55',
+                text: 'бонусов',
+            })
+            +Promocode({
+                title: true,
+                titleText: 'Промокод',
+                input: true,
+                inputText: 'Введите промокод',
+                btnText: 'Применить',
+            })
+            +Gray-info({
+                content: true,
+                addClass: 'gray-container__bonuses',
+                grayInfoSm: true,
+                icon: true,
+                iconName: 'cart-bonus',
+                subText: 'получите',
+                linkText: 'Подключитесь к бонусной программе,',
+                highlightText: '350 приветственных бонусов.',
+                text: 'Копите бонусы и оплачивайте ими до 100% заказа.'
+            })
+            a(href='#').n-btn Оформить через личный кабинет

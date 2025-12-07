@@ -1,0 +1,41 @@
+mixin Cart-inputs(param={})
+    .cart-page__inputs(class=param.cartPageInputsRequired)
+
+        if(param.place)
+            .inputs-section.inputs-section__center
+                +Input({placeholder: 'Москва', required: false, labelTop: true, labelTopText: 'Город',})
+                +Input({placeholder: 'Медицинский центр', labelTop: true, labelTopText: 'Выберите медицинский центр', readonly: true, button: true, buttonIcon: 'modal', dataOpenModal: '#modal-map', inputBtnText: 'Выбрать', addWrapperClass: 'v-input__wrapper-center'})
+        if(param.personal)
+            .inputs-section.inputs-section__personal
+                .inputs-section__title.cart-order__border Персональные данные
+                +Input({placeholder: 'Фамилия', required: false, labelTop: true, labelTopText: 'Фамилия', labelTopRequired: true})
+                +Input({placeholder: 'Имя', required: false, labelTop: true, labelTopText: 'Имя', labelTopRequired: true})
+                +Input({placeholder: 'Отчество', required: false, labelTop: true, labelTopText: 'Отчество'})
+
+        if(param.demographics)
+            .inputs-section.inputs-section__demographics
+                +Input({date: true, placeholder: 'Дата рождения', required: false, labelTop: true, labelTopText: 'Дата рождения', labelTopRequired: true, class: 'birth', readonly: true})
+                +Cart-radio-gender({
+                    labelTop: true
+                })
+            
+        if(param.contact)
+            .inputs-section.inputs-section__contact
+                .inputs-section__title.cart-order__border Контактные данные
+                +Input({placeholder: 'Номер телефона', required: false, labelTop: true, labelTopText: 'Номер телефона', labelTopRequired: true, mask: 'phone'})
+                +Input({placeholder: 'E-mail', required: false, labelTop: true, labelTopText: 'E-mail', labelTopRequired: true})
+
+        .cart-page__inputs-required-text Чтобы продолжить необходимо заполнить обязательные поля
+
+        if(param.checkboxes)
+            +Ars-sidebar-sheckboxes({
+                noTitle: true,
+                checkboxes: [
+                    'Согласие на отправку результатов по sms',
+                    { text: 'Я согласен с', linkText: 'обработкой персональных данных', linkHref: '#' }, 
+                    'Согласие на уведомление о готовности результатов по SMS',
+                    'Согласие на отправку результатов по E-Mail',
+                    'Согласие на получение информационных рассылок',
+                    { text: 'Я ознакомлен и выражаю безоговорочное согласие с условиями', linkText: 'публичной оферты на оказание медицинских услуг', linkHref: '#' }, 
+                ],
+            })

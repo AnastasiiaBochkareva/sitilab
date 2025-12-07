@@ -1,0 +1,14 @@
+mixin Cart-radio-payments(param={})
+    .radio-group.radio-group__payments
+        //- +Radio({name: 'payments', value: 'online', text: 'Онлайн', checked: true,  box: true})
+        //- +Radio({name: 'payments', value: 'med-center', text: 'В медцентре',  box: true})
+        label.radio-item
+            input(type="radio" name="payments" value="online" checked)
+            .radio-item__text 
+                .radio-item__box
+                |Онлайн
+        label.radio-item
+            input(type="radio" name="payments" value="offline")
+            .radio-item__text 
+                .radio-item__box
+                |Оплата в медцентре

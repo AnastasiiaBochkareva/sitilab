@@ -1,0 +1,152 @@
+.cart-page {
+  &__inputs {
+    padding: 20px 0;
+    &.cart-page__inputs-required {
+      .cart-page__inputs-required-text {
+        display: block;
+        margin: 24px 0;
+      }
+      .v-input {
+        &::after {
+          border-color: rgba(240, 68, 56, 1) !important;
+        }
+      }
+    }
+    &-required {
+      &-text {
+        color: rgba(240, 68, 56, 1);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+        display: none;
+      }
+    }
+    .ars-sidebar__checkboxes {
+      margin: 24px 0;
+      .ars-checkbox {
+        align-items: center;
+        &__label {
+          color: rgba(52, 64, 84, 1);
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: 0%;
+          text-align: left;
+          a {
+            color: rgba(0, 171, 223, 1);
+            margin: 0 4px;
+          }
+        }
+        &__custom {
+          width: 16px;
+          height: 16px;
+          min-width: 16px;
+          min-height: 16px;
+          border-radius: 4px;
+          &::after {
+            top: 1px;
+            left: 5px;
+            width: 4px;
+            height: 7px;
+          }
+        }
+      }
+    }
+    .inputs-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      &__title {
+        margin-top: 30px;
+        width: 100%;
+        color: rgba(16, 24, 40, 1);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      &__personal {
+        .v-input__wrapper {
+          width: 100%;
+          flex: 1;
+        }
+        @include sm {
+          flex-direction: column;
+        }
+      }
+      &__demographics {
+        margin: 24px 0;
+      }
+
+      .v-input {
+        &.birth {
+          svg {
+            position: absolute;
+            left: 16px;
+          }
+          .v-input__placeholder {
+            left: 44px;
+          }
+        }
+        svg {
+          fill: rgba(52, 64, 84, 1);
+          width: 20px;
+          height: 20px;
+          min-width: 20px;
+          min-height: 20px;
+        }
+        &__wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          .v-input {
+            border-radius: 8px;
+            input {
+              height: 40px;
+            }
+          }
+          &-center {
+            flex: 1;
+          }
+        }
+        &__label-top {
+          color: rgba(52, 64, 84, 1);
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: 0%;
+          text-align: left;
+          .v-input__label-required {
+            color: rgba(240, 68, 56, 1);
+          }
+        }
+        &__btn {
+          padding: 10px 16px;
+          border-left: 1px solid rgba(208, 213, 221, 1);
+          span {
+            color: rgba(52, 64, 84, 1);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+        }
+        &::after {
+          box-sizing: border-box;
+          border: 1px solid rgba(208, 213, 221, 1);
+          border-radius: 8px;
+        }
+      }
+      @include sm {
+        &__center {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

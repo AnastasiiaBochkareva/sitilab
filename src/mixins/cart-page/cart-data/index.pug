@@ -1,0 +1,27 @@
+mixin Cart-data(param={})
+    .cart-page__data
+        h1.title=param.title
+        if(param.radioServices)
+            +Cart-radio-services({})
+        if(param.inputs)
+            +Cart-inputs({
+                place: param.place || false,
+                personal: param.personal || false,
+                demographics: param.demographics || false,
+                contact: param.contact || false,
+                checkboxes: param.checkboxes || false,
+                cartPageInputsRequired: param.required || false,
+            })
+        if(param.services)
+            +Cart-services({
+            services: [
+                    {check: true, code: true, duration: true, delete: true, nameService: 'Выявление РНК коронавируса COVID-19 (SARS-CoV-2), соскоб из ротоглотки и носоглотки', price: 2000, discount: 100, valueHours: '1-3h', valueDays: '1-1d', name: 'duration-1' },
+                    {check: true, code: true, duration: true, delete: true, nameService: 'Общий анализ крови (CBC/Diff - 5 фракций лейкоцитов)', price: 1500, discount: 50, valueHours: '2-3h', valueDays: '2-1d', name: 'duration-2' },
+                    {check: true, code: true, noDuration: true, delete: true, nameService: 'Определение концентрации IgG4 подкласса иммуноглобулинов', noDurationPrice: '2 180.00', },
+                    {tdClassBold: 'total-bold', nameService: 'Стоимость заказа', tdClass: 'total', noDuration: true, noDurationPrice: '4 420.00', price: '-625.5', discount: '3 794.5', priceClass: 'total'},
+                ]
+            })
+        if(param.orderDetails)
+            +Order-details({
+                
+            })

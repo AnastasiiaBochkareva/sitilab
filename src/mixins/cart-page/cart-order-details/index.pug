@@ -1,0 +1,47 @@
+mixin Order-details(param={})
+    .order-details__content
+        .order-details__note 
+                | Для оказания услуг необходимо посетить медицинский центр по адресу:
+        .order-details__center
+            .order-details__center-content
+                +icon('cart-marker')
+                .order-details__center-info
+                    .order-details__address Москва, Хорошевское шоссе, д. 90
+                    .order-details__phone Телефон: 
+                        a.text-blue(href='tel:8 (499) 705-08-08') 8 (499) 705-08-08
+
+                    .order-details__schedule
+                        p.bold Режим работы:
+                        p Пн. - Пт. — 7:00-19:00
+                        p Сб. - Вс. — 07:30-15:30
+
+                    .order-details__biomaterial
+                        p.bold Взятие биоматериала:
+                        p Пн. - Пт. — 7:00-18:30
+                        p Сб. - Вс. — 07:30-15:00
+
+                    a.order-details__more.text-blue(href='#') 
+                        | Подробнее
+                        +icon('cart-arrow-right')
+
+                .order-details__center-map
+                    +Img({
+                        src: 'cart-map.png',
+                        alt: 'cart map'
+                    })
+
+        .order-details__summary
+            .order-details__summary-item.order-number Заказ: 
+                span.number.text-blue №123456
+            .devider
+            .order-details__summary-item.order-sum Общая сумма 
+                span.sum 3 470 ₽
+            .order-details__summary-item.order-discount Скидка 15% по промокоду 
+                span.discount -520.5 ₽
+            .devider
+            .order-details__summary-item.order-total Итого 
+                span.total 2 649 ₽
+            .order-details__summary-item.order-status Статус заказа
+                span.status не оплачен
+            .order-details__summary-link.order-check
+                a.check.text-blue(href='#') Чек об оплате

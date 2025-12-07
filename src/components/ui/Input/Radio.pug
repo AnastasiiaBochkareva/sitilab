@@ -6,11 +6,15 @@
 	param.text
 
 mixin Radio(param = {})
-
-	label.v-radio
+	label.v-radio(for=param.id)
 		input(type="radio" name=param.name value=param.value checked=param.checked disabled=param.disabled)
-		span=param.text
-
+		if(!param.complex)
+			span=param.text
+		if(param.complex)
+			div.radio-btn__complex
+				span.radio-btn__text= param.text
+				if(param.additional)
+					span(class=`${param.addClass}`) #{param.addText}
 
 // -
 	param.name
@@ -27,6 +31,7 @@ mixin RadioBtn(param = {})
 	.radio-btn
 		input(type="radio" name=param.name value=param.value checked=param.checked disabled=param.disabled id=param.id)
 		label(for=param.id) #{param.text}
+
 
 mixin NRadioBtn(param = {})
 	.n-btn-radio

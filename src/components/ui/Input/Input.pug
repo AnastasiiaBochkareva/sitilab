@@ -20,30 +20,67 @@
 mixin Input(param = {})
     - param.id = param.id ? param.id : 'id-' + Math.floor(Math.random() * 66666);
     - param.name = param.name ? param.name : 'name-' + Math.floor(Math.random() * 66666);
-
     // - TYPE TEXT
     - if (!param.type || param.type === 'text')
-        .v-input(
-            class=param.status ? 'input_' + param.status : ''
-            class=param.size ? 'input_' + param.size : ''
-            class=param.mode ? 'input_' + param.mode : ''
-            class=param.class
-        )
-            input(
-                type="text"
-                id=param.id
-                name=param.name
-                placeholder=" "
-                disabled=param.disabled
-                class=param.inputClass
-                required=param.required
-                data-mask=param.mask
+        if(param.labelTop)
+            .v-input__wrapper(class=param.addWrapperClass)
+                span.v-input__label-top #{param.labelTopText} 
+                    if(param.labelTopRequired)
+                        span.v-input__label-required * 
+                .v-input(
+                    class=param.status ? 'input_' + param.status : ''
+                    class=param.size ? 'input_' + param.size : ''
+                    class=param.mode ? 'input_' + param.mode : ''
+                    class=param.class
+                )
+                    input(
+                        type="text"
+                        id=param.id
+                        name=param.name
+                        placeholder=" "
+                        disabled=param.disabled
+                        class=param.inputClass
+                        required=param.required
+                        data-mask=param.mask
+                        onClick=param.onClick
+                        readonly=param.readonly
+                        data-open-modal=param.dataOpenModal
+                    )
+                    if(param.date)
+                        +icon('cart-calendar')
+                    label(for=param.id).v-input__placeholder #{param.placeholder}
+                    if(param.button)
+                        button(type="button" class="v-input__btn" data-open-modal=param.dataOpenModal)
+                            //- +icon(param.buttonIcon)
+                            span=param.inputBtnText
+                    if(param.arrowDown)
+                        +icon('a-arrow-down')
+                    if(param.dateBirth)
+                        +icon('date-birth')
+
+        else
+            .v-input(
+                class=param.status ? 'input_' + param.status : ''
+                class=param.size ? 'input_' + param.size : ''
+                class=param.mode ? 'input_' + param.mode : ''
+                class=param.class
             )
-            label(for=param.id).v-input__placeholder #{param.placeholder}
-            if (param.arrowDown)
-              +icon('a-arrow-down')
-            if (param.dateBirth)
-              +icon('date-birth')
+
+                input(
+                    type="text"
+                    id=param.id
+                    name=param.name
+                    placeholder=" "
+                    disabled=param.disabled
+                    class=param.inputClass
+                    required=param.required
+                    data-mask=param.mask
+                )
+                label(for=param.id).v-input__placeholder #{param.placeholder}
+                if (param.arrowDown)
+                    +icon('a-arrow-down')
+                if (param.dateBirth)
+                    +icon('date-birth')
 
     // - TYPE COUNT
     - if (param.type === 'count')

@@ -205,6 +205,8 @@ button {
   svg {
     width: 20px;
     height: 20px;
+    fill: transparent;
+    stroke: rgba(142, 154, 171, 1);
   }
 
   @media (max-width: 768px) {
@@ -225,7 +227,7 @@ button {
   text-align: center;
   &:hover {
     background-color: $blue-hover;
-    text-decoration: none;
+    text-decoration: none !important;
   }
   span {
     color: #fff;
@@ -246,7 +248,7 @@ button {
   border: 1px solid rgb(0, 171, 223);
   &:hover {
     background-color: $blue-hover;
-    text-decoration: none;
+    text-decoration: none !important;
     span {
       color: #fff;
     }
@@ -273,7 +275,7 @@ button {
   border: 1px solid rgb(142, 154, 171);
   &:hover {
     background-color: rgb(142, 154, 171, 0.1);
-    text-decoration: none;
+    text-decoration: none !important;
   }
   span {
     color: rgb(142, 154, 171);
@@ -316,7 +318,7 @@ button {
     color: rgb(142, 154, 171);
     background: transparent;
   }
-  &:not(.franchise-page .c-btn) {
+  &:not(.franchise-page .c-btn, .modal-map__body_filter .c-btn) {
     font-size: 14px;
     line-height: 30px;
     font-weight: 500;

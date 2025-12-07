@@ -10,7 +10,8 @@
 mixin Checkbox(param = {})
 
 	- param.name = param.name ? param.name : 'name-' + Math.floor(Math.random() * 6666);
-	- param.id = Math.floor(Math.random() * 6666);
+	//- - param.id = Math.floor(Math.random() * 6666);
+	- param.id = param.id ? param.id : Math.floor(Math.random() * 6666);
 
 	.v-checkbox(class=param.reverse ? 'checkbox_reverse' : '')
 		input.v-checkbox__input(type="checkbox" name=param.name value=param.value checked=param.checked disabled=param.disabled id=param.id)
@@ -18,7 +19,7 @@ mixin Checkbox(param = {})
 			label(for=param.id).v-checkbox__label #{param.text}
 				a(href='#') #{param.textLink}
 		else
-			label(for=param.id class=`${param.labelClass}`).v-checkbox__label #{param.text}
+			label(for=param.id class=param.labelClass ? param.labelClass : null).v-checkbox__label #{param.text}
 				if(param.span)
 					span(class=`${param.spanClass}`)=`${param.spanText}`
 

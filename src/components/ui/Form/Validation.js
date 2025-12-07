@@ -1,7 +1,8 @@
 export default class Validation {
   constructor() {
     // Elemetns
-    this.forms = [...document.querySelectorAll('form')];
+    // this.forms = [...document.querySelectorAll('form')];
+    this.forms = [];
   }
 
   init() {
@@ -9,14 +10,17 @@ export default class Validation {
       form.noValidate = true;
     });
 
-    document.addEventListener('submit', Validation.submitHandler);
-    document.addEventListener('reset', Validation.resetHandler);
+    // document.addEventListener('submit', Validation.submitHandler);
+    // document.addEventListener('reset', Validation.resetHandler);
   }
 
   static resetHandler(e) {
     const form = e.target;
 
-    const inputs = [...form.querySelectorAll('input'), ...form.querySelectorAll('textarea')];
+    const inputs = [
+      ...form.querySelectorAll('input'),
+      ...form.querySelectorAll('textarea'),
+    ];
 
     inputs.forEach((input) => {
       Validation.clearError(input);
@@ -54,7 +58,7 @@ export default class Validation {
     }
 
     // TODO закоментить на проде
-    await Validation.debug(form, res);
+    // await Validation.debug(form, res);
 
     if (res.status === 200 && json.success) Validation.formSuccess();
     if (res.status !== 200) Validation.formError();
@@ -63,20 +67,24 @@ export default class Validation {
     form.reset();
   }
 
-  static async debug(form, res) {
-    console.warn('Пауза 2000 мс. Отключить на проде!!!');
-    await new Promise((resolve) => { setTimeout(resolve, 2000); });
-    console.log('form.id', form.id);
-    console.log('status', res.status);
-  }
+  // static async debug(form, res) {
+  //   console.warn('Пауза 2000 мс. Отключить на проде!!!');
+  //   await new Promise((resolve) => { setTimeout(resolve, 2000); });
+  //   console.log('form.id', form.id);
+  //   console.log('status', res.status);
+  // }
 
   static checkFormValidity(form) {
-    const inputs = [...form.querySelectorAll('input'), ...form.querySelectorAll('textarea')];
+    const inputs = [
+      ...form.querySelectorAll('input'),
+      ...form.querySelectorAll('textarea'),
+    ];
 
     inputs.forEach((input) => {
       // Если есть атрибут с маской то проводим свою валидацию
       if (input.dataset.mask === 'phone') {
-        if (input.value.length < 16) input.setCustomValidity('phone min length = 16');
+        if (input.value.length < 16)
+          input.setCustomValidity('phone min length = 16');
         else input.setCustomValidity('');
       }
 
@@ -99,9 +107,13 @@ export default class Validation {
 
       wrapper.classList.add('input_error');
 
-      input.addEventListener('input', (e) => {
-        Validation.clearError(e.target);
-      }, { once: true });
+      input.addEventListener(
+        'input',
+        (e) => {
+          Validation.clearError(e.target);
+        },
+        { once: true }
+      );
     });
 
     return form.checkValidity();
@@ -124,7 +136,7 @@ export default class Validation {
     `;
 
     return loader;
-  }
+  };
 
   static clearError(input) {
     const wrapper = input.closest('.input');

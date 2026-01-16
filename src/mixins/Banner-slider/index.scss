@@ -1,0 +1,137 @@
+.banner-slider__medical-center {
+  position: relative;
+  overflow: hidden;
+  .banner-slider {
+    &__navigation {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 80px);
+      z-index: 2;
+      .slider-navigation {
+        &_prev,
+        &_next {
+          background-color: #00b2e3 !important;
+          border: 2px solid #fff !important;
+          transition: all ease 0.3s;
+          svg {
+            width: 50px;
+            height: 50px;
+            fill: #fff !important;
+          }
+          &:not(.swiper-button-disabled) {
+            &:hover {
+              background-color: rgb(21, 195, 250) !important;
+            }
+          }
+        }
+        &_next {
+          right: 0 !important;
+          top: 0;
+          svg {
+            transform: rotate(-90deg);
+          }
+        }
+        &_prev {
+          left: 0;
+          top: 0;
+          svg {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+    &__wrapper {
+      background-color: rgba(0, 171, 223, 1);
+      border-radius: 20px;
+      width: 100%;
+      .swiper-wrapper {
+        align-items: stretch;
+      }
+      .swiper-slide {
+        height: auto;
+        display: flex;
+      }
+    }
+  }
+  .banner-card {
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    gap: 30px;
+    padding: 0 131px;
+    flex: 1;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+    &__title {
+      color: rgba(255, 255, 255, 1);
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 32px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    &__subtitle {
+      color: rgba(255, 255, 255, 1);
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 48px;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+  }
+  .btn_more {
+    text-decoration: none;
+    display: flex;
+    // align-items: center;
+    align-items: flex-end;
+    gap: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0%;
+    @media (min-width: 1000px) {
+      &:hover {
+        text-decoration: underline;
+        svg {
+          transform: translateX(2px);
+        }
+      }
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      min-height: 18px;
+      fill: #fff;
+      transition: all ease 0.3s;
+    }
+  }
+  .img-container {
+    max-width: 270px;
+    max-height: 190px;
+  }
+  @media (max-width: 1000px) {
+    .banner-card {
+      padding: 20px 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      &__content {
+        align-items: center;
+      }
+      &__title,
+      &__subtitle {
+        text-align: center;
+      }
+    }
+  }
+}

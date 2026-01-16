@@ -31,7 +31,10 @@
       height: 19px;
       fill: #00b2e3 !important;
     }
-    &.swiper-button-disabled:not(.cart-order__slider .swiper-button-disabled) {
+    &.swiper-button-disabled:not(
+        .cart-order__slider .swiper-button-disabled,
+        .banner-slider__medical-center .swiper-button-disabled
+      ) {
       border: 1px solid #00b2e3 !important;
       background-color: #fff !important;
       svg {

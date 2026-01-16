@@ -1,0 +1,39 @@
+//- mixin Medical-center-slider(param={})
+//-     div.medical-center-slider
+//-         .medical-center-slide__wrapper
+//-             .swiper-wrapper 
+//-                 .swiper-slide
+//-                     .medical-center-card
+//-                         .medical-center-card__content
+//-                             h2.medical-center-card__title=param.title
+//-                             p.medical-center-card__subtitle=param.subtitle
+//-                             a(href='#').btn_more
+//-                                 | Подробнее
+//-                                 +icon('btn_more')
+//-                         .img-container
+//-                             +Img({
+//-                                 src: `${param.img}.png`,
+//-                                 alt: 'slider-image'
+//-                             })
+        
+//-         +Slider-navigation({})
+mixin Banner-slider(items, modifier='')
+    div.banner-slider(class=modifier ? `banner-slider__${modifier}` : '')
+        .banner-slider__navigation
+            +Slider-navigation({})
+        .banner-slider__wrapper
+            .swiper-wrapper
+                each item in items
+                    .swiper-slide
+                        .banner-card
+                            .banner-card__content
+                                h2.banner-card__title=item.title
+                                p.banner-card__subtitle=item.subtitle
+                                a.banner-card__btn.btn_more(href='#')
+                                    | Подробнее
+                                    +icon('btn_more')
+                            .img-container
+                                +Img({
+                                    src: `${item.img}.png`,
+                                    alt: item.title || 'banner image'
+                                })

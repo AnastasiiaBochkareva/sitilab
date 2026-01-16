@@ -175,6 +175,20 @@ const franchiseSlider = new Swiper('.franchise-slider', {
   },
 });
 
+// Medical Center Page
+const bannerMedicalCenterSlider = new Swiper('.banner-slider__medical-center .banner-slider__wrapper', {
+  modules: [Navigation],
+  slidesPerView: '1',
+  spaceBetween: 0,
+  navigation: {
+    prevEl: document.querySelector('.slider-navigation_prev'),
+    nextEl: document.querySelector('.slider-navigation_next'),
+  },
+  noSwiping: true,
+  grabCursor: true,
+  slideToClickedSlide: true,
+});
+
 // const mainBannerSlider = new Swiper('.main-banner__slider', {
 //   modules: [Pagination, Autoplay],
 //   slidesPerView: '1',

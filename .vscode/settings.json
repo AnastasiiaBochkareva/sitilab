@@ -1,14 +1,28 @@
 {
-    "prettier.jsxSingleQuote": true,
-    "prettier.singleQuote": true,
-    "prettier.useEditorConfig": false,
+  "editor.formatOnSave": true,
 
-    "workbench.colorCustomizations": {
-        "titleBar.activeBackground": "#003546",
-        "titleBar.inactiveBackground": "#60A5FA",
-        "titleBar.activeForeground": "#ffffff",
-        "titleBar.inactiveForeground": "#eeeeee",
-        "activityBar.background": "#003546",
-        "activityBar.foreground": "#ffffff"
-    }
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.useEditorConfig": false,
+
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#003546",
+    "titleBar.inactiveBackground": "#60A5FA",
+    "titleBar.activeForeground": "#ffffff",
+    "titleBar.inactiveForeground": "#eeeeee",
+    "activityBar.background": "#003546",
+    "activityBar.foreground": "#ffffff"
+  },
+
+  "[pug]": {
+    "editor.defaultFormatter": "ducfilan.pug-formatter"
+  },
+
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

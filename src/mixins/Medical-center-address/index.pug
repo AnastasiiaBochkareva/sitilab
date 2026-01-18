@@ -1,0 +1,96 @@
+mixin Medical-center-address(param={})
+    .medical-center__address.address 
+        .address__col
+            .address__title Медицинские анализы Москва, Хорошевское шоссе, д. 90
+            .all-blick-data
+                ul.metro-block-new
+                    li 
+                        img(src="/assets/img/categories/m.png", alt="")
+                        p Хорошёвская 
+                            +icon('man') 
+                            span 132 м
+                    li 
+                        img(src="/assets/img/categories/m.png", alt="")
+                        p Хорошёвская 
+                            +icon('man') 
+                            span 132 м
+                    li 
+                        img(src="/assets/img/categories/m.png", alt="")
+                        p Хорошёвская 
+                            +icon('man') 
+                            span 132 м
+            a(href='tel:+74997050808').address__phone +7 (499) 705-08-08
+            ul.address__advantages
+                li 
+                    +icon('a-calendar')
+                    | Выезд на дом
+                li 
+                    +icon('a-calendar')
+                    | Удобная парковка
+                li 
+                    +icon('a-calendar')
+                    | Срочные анализы (CITO)          
+                li 
+                    +icon('a-calendar')
+                    | Выезд с колясками
+                li 
+                    +icon('a-calendar')
+                    | Дневной стационар
+                li 
+                    +icon('a-calendar')
+                    | Оплата картой
+                li 
+                    +icon('a-calendar')
+                    | Работа без выходных
+                li 
+                    +icon('a-calendar')
+                    | Передача БМ в лабораторию
+        .address__col
+            +TabsNav({
+                items: [
+                { label: 'На карте', targetId: 'tab1' },
+                { label: 'Панорама', targetId: 'tab2' },
+                { label: 'Фото', targetId: 'tab3' },
+                { label: 'Маршрут', targetId: 'tab4' }
+                ],
+                noCar: true,
+                noSvg: true,
+            })
+            .tabb#tab1(style="width: 100%; height: max-content; background: tranparent;") 
+                .address__map
+                    +Img({
+                        src: 'address-map.png',
+                        alt: 'address-map'
+                    })
+            .tabb#tab2(style="width: 100%; height: max-content; background: tranparent; display: none;") 
+                p Panorama 
+            .tabb#tab3(style="width: 100%; height: max-content; background: tranparent; display: none;") 
+                .medical-center__address_slider
+                    .swiper-wrapper 
+                        .swiper-slide
+                            +Img({
+                                src: 'address-slider-1.png',
+                                alt: 'address-slider-1'
+                            })
+                        .swiper-slide
+                            +Img({
+                                src: 'address-map.png',
+                                alt: 'address-map'
+                            })
+                .medical-center__address-nav
+                    button(type='button').slider-nav_prev
+                        +icon('franchise-slider')
+                    button(type='button').slider-nav_next
+                        +icon('franchise-slider')
+                .medical-center__address-pagination
+            .tabb#tab4(style="width: 100%; height: max-content; background: tranparent; display: none;") 
+                .gray-container
+                    .gray-container__title Как добраться
+                    .gray-container__item
+                        .gray-container__item_title Пешком
+                        .gray-container__item_subtitle Станция метро «Полежаевская» (первый вагон из центра, из стеклянных дверей направо, первая лестница налево)
+                    .gray-container__item
+                        .gray-container__item_title Транспортом
+                        .gray-container__item_subtitle Движение по Хорошевскому шоссе из Москвы.
+                    .gray-container__btn
+                        | Построить маршрут

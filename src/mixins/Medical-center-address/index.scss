@@ -1,0 +1,41 @@
+.medical-center__address {
+    .address {
+        &__advantages {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 100%;
+                max-width: calc(50% - 10px);
+                svg{
+                    width: 24px;
+                    height: 24px;
+                    min-width: 24px;
+                    min-height: 24px;
+                }
+            }
+        }
+    }
+    .all-blick-data {
+
+    }
+    .metro-block-new {
+        li {
+            display: flex;
+            align-items: center;
+            picture, img {
+                width: 12px;
+                height: 12px;
+                min-height: 12px;
+                min-width: 12px;
+            }
+            p {
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    min-width: 20px;
+                    min-height: 20px;
+                }
+            }
+        }
+    }
+}

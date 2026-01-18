@@ -2054,3 +2054,11 @@ body {
     }
   }
 }
+.medical-center{
+  .visit-attention {
+    row-gap: 0;
+    &__subtitle {
+      max-width: 100% !important;
+    }
+  }
+}

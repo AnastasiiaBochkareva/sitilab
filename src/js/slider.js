@@ -123,9 +123,9 @@ const corporateSlider = new Swiper('.corporate-slider', {
   autoplay:
     window.innerWidth <= 768
       ? {
-          delay: 2500,
-          disableOnInteraction: false,
-        }
+        delay: 2500,
+        disableOnInteraction: false,
+      }
       : false,
   breakpoints: {
     1308: {
@@ -183,6 +183,22 @@ const bannerMedicalCenterSlider = new Swiper('.banner-slider__medical-center .ba
   navigation: {
     prevEl: document.querySelector('.slider-navigation_prev'),
     nextEl: document.querySelector('.slider-navigation_next'),
+  },
+  noSwiping: true,
+  grabCursor: true,
+  slideToClickedSlide: true,
+});
+
+const medicalCenterAddressSlider = new Swiper('.medical-center__address_slider', {
+  modules: [Navigation, Pagination],
+  slidesPerView: '1',
+  spaceBetween: 0,
+  navigation: {
+    prevEl: document.querySelector('.slider-nav_prev'),
+    nextEl: document.querySelector('.slider-nav_next'),
+  },
+  pagination: {
+    el: '.medical-center__address-pagination',
   },
   noSwiping: true,
   grabCursor: true,

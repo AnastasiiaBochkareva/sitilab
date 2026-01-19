@@ -1,0 +1,22 @@
+mixin Medical-center-legal-info(param={})
+    div.medical-center__legal-info.legal-info
+        .container
+            .legal-info__title Сведения о юридическом лице
+            .legal-info__items
+                .legal-info__col.legal-info__col_left
+                    each item in param.items
+                        .legal-info__item
+                            .legal-info__item_title= item.title
+                            .legal-info__item_subtitle= item.subtitle
+
+                if(param.itemImg)
+                    .legal-info__col.legal-info__col_right
+                        .img-container
+                            +Img({
+                                src: `${param.itemImg.img}.png`,
+                                alt: param.itemImg.img
+                            })
+                        .legal-info__item
+                            .legal-info__item_title= param.itemImg.title
+                            .legal-info__item_subtitle= param.itemImg.subtitle
+

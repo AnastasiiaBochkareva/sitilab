@@ -1,0 +1,8 @@
+mixin Note(param={})
+    div.note
+        if(param.text)
+            .note__text=param.text
+        if(param.stars)
+            .note__rating
+                each svg in Array(5)
+                    +icon('ask-star')

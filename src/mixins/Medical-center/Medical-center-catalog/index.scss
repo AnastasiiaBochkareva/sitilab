@@ -1,0 +1,107 @@
+.medical-center__catalog {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  .catalog {
+    &__title {
+      color: rgba(59, 75, 100, 1);
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 38px;
+      letter-spacing: -2%;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: -2%;
+      text-align: left;
+      margin-bottom: 28px;
+      span {
+        font-weight: 700;
+      }
+      a {
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+          color: rgb(21, 195, 250);
+        }
+      }
+    }
+    &__btn {
+      text-decoration: none;
+      color: rgba(59, 75, 100, 1);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -2%;
+      padding: 11px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border: 1px solid rgba(178, 186, 198, 1);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 1);
+      max-width: max-content;
+      transition: all ease 0.3s;
+      &:hover {
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+        border-color: rgb(21, 195, 250);
+        svg {
+          stroke: rgb(21, 195, 250);
+        }
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
+        stroke: rgba(0, 171, 223, 1);
+        fill: #fff;
+        transition: all ease 0.3s;
+      }
+    }
+    &__col {
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      li {
+        width: 100%;
+        max-width: calc(50% - 10px);
+        border: 1px solid rgba(217, 225, 233, 1);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 1);
+        transition: all 0.3s ease;
+        &:hover {
+          border-color: rgb(21, 195, 250);
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+        }
+        a {
+          text-decoration: none;
+          color: rgba(59, 75, 100, 1);
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 28px;
+          letter-spacing: -2%;
+          padding: 11px 20px;
+          display: flex;
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(1, 1fr);
+    .catalog {
+      &__list {
+        li {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

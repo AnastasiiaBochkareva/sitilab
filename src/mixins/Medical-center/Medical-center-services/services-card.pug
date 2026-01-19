@@ -1,0 +1,5 @@
+mixin Medical-center-services-card(param={})
+    .services__card
+        +icon(`${param.svg}`)
+        .services__card_title=param.title
+        a(href='#').services__card_btn Записаться

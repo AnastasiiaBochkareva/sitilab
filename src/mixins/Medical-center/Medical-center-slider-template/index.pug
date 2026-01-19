@@ -1,0 +1,14 @@
+mixin Medical-center-slider-template(param={})
+    div.medical-center__slider-container
+        .medical-center__slider-head
+            .medical-center__slider_title=param.title
+            a(href='#').medical-center__slider_subtitle.text-blue=param.subtitle
+            +Note({
+                text: 'Проверенные врачи высокой квалификации',
+                stars: true
+            })
+            .medical-center__slider_navigation
+                +Slider-navigation({})
+        .medical-center__slider
+            .swiper-wrapper 
+                .swiper-slide

@@ -1,0 +1,14 @@
+mixin Medical-center-services(param={})
+    .medical-center__services.services
+        div.container 
+            .services__row 
+                .services__title=param.title
+                ul.services__list
+                    each el in param.list 
+                        li
+                            +icon('icon-check')
+                            |#{el}
+            .services__row 
+                +Medical-center-services-card({ svg: 'icon-doctor', title: 'Врач акушер-гинеколог' })
+                +Medical-center-services-card({ svg: 'usi', title: 'УЗИ' })
+                +Medical-center-services-card({ svg: 'iv', title: 'Капельницы, инъекции' })

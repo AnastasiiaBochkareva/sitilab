@@ -1,0 +1,121 @@
+.medical-center__services {
+  background-color: rgba(243, 246, 249, 1);
+  padding: 80px 0 60px;
+  .services {
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+    &__title {
+      color: rgba(59, 75, 100, 1);
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 38px;
+      letter-spacing: -2%;
+      text-align: left;
+      max-width: 300px;
+      width: 100%;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 16px;
+      flex: 1;
+      li {
+        width: calc(50% - 8px);
+        display: flex;
+        align-items: flex-start;
+        color: rgba(59, 75, 100, 1);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: -2%;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+        svg {
+          width: 14px;
+          height: 19px;
+          min-width: 14px;
+          min-height: 19px;
+          fill: rgba(0, 171, 223, 1);
+          margin: 4px 8px 0 0;
+        }
+      }
+    }
+    &__card {
+      flex: 1;
+      width: 100%;
+      min-width: calc(33% - 10px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(217, 225, 233, 1);
+      background-color: rgba(255, 255, 255, 1);
+      padding: 20px;
+      svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(230, 248, 253, 1);
+        fill: rgba(0, 171, 223, 1);
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        padding: 7.5px;
+      }
+      &_btn {
+        border: 1.5px solid rgba(0, 171, 223, 1);
+        border-radius: 10px;
+        color: rgba(0, 171, 223, 1);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: -2%;
+        text-align: center;
+        text-decoration: none;
+        padding: 11px 35px;
+        width: max-content;
+        transition: all ease 0.3s;
+        display: block;
+        &:hover {
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+          border-color: rgb(21, 195, 250);
+          color: rgb(21, 195, 250);
+        }
+      }
+      &_title {
+        color: rgba(59, 75, 100, 1);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: -2%;
+        text-align: left;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    .services {
+      &__row {
+        flex-direction: column;
+      }
+      &__list {
+        column-count: 1;
+        li {
+          width: 100%;
+        }
+      }
+      &__title {
+        max-width: 100%;
+      }
+      &__card {
+        min-width: 100%;
+      }
+    }
+  }
+}

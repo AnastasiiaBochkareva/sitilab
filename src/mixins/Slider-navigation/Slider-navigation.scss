@@ -33,7 +33,7 @@
     }
     &.swiper-button-disabled:not(
         .cart-order__slider .swiper-button-disabled,
-        .banner-slider__medical-center .swiper-button-disabled
+        .banner-slider__medical-center .swiper-button-disabled, .medical-center__address-nav .swiper-button-disabled
       ) {
       border: 1px solid #00b2e3 !important;
       background-color: #fff !important;

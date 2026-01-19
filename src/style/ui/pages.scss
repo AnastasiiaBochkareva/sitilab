@@ -2057,8 +2057,17 @@ body {
 .medical-center{
   .visit-attention {
     row-gap: 0;
+    display: block;
+    padding: 14px 20px;
+    border-radius: 12px;
     &__subtitle {
       max-width: 100% !important;
+      color: rgba(59, 75, 100, 1);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: -2%;
+      text-align: left;
     }
   }
 }

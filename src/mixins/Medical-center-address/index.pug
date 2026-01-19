@@ -1,7 +1,7 @@
 mixin Medical-center-address(param={})
     .medical-center__address.address 
         .address__col
-            .address__title Медицинские анализы Москва, Хорошевское шоссе, д. 90
+            .address__title.text-blue Медицинские анализы Москва, Хорошевское шоссе, д. 90
             .all-blick-data
                 ul.metro-block-new
                     li 
@@ -19,7 +19,7 @@ mixin Medical-center-address(param={})
                         p Хорошёвская 
                             +icon('man') 
                             span 132 м
-            a(href='tel:+74997050808').address__phone +7 (499) 705-08-08
+            a(href='tel:+74997050808').address__phone.text-blue +7 (499) 705-08-08
             ul.address__advantages
                 li 
                     +icon('a-calendar')
@@ -56,16 +56,20 @@ mixin Medical-center-address(param={})
                 noCar: true,
                 noSvg: true,
             })
-            .tabb#tab1(style="width: 100%; height: max-content; background: tranparent;") 
+            .tabb#tab1(style="width: 100%; height: max-content; background: transparent;") 
                 .address__map
                     +Img({
                         src: 'address-map.png',
                         alt: 'address-map'
                     })
-            .tabb#tab2(style="width: 100%; height: max-content; background: tranparent; display: none;") 
-                p Panorama 
-            .tabb#tab3(style="width: 100%; height: max-content; background: tranparent; display: none;") 
-                .medical-center__address_slider
+            .tabb#tab2(style="width: 100%; height: max-content; background: transparent; display: none;") 
+                .address__panorama
+                    +Img({
+                        src: 'address-map.png',
+                        alt: 'address-map'
+                    })
+            .tabb.tabb-slider#tab3(style="width: 100%; height: max-content; background: transparent; display: none;" data-tab-content="address-slider") 
+                .medical-center__address_slider.swiper
                     .swiper-wrapper 
                         .swiper-slide
                             +Img({
@@ -78,19 +82,19 @@ mixin Medical-center-address(param={})
                                 alt: 'address-map'
                             })
                 .medical-center__address-nav
-                    button(type='button').slider-nav_prev
-                        +icon('franchise-slider')
-                    button(type='button').slider-nav_next
-                        +icon('franchise-slider')
+                    +Slider-navigation({})
                 .medical-center__address-pagination
-            .tabb#tab4(style="width: 100%; height: max-content; background: tranparent; display: none;") 
+            .tabb#tab4(style="width: 100%; height: max-content; background: transparent; display: none;") 
                 .gray-container
                     .gray-container__title Как добраться
                     .gray-container__item
                         .gray-container__item_title Пешком
+                            +icon('icon-man')
                         .gray-container__item_subtitle Станция метро «Полежаевская» (первый вагон из центра, из стеклянных дверей направо, первая лестница налево)
                     .gray-container__item
                         .gray-container__item_title Транспортом
+                            +icon('icon-man')
                         .gray-container__item_subtitle Движение по Хорошевскому шоссе из Москвы.
-                    .gray-container__btn
+                    a(href='#').gray-container__btn
                         | Построить маршрут
+                        +icon('route')

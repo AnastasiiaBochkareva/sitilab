@@ -189,21 +189,100 @@ const bannerMedicalCenterSlider = new Swiper('.banner-slider__medical-center .ba
   slideToClickedSlide: true,
 });
 
-const medicalCenterAddressSlider = new Swiper('.medical-center__address_slider', {
-  modules: [Navigation, Pagination],
-  slidesPerView: '1',
-  spaceBetween: 0,
-  navigation: {
-    prevEl: document.querySelector('.slider-nav_prev'),
-    nextEl: document.querySelector('.slider-nav_next'),
-  },
-  pagination: {
-    el: '.medical-center__address-pagination',
-  },
-  noSwiping: true,
-  grabCursor: true,
-  slideToClickedSlide: true,
-});
+// const medicalCenterAddressSlider = new Swiper('.medical-center__address_slider', {
+//   modules: [Navigation, Pagination, Autoplay],
+//   slidesPerView: 1,
+//   spaceBetween: 0,
+//   navigation: {
+//     prevEl: document.querySelector('.medical-center__address-nav .slider-navigation_prev'),
+//     nextEl: document.querySelector('.medical-center__address-nav .slider-navigation_next'),
+//   },
+//   pagination: {
+//     el: '.medical-center__address-pagination',
+//   },
+//   autoplay:
+//     window.innerWidth <= 768
+//       ? {
+//         delay: 2500,
+//         disableOnInteraction: false,
+//       }
+//       : false,
+//   noSwiping: true,
+//   grabCursor: true,
+//   slideToClickedSlide: true,
+//   breakpoints: {
+//     300: {
+//       slidesPerView: 1,
+//     },
+//   },
+// });
+// show
+// глобальная переменная для слайдера
+const clickHandler = async (e) => {
+  const tabBtn = e.target.closest('.tabs-nav__btn');
+  if (!tabBtn) return;
+
+  const tabsNav = tabBtn.parentElement;
+  const beforeActiveBtn = tabsNav.querySelector('.tabs-nav__btn.active');
+
+  beforeActiveBtn?.classList.remove('active');
+  tabBtn.classList.add('active');
+
+  // === анимация скрытия предыдущей вкладки ===
+  const activeTab = document.getElementById(beforeActiveBtn?.dataset.tabTarget);
+  if (activeTab) {
+    await animate({
+      draw(progress) {
+        activeTab.style.opacity = 1 - progress;
+      },
+    });
+    activeTab.style.display = 'none';
+    activeTab.style.opacity = null;
+  }
+
+  // === анимация показа новой вкладки ===
+  const targetTab = document.getElementById(tabBtn.dataset.tabTarget);
+  if (targetTab) {
+    targetTab.style.opacity = 0;
+    targetTab.style.display = null;
+    await animate({
+      draw(progress) {
+        targetTab.style.opacity = progress;
+      },
+    });
+    targetTab.style.opacity = null;
+  }
+
+  // === Здесь вставляем инициализацию Swiper для tab3 ===
+  if (tabBtn.dataset.tabTarget === 'tab3') {
+    if (!window.medicalCenterSlider) {
+      window.medicalCenterSlider = new Swiper('#tab3 .medical-center__address_slider', {
+        modules: [Navigation, Pagination, Autoplay],
+        slidesPerView: 1,
+        spaceBetween: 0,
+        navigation: {
+          prevEl: '#tab3 .slider-navigation_prev',
+          nextEl: '#tab3 .slider-navigation_next',
+        },
+        pagination: {
+          el: '#tab3 .medical-center__address-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        observer: true,
+        observeParents: true,
+      });
+      window.medicalCenterSlider.update();
+    } else {
+      window.medicalCenterSlider.update();
+      if (window.medicalCenterSlider.autoplay) window.medicalCenterSlider.autoplay.start();
+    }
+  }
+};
+
 
 // const mainBannerSlider = new Swiper('.main-banner__slider', {
 //   modules: [Pagination, Autoplay],

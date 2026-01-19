@@ -32,11 +32,11 @@
     margin: 0;
   }
   button:not(
-      .slider-navigation_prev,
-      .slider-navigation_next,
-      .order-tab-two__slider button,
-      .modal-fixed__close
-    ) {
+    .slider-navigation_prev,
+    .slider-navigation_next,
+    .order-tab-two__slider button,
+    .modal-fixed__close
+  ) {
     background-color: transparent !important;
     border: none !important;
     cursor: pointer !important;
@@ -2038,7 +2038,8 @@ body {
     }
   }
 }
-.franchise-page, .medical-center {
+.franchise-page,
+.medical-center {
   .container {
     max-width: 1380px;
     width: 100%;
@@ -2047,14 +2048,18 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-  @include xs {
-    .container {
-      padding-left: 24px;
-      padding-right: 24px;
+  @media (max-width: 1000px) {
+    .container:not(.container--slider-mobile) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .container--slider-mobile {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
-.medical-center{
+.medical-center {
   .visit-attention {
     row-gap: 0;
     display: block;
@@ -2070,14 +2075,14 @@ body {
       text-align: left;
     }
   }
-  .container--blue-bg-mobile {
-    @media(max-width: 1000px) {
-      background-color: rgb(0, 171, 223);
+
+  @media (max-width: 1000px) {
+    &__subtitle {
+      font-size: 14px;
+      line-height: 20px;
     }
-  }
-  .container--gray-bg-mobile {
-    @media(max-width: 1000px) {
-      background-color: rgb(243, 246, 249);
+    .container--gray-bg-mobile {
+      background-color: rgba(243, 246, 249, 1);
     }
   }
 }

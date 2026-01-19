@@ -177,16 +177,23 @@ const franchiseSlider = new Swiper('.franchise-slider', {
 
 // Medical Center Page
 const bannerMedicalCenterSlider = new Swiper('.banner-slider__medical-center .banner-slider__wrapper', {
-  modules: [Navigation],
+  modules: [Navigation, Pagination, Autoplay],
   slidesPerView: '1',
   spaceBetween: 0,
   navigation: {
     prevEl: document.querySelector('.slider-navigation_prev'),
     nextEl: document.querySelector('.slider-navigation_next'),
   },
+  pagination: {
+    el: '.banner-slider__pagination',
+  },
   noSwiping: true,
   grabCursor: true,
   slideToClickedSlide: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 });
 
 const MedicalCenterSliderReviews = new Swiper('.medical-center__slider-reviews', {
@@ -208,10 +215,10 @@ const MedicalCenterSliderReviews = new Swiper('.medical-center__slider-reviews',
       slidesPerView: '2',
     },
     350: {
-      slidesPerView: '1.1',
+      slidesPerView: '1.5',
     },
     300: {
-      slidesPerView: '1',
+      slidesPerView: '1.5',
     },
   },
 });
@@ -232,10 +239,10 @@ const MedicalCenterSliderDoctors = new Swiper('.medical-center__slider-doctors',
       slidesPerView: '2',
     },
     350: {
-      slidesPerView: '1.1',
+      slidesPerView: '1.5',
     },
     300: {
-      slidesPerView: '1',
+      slidesPerView: '1.5',
     },
   },
 });

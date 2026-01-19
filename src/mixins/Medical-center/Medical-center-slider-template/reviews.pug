@@ -1,0 +1,21 @@
+mixin Medical-center-slide-review(param={})
+    div.medical-center__review.review
+        .platform   
+                +Img({
+                    src: 'ya.png',
+                    alt: 'ya'
+                })
+        .review__head
+            .img-container
+                +Img({
+                    src: 'user.png', 
+                    alt: 'user'
+                })
+            .review__username=param.username
+            .review__rating 
+                each el in Array(5)
+                    +icon('ask-star')
+        .review__body
+            .review__text=param.text
+            a(href='#').review__btn.btn-more.text-blue Читать полностью
+                +icon('btn_more')

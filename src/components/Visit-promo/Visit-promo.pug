@@ -15,6 +15,16 @@ mixin Visit-promo(param = {})
           .visit-promo__title Закажите по телефону:
           .visit-promo__phone 8 (495) 147-01-71
           .visit-promo__title-sm или заполните форму заявки:
+          .dropdown
+            input(type="hidden" name="service" class="dropdown__value")
+            .dropdown__head(tabindex="0")
+              span.dropdown__text Москва -  в пределах МКАД - 750 руб.
+              +icon('a-arrow-down')
+
+            ul.dropdown__list
+              li.dropdown__item(data-value="Москва -  в пределах МКАД - 750 руб.") Москва -  в пределах МКАД - 750 руб.
+              li.dropdown__item(data-value="Lorem ipsum") Lorem ipsum, dolor sit amet consectetur adipisicing elit.!
+              li.dropdown__item(data-value="Некий адрес") Некий адрес
           +Input({
             text: true,
             placeholder: 'ФИО *',

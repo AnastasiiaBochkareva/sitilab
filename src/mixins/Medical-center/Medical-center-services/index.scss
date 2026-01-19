@@ -1,6 +1,7 @@
 .medical-center__services {
   background-color: rgba(243, 246, 249, 1);
   padding: 80px 0 60px;
+  margin: 60px 0;
   .services {
     &__row {
       display: flex;
@@ -100,6 +101,7 @@
     }
   }
   @media (max-width: 1000px) {
+    margin: 30px 0;
     .services {
       &__row {
         flex-direction: column;

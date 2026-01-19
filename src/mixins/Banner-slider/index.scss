@@ -16,8 +16,10 @@
           border: 2px solid #fff !important;
           transition: all ease 0.3s;
           svg {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            min-height: 40px;
             fill: #fff !important;
           }
           &:not(.swiper-button-disabled) {

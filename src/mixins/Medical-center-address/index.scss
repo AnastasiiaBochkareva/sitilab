@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 644px;
     gap: 40px;
-    padding: 70px 0 35px;
+    padding: 70px 0;
     .address {
         &__advantages {
             display: flex;
@@ -268,6 +268,7 @@
             width: 100%;
             max-width: max-content;
             display: flex;
+            gap: 8px;
             align-items: center;
             justify-content: center;
             text-decoration: none;
@@ -276,7 +277,8 @@
                 background: rgb(21, 195, 250);
             }
             svg{
-                fill: #fff;
+                stroke: #fff;
+                fill: transparent;
                 width: 24px;
                 height: 24px;
                 min-width: 24px;

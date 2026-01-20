@@ -11,6 +11,7 @@ import '@/components/components';
 import '@/js/main';
 import '@/js/tabs';
 
+
 // import './slider.js';
 // import "swiper/css";
 // import "swiper/css/navigation";
@@ -24,6 +25,7 @@ import { setupProgressBar } from './mixins/progress-bar/index';
 import { processFranchiseCalculation } from './mixins/Franchise-page/Franchise-calculation/index';
 
 import './mixins/Franchise-page/Franchise-slider/index';
+import './mixins/Medical-center-schedule/index';
 
 import { initCartServicesCheckboxes } from './mixins/cart-page/cart-services/index';
 import { initPromocode } from './mixins/Promocode/index';

@@ -1,0 +1,17 @@
+mixin Medical-center-slide-doctors(param={})
+    div.medical-center__doctor.doctor
+        .img-container
+            +Img({
+                src: 'center-doctor.png', 
+                alt: 'center-doctor'
+            })
+        .doctor__info
+            .doctor__name=param.name
+            .doctor__experience=param.experience
+            .doctor__position=param.position
+            a(href='#').doctor__btn.btn-more.text-blue Подробнее
+                +icon('btn_more')
+        .icon-tooltip-wrapper
+            .icon-tooltip
+                +icon('bookmark')
+                span.icon-tooltip__text Врач первой категории

@@ -1,7 +1,13 @@
 mixin Medical-center-catalog(param={})
     div.medical-center__catalog.catalog
-        .catalog__col
-            .catalog__title Каталог анализов
+        .catalog__lists
+            each list in param.lists
+                ul.catalog__list 
+                    each li in list
+                        li.catalog__list_item
+                            a(href='#')=li
+
+        .catalog__info
             .catalog__subtitle 
                 a(href='#').text-blue Каталог анализов 
                 | содержит тясячи анализов. Сдать анализы в Москве можно по адресу 
@@ -11,8 +17,20 @@ mixin Medical-center-catalog(param={})
             a(href='#' download="pravila-podgotovki.pdf").catalog__btn.text-blue
                 +icon('a-document')
                 | Правила подготовки к исследованиям
-        .catalog__col
-            ul.catalog__list
-                each link in param.list 
-                    li
-                        a(href='#')=link
+
+        //- .catalog__col
+        //-     .catalog__title Каталог анализов
+        //-     .catalog__subtitle 
+        //-         a(href='#').text-blue Каталог анализов 
+        //-         | содержит тясячи анализов. Сдать анализы в Москве можно по адресу 
+        //-         span Москва, Хорошевское шоссе, д. 90 
+        //-         | или записаться по телефону 
+        //-         a(href="tel:+74997050808").text-blue +7 (499) 705-08-08
+        //-     a(href='#' download="pravila-podgotovki.pdf").catalog__btn.text-blue
+        //-         +icon('a-document')
+        //-         | Правила подготовки к исследованиям
+        //- .catalog__col
+        //-     ul.catalog__list
+        //-         each link in param.list 
+        //-             li
+        //-                 a(href='#')=link

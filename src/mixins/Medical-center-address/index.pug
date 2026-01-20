@@ -1,25 +1,26 @@
 mixin Medical-center-address(param={})
     .medical-center__address.address 
-        .address__col
+        .address__col.address__col-metro
             .address__title.text-blue Медицинские анализы Москва, Хорошевское шоссе, д. 90
             .all-blick-data
                 ul.metro-block-new
                     li 
-                        img(src="/assets/img/categories/m.png", alt="")
+                        img(src="/assets/img/categories/m.png" alt="")
                         p Хорошёвская 
                             +icon('man') 
                             span 132 м
                     li 
-                        img(src="/assets/img/categories/m.png", alt="")
+                        img(src="/assets/img/categories/m.png" alt="")
                         p Хорошёвская 
                             +icon('man') 
                             span 132 м
                     li 
-                        img(src="/assets/img/categories/m.png", alt="")
+                        img(src="/assets/img/categories/m.png" alt="")
                         p Хорошёвская 
                             +icon('man') 
                             span 132 м
             a(href='tel:+74997050808').address__phone.text-blue +7 (499) 705-08-08
+        .address__col.address__col-advantages
             ul.address__advantages
                 li 
                     +icon('a-calendar')
@@ -45,7 +46,7 @@ mixin Medical-center-address(param={})
                 li 
                     +icon('a-calendar')
                     | Передача БМ в лабораторию
-        .address__col
+        .address__col.address__col-tabs
             +TabsNav({
                 items: [
                 { label: 'На карте', targetId: 'tab1' },

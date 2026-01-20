@@ -1,15 +1,26 @@
 .medical-center__slider {
+  overflow: hidden;
+  padding-top: 20px;
   &-container {
     background-color: rgba(243, 246, 249, 1);
     padding: 50px 90px 60px;
   }
   &-head {
     position: relative;
+    display: grid;
+    grid-template-areas:
+      'title note'
+      'subtitle navigation';
+    grid-template-columns: 400px 1fr;
+    gap: 6px 20px;
     a {
       transition: all 0.3s ease;
       &:hover {
         color: rgb(21, 195, 250);
       }
+    }
+    .note {
+      grid-area: note;
     }
   }
   &_title {
@@ -19,6 +30,7 @@
     line-height: 36px;
     letter-spacing: 0%;
     text-align: left;
+    grid-area: title;
   }
   &_subtitle {
     color: rgba(0, 171, 223, 1);
@@ -28,15 +40,323 @@
     letter-spacing: 0%;
     text-align: left;
     text-decoration: none;
+    grid-area: subtitle;
   }
-  &_navigation {
+  &-reviews_navigation,
+  &-doctors_navigation {
     display: flex;
     gap: 10px;
     align-items: center;
+    grid-area: navigation;
+    margin-left: auto;
     .slider-navigation {
       &_prev,
       &_next {
         position: initial;
+        border: 2px solid rgba(0, 171, 223, 1) !important;
+        transition: all 0.3s ease;
+        svg {
+          width: 40px;
+          height: 40px;
+          min-width: 40px;
+          min-height: 40px;
+          transform: rotate(-90deg);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  @media (max-width: 1440px) {
+    &-container {
+      padding: 20px;
+    }
+  }
+  @media (max-width: 1000px) {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    &-head {
+      grid-template-areas:
+        'title'
+        'subtitle'
+        'note';
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px 0;
+      padding: 0 20px;
+      .note {
+      }
+    }
+    &-container {
+      padding: 40px 0;
+    }
+    &_title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+    }
+    &-reviews_navigation,
+    &-doctors_navigation {
+      display: none;
+    }
+  }
+}
+.medical-center__review {
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 28px;
+  position: relative;
+  .platform {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 12px;
+    right: 12px;
+  }
+  .review {
+    &__head {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 4px 12px;
+      position: relative;
+
+      .img-container {
+        max-width: 60px;
+        max-height: 60px;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: rgba(255, 233, 236, 1);
+        grid-row: 1 / 4;
+      }
+    }
+    &__username {
+      color: rgba(59, 75, 100, 1);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: -2%;
+      text-align: left;
+    }
+    &__rating {
+      svg {
+        fill: rgb(255, 204, 0);
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        min-height: 16px;
+      }
+    }
+    &__text {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+      color: rgba(59, 75, 100, 1);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -2%;
+      text-align: left;
+    }
+    &__btn {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0%;
+      text-align: left;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      margin-top: 10px;
+      svg {
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+        min-height: 18px;
+        fill: rgba(0, 171, 223, 1);
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        color: rgb(21, 195, 250);
+        svg {
+          transform: translateX(2px);
+          fill: rgb(21, 195, 250);
+        }
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    gap: 12px;
+    .platform {
+    }
+    .review {
+      &__username {
+      }
+      &__head {
+        max-width: calc(100% - 42px);
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+.medical-center__doctor {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 9px;
+  border-radius: 14px;
+  position: relative;
+  .icon-tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgba(0, 171, 223, 1);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    &-wrapper {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      min-height: 24px;
+      fill: transparent;
+      stroke: #fff;
+    }
+
+    &__text {
+      border-radius: 10px;
+      box-shadow: 0px 4px 25px 4px rgba(0, 0, 0, 0.05);
+      background: rgba(255, 255, 255, 1);
+      position: absolute;
+      bottom: 5px;
+      left: -80px;
+      padding: 8px 14px;
+      white-space: nowrap;
+      color: rgba(59, 75, 100, 1);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -2%;
+      text-align: left;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+      z-index: 2;
+    }
+
+    &:hover {
+      .icon-tooltip__text {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(-12px);
+      }
+    }
+  }
+
+  .doctor {
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    &__name {
+      color: rgba(59, 75, 100, 1);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: -2%;
+      text-align: left;
+    }
+    &__experience {
+      color: rgba(142, 154, 171, 1);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -2%;
+      text-align: left;
+    }
+    &__position {
+      color: rgba(59, 75, 100, 1);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -2%;
+      text-align: left;
+      margin: 4px 0 24px;
+    }
+    &__btn {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0%;
+      text-align: left;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      svg {
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+        min-height: 18px;
+        fill: rgba(0, 171, 223, 1);
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        color: rgb(21, 195, 250);
+        svg {
+          transform: translateX(2px);
+          fill: rgb(21, 195, 250);
+        }
+      }
+    }
+  }
+  .img-container {
+    border-radius: 9px;
+    background-color: #fff;
+    max-width: 230px;
+    width: 100%;
+  }
+  @media (max-width: 1000px) {
+    gap: 20px;
+    flex-direction: column;
+    padding: 10px 10px 20px;
+    .doctor {
+      &__info {
+      }
+      &__name,
+      &__experience,
+      &__position {
+        text-align: center;
+      }
+      &__position {
+        margin: 4px 0 20px;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .icon-tooltip {
+      &__text {
+        left: -20px;
+        bottom: 0;
+        padding: 5px;
       }
     }
   }

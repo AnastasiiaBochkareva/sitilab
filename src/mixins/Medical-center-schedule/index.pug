@@ -1,15 +1,156 @@
 mixin Medical-center-schedule(param={})
-    div
         .table-grid
-            .header
-                .cell Имя
-                .cell.col Возраст
-                .cell Город
-            .row
-                .cell Иван
-                .cell.col 25
-                .cell Москва
-            .row
-                .cell Мария
-                .cell.col 30
-                .cell Сочи
+            .table-grid__col.table-grid__col-info
+                .cell
+                .cell.table-grid__title Расписание
+                .cell.table-grid__analysis 
+                    span Взятие биоматериала (анализы крови, анализы мочи, анализы кала)
+                    .table-grid__schedule
+                        .table-grid__schedule-row 
+                            span пн - пт  
+                            | 07:00 - 18:00
+                        .table-grid__schedule-row 
+                            span сб - вс  
+                            | 07:00 - 15:00
+                .cell.table-grid__analysis 
+                    span Взятие гинекологического материала
+                    .table-grid__schedule
+                        .table-grid__schedule-row 
+                            span пн - пт  
+                            | 07:00 - 18:00
+                        .table-grid__schedule-row 
+                            span сб - вс  
+                            | 07:00 - 15:000
+                .cell.table-grid__analysis 
+                    span Взятие урологического материала
+                    .table-grid__schedule
+                        .table-grid__schedule-row 
+                            span пн - пт  
+                            | 07:00 - 18:00
+                        .table-grid__schedule-row 
+                            span сб - вс  
+                            | 07:00 - 15:00
+                .cell.table-grid__analysis 
+                    span Выдача результатов анализов
+                    .table-grid__schedule
+                        .table-grid__schedule-row 
+                            span пн - пт  
+                            | 07:00 - 18:00
+                        .table-grid__schedule-row 
+                            span сб - вс  
+                            | 07:00 - 15:00
+                .cell.table-grid__analysis 
+                    span Срочные анализы - CITO 
+                    a(href='#').text-blue Посмотреть список
+                    .table-grid__schedule
+                        .table-grid__schedule-row 
+                            span пн - пт  
+                            | 07:00 - 18:00
+                        .table-grid__schedule-row 
+                            span сб - вс  
+                            | 07:00 - 15:00
+            .table-grid__col.active
+                .cell.col.today
+                    span сегодня 
+                .cell.col 
+                    span пн.
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+            .table-grid__col
+                .cell.col.today
+                    span сегодня
+                .cell.col 
+                    span вт.
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+            .table-grid__col
+                .cell.col.today
+                    span сегодня
+                .cell.col 
+                    span ср.
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+            .table-grid__col
+                .cell.col.today
+                    span сегодня
+                .cell.col 
+                    span чт.
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+            .table-grid__col
+                .cell.col.today
+                    span сегодня
+                .cell.col 
+                    span пт.
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+                .cell.col 
+                    span 07:00 - 18:00
+            .table-grid__col
+                .cell.col.today
+                    span сегодня
+                .cell.col 
+                    span сб.
+                .cell.col 
+                    span 07:30 - 15:00
+                .cell.col 
+                    span 07:30 - 15:00
+                .cell.col 
+                    span 07:30 - 15:00
+                .cell.col 
+                    span 07:30 - 15:00
+                .cell.col 
+                    span 07:30 - 15:00
+            .table-grid__col
+                .cell.col.today
+                    span сегодня
+                .cell.col 
+                    span вс.
+                .cell.col 
+                    span 07:30 - 15:00
+                .cell.col 
+                    span 07:30 - 15:00
+                .cell.col 
+                    span 07:30 - 15:00
+                .cell.col 
+                    span 07:30 - 15:00
+                .cell.col 
+                    span 07:30 - 15:00

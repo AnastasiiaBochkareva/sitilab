@@ -177,16 +177,74 @@ const franchiseSlider = new Swiper('.franchise-slider', {
 
 // Medical Center Page
 const bannerMedicalCenterSlider = new Swiper('.banner-slider__medical-center .banner-slider__wrapper', {
-  modules: [Navigation],
+  modules: [Navigation, Pagination, Autoplay],
   slidesPerView: '1',
   spaceBetween: 0,
   navigation: {
     prevEl: document.querySelector('.slider-navigation_prev'),
     nextEl: document.querySelector('.slider-navigation_next'),
   },
+  pagination: {
+    el: '.banner-slider__pagination',
+  },
   noSwiping: true,
   grabCursor: true,
   slideToClickedSlide: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
+
+const MedicalCenterSliderReviews = new Swiper('.medical-center__slider-reviews', {
+  modules: [Navigation],
+  slidesPerView: '3',
+  spaceBetween: 20,
+  navigation: {
+    prevEl: document.querySelector('.medical-center__slider-reviews_navigation .slider-navigation_prev'),
+    nextEl: document.querySelector('.medical-center__slider-reviews_navigation .slider-navigation_next'),
+  },
+  noSwiping: true,
+  grabCursor: true,
+  slideToClickedSlide: true,
+  breakpoints: {
+    1440: {
+      slidesPerView: '3',
+    },
+    1000: {
+      slidesPerView: '2',
+    },
+    350: {
+      slidesPerView: '1.5',
+    },
+    300: {
+      slidesPerView: '1.5',
+    },
+  },
+});
+
+const MedicalCenterSliderDoctors = new Swiper('.medical-center__slider-doctors', {
+  modules: [Navigation],
+  slidesPerView: '2',
+  spaceBetween: 20,
+  navigation: {
+    prevEl: document.querySelector('.medical-center__slider-doctors_navigation .slider-navigation_prev'),
+    nextEl: document.querySelector('.medical-center__slider-doctors_navigation .slider-navigation_next'),
+  },
+  noSwiping: true,
+  grabCursor: true,
+  slideToClickedSlide: true,
+  breakpoints: {
+    1000: {
+      slidesPerView: '2',
+    },
+    350: {
+      slidesPerView: '1.5',
+    },
+    300: {
+      slidesPerView: '1.5',
+    },
+  },
 });
 
 // const medicalCenterAddressSlider = new Swiper('.medical-center__address_slider', {
@@ -216,56 +274,38 @@ const bannerMedicalCenterSlider = new Swiper('.banner-slider__medical-center .ba
 //     },
 //   },
 // });
-// show
-// глобальная переменная для слайдера
-const clickHandler = async (e) => {
+
+// medical-center__address-pagination - инициализация слайдера после открытия таба
+const tabsNav = document.querySelector('.tabs-nav');
+
+const clickHandler = (e) => {
   const tabBtn = e.target.closest('.tabs-nav__btn');
   if (!tabBtn) return;
 
-  const tabsNav = tabBtn.parentElement;
   const beforeActiveBtn = tabsNav.querySelector('.tabs-nav__btn.active');
-
   beforeActiveBtn?.classList.remove('active');
   tabBtn.classList.add('active');
 
-  // === анимация скрытия предыдущей вкладки ===
   const activeTab = document.getElementById(beforeActiveBtn?.dataset.tabTarget);
-  if (activeTab) {
-    await animate({
-      draw(progress) {
-        activeTab.style.opacity = 1 - progress;
-      },
-    });
-    activeTab.style.display = 'none';
-    activeTab.style.opacity = null;
-  }
+  if (activeTab) activeTab.style.display = 'none';
 
-  // === анимация показа новой вкладки ===
   const targetTab = document.getElementById(tabBtn.dataset.tabTarget);
-  if (targetTab) {
-    targetTab.style.opacity = 0;
-    targetTab.style.display = null;
-    await animate({
-      draw(progress) {
-        targetTab.style.opacity = progress;
-      },
-    });
-    targetTab.style.opacity = null;
-  }
+  if (targetTab) targetTab.style.display = null;
 
-  // === Здесь вставляем инициализацию Swiper для tab3 ===
-  if (tabBtn.dataset.tabTarget === 'tab3') {
-    if (!window.medicalCenterSlider) {
-      window.medicalCenterSlider = new Swiper('#tab3 .medical-center__address_slider', {
+  const sliderEl = targetTab.querySelector('.medical-center__address_slider');
+
+  if (sliderEl) {
+    if (!sliderEl.swiper) {
+      sliderEl.swiper = new Swiper(sliderEl, {
         modules: [Navigation, Pagination, Autoplay],
         slidesPerView: 1,
         spaceBetween: 0,
         navigation: {
-          prevEl: '#tab3 .slider-navigation_prev',
-          nextEl: '#tab3 .slider-navigation_next',
+          prevEl: targetTab.querySelector('.slider-navigation_prev'),
+          nextEl: targetTab.querySelector('.slider-navigation_next'),
         },
         pagination: {
-          el: '#tab3 .medical-center__address-pagination',
+          el: targetTab.querySelector('.medical-center__address-pagination'),
           clickable: true,
         },
         autoplay: {
@@ -275,13 +315,14 @@ const clickHandler = async (e) => {
         observer: true,
         observeParents: true,
       });
-      window.medicalCenterSlider.update();
-    } else {
-      window.medicalCenterSlider.update();
-      if (window.medicalCenterSlider.autoplay) window.medicalCenterSlider.autoplay.start();
     }
+
+    sliderEl.swiper.update();
+    sliderEl.swiper.autoplay?.start();
   }
 };
+
+tabsNav?.addEventListener('click', clickHandler);
 
 
 // const mainBannerSlider = new Swiper('.main-banner__slider', {

@@ -2048,6 +2048,10 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  .container--slider-mobile {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
   @media (max-width: 1000px) {
     .container:not(.container--slider-mobile) {
       padding-left: 20px;
@@ -2056,6 +2060,8 @@ body {
     .container--slider-mobile {
       padding-left: 0;
       padding-right: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -2075,7 +2081,13 @@ body {
       text-align: left;
     }
   }
-
+  .default-styles {
+    ul {
+      li {
+        padding: 0 !important;
+      }
+    }
+  }
   @media (max-width: 1000px) {
     &__subtitle {
       font-size: 14px;
@@ -2084,5 +2096,9 @@ body {
     .container--gray-bg-mobile {
       background-color: rgba(243, 246, 249, 1);
     }
+  }
+  @media (max-width: 998px) {
+    margin-left: -15px;
+    margin-right: -15px;
   }
 }

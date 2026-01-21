@@ -97,6 +97,7 @@
         //   border-color: rgb(21, 195, 250);
         //   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
         // }
+        padding: 0;
         display: flex;
         text-align: center;
 
@@ -129,6 +130,9 @@
   @media (max-width: 1440px) {
     padding: 40px 0;
     .catalog {
+      &__lists {
+        gap: 10px;
+      }
       &__list {
         display: flex;
         flex-direction: column;

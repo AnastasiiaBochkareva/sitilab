@@ -2081,9 +2081,9 @@ body {
       text-align: left;
     }
   }
-  .default-styles {
+  &.default-styles {
     ul {
-      li {
+      li:not(.catalog__list_item) {
         padding: 0 !important;
       }
     }

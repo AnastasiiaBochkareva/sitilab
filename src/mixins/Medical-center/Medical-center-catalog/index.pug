@@ -1,11 +1,9 @@
 mixin Medical-center-catalog(param={})
     div.medical-center__catalog.catalog
-        .catalog__lists
-            each list in param.lists
-                ul.catalog__list 
-                    each li in list
-                        li.catalog__list_item
-                            a(href='#')=li
+        ul.catalog__list 
+            each li in param.list
+                li.catalog__list_item
+                    a(href='#')=li
 
         .catalog__info
             .catalog__subtitle 

@@ -1,19 +1,6 @@
 .medical-center__catalog {
-  // gap: 20px;
-  // display: grid;
-  // grid-template-columns: 440px 1fr;
-  // gap: 40px;
   padding: 60px 0;
   .catalog {
-    // &__title {
-    //   color: rgba(59, 75, 100, 1);
-    //   font-size: 32px;
-    //   font-weight: 700;
-    //   line-height: 38px;
-    //   letter-spacing: -2%;
-    //   text-align: left;
-    //   margin-bottom: 40px;
-    // }
     &__subtitle {
       font-size: 18px;
       font-weight: 500;
@@ -76,36 +63,21 @@
       justify-content: center;
       margin-top: 40px;
     }
-    &__lists {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
     &__list {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      li {
-        // width: 100%;
-        // max-width: calc(50% - 10px);
-        // border: 1px solid rgba(217, 225, 233, 1);
-        // border-radius: 12px;
-        // background: rgba(255, 255, 255, 1);
-        // transition: all 0.3s ease;
-        // &:hover {
-        //   border-color: rgb(21, 195, 250);
-        //   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
-        // }
+      justify-content: center;
+      &_item {
         padding: 0;
         display: flex;
         text-align: center;
-
-        &:not(:last-child) {
-          &::after {
+        &.has-separator {
+          &::before {
             content: '|';
             display: block;
             position: relative;
+            margin-right: 10px;
           }
         }
         a {
@@ -116,10 +88,8 @@
           font-weight: 500;
           line-height: 28px;
           letter-spacing: -2%;
-          // padding: 11px 20px;
           display: flex;
           transition: all 0.3s ease;
-          margin-right: 10px;
           &:hover {
             color: rgba(0, 171, 223, 1);
           }
@@ -130,24 +100,15 @@
   @media (max-width: 1440px) {
     padding: 40px 0;
     .catalog {
-      &__lists {
-        gap: 10px;
-      }
       &__list {
-        display: flex;
         flex-direction: column;
         width: 100%;
-        li {
+        &_item {
           max-width: 100%;
           border-bottom: 1px solid rgba(234, 236, 240, 1);
           padding-bottom: 10px;
           align-items: center;
           justify-content: center;
-          &:not(:last-child) {
-            &::after {
-              content: none;
-            }
-          }
           a {
             margin-right: 0;
             align-items: center;

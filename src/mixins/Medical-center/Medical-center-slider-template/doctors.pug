@@ -2,7 +2,7 @@ mixin Medical-center-slide-doctors(param={})
     div.medical-center__doctor.doctor
         .img-container
             +Img({
-                src: 'center-doctor.png', 
+                src: `${param.img}.png`, 
                 alt: 'center-doctor'
             })
         .doctor__info

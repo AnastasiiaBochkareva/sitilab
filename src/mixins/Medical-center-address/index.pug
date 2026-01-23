@@ -57,19 +57,19 @@ mixin Medical-center-address(param={})
                 noCar: true,
                 noSvg: true,
             })
-            .tabb#tab1(style="width: 100%; height: max-content; background: transparent;") 
+            .tabb.max-height#tab1(style="width: 100%; height: max-content; background: transparent;") 
                 .address__map
                     +Img({
                         src: 'address-map.png',
                         alt: 'address-map'
                     })
-            .tabb#tab2(style="width: 100%; height: max-content; background: transparent; display: none;") 
+            .tabb.max-height#tab2(style="width: 100%; height: max-content; background: transparent; display: none;") 
                 .address__panorama
                     +Img({
                         src: 'address-map.png',
                         alt: 'address-map'
                     })
-            .tabb.tabb-slider#tab3(style="width: 100%; height: max-content; background: transparent; display: none;" data-tab-content="address-slider") 
+            .tabb.max-height.tabb-slider#tab3(style="width: 100%; height: max-content; background: transparent; display: none;" data-tab-content="address-slider") 
                 .medical-center__address_slider.swiper
                     .swiper-wrapper 
                         .swiper-slide
@@ -82,6 +82,16 @@ mixin Medical-center-address(param={})
                                 src: 'address-map.png',
                                 alt: 'address-map'
                             })
+                        .swiper-slide
+                            +Img({
+                                src: 'test-horizontal.png',
+                                alt: 'address-map'
+                            })
+                        .swiper-slide
+                            +Img({
+                                src: 'test-vertical.png',
+                                alt: 'address-map'
+                            })
                 .medical-center__address-nav
                     +Slider-navigation({})
                 .medical-center__address-pagination
@@ -92,6 +102,7 @@ mixin Medical-center-address(param={})
                         .gray-container__item_title Пешком
                             +icon('icon-man')
                         .gray-container__item_subtitle Станция метро «Полежаевская» (первый вагон из центра, из стеклянных дверей направо, первая лестница налево)
+                        .gray-container__item_subtitle Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus asperiores corrupti fugiat vel est sit obcaecati, facere ipsum, sequi veniam deleniti dolor corporis nemo alias similique aliquid maiores ad nobis in quia consequatur error et! Ducimus illo doloremque, repellendus quae deleniti ex cumque provident fugiat quis fuga nisi dolorem assumenda accusamus modi quasi nesciunt, debitis numquam reiciendis eligendi. Quaerat tempora nisi ipsum totam officiis adipisci reprehenderit dolore officia optio eius nihil explicabo repellendus eligendi, sapiente nesciunt, amet nobis? Unde, aliquam, tempora iste possimus eligendi hic vitae facere sint corrupti numquam laboriosam? Tenetur rerum et harum quaerat? Animi totam expedita illo?
                     .gray-container__item
                         .gray-container__item_title Транспортом
                             +icon('icon-man')

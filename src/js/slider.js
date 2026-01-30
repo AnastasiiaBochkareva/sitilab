@@ -247,6 +247,33 @@ const MedicalCenterSliderDoctors = new Swiper('.medical-center__slider-doctors',
   },
 });
 
+const NewsBlockSlider = new Swiper('.news-block__slider', {
+  modules: [Navigation],
+  slidesPerView: '4',
+  spaceBetween: 20,
+  navigation: {
+    prevEl: document.querySelector('.news-block__slider-nav .slider-nav_prev'),
+    nextEl: document.querySelector('.news-block__slider-nav .slider-nav_next'),
+  },
+  noSwiping: true,
+  grabCursor: true,
+  slideToClickedSlide: true,
+  breakpoints: {
+    1000: {
+      slidesPerView: '4',
+    },
+    500: {
+      slidesPerView: '2.1',
+    },
+    300: {
+      slidesPerView: '1.2',
+    },
+    300: {
+      slidesPerView: '1.2',
+    },
+  },
+});
+
 // const medicalCenterAddressSlider = new Swiper('.medical-center__address_slider', {
 //   modules: [Navigation, Pagination, Autoplay],
 //   slidesPerView: 1,

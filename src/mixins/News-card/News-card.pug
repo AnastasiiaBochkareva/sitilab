@@ -2,7 +2,13 @@ mixin News-card(param={})
   .news-card
     .tooltip ООО "СИТИЛАБ ЦО", ИНН 7731479529
     .news-card__img
-      img(src="/assets/img/categories/news-card.png", alt="")
+      if(!param.testImg)
+        img(src="/assets/img/categories/news-card.png" alt="")
+      else
+        +Img({
+          src: `${param.img}.png`,
+          atl: '1'
+        })
       .news-card__ad Реклама
     .news-card__content
       ._title Меморандум для повышения качества услуг и улучшения здоровья нации

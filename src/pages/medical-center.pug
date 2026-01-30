@@ -38,6 +38,11 @@ block content
             title: 'Услуги медцентра',
             list: ['Анализы крови, мочи, кала', 'Анализы для детей (взятие крови у детей) с 3х лет', 'Прием биоматериала для спермограммы', 'Анализ на коронавирус SARS-CoV-2', 'Гинекологические анализы', 'Анализ на антитела к коронавирусу SARS-CoV-2', 'Взятие мазков и соскобов на ПЦР-анализы', 'Передача БМ в лабораторию']
         })
+        .container 
+            +News-block({
+                slider: true,
+                addClass: 'news-block__slider-container',
+            })
         .container.container--slider-mobile.container--gray-bg-mobile
             +Medical-center-slider-template({
                 title: 'Врачи медицинского центра',
@@ -73,4 +78,5 @@ block content
             items: [{title: 'Наименование:', subtitle: 'ООО «Ситилаб МО»'}, {title: 'Юридический адрес:', subtitle: '123308, г. Москва, Хорошевское шоссе, д.43Г, стр.1, комн. 1'}, {title: 'Фактический адрес:', subtitle: '123308, г. Москва, Хорошевское шоссе, д.43Г, стр.1, комн. 1'}],
             itemImg: {img: 'license', title: 'Лицензия:', subtitle: 'Л041-01164-52/00562627 от 27.10.2021на осуществление медицинской деятельности'}
         })
+        .global-tooltip(id='globalTooltip')
 

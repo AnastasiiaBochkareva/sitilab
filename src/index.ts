@@ -29,6 +29,9 @@ import './mixins/Medical-center-schedule/index';
 import { initCartServicesCheckboxes } from './mixins/cart-page/cart-services/index';
 import { initPromocode } from './mixins/Promocode/index';
 import { initListElementsSeparator } from './mixins/Medical-center/Medical-center-catalog/index';
+import { initDropdowns } from './components/Visit-promo/Visit-promo';
+
+import { initGlobalTooltip } from './mixins/Global-tooltip/index';
 
 // сайдбар
 function setupAccordion(category: HTMLElement) {
@@ -392,6 +395,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initListElementsSeparator();
   });
   observer.observe(list);
+
+  initDropdowns();
+  initGlobalTooltip();
 
   // document.addEventListener('submitSurvey', (e)  => {
   //   const { detail } = e;

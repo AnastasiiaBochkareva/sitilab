@@ -164,6 +164,9 @@
   &_slider {
     overflow: hidden;
     position: relative;
+    img {
+      object-position: center center;
+    }
   }
   &-nav {
     position: absolute;
@@ -220,6 +223,8 @@
     .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
+      min-width: 12px;
+      min-height: 12px;
       &:not(.swiper-pagination-bullet-active) {
         background-color: #fff;
         opacity: 1;
@@ -346,6 +351,15 @@
     }
     .tabs-nav__btn {
       min-width: 140px;
+    }
+    &_slider {
+      .swiper-wrapper {
+        .swiper-slide {
+          img {
+            height: 400px;
+          }
+        }
+      }
     }
   }
 }

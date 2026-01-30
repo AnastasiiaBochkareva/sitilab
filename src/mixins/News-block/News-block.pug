@@ -1,16 +1,44 @@
 mixin News-block(param={})
-  .news-block
-    ._title 
-      span.active Новости
-      span /
-      span Акции
-    a(href="#")._subtitle=param.titleLink 
-    .news-block-tab.active
-      +News-card({
+  .news-block(class=param.addClass)
+    if(param.slider)
+      ._title 
+        span Акции
+      +Slider-nav({
+        addNavClass: 'news-block__slider-nav'
       })
-      +News-card({
-      })
-      +News-card({
-      })
-      +News-card({
-      })
+      .news-block-tab.news-block__slider.active
+        .swiper-wrapper 
+          .swiper-slide
+            +News-card({
+              testImg: true,
+              img: 'test-vertical'
+            })
+          .swiper-slide
+            +News-card({
+              testImg: true,
+              img: 'test-horizontal'
+            })
+          .swiper-slide
+            +News-card({
+              testImg: true,
+              img: 'ya'
+            })
+          .swiper-slide
+            +News-card({})
+          .swiper-slide
+            +News-card({})
+    else
+      ._title 
+        span.active Новости
+        span /
+        span Акции
+      a(href="#")._subtitle=param.titleLink 
+      .news-block-tab.active
+        +News-card({
+        })
+        +News-card({
+        })
+        +News-card({
+        })
+        +News-card({
+        })

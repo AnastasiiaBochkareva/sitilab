@@ -11,7 +11,7 @@ mixin Medical-center-slide-doctors(param={})
             .doctor__position=param.position
             a(href='#').doctor__btn.btn-more.text-blue Подробнее
                 +icon('btn_more')
-        .icon-tooltip-wrapper
+        .icon-tooltip-wrapper.medical-center__doctor_tooltip(data-tooltip=param.text)
             .icon-tooltip
                 +icon('bookmark')
-                span.icon-tooltip__text Врач первой категории
+                //- span.icon-tooltip__text Врач первой категории

@@ -98,7 +98,7 @@ import { logIfDebug } from '../../../mydebug';
 
 // export { initFranchiseSurvey };
 const START_INDEX = 0;
-const STEP_DELAY = 400; // задержка перехода между шагами
+const STEP_DELAY = 400;
 
 interface IChosenStep {
   name: string;
@@ -136,23 +136,18 @@ function initFranchiseSurvey() {
 
   let transitionTimeout: ReturnType<typeof setTimeout> | null = null;
 
-  // --- Обновление прогресса ---
   function updateProgressBar(stepIndex: number) {
     const totalSteps = steps.length;
 
-    // финальный шаг (форма)
     const isFinalStep = stepIndex === totalSteps - 1;
 
-    // рассчитываем процент
     const progressPercent = ((stepIndex + 1) / totalSteps) * 100;
 
-    // плавное заполнение
     if (progressFill) {
       progressFill.style.transition = 'width 0.4s ease';
       progressFill.style.width = `${progressPercent}%`;
     }
 
-    // если это финальный шаг — плавно скрываем бар ПОСЛЕ завершения анимации заполнения
     if (isFinalStep && progressBar) {
       setTimeout(() => {
         progressBar.style.opacity = '0';
@@ -160,15 +155,13 @@ function initFranchiseSurvey() {
         setTimeout(() => {
           progressBar.style.display = 'none';
         }, 400);
-      }, 400); // подождать пока полоса дойдет до 100%
+      }, 400);
     } else if (progressBar) {
-      // если не финальный — показать бар
       progressBar.style.display = '';
       progressBar.style.opacity = '1';
     }
   }
 
-  // --- Клик по радио ---
   survey.addEventListener('click', (event) => {
     const target = event.target as HTMLElement;
     let input: HTMLInputElement | null = null;
@@ -199,19 +192,15 @@ function initFranchiseSurvey() {
 
     const nextStep = currentStep.nextElementSibling as HTMLElement | null;
 
-    // записываем выбор
     data.steps[activeStepIndex] = {
       name: input.name,
       value: input.value,
     };
 
-    // если пользователь кликнул новую кнопку — сбрасываем старый таймер
     if (transitionTimeout) clearTimeout(transitionTimeout);
 
-    // сразу обновляем прогресс
     updateProgressBar(activeStepIndex + 1);
 
-    // запускаем отсчёт перехода
     transitionTimeout = setTimeout(() => {
       if (nextStep) {
         currentStep.classList.remove('active');
@@ -222,7 +211,6 @@ function initFranchiseSurvey() {
     }, STEP_DELAY);
   });
 
-  // --- Назад ---
   buttonsBack.forEach((btn) => {
     btn.addEventListener('click', () => {
       if (transitionTimeout) clearTimeout(transitionTimeout);
@@ -245,7 +233,6 @@ function initFranchiseSurvey() {
     });
   });
 
-  // --- Отправка ---
   const form = survey.querySelector('.franchise-form .form');
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -253,7 +240,6 @@ function initFranchiseSurvey() {
     document.dispatchEvent(customEvent);
   });
 
-  // --- Инициализация ---
   updateProgressBar(0);
 }
 

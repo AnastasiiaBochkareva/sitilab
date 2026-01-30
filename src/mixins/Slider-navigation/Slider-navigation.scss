@@ -6,7 +6,7 @@
   &_next:not(
       .main-analysis-slider .a-sale__cards .slider-navigation_next,
       .corporate-clientage .slider-navigation_next,
-      .cart-order__slider .slider-navigation_next 
+      .cart-order__slider .slider-navigation_next
     ) {
     transform: rotate(0deg) !important;
     right: -25px;
@@ -33,8 +33,10 @@
     }
     &.swiper-button-disabled:not(
         .cart-order__slider .swiper-button-disabled,
-        .banner-slider__medical-center .swiper-button-disabled, .medical-center__address-nav .swiper-button-disabled, .medical-center__slider-reviews_navigation .swiper-button-disabled, 
-.medical-center__slider-doctors_navigation .swiper-button-disabled
+        .banner-slider__medical-center .swiper-button-disabled,
+        .medical-center__address-nav .swiper-button-disabled,
+        .medical-center__slider-reviews_navigation .swiper-button-disabled,
+        .medical-center__slider-doctors_navigation .swiper-button-disabled
       ) {
       border: 1px solid #00b2e3 !important;
       background-color: #fff !important;
@@ -60,4 +62,55 @@
 .main-analysis-slider .a-sale__cards .slider-navigation_next svg,
 .main-analysis-slider .a-sale__cards .slider-navigation_prev svg {
   transform: rotate(-90deg);
+}
+
+.slider-nav {
+  display: flex;
+  &_prev {
+    left: -25px;
+    transform: rotate(90deg);
+  }
+  &_next {
+    right: -25px;
+    transform: rotate(-90deg);
+  }
+  &_prev,
+  &_next {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 100%;
+    border: 2px solid #00b2e3;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    svg {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
+      fill: #00b2e3;
+      transition: all 0.3s ease;
+    }
+    &.swiper-button-disabled {
+      border: 2px solid #00b2e3;
+      background-color: #fff;
+      svg {
+        fill: #00b2e3;
+      }
+    }
+    &:not(.swiper-button-disabled) {
+      &:hover {
+        background-color: #00b2e3;
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
 }

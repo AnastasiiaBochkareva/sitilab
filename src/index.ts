@@ -11,7 +11,6 @@ import '@/components/components';
 import '@/js/main';
 import '@/js/tabs';
 
-// import './slider.js';
 // import "swiper/css";
 // import "swiper/css/navigation";
 // import '@/sites/Analysis-result-search/components/Filter-result/Filter-result';

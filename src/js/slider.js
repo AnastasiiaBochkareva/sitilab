@@ -247,7 +247,6 @@ const MedicalCenterSliderDoctors = new Swiper('.medical-center__slider-doctors',
   },
 });
 
-console.log('TEST!');
 const NewsBlockSlider = new Swiper('.news-block__slider', {
   modules: [Navigation],
   slidesPerView: '4',

@@ -110,6 +110,34 @@
           }
           &-center {
             flex: 1;
+            min-width: 350px;
+            @include sm {
+              min-width: initial;
+            }
+          }
+          &-date {
+            max-width: 206px;
+            cursor: pointer;
+            .v-input input {
+              padding: 8px 12px 7px 43px !important;
+            }
+            .v-input {
+              &__placeholder {
+                left: 43px;
+                color: rgb(52, 64, 84);
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0%;
+                text-align: left;
+              }
+            }
+            svg {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 15px;
+            }
           }
         }
         &__label-top {

@@ -1,13 +1,23 @@
 mixin Breadcrumbs(param={})
-    ul.breadcrumbs
+    ul.breadcrumbs(class=`${param.addClass}`)
 
         li.breadcrumbs__item
             a(href='./').breadcrumbs__link Главная
+            if(param.toCart)
+                .breadcrumbs__image
+                    +icon('bc-arrow')
         if(param.toDoctors)
             li.breadcrumbs__item
                 a(href='./').breadcrumbs__link Врачам
             li.breadcrumbs__item
                 .breadcrumbs__link Сотрудничество
+        if(param.toCart)
+            li.breadcrumbs__item
+                a(href='./').breadcrumbs__link Корзина
+                .breadcrumbs__image
+                    +icon('bc-arrow')
+            li.breadcrumbs__item.active
+                .breadcrumbs__link Оформление заказа
 
         //- - for (let i = 0; i < 3; i++)
         //-     li.breadcrumbs__item

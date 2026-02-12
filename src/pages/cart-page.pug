@@ -7,8 +7,12 @@ block variables
 block content
     .cart-page.cart-page--empty
         +Cart-empty()
-    
+
     .cart-page.box-sizing
+        +Breadcrumbs({
+            toCart: true,
+            addClass: 'cart__breadcrumbs'
+        })
         .cart-tab.active
             .cart-tab__col
                 +Cart-data({
@@ -49,7 +53,7 @@ block content
                     required: 'cart-page__inputs-required',
                     inputs: true
                 })
-               
+
             .order-tab__col
                 +Cart-payments({
                     title: true,
@@ -66,9 +70,9 @@ block content
                 +Cart-payments({
                     orderPayment: true
                 })
-            
+
         //- .cart-page__wrapper
-        
+
             //- .cart-page__head
             //-     .n-d-flex-sm
             //-         .n-title-sm Где буду сдавать
@@ -177,12 +181,12 @@ block content
             //-                 addClass: 'n-last-child',
             //-                 name: 'group6'
             //-             })
-        
+
         //- +Cart-sidebar({
         //-     data: true
         //- })
 
-        
+
 
         //- .map-madal
         //-     +Filter-result({

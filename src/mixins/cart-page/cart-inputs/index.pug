@@ -5,6 +5,10 @@ mixin Cart-inputs(param={})
             .inputs-section.inputs-section__center
                 +Input({placeholder: 'Москва', required: false, labelTop: true, labelTopText: 'Город',})
                 +Input({placeholder: 'Медицинский центр', labelTop: true, labelTopText: 'Выберите медицинский центр', readonly: true, button: true, buttonIcon: 'modal', dataOpenModal: '#modal-map', inputBtnText: 'Выбрать', addWrapperClass: 'v-input__wrapper-center'})
+                +Input({placeholder: 'Выбрать дату', required: false, labelTop: true, labelTopText: 'Дата выезда', date: true, addWrapperClass: 'v-input__wrapper-date', readonly: true})
+                +Input({placeholder: 'Введите номер заказа', required: false, labelTop: true, labelTopText: 'Номер предыдущего заказа', labelTopRequired: true})
+                +Input({placeholder: 'Выбрать дату', required: false, labelTop: true, labelTopText: 'Дата сдачи биоматериала', date: true, addWrapperClass: 'v-input__wrapper-date', readonly: true, labelTopRequired: true})
+                +Input({placeholder: 'Медицинский центр', labelTop: true, labelTopText: 'Выберите медицинский центр', readonly: true, button: true, buttonIcon: 'modal', dataOpenModal: '#modal-map', inputBtnText: 'Выбрать', addWrapperClass: 'v-input__wrapper-center', labelTopRequired: true})
         if(param.personal)
             .inputs-section.inputs-section__personal
                 .inputs-section__title.cart-order__border Персональные данные
@@ -18,7 +22,7 @@ mixin Cart-inputs(param={})
                 +Cart-radio-gender({
                     labelTop: true
                 })
-            
+
         if(param.contact)
             .inputs-section.inputs-section__contact
                 .inputs-section__title.cart-order__border Контактные данные

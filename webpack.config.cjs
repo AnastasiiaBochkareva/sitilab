@@ -1,6 +1,7 @@
 /* eslint-disable */
 const path = require('path');
 const fs = require('fs');
+const pug = require('pug');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -29,7 +30,7 @@ const isProd = !isDev;
 
 // ПЛАГИНЫ
 const plugins = [
-  // Удалет старый /dist
+  // Удаляет старый /dist
   new CleanWebpackPlugin(),
 
   // Копирование файлов
@@ -45,24 +46,6 @@ const plugins = [
     },
   }),
 
-  // html
-  ...PAGES.map(
-    (page) =>
-      new HtmlWebpackPlugin({
-        template: `${PAGES_DIR}/${page}`,
-        filename: `./${page.replace(/\.pug/, '.html')}`,
-        minify: {
-          collapseWhitespace: false,
-          keepClosingSlash: true,
-          removeComments: true,
-          removeRedundantAttributes: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
-          useShortDoctype: true,
-        },
-      })
-  ),
-
   // Обработка css - собирает все в один файл
   new MiniCssExtractPlugin({
     filename: isDev ? './css/[name].css' : './css/[name].[contenthash].css',
@@ -77,6 +60,26 @@ const plugins = [
 ];
 
 if (isDev) plugins.push(new webpack.HotModuleReplacementPlugin());
+
+if (isProd) {
+  // ✅ только prod: генерим все html
+  plugins.push(
+    ...PAGES.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          template: `${PAGES_DIR}/${page}`,
+          filename: `./${page.replace(/\.pug$/, '.html')}`,
+          chunks: ['index'],
+          inject: 'body',
+          minify: {
+            collapseWhitespace: false,
+            keepClosingSlash: true,
+            removeComments: true,
+          },
+        })
+    )
+  );
+}
 
 // КОНФИГ ОПТИМИЗАЦИИ
 const optimization = () => {
@@ -127,74 +130,86 @@ module.exports = {
   output: {
     filename: isDev ? '[name].js' : '[name].[contenthash].js',
     path: DIST,
+    publicPath: '/', // ✅ важно для devServer
     assetModuleFilename: '[path][name][ext]',
   },
-  // resolve: {
-  //     // Массив расширений которые можно будет не указывать в import
-  //     // extensions: ['.js', '.scss', '.pug'],
-  //     alias: {
-  //         '@': SRC,
-  //     },
-  // },
+
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  optimization: optimization(),
+
+  optimization: isDev
+    ? {
+      splitChunks: false,
+      runtimeChunk: false,
+    }
+    : optimization(),
+
   devServer: {
     port: 1666,
-    watchFiles: `${SRC}/**/*.pug`,
+    hot: true,
+    historyApiFallback: false,
+    watchFiles: [`${SRC}/**/*.{pug,ts,tsx,js,scss,css}`],
     open: true,
+
+    static: [
+      {
+        directory: path.join(SRC, 'assets'),
+        publicPath: '/assets',
+        watch: true,
+      },
+    ],
+
+    // ✅ главное: динамический рендер PUG по URL
+    setupMiddlewares: (middlewares, devServer) => {
+      const app = devServer.app;
+
+      app.get('/:page.html', (req, res, next) => {
+        const page = req.params.page;
+        const pugPath = path.join(PAGES_DIR, `${page}.pug`);
+
+        if (!fs.existsSync(pugPath)) return next();
+
+        try {
+          // рендерим только нужный pug
+          const htmlFromPug = pug.renderFile(pugPath, {
+            pretty: true,
+            // если нужны locals — добавляй сюда
+          });
+
+          const cssTag = `<link rel="stylesheet" href="/css/index.css">`;
+
+          const jsTag = '<script src="/index.js"></script>';
+
+          let out = htmlFromPug;
+
+          // CSS -> head
+          if (/<\/head>/i.test(out)) out = out.replace(/<\/head>/i, `${cssTag}\n</head>`);
+          else out = `${cssTag}\n${out}`;
+
+          // JS -> body
+          if (/<\/body>/i.test(out)) out = out.replace(/<\/body>/i, `${jsTag}\n</body>`);
+          else out = `${out}\n${jsTag}\n`;
+
+
+          res.setHeader('Content-Type', 'text/html; charset=utf-8');
+          res.send(out);
+        } catch (e) {
+          next(e);
+        }
+      });
+
+      // опционально: корень / -> на какую-то страницу
+      app.get('/', (req, res) => res.redirect('/index.html'));
+
+      return middlewares;
+    },
   },
   devtool: isDev ? 'source-map' : false,
-  plugins: [
-    // Удалет старый /dist
-    new CleanWebpackPlugin(),
-
-    // Копирование файлов
-    new CopyPlugin({
-      patterns: [{ from: 'assets/json', to: 'assets/json' }],
-    }),
-
-    // Спрайт
-    new SpriteLoaderPlugin({
-      plainSprite: true,
-      spriteAttrs: {
-        fill: '',
-      },
-    }),
-
-    // html
-    ...PAGES.map(
-      (page) =>
-        new HtmlWebpackPlugin({
-          template: `${PAGES_DIR}/${page}`,
-          filename: `./${page.replace(/\.pug/, '.html')}`,
-          minify: {
-            collapseWhitespace: false,
-            keepClosingSlash: true,
-            removeComments: true,
-            removeRedundantAttributes: true,
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            useShortDoctype: true,
-          },
-        })
-    ),
-
-    // Обработка css - собирает все в один файл
-    new MiniCssExtractPlugin({
-      filename: isDev ? './css/[name].css' : './css/[name].[contenthash].css',
-    }),
-
-    // eslint
-    new ESLintPlugin({
-      extensions: ['js'],
-      // fix: true,
-    }),
-  ],
+  plugins,
   module: {
     rules: [
       {
@@ -274,59 +289,66 @@ module.exports = {
         },
       },
 
-      {
-        test: /\.pug/,
-        use: [
+      ...(isProd
+        ?
+        [
           {
-            loader: 'html-loader',
-            options: {
-              minimize: false,
-              sources: {
-                // Фильтруем загрузку ресуров
-                // Пропускаем где в пути есть sprite.svg - т.к. он появляется только в dist
-                urlFilter: (attr, val) => {
-                  if (/sprite\.svg/.test(val)) return false;
-                  return true;
+            test: /\.pug/,
+            use: [
+              {
+                loader: 'html-loader',
+                options: {
+                  minimize: false,
+                  sources: {
+                    // Фильтруем загрузку ресуров
+                    // Пропускаем где в пути есть sprite.svg - т.к. он появляется только в dist
+                    urlFilter: (attr, val) => {
+                      if (/sprite\.svg/.test(val)) return false;
+                      return true;
+                    },
+                  },
+                  preprocessor: (content, loaderContext) => {
+                    let result;
+
+                    try {
+                      result = posthtml([
+                        // Делаем из img -> picture
+                        // img(src=*.jpg) -> picture [ source(srcset=*.jpg.webp) img(src=*.jpg) ]
+                        posthtmlWebp(),
+                        // Чтоб правильно конвертировались картинки в webp нужно передать ?as=webp
+                        posthtmlReplace([
+                          {
+                            match: { tag: 'source' },
+                            attrs: {
+                              srcset: (attr, node) => {
+                                if (attr) {
+                                  return node.attrs.srcset.replace(
+                                    '.webp',
+                                    '?as=webp'
+                                  );
+                                }
+                                return null;
+                              },
+                            },
+                          },
+                        ]),
+                      ]).process(content, { sync: true });
+                    } catch (error) {
+                      loaderContext.emitError(error);
+                      return content;
+                    }
+
+                    return result.html;
+                  },
                 },
               },
-              preprocessor: (content, loaderContext) => {
-                let result;
-
-                try {
-                  result = posthtml([
-                    // Делаем из img -> picture
-                    // img(src=*.jpg) -> picture [ source(srcset=*.jpg.webp) img(src=*.jpg) ]
-                    posthtmlWebp(),
-                    // Чтоб правильно конвертировались картинки в webp нужно передать ?as=webp
-                    posthtmlReplace([
-                      {
-                        match: { tag: 'source' },
-                        attrs: {
-                          srcset: (attr, node) => {
-                            if (attr) {
-                              return node.attrs.srcset.replace(
-                                '.webp',
-                                '?as=webp'
-                              );
-                            }
-                            return null;
-                          },
-                        },
-                      },
-                    ]),
-                  ]).process(content, { sync: true });
-                } catch (error) {
-                  loaderContext.emitError(error);
-                  return content;
-                }
-
-                return result.html;
-              },
-            },
+              { loader: 'pug-html-loader', options: { pretty: true } },
+            ],
           },
-          { loader: 'pug-html-loader', options: { pretty: true } },
-        ],
-      },
+        ]
+          :
+        []
+      )
     ],
   },
 };

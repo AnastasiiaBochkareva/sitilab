@@ -40,9 +40,9 @@ mixin Cart-services(param={})
                                     if(service.noDuration)
                                         span.price=service.noDurationPrice
                             td
-                                .cell-wrapper.flex-end(class=service.priceClass ? service.priceClass : null)= service.price || ''
+                                .cell-wrapper.flex-end(class=service.priceClass ? service.priceClass : null)= service.price || '' 
                             td
-                                .cell-wrapper.flex-end(class=service.tdClassBold ? service.tdClassBold : null)= service.discount || ''
+                                .cell-wrapper.flex-end(class=service.tdClassBold ? service.tdClassBold : null)= service.discount || '' 
                             td
                                 .cell-wrapper
                                     if(service.delete)

@@ -389,11 +389,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const list = document.querySelector(
     '.medical-center__catalog .catalog__list'
   );
-  if (!list) return;
-  const observer = new ResizeObserver(() => {
-    initListElementsSeparator();
-  });
-  observer.observe(list);
+  if (list) {
+    const observer = new ResizeObserver(() => {
+      initListElementsSeparator();
+    });
+    observer.observe(list);
+  }
 
   initDropdowns();
   initGlobalTooltip();
@@ -408,6 +409,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // document.addEventListener('onChangeFranchiseCalculation', (e) => {
   //   const { detail } = e;
   //   const changedValue = detail;
+  // });
+
+  // Проверка чекнутых радио в .cart-page
+  // const radios = document.querySelectorAll<HTMLInputElement>(
+  //   '.radio-group__payments .radio-item input[type="radio"]'
+  // );
+
+  // radios.forEach((radio) => {
+  //   radio.addEventListener('change', () => {
+  //     console.log('Состояние радио после клика:');
+  //     radios.forEach((r) => {
+  //       console.log(r.name, r.value, r.checked);
+  //     });
+  //     console.log('---------------------------');
+  //   });
   // });
 });
 

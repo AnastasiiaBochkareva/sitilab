@@ -97,15 +97,16 @@
     }
   }
   &__table {
+    overflow: hidden;
     margin-top: 20px;
     border: 1px solid rgba(234, 236, 240, 1);
     border-radius: 20px;
     width: 100%;
     border-spacing: 0;
     &-wrapper {
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
+      // overflow-x: auto;
+      // overflow-y: hidden;
+      // -webkit-overflow-scrolling: touch;
     }
     .delete {
       cursor: pointer;
@@ -173,22 +174,6 @@
         }
       }
     }
-
-    tr {
-      // @include sm {
-      //   display: flex;
-      //   flex-wrap: wrap;
-      //   align-items: center;
-      //   padding: 16px;
-      //   row-gap: 24px;
-      //   justify-content: space-between;
-
-      //   td {
-      //     padding: 0 !important;
-      //     height: initial;
-      //   }
-      // }
-    }
     th {
       padding: 12px;
       text-align: left;
@@ -206,33 +191,47 @@
     }
   }
   @include sm {
+    thead {
+      display: none;
+    }
+    tbody {
+      tr {
+        padding: 15px 10px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-auto-rows: auto;
+        gap: 4px 8px;
+        &:not(:last-child) {
+          border-bottom: 1px solid rgb(234, 236, 240);
+        }
+        &:not(:last-child) td {
+          border-bottom: none;
+        }
+        td {
+          padding: 0;
+
+          &:first-child {
+            grid-column: 1;
+            grid-row: 1 / -1;
+            padding-left: 0;
+          }
+          &:last-child {
+            grid-column: 3;
+            grid-row: 1 / -1;
+          }
+          &:not(:first-child):not(:last-child) {
+            grid-column: 2;
+            grid-row: auto;
+          }
+          .cell-wrapper {
+            min-height: initial;
+          }
+          .flex-end {
+            justify-content: initial;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
   }
-  // @include sm {
-  //   thead {
-  //     display: none;
-  //   }
-
-  //   tbody tr {
-  //     display: grid;
-  //     grid-template-columns: 1fr 1fr;
-  //     padding: 16px;
-  //     row-gap: 12px;
-  //     border-bottom: 1px solid rgba(234, 236, 240, 1);
-  //   }
-
-  //   tbody td {
-  //     padding: 0 !important;
-  //     border: none !important;
-  //     display: flex;
-  //     justify-content: space-between;
-  //     width: 100%;
-
-  //     &::before {
-  //       content: attr(data-label);
-  //       color: #98a2b3;
-  //       font-size: 14px;
-  //       margin-right: 8px;
-  //     }
-  //   }
-  // }
 }

@@ -16,7 +16,7 @@ mixin Ars-content-card(param)
                         else 
                             button.ars-content-card__notice.text-blue <span>Акция</span>с 23.07.2024 по 30.09.2024
                     if(param.sale)
-                        .ars-content-card__sale 
+                        .ars-content-card__sale.icon-tooltip-wrapper(data-tooltip='Скидка 26% по промокоду<br> ВЕСНА26<br> до 31 марта 2026г.' data-tooltip-class='tooltip-default-styles' data-tooltip-mode='hover')
                             +Img({
                                 src: 'ars-sale.svg',
                                 alt: 'sale'

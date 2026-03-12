@@ -5,6 +5,10 @@
   max-width: 1340px;
 }
 
+.cart-page {
+  overflow: hidden;
+}
+
 .analysis-result-details,
 .analysis-result-search,
 .cart-page,
@@ -1360,6 +1364,7 @@ body {
 .analysis-result-search {
   display: flex;
   gap: 44px;
+  position: relative;
   .text-blue {
     color: $blue;
     transition: color 0.3s ease;

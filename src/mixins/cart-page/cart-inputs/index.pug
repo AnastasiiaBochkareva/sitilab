@@ -8,7 +8,32 @@ mixin Cart-inputs(param={})
                 +Input({placeholder: 'Выбрать дату', required: false, labelTop: true, labelTopText: 'Дата выезда', date: true, addWrapperClass: 'v-input__wrapper-date', readonly: true})
                 +Input({placeholder: 'Введите номер заказа', required: false, labelTop: true, labelTopText: 'Номер предыдущего заказа', labelTopRequired: true})
                 +Input({placeholder: 'Выбрать дату', required: false, labelTop: true, labelTopText: 'Дата сдачи биоматериала', date: true, addWrapperClass: 'v-input__wrapper-date', readonly: true, labelTopRequired: true})
+
+                //- div.v-input__wrapper.v-input__wrapper-date
+                //-     span.v-input__label-top Дата выезда
+                //-     .v-input    
+                //-         input(type="text" id="id-17406" name="name-53474" placeholder="Дата выезда" readonly="readonly")
+                //-         svg.svg-icon.icon-cart-calendar
+                //-             use(xlink:href="/assets/img/icons/sprite.svg#cart-calendar")
+                //-         label.v-input__placeholder(for="id-17406")
+
                 +Input({placeholder: 'Медицинский центр', labelTop: true, labelTopText: 'Выберите медицинский центр', readonly: true, button: true, buttonIcon: 'modal', dataOpenModal: '#modal-map', inputBtnText: 'Выбрать', addWrapperClass: 'v-input__wrapper-center', labelTopRequired: true})
+
+        
+                if(param.nameDropdown)
+                    .v-input__wrapper.inputs-section__dropdown
+                        span.v-input__label-top Дата сдачи биоматериала 
+                            span.v-input__label-required *
+                        .dropdown
+                            input(type="hidden" name="service" class="dropdown__value")
+                            .dropdown__head(tabindex="0")
+                                span.dropdown__text Анна Карпова
+                                +icon('a-arrow-down')
+
+                            ul.dropdown__list
+                                li.dropdown__item(data-value="Карпова Анна") Карпова Анна
+                                li.dropdown__item(data-value="Lorem ipsum") Lorem ipsum, dolor sit amet consectetur adipisicing elit.!
+                                li.dropdown__item(data-value="Некий") Некий
         if(param.personal)
             .inputs-section.inputs-section__personal
                 .inputs-section__title.cart-order__border Персональные данные
@@ -29,6 +54,8 @@ mixin Cart-inputs(param={})
                 +Input({placeholder: 'Номер телефона', required: false, labelTop: true, labelTopText: 'Номер телефона', labelTopRequired: true, mask: 'phone'})
                 +Input({placeholder: 'E-mail', required: false, labelTop: true, labelTopText: 'E-mail', labelTopRequired: true})
 
+
+
         .cart-page__inputs-required-text Чтобы продолжить необходимо заполнить обязательные поля
 
         if(param.checkboxes)
@@ -43,3 +70,4 @@ mixin Cart-inputs(param={})
                     { text: 'Я ознакомлен и выражаю безоговорочное согласие с условиями', linkText: 'публичной оферты на оказание медицинских услуг', linkHref: '#' }, 
                 ],
             })
+        

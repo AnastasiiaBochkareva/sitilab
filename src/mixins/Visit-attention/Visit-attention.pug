@@ -36,3 +36,15 @@ mixin Visit-attention(param={})
         .visit-attention__title=param.title
     .visit-contraindications
       .visit-contraindications__title Имеются противопоказания. Необходима консультация специалиста.
+  if(param.attentionRed)
+    .visit-attention.visit-attention--warning
+      .visit-attention__header
+        +icon('icon-attention')
+        .visit-attention__title=param.title
+        .visit-attention__subtitle=param.subtitle
+      ul.visit-attention__list
+        each item in param.list
+          li=item
+      .visit-attention__btns   
+        button.visit-attention__btn Выбрать другой город
+        button.visit-attention__btn Удалить этот анализ

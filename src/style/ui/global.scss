@@ -316,7 +316,9 @@
   border: 1px solid rgb(178, 186, 198);
   border-radius: 5px;
   padding: 8px 10px 9px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -441,5 +443,11 @@
 @media (max-width: 359px) {
   .main-analysis-slider .tabb .a-sale__cards {
     padding-right: 0 !important;
+  }
+}
+
+.sm-d-none {
+  @include sm {
+    display: none !important;
   }
 }

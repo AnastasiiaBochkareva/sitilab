@@ -61,9 +61,36 @@ block content
         li 
           a(href="about.html" data-my-modal="#modal-menu") 
             +Info-popup({})
+        li
+          p.icon-tooltip-wrapper(data-tooltip="Текст для tooltip" data-tooltip-class="tooltip-default-styles") icon
+
 
     ul
         li
             a(href="ui.html") UI Examples
+
+    .global-tooltip(id="globalTooltip")
     
     include _modals
+
+//- GLOBAL-TOOLTIP
+//- Чтобы добавить tooltip, элементу, на который будет наведение, нужно задать класс icon-tooltip-wrapper и два data-атрибута:
+//- - data-tooltip - текст тултипа,
+//- - data-tooltip-class - класс со стилями, который будет добавляться к глобальному тултипу через JS. Опционально.
+
+//- Пример:
+
+//- <div 
+//-   class="icon-tooltip-wrapper"
+//-   data-tooltip="Текст для tooltip"
+//-   data-tooltip-class="tooltip-default-styles"
+//- >
+//- </div>
+
+//- В конце родительского контейнера страницы (например, внутри analysis-result-search) нужно добавить:
+
+//- <div class="global-tooltip" id="globalTooltip"></div>
+
+//- Этот блок используется как общий тултип: в него подставляется текст из data-tooltip и добавляется класс из data-tooltip-class при наведении.
+
+//- Если к элементу добавлен атрибут data-tooltip-mode="hover", то global-tooltip вставляется внутрь этого элемента через JS и работает как обычный hover-tooltip.

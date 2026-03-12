@@ -1,3 +1,39 @@
+.gray-container {
+  &__hours {
+    background-color: rgba(243, 246, 249, 1);
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    .gray-container {
+      &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+      }
+      &__col {
+        flex: 1;
+        min-width: 143px;
+        &-title,
+        &-text {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: 0%;
+          text-align: left;
+          color: #344054;
+        }
+        &-title {
+          font-weight: 500;
+        }
+        &-text {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
 .labuda-page {
   .n-sale-info {
     border-radius: 20px;

@@ -13,12 +13,55 @@
     position: relative;
     padding: 20px 30px;
     background-color: rgb(0, 171, 223);
+    .modal-fixed__close {
+      svg {
+        fill: #fff;
+        path {
+          stroke: #fff;
+        }
+      }
+    }
   }
   &__content {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 28px;
     max-width: calc(100% - 32px) !important;
+    .col {
+      display: none;
+      gap: 3px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      padding: 3px;
+      height: 40px;
+      button {
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        min-width: 49%;
+        width: calc(50% - 1px);
+        height: 32px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: rgb(59, 75, 100);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        padding: 3px;
+        box-sizing: border-box;
+        color: #fff;
+        &.active {
+          background-color: #fff;
+          color: rgb(0, 171, 223);
+        }
+        &:hover:not(.active) {
+          background-color: rgb(21, 195, 250);
+        }
+      }
+    }
     &-title {
       color: rgba(255, 255, 255, 1);
       font-size: 22px;
@@ -26,6 +69,7 @@
       line-height: 28px;
       letter-spacing: -2%;
       text-align: left;
+      font-family: 'Montserrat', sans-serif;
     }
     &-input {
       display: flex;
@@ -34,7 +78,9 @@
       overflow: hidden;
       border: none;
       border-radius: 8px;
-      transition: border-color 0.3s, box-shadow 0.3s;
+      transition:
+        border-color 0.3s,
+        box-shadow 0.3s;
       background-color: #fff;
       width: 100%;
       //   max-width: 678px;
@@ -180,32 +226,48 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     &__head {
       padding: 25px 20px 20px;
-      background-color: #fff;
+      // background-color: #fff; удалено для правок
       .n-title-md-alt {
         color: rgb(0, 171, 223);
       }
       .modal-map__content-filters,
       .modal-map__content-input {
-        display: none;
+        // display: none; удалено для правок
       }
       .modal-fixed__close {
+        top: 25px;
+        right: 20px;
         svg {
-          top: 25px;
-          right: 20px;
           path {
-            stroke: rgb(178, 186, 198);
+            stroke: #fff;
           }
         }
       }
     }
     &__content {
-      grid-template-columns: repeat(1, 1fr);
+      gap: 8px;
+      max-width: calc(100% - 23px) !important;
+      &-filters {
+        span {
+          display: none;
+        }
+      }
+      .col {
+        display: flex;
+      }
+      &-title,
+      .col {
+        width: 100%;
+      }
     }
     &__body {
       padding: 7px 25px 40px;
+      &_filter {
+        padding: 0;
+      }
       .my-modal {
         &__form {
           min-width: 200px;

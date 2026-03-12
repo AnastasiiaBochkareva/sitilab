@@ -220,6 +220,15 @@
     max-width: max-content;
     border-radius: 8px;
     background: linear-gradient(to right, rgb(234, 81, 109), rgb(163, 16, 118));
+    &.icon-tooltip-wrapper[data-tooltip-mode='hover'] {
+      @media (max-width: 768px) {
+        .global-tooltip {
+          left: 0;
+          transform: translateY(calc(-100% - 26px));
+        }
+      }
+    }
+
     span {
       color: #fff;
     }

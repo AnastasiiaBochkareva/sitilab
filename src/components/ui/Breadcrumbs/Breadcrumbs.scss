@@ -187,6 +187,34 @@ a.breadcrumbs__link:hover {
   list-style: none !important;
   margin: 0 !important;
   gap: 8px;
+  overflow-x: auto;
+  // ::-webkit-scrollbar-button {
+  //   width: 6px;
+  //   height: 0px;
+  // }
+
+  // ::-webkit-scrollbar-track {
+  //   background-color: #eee;
+  // }
+
+  // ::-webkit-scrollbar-thumb {
+  //   -webkit-border-radius: 10px;
+  //   border-radius: 10px;
+  //   background-color: #4bb1e0;
+  //   background-image: url('https://citilab.ru/upload/citiimg/scroll.png');
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  // }
+
+  // ::-webkit-resizer {
+  //   width: 4px;
+  //   height: 0px;
+  // }
+
+  // ::-webkit-scrollbar {
+  //   width: 9px;
+  //   height: 9px;
+  // }
   .breadcrumbs {
     &__item {
       &:not(:last-child) {
@@ -202,6 +230,7 @@ a.breadcrumbs__link:hover {
         .breadcrumbs__link {
           background-color: #f9fafb;
           color: #344054;
+          padding: 4px 8px;
         }
       }
     }
@@ -209,19 +238,23 @@ a.breadcrumbs__link:hover {
       display: flex;
       align-items: center;
       justify-content: center;
+      min-width: 16px;
+      width: 16px;
+      min-height: 16px;
+      height: 16px;
       svg {
         fill: transparent;
         stroke: #d0d5dd;
-        min-width: 16px;
-        width: 16px;
-        min-height: 16px;
-        height: 16px;
+        min-width: 4px;
+        width: 4px;
+        min-height: 8px;
+        height: 8px;
       }
     }
     &__link {
       color: #475467;
       border-radius: 6px;
-      padding: 4px 8px;
+      padding: 0;
       transition: all 0.3s ease;
       font-size: 14px;
       line-height: 20px;
@@ -232,6 +265,16 @@ a.breadcrumbs__link:hover {
     }
   }
   @include sm {
-    display: none;
+    padding: 12px 0 32px;
+    .breadcrumbs {
+      &__item {
+        &.active {
+          .breadcrumbs__link {
+            padding: 0;
+            background-color: transparent;
+          }
+        }
+      }
+    }
   }
 }

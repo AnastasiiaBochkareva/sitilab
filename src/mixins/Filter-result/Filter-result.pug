@@ -88,6 +88,24 @@ mixin Filter-result(param={})
                         li 
                             span сб - вс 
                             p 07:30 - 15:30
+                    +Gray-info({
+                        addClass: 'gray-container__hours',
+                        hours: true,
+                        grayInfoSm: true,
+                        content: true,
+                    })
+                    ul.accordion.accordion--unavailable-analyses
+                        li.accordion__item
+                            .accordion__head
+                                .accordion__head-content
+                                    .accordion__head-text 1 анализ недоступен
+                                .accordion__icon
+                                    +icon('a-arrow-down')
+                            .accordion__body
+                                ul.accordion__body-content 
+                                    li Определение концентрации IgG4 подкласса иммуноглобулинов
+                                    li 2
+                                    li 3
                     .filter-result__img
                         .filter-result__img-container
                             img(src="/assets/img/categories/garant.png", alt="picture 1")

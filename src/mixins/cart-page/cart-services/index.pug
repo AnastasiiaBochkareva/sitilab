@@ -17,8 +17,8 @@ mixin Cart-services(param={})
                         th.text-end Итог, ₽
                         th 
                 tbody
-                    each service in param.services
-                        tr
+                    each service in param.services 
+                        tr(class=service.trClass)
                             td
                                 .cell-wrapper
                                     if(service.check)

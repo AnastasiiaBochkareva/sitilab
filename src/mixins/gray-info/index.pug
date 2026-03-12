@@ -16,6 +16,15 @@ mixin Gray-info(param={})
                         |&nbsp;
                     if(param.text)
                         | #{param.text}
+                    if(param.hours)
+                        .gray-container__col
+                            .gray-container__col-title Режим работы:
+                            .gray-container__col-text Пн. - Пт. — 7:00-19:00
+                            .gray-container__col-text Сб. - Вс. — 07:30-15:30
+                        .gray-container__col
+                            .gray-container__col-title Взятие биоматериала:
+                            .gray-container__col-text Пн. - Пт. — 7:00-18:30
+                            .gray-container__col-text Сб. - Вс. — 07:30-15:00
             if(!param.content)
                 if(param.text)
                     | #{param.text}

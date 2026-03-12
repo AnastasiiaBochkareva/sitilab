@@ -80,6 +80,24 @@
       &__demographics {
         margin: 24px 0;
       }
+      &__dropdown {
+        max-width: 540px;
+        width: 100%;
+        min-width: 270px;
+        @include sm {
+          min-width: 100%;
+        }
+      }
+      .dropdown {
+        height: 40px;
+        &__head {
+          padding: 8px 12px 7px;
+          height: 100%;
+        }
+        &__text {
+          line-height: 20px;
+        }
+      }
 
       .v-input {
         &.birth {

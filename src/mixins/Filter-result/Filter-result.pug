@@ -78,7 +78,7 @@ mixin Filter-result(param={})
                 if(!param.closeIcon)
                     .accordion__icon
                         +icon('plus')
-            .accordion__body
+            .accordion__body.accordion__body-limiter
                 .accordion__body-content
                     div Режим работы:
                     ul 

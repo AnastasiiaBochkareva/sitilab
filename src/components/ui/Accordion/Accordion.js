@@ -5,6 +5,11 @@ const openItem = (item) => {
 
     const body = item.querySelector('.accordion__body');
     body.style.maxHeight = `${body.scrollHeight}px`;
+
+    body.addEventListener('transitionend', () => {
+    // updateParentAccordion(item);
+    fixScroll(item.closest('.accordion'), item);
+}, { once: true });
 };
 
 const closeItem = (item) => {
@@ -13,14 +18,37 @@ const closeItem = (item) => {
 
     const body = item.querySelector('.accordion__body');
     body.style.maxHeight = null;
+
+    body.addEventListener('transitionend', () => {
+    // updateParentAccordion(item);
+    fixScroll(item.closest('.accordion'), item);
+}, { once: true });
 };
+
+// function updateParentAccordion(item) {
+//     const parentAccordion = item.closest('.accordion__body')?.closest('.accordion');
+//     if (parentAccordion) {
+//         const parentBody = parentAccordion.querySelector(':scope > .accordion__item.active > .accordion__body.accordion__body-limiter');
+//         if (parentBody) {
+//             console.log(1);
+            
+//             if (parentBody.style.minHeight == '') {
+// parentBody.style.minHeight = `max-content`;
+// console.log(2);
+//             } else {
+//                 console.log(3);
+//                 parentBody.style.minHeight = ``;
+//             }
+            
+//             updateParentAccordion(parentAccordion);
+//         }
+//     }
+// }
 
 function fixScroll(activeItem, itemToScroll) {
     if (!activeItem) return;
     const body = activeItem.querySelector('.accordion__body');
-    // console.log(body.scrollHeight);
     const viewportHeight = window.innerHeight;
-    // console.log(viewportHeight);
     if (body.scrollHeight > viewportHeight) {
         setTimeout(() => {
             const header = document.querySelector('.header');
@@ -39,18 +67,21 @@ function fixScroll(activeItem, itemToScroll) {
 const clickHandler = (e) => {
     const accordionHead = e.target.closest('.accordion__head');
     if (!accordionHead) return;
-    // console.log(e);
+
     const accordion = e.target.closest('.accordion');
     const targetItem = e.target.closest('.accordion__item');
+     if (!accordion || !targetItem) return;
     const activeItem = accordion.querySelector('.accordion__item.active');
 
     if (targetItem !== activeItem) {
-        openItem(targetItem);
+        // openItem(targetItem);
         closeItem(activeItem);
-        fixScroll(activeItem, targetItem);
+        openItem(targetItem);
+        // fixScroll(activeItem, targetItem);
     } else {
         closeItem(targetItem);
     }
 };
 
 document.addEventListener('click', clickHandler);
+
